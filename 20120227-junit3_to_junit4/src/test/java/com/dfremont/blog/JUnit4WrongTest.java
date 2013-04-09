@@ -3,7 +3,9 @@ package com.dfremont.blog;
 import org.junit.Test;
 
 public class JUnit4WrongTest {
+
 	@Test
+	@SuppressWarnings("unused")
 	public void testDivideValue() {
 		// Arrange
 		ClassToTest classToTest = new ClassToTest();
