@@ -4,6 +4,7 @@
 	<groupId>com.dfremont.blog</groupId>
 	<artifactId>20120227-junit3_to_junit4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+    <url>http://www.damienfremont.com</url>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
