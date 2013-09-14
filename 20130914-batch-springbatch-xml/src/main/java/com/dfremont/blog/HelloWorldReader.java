@@ -4,6 +4,11 @@ import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ParseException;
 import org.springframework.batch.item.UnexpectedInputException;
 
+/**
+ * reads as many times as there are executionTimes.
+ * 
+ * @author Damien FREMONT
+ */
 public class HelloWorldReader implements ItemReader<Object> {
 
     private int executionTimes;
