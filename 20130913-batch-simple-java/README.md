@@ -7,14 +7,14 @@ Without using any Framework, you need to develop every time the same parts of th
 
 The focus of this tutorial is to develop a batch that will perform an "HelloWorld" task as many times as requested (value specify in argument content).
 
-1. Expected usage (by test)
-@Test
-public void test_batch_execution() {
-    String[] args = { "10" }; // arrange
-    HelloWorldBatch.main(args); // act
-}
-
-2. Result (console output)
+1. How it works?
+`
+HelloWorldBatch.main(
+    new String[] { "10" } // exec 10 times
+);
+`
+2. Demo (console output)
+`
 Executing batch
 input args ok
 Executing job
@@ -30,3 +30,4 @@ Hello World!
 Hello World!
 Ending job (success)
 Ending batch
+`
