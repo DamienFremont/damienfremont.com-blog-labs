@@ -8,12 +8,15 @@ Without using any Framework, you need to develop every time the same parts of th
 The focus of this tutorial is to develop a batch that will perform an "HelloWorld" task as many times as requested (value specify in argument content).
 
 1. How it works?
+
 ```java
 HelloWorldBatch.main(
     new String[] { "10" } // exec 10 times
 );
 ```
+
 2. Demo (console output)
+
 ```
 Executing batch
 input args ok
