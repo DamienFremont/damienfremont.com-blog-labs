@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.dfremont.blog</groupId>
-	<artifactId>20130913-batch-springbatch-xml</artifactId>
+	<artifactId>20130914-springbatch-xml</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <url>http://www.damienfremont.com</url>
 	<dependencies>
