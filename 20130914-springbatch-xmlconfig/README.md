@@ -1,4 +1,4 @@
-batch-simple_java
+springbatch-xmlconfig
 =============
 
 In Java, the development of batch can be achieved with few solutions. Most applications use SpringBatch.
