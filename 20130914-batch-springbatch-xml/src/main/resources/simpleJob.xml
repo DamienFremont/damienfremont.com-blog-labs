@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/batch"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/batch
+http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
+
+	<beans:import resource="applicationContext.xml" />
+
+	<job id="helloWorldJob" job-repository="jobRepository">
+		<!-- Job validator -->
+		<validator ref="helloWorldJobParametersValidator" />
+
+		<step id="helloWorldStep">
+			<tasklet>
+				<chunk reader="helloWorldReader" writer="helloWorldWriter"
+					commit-interval="0">
+				</chunk>
+			</tasklet>
+		</step>
+	</job>
+
+	<beans:bean id="helloWorldJobParametersValidator"
+		class="org.springframework.batch.core.job.DefaultJobParametersValidator">
+		<beans:property name="requiredKeys" value="execution.times" />
+	</beans:bean>
+
+	<beans:bean name="helloWorldReader" class="com.dfremont.blog.HelloWorldReader"
+		scope="step">
+		<beans:property name="executionTimes"
+			value="#{jobParameters['execution.times']}" />
+	</beans:bean>
+
+	<beans:bean name="helloWorldWriter" class="com.dfremont.blog.HelloWorldWriter">
+	</beans:bean>
+
+	<!-- To run the job from the command line type the following: mvn exec:java 
+		-Dexec.mainClass=org.springframework.batch.core.launch.support.CommandLineJobRunner 
+		-Dexec.args="simpleJob.xml helloWorldJob" -->
+</beans:beans>
