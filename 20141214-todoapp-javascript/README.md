@@ -1,10 +1,10 @@
-Ce tutoriel est le dev d’une simple TODO list de type client-serveur (front-end + back-end). Le but est d’utiliser une stack technique complète en Java pour comparer avec d’autres technologies.
+Ce tutoriel est le dev d'une simple TODO list de type client-serveur (front-end + back-end). Le but est d'utiliser une stack technique complète en JavaScript pour comparer avec d'autres technologies.
 
 Environnement
 
-En DEV : un IDE eclipse JavaEE + Maven et un tomcat7, ensuite installer le plugin GWT, manuellement ou via le marketplace d’eclipse.
+En DEV : un IDE eclipse avec le plugin nodeclipse d'installé via le menu marketplace d'eclipse. Avoir aussi un NodeJS et son npm Express.
 
-En RUN : le front-end se base sur le site todomvc.com avec l’exemple en GWT. Le back-end est un Tomcat avec une servlet REST HTTP Jersey (JAX-RS).
+En RUN : le front-end se base sur le site todomvc.com via l'exemple angularjs. Le back-end en plus est un NodeJS avec le serveur REST HTTP de Express.
 
 La structure (classique) est composé d’un MVC coté front et d’un service REST coté back :
 Front
