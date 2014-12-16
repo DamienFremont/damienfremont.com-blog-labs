@@ -17,12 +17,18 @@ Repository
 
 Demo
 
-Lancer le server
-http://localhost:8080/20141215-todoapp-java/api/todos
+Tester sur L'URL du back
+
+http://localhost:3000/api/todos
+
+Tester sur L'URL du front
+
+http://localhost:3000/index.html#/
 
 Sources
 
-http://github.com/damienfremont/blog/tree/master/20141215-todoapp-java
+https://github.com/damienfremont/blog/tree/master/20141214-todoapp-javascript
+
 References
 
 http://www.vogella.com/articles/REST/article.html
