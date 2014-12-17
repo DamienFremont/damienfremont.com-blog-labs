@@ -7,32 +7,33 @@ import java.util.List;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.http.client.URL;
 import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONBoolean;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.json.client.JSONString;
-import com.google.gwt.storage.client.Storage;
 import com.google.gwt.user.client.History;
 import com.google.gwt.view.client.AbstractDataProvider;
 import com.google.gwt.view.client.ListDataProvider;
-import com.todo.client.ToDoItem;
-import com.todo.client.ToDoRouting;
 import com.todo.client.events.ToDoEvent;
 import com.todo.client.events.ToDoRemovedEvent;
 import com.todo.client.events.ToDoUpdatedEvent;
 
 /**
- * The presenter for the ToDo application. This class is responsible for the lifecycle of the
- * {@link ToDoItem} instances.
- *
+ * The presenter for the ToDo application. This class is responsible for the
+ * lifecycle of the {@link ToDoItem} instances.
+ * 
  * @author ceberhardt
  * @author dprotti
- *
+ * 
  */
 public class ToDoPresenter {
-
-	private static final String STORAGE_KEY = "todo-gwt";
 
 	/**
 	 * The interface that a view for this presenter must implement.
@@ -55,7 +56,8 @@ public class ToDoPresenter {
 		void setTaskStatistics(int totalTasks, int completedTasks);
 
 		/**
-		 * Sets the data provider that acts as a source of {@link ToDoItem} instances.
+		 * Sets the data provider that acts as a source of {@link ToDoItem}
+		 * instances.
 		 */
 		void setDataProvider(AbstractDataProvider<ToDoItem> data);
 
@@ -136,23 +138,25 @@ public class ToDoPresenter {
 		setupHistoryHandler();
 		eventBus = ToDoEvent.getGlobalEventBus();
 		// listen to edits on individual items
-		eventBus.addHandler(ToDoUpdatedEvent.TYPE, new ToDoUpdatedEvent.Handler() {
+		eventBus.addHandler(ToDoUpdatedEvent.TYPE,
+				new ToDoUpdatedEvent.Handler() {
 
-			@Override
-			public void onEvent(ToDoUpdatedEvent event) {
-				itemStateChanged(event.getToDo());
-			}
+					@Override
+					public void onEvent(ToDoUpdatedEvent event) {
+						itemStateChanged(event.getToDo());
+					}
 
-		});
+				});
 		// listen to removals
-		eventBus.addHandler(ToDoRemovedEvent.TYPE, new ToDoRemovedEvent.Handler() {
+		eventBus.addHandler(ToDoRemovedEvent.TYPE,
+				new ToDoRemovedEvent.Handler() {
 
-			@Override
-			public void onEvent(ToDoRemovedEvent event) {
-				deleteTask(event.getToDo());
-			}
+					@Override
+					public void onEvent(ToDoRemovedEvent event) {
+						deleteTask(event.getToDo());
+					}
 
-		});
+				});
 	}
 
 	/**
@@ -172,7 +176,7 @@ public class ToDoPresenter {
 	/**
 	 * Converts the string routing token into the equivalent enum value.
 	 */
-	private ToDoRouting parseRoutingToken(String token ) {
+	private ToDoRouting parseRoutingToken(String token) {
 		if (token.equals("/active")) {
 			return ToDoRouting.ACTIVE;
 		} else if (token.equals("/completed")) {
@@ -219,7 +223,8 @@ public class ToDoPresenter {
 	}
 
 	/**
-	 * Invoked by a task when its state changes so that we can update the view statistics and persist.
+	 * Invoked by a task when its state changes so that we can update the view
+	 * statistics and persist.
 	 */
 	protected void itemStateChanged(ToDoItem toDoItem) {
 
@@ -233,7 +238,8 @@ public class ToDoPresenter {
 	}
 
 	/**
-	 * When the task state has changed, this method will update the UI and persist.
+	 * When the task state has changed, this method will update the UI and
+	 * persist.
 	 */
 	private void taskStateChanged() {
 		updateFilteredList();
@@ -285,48 +291,89 @@ public class ToDoPresenter {
 		taskStateChanged();
 	}
 
+	private String url = "http://localhost:8080/20141215-todoapp-java/api/todos";
+
 	/**
-	 * Saves the current to-do items to local storage.
+	 * Saves the current to-do items to storage.
 	 */
 	private void saveState() {
-		Storage storage = Storage.getLocalStorageIfSupported();
-		if (storage != null) {
 
-			// JSON encode the items
-			JSONArray todoItems = new JSONArray();
-			for (int i = 0; i < todos.size(); i++) {
-				ToDoItem toDoItem = todos.get(i);
-				JSONObject jsonObject = new JSONObject();
-				jsonObject.put("task", new JSONString(toDoItem.getTitle()));
-				jsonObject.put("complete", JSONBoolean.getInstance(toDoItem.isCompleted()));
-				todoItems.set(i, jsonObject);
-			}
+		// JSON encode the items
+		JSONArray todoItems = new JSONArray();
+		for (int i = 0; i < todos.size(); i++) {
+			ToDoItem toDoItem = todos.get(i);
+			JSONObject jsonObject = new JSONObject();
+			jsonObject.put("task", new JSONString(toDoItem.getTitle()));
+			jsonObject.put("complete",
+					JSONBoolean.getInstance(toDoItem.isCompleted()));
+			todoItems.set(i, jsonObject);
+		}
 
-			// save to local storage
-			storage.setItem(STORAGE_KEY, todoItems.toString());
+		// save to remote storage
+		try {
+			new RequestBuilder(RequestBuilder.PUT, URL.encode(url))
+					.sendRequest(todoItems.toString(), new RequestCallback() {
+
+						@Override
+						public void onResponseReceived(Request request,
+								Response response) {
+							// Process the response in response.getText()
+						}
+
+						@Override
+						public void onError(Request request, Throwable exception) {
+							// Couldn't connect to server (could be timeout, SOP
+							// violation, etc.)
+						}
+
+					});
+		} catch (RequestException e) {
+			// Couldn't connect to server
 		}
 	}
 
 	private void loadState() {
-		Storage storage = Storage.getLocalStorageIfSupported();
-		if (storage != null) {
-			try {
-				// get state
-				String state = storage.getItem(STORAGE_KEY);
+		// get state
+		try {
+			new RequestBuilder(RequestBuilder.GET, URL.encode(url))
+					.sendRequest(null, new RequestCallback() {
+						public void onError(Request request, Throwable exception) {
+							// Couldn't connect to server (could be timeout, SOP
+							// violation, etc.)
+						}
 
-				// parse the JSON array
-				JSONArray todoItems = JSONParser.parseStrict(state).isArray();
-				for (int i = 0; i < todoItems.size(); i++) {
-					// extract the to-do item values
-					JSONObject jsonObject = todoItems.get(i).isObject();
-					String task = jsonObject.get("task").isString().stringValue();
-					boolean completed = jsonObject.get("complete").isBoolean().booleanValue();
-					// add a new item to our list
-					todos.add(new ToDoItem(task, completed));
-				}
-			} catch (Exception e) {
+						public void onResponseReceived(Request request,
+								Response response) {
+							if (200 == response.getStatusCode()) {
 
-			}
+								// Process the response in response.getText()
+								String state = response.getText();
+
+								// parse the JSON array
+								JSONArray todoItems = JSONParser.parseStrict(
+										state).isArray();
+								for (int i = 0; i < todoItems.size(); i++) {
+									// extract the to-do item values
+									JSONObject jsonObject = todoItems.get(i)
+											.isObject();
+									String task = jsonObject.get("task")
+											.isString().stringValue();
+									boolean completed = jsonObject
+											.get("complete").isBoolean()
+											.booleanValue();
+									// add a new item to our list
+									todos.add(new ToDoItem(task, completed));
+								}
+
+							} else {
+								// Handle the error. Can get the status text
+								// from
+								// response.getStatusText()
+							}
+						}
+					});
+		} catch (RequestException e) {
+			// Couldn't connect to server
 		}
 
 		updateFilteredList();
