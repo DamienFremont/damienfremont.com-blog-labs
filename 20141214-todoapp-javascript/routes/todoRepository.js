@@ -1,9 +1,9 @@
 
 var datas = [ {
-	title : "task 1",
+	title : "task 1 from backend",
 	completed : false
 }, {
-	title : "task 2",
+	title : "task 2 from backend",
 	completed : false
 } ];
 

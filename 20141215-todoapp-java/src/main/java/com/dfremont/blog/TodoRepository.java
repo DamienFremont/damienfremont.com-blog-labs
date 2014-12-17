@@ -5,8 +5,8 @@ public class TodoRepository {
 	// datas
 	private static TodoModel[] todos = new TodoModel[] { //
 	//
-			new TodoModel("linge", false), //
-			new TodoModel("vaisselle", false) };
+			new TodoModel("task 1 from backend", false), //
+			new TodoModel("task 2 from backend", false) };
 
 	// methods
 
