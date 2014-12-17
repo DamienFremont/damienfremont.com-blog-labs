@@ -109,7 +109,7 @@
 							<followSymlinks>false</followSymlinks>
 						</fileset>
 						<fileset>
-							<directory>src/main/webapp/gwt-unitCache</directory>
+							<directory>src/main/gwt-unitCache</directory>
 							<followSymlinks>false</followSymlinks>
 						</fileset>
 					</filesets>
