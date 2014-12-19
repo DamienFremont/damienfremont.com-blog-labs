@@ -1,2 +1,2 @@
 
-http://damienfremont.com/2014/12/19/how-to-expandcollapse-table-rows-with-bootstrap/#more-353
+http://damienfremont.com/2014/12/19/how-to-expandcollapse-table-rows-with-bootstrap
