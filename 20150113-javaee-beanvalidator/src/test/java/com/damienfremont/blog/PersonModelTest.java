@@ -39,7 +39,7 @@ public class PersonModelTest {
 	}
 
 	@Test
-	public void test_WHEN_invalid_GIVEN_valid_model_THEN_error() {
+	public void test_WHEN_valid_GIVEN_invalid_model_THEN_error() {
 
 		// GIVEN
 
