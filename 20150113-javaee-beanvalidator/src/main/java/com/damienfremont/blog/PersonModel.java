@@ -3,6 +3,7 @@ package com.damienfremont.blog;
 import java.util.Calendar;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
 public class PersonModel {
@@ -16,6 +17,7 @@ public class PersonModel {
 	private String lastName;
 
 	@NotNull
+	@Past
 	private Calendar birthDate;
 
 	public PersonModel(String firstName, String lastName, Calendar birthDate) {
