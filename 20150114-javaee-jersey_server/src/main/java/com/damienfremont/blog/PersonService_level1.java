@@ -7,8 +7,10 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
-@Path("/persons-basic")
+@Path("/persons")
 public class PersonService_level1 {
 
 	private PersonRepository dao = new PersonRepository();
@@ -16,29 +18,33 @@ public class PersonService_level1 {
 	/* CRUD METHODS */
 
 	@POST
-	public PersonModel createPerson(PersonModel person) {
-		return dao.update(person);
+    @Produces(MediaType.TEXT_PLAIN)
+	public String createPerson(PersonModel person) {
+		return String.valueOf( dao.create(person).getId());
 	}
 
 	@GET
-	@Path("/{id}")
-	public PersonModel readPerson(@PathParam("id") Long id) {
+	@Path("/id/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+	public PersonModel readPerson(@PathParam("id") Integer id) {
 		return dao.read(id);
 	}
 
 	@GET
+    @Produces(MediaType.APPLICATION_JSON)
 	public List<PersonModel> readPersons() {
 		return dao.readAll();
 	}
 
 	@POST
-	public PersonModel updatePerson(@PathParam("id") Long id, PersonModel person) {
-		return dao.update(person);
+	@Path("/id/{id}")
+	public void updatePerson(@PathParam("id") Integer id, PersonModel person) {
+		dao.update(person);
 	}
 
 	@DELETE
-	@Path("/{id}")
-	public void deletePerson(@PathParam("id") Long id) {
+	@Path("/id/{id}")
+	public void deletePerson(@PathParam("id") Integer id) {
 		dao.delete(id);
 	}
 }

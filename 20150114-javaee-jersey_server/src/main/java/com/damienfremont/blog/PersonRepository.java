@@ -14,8 +14,8 @@ public class PersonRepository {
 
 	public PersonRepository() {
 		datas = new HashMap<>();
-		datas.put(1, new PersonModel(1, "Anakin", "Skywlaker", "41.9 BBY"));
-		datas.put(2, new PersonModel(2, "Luke", "Skywlaker", "19 BBY"));
+		datas.put(1, new PersonModel(1, "Anakin", "Skywalker", "41.9 BBY"));
+		datas.put(2, new PersonModel(2, "Luke", "Skywalker", "19 BBY"));
 		datas.put(3, new PersonModel(3, "Leia", "Organa Solo", "19 BBY"));
 	}
 
@@ -23,10 +23,12 @@ public class PersonRepository {
 
 	public PersonModel create(PersonModel entity) {
 		int randomNum = new Random().nextInt();
-		return datas.put(randomNum, entity);
+		entity.setId(randomNum);
+		datas.put(entity.getId(), entity);
+		return entity;
 	}
 
-	public PersonModel read(Long id) {
+	public PersonModel read(Integer id) {
 		return datas.get(id);
 	}
 
@@ -38,7 +40,7 @@ public class PersonRepository {
 		return datas.put(entity.getId(), entity);
 	}
 
-	public void delete(Long id) {
+	public void delete(Integer id) {
 		datas.remove(id);
 	}
 

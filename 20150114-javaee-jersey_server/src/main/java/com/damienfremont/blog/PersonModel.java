@@ -1,11 +1,18 @@
 package com.damienfremont.blog;
 
-public class PersonModel {
+import java.io.Serializable;
+
+public class PersonModel implements Serializable {
+
+	private static final long serialVersionUID = 6879685199191377814L;
 
 	private Integer id;
 	private String firstName;
 	private String lastName;
 	private String birthDate;
+
+	public PersonModel() {
+	}
 
 	public PersonModel(String firstName, String lastName, String birthDate) {
 		super();
@@ -24,15 +31,32 @@ public class PersonModel {
 		return id;
 	}
 
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getFirstName() {
 		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
 		return lastName;
 	}
 
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
 	public String getBirthDate() {
 		return birthDate;
 	}
+
+	public void setBirthDate(String birthDate) {
+		this.birthDate = birthDate;
+	}
+
 }
