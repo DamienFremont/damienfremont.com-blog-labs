@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * Version simple : on laisse faire jersey-server.
+ * version simple du service: on laisse faire jersey-server.
  */
 @Path("/persons")
 public class PersonService1 {

@@ -10,7 +10,6 @@ import org.apache.catalina.startup.Tomcat;
 /*
  * FROM http://zsoltfabok.com/blog/2012/08/embedded-web-services-for-testing/
  */
-
 public class EmbeddedServer implements Runnable {
 
 	private Tomcat tomcat;

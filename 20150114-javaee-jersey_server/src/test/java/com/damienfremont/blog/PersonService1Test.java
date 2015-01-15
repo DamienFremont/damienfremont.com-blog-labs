@@ -11,8 +11,13 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+/**
+ * Les tests pourront s'executer au choix vers un serveur Tomcat local ou embarque dans le test  (c'est plus rapide et moins repetitif).
+ */
 public class PersonService1Test {
 
+	/* EMBEDDED SERVER (TOMCAT) */ 
+	
 	private static EmbeddedServer server;
 
 	@BeforeClass
@@ -26,6 +31,8 @@ public class PersonService1Test {
 		server.stop();
 	}
 	
+	/* TESTS */ 
+
 	private static final String REST_API = "/20150114-javaee-jersey_server/api";
 
 	@Test

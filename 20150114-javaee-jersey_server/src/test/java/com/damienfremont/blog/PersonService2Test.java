@@ -1,8 +1,6 @@
 package com.damienfremont.blog;
 
 import static com.jayway.restassured.RestAssured.expect;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.notNullValue;
 
 import javax.servlet.ServletException;
@@ -11,8 +9,12 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+/**
+ * Les tests pourront s'executer au choix vers un serveur Tomcat local ou embarque dans le test  (c'est plus rapide et moins repetitif).
+ */
 public class PersonService2Test {
 	
+	/* EMBEDDED SERVER (TOMCAT) */ 
 
 	private static EmbeddedServer server;
 
@@ -27,6 +29,8 @@ public class PersonService2Test {
 		server.stop();
 	}
 	
+	/* TESTS */ 
+
 	private static final String REST_API = "/20150114-javaee-jersey_server/api";
 
 	@Test
