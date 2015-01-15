@@ -25,6 +25,8 @@ public class PersonService1Test {
 	public static void stopServer() {
 		server.stop();
 	}
+	
+	private static final String REST_API = "/20150114-javaee-jersey_server/api";
 
 	@Test
 	public void testPersonCreateSuccess() {
@@ -38,7 +40,7 @@ public class PersonService1Test {
 					"lastName", "Amidala",
 					"birthDate", "46 BBY")
 		.when()
-			.post("/20150114-javaee-jersey_server/api/persons");
+			.post(REST_API + "/persons");
 	}
 
 	@Test
@@ -50,7 +52,7 @@ public class PersonService1Test {
 			.body("lastName", equalTo("Skywalker"))
 			.body("birthDate", equalTo("41.9 BBY")) //
 		.when()
-			.get("/20150114-javaee-jersey_server/api/persons/id/1");
+			.get(REST_API + "/persons/id/1");
 	}
 
 	@Test
@@ -59,7 +61,7 @@ public class PersonService1Test {
 			.statusCode(200)
 			.body("id", hasItems(1, 2, 3)) //
 		.when()
-			.get("/20150114-javaee-jersey_server/api/persons");
+			.get(REST_API + "/persons");
 	}
 
 	@Test
@@ -73,7 +75,7 @@ public class PersonService1Test {
 					"lastName", "Skywalker",
 					"birthDate", "41.9 BBY")
 		.when()
-			.post("/20150114-javaee-jersey_server/api/persons/id/1");
+			.post(REST_API + "/persons/id/1");
 	}
 	
 	@Test
@@ -81,6 +83,6 @@ public class PersonService1Test {
 		expect()
 			.statusCode(204)
 		.when()
-			.delete("/20150114-javaee-jersey_server/api/persons/id/3");
+			.delete(REST_API + "/persons/id/3");
 	}
 }
