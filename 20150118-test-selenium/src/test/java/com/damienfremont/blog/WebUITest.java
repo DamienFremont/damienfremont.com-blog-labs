@@ -113,6 +113,8 @@ public class WebUITest {
 
 		// ALORS
 		assertTrue(driver.getCurrentUrl().contains("page2"));
+		assertTrue(driver.findElement(By.cssSelector("body"))
+				.getText().contains("404"));
 	}
 
 }
