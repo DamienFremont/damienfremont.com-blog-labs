@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
-@XmlRootElement
+@XmlRootElement(name="person")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PersonModel implements Serializable {
 
