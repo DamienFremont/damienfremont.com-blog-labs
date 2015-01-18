@@ -41,7 +41,7 @@ public class PersonService2 {
 		// RESULT
 		return Response
 				.status(CREATED)
-				.entity("Location: /persons2/" + newEntity.getId())
+				.entity("Location: /persons2/id/" + newEntity.getId())
 				.build();
 	}
 
