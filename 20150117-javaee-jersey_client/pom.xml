@@ -4,7 +4,7 @@
 	<groupId>com.damienfremont.blog</groupId>
 	<artifactId>20150117-javaee-jersey_client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7</jdk.version>
