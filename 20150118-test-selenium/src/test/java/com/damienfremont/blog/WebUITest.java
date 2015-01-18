@@ -16,20 +16,35 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.google.common.collect.ImmutableMap;
 
+/**
+ * <pre>
+ * Test
+ * - user Test (JUnit)
+ *      |
+ *      v
+ * - UI Connector (Selenium)
+ *      |
+ *      v
+ * - browser (PhantomJS / HtmlUnit / FireFox)
+ * 
+ * </pre>
+ *
+ */
 public class WebUITest {
 
+	private static EmbeddedServer server;
 	private static WebDriver driver;
 	private static String baseUrl;
 
-	private static EmbeddedServer server;
-
 	@BeforeClass
 	public static void startServer() throws ServletException {
+		
+		// INIT WEB SERVER (TOMCAT)
 		server = new EmbeddedServer(8080, "/20150118-test-selenium");
 		server.start();
 
+		// INIT WEB BROWSER (SELENIUM + PHANTOMJS)
 		driver = new PhantomJSDriver(
-
 		new DesiredCapabilities(ImmutableMap.of( //
 				PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, //
 				new PhantomJsDownloader().downloadAndExtract()
@@ -41,7 +56,6 @@ public class WebUITest {
 	@AfterClass
 	public static void stopServer() {
 		server.stop();
-
 		driver.quit();
 	}
 
