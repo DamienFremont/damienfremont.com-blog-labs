@@ -16,23 +16,7 @@ public class PersonModel implements Serializable {
 	private String firstName;
 	private String lastName;
 	private String birthDate;
-
-	public PersonModel() {
-	}
-
-	public PersonModel(String firstName, String lastName, String birthDate) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthDate = birthDate;
-	}
-
-	public PersonModel(Integer id, String firstName, String lastName,
-			String birthDate) {
-		this(firstName, lastName, birthDate);
-		this.id = id;
-	}
-
+	
 	public Integer getId() {
 		return id;
 	}
