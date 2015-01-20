@@ -4,10 +4,10 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import static net.jadler.Jadler.closeJadler;
 import static net.jadler.Jadler.initJadler;
 import static net.jadler.Jadler.onRequest;
+import static org.fest.assertions.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
 import net.jadler.Jadler;
 
-import org.fest.assertions.api.Assertions;
 import org.jboss.resteasy.client.ProxyFactory;
 import org.junit.After;
 import org.junit.Before;
@@ -41,7 +41,7 @@ public class ExecutorTest {
 				.withDelay(1, SECONDS);
 
 		// QUAND
-			client.ping();
+		client.ping();
 	}
 
 	@Test
@@ -57,7 +57,9 @@ public class ExecutorTest {
 			client.ping();
 			fail("Expected Exception!");
 		} catch (Exception e) {
-			Assertions.assertThat(e.getMessage()).contains("Read timed out");
+			
+			// ALORS
+			assertThat(e.getMessage()).contains("Read timed out");
 		}
 	}
 
