@@ -5,9 +5,10 @@ import org.fluentlenium.core.FluentPage;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.openqa.selenium.support.FindBy;
 
+// PAGE PATTERN DE LA PAGE PRINCIPALE
 public class MainPage extends FluentPage {
 
-	// getUrl : fournit l'url de la page pour 
+	// FLUENTLENIUM UTILS
 	
 	@Override
 	public String getUrl() {

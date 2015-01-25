@@ -1,11 +1,11 @@
 package com.damienfremont.blog;
 
-import java.math.BigDecimal;
-
+import org.fluentlenium.assertj.FluentLeniumAssertions;
 import org.fluentlenium.core.FluentPage;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.openqa.selenium.support.FindBy;
 
+// PAGE PATTERN DE LA PAGE 1
 public class MainPage1 extends FluentPage {
 
 	@Override
@@ -15,12 +15,12 @@ public class MainPage1 extends FluentPage {
 
 	@Override
 	public void isAt() {
-		// TODO Auto-generated method stub
-		super.isAt();
+		FluentLeniumAssertions.assertThat(title).hasText("Page 1");
 	}
 
 	@FindBy(css = ".container .title")
 	FluentWebElement title;
+	
 	@FindBy(css = ".container .back.btn")
 	FluentWebElement backBtn;
 
