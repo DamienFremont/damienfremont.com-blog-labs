@@ -3,8 +3,13 @@ package com.damienfremont.blog;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.junit.Assert.assertTrue;
 
+import java.math.BigDecimal;
+
 import javax.servlet.ServletException;
 
+import org.assertj.core.api.Assertions;
+import org.fluentlenium.adapter.FluentTest;
+import org.fluentlenium.core.annotation.Page;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -14,12 +19,16 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static org.fluentlenium.core.filter.FilterConstructor.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
+
 import com.google.common.collect.ImmutableMap;
 
 /**
  * <pre>
  * Test
- * - user Test (JUnit)
+ * - user Test (JUnit + FluentLenium)
  *      |
  *      v
  * - UI Connector (Selenium)
@@ -28,29 +37,22 @@ import com.google.common.collect.ImmutableMap;
  * - browser (PhantomJS / HtmlUnit / FireFox)
  * 
  * </pre>
- *
+ * 
  */
-public class WebUITest {
+public class WebUITest extends FluentTest {
 
-	private static EmbeddedServer server;
-	private static WebDriver driver;
-	private static String baseUrl;
+	static EmbeddedServer server;
+	static WebDriver driver;
+	static String baseUrl;
 
+	// SELENIUM INIT **************
+	
 	@BeforeClass
 	public static void startServer() throws ServletException {
-		
-		// INIT WEB SERVER (TOMCAT)
-		server = new EmbeddedServer(8080, "/20150118-test-selenium");
-		server.start();
 
-		// INIT WEB BROWSER (SELENIUM + PHANTOMJS)
-		driver = new PhantomJSDriver(
-		new DesiredCapabilities(ImmutableMap.of( //
-				PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, //
-				new PhantomJsDownloader().downloadAndExtract()
-						.getAbsolutePath())));
-		baseUrl = "http://localhost:8080/20150118-test-selenium";
-		driver.manage().timeouts().implicitlyWait(5, SECONDS);
+		// INIT WEB SERVER (TOMCAT)
+		server = new EmbeddedServer(8080, "/20150225-test-fluentlenium");
+		server.start();
 	}
 
 	@AfterClass
@@ -58,63 +60,74 @@ public class WebUITest {
 		server.stop();
 		driver.quit();
 	}
+	
+	// FLUENTLENIUM INIT **********
 
+	// Override of this method to change the driver
+	@Override
+	public WebDriver getDefaultDriver() {
+		
+		// INIT WEB BROWSER (SELENIUM + PHANTOMJS)
+		driver = new PhantomJSDriver(new DesiredCapabilities(ImmutableMap.of( //
+				PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, //
+				new PhantomJsDownloader().downloadAndExtract()
+						.getAbsolutePath())));
+		baseUrl = "http://localhost:8080/20150225-test-fluentlenium";
+		driver.manage().timeouts().implicitlyWait(5, SECONDS);
+		
+		return driver;
+	}
+
+	@Page
+	MainPage mainPage;
+	
+	@Page
+	MainPage1 page1;
+
+	// TESTS **********************
+	
 	@Test
 	public void test_QUAND_acces_site_ETANT_DONNE_main_page_ALORS_afficher_main_page() {
 
 		// QUAND
-		driver.get(baseUrl);
+		goTo(baseUrl);
 
 		// ALORS
-		assertTrue(driver.findElement(By.cssSelector(".container .title"))
-				.isDisplayed());
-		assertTrue(driver.findElement(By.cssSelector(".container .title"))
-				.getText().contains("Main page"));
-		assertTrue(driver.findElement(
-				By.cssSelector(".container li:nth-child(1) .goto.btn"))
-				.isDisplayed());
-		assertTrue(driver.findElement(
-				By.cssSelector(".container li:nth-child(2) .goto.btn"))
-				.isDisplayed());
+		assertThat(mainPage).isAt();
+
+		assertThat(mainPage.title).isDisplayed().hasText("Main page");
+		assertThat(mainPage.goToPage1Btn).isDisplayed();
+		assertThat(mainPage.goToPage2Btn).isDisplayed();
 	}
 
 	@Test
 	public void test_QUAND_navigue_vers_page_1_ETANT_DONNE_main_page_ALORS_afficher_page_1() {
 
 		// ETANT DONNE
-		driver.get(baseUrl);
-		assertTrue(driver.findElement(By.cssSelector(".container .title"))
-				.getText().contains("Main page"));
+		goTo(mainPage);
+		assertThat(mainPage).isAt();
 
 		// QUAND
-		driver.findElement(
-				By.cssSelector(".container li:nth-child(1) .goto.btn")).click();
+		mainPage.goToPage1Btn.click();
 
 		// ALORS
-		assertTrue(driver.getCurrentUrl().contains("page1"));
-
-		assertTrue(driver.findElement(By.cssSelector(".container .title"))
-				.isDisplayed());
-		assertTrue(driver.findElement(By.cssSelector(".container .title"))
-				.getText().contains("Page 1"));
+		assertThat(page1).isAt();
+		assertThat(page1.title).isDisplayed().hasText("Page 1");
+		assertThat(page1.backBtn).isDisplayed().hasText("Return");
 	}
 
 	@Test
 	public void test_QUAND_navigue_vers_page_2_ETANT_DONNE_page_2_cassee_ALORS_erreur_404() {
 
 		// ETANT DONNE
-		driver.get(baseUrl);
-		assertTrue(driver.findElement(By.cssSelector(".container .title"))
-				.getText().contains("Main page"));
+		goTo(mainPage);
+		assertThat(mainPage).isAt();
 
 		// QUAND
-		driver.findElement(
-				By.cssSelector(".container li:nth-child(2) .goto.btn")).click();
+		mainPage.goToPage2Btn.click();
 
 		// ALORS
-		assertTrue(driver.getCurrentUrl().contains("page2"));
-		assertTrue(driver.findElement(By.cssSelector("body"))
-				.getText().contains("404"));
+		Assertions.assertThat(find("body").getText()).contains("404");
 	}
 
 }
