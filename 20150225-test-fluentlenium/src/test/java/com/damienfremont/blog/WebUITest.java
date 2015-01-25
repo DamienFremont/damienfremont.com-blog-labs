@@ -1,9 +1,7 @@
 package com.damienfremont.blog;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
-import static org.junit.Assert.assertTrue;
-
-import java.math.BigDecimal;
+import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
 
 import javax.servlet.ServletException;
 
@@ -13,15 +11,10 @@ import org.fluentlenium.core.annotation.Page;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import static org.fluentlenium.core.filter.FilterConstructor.*;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -46,7 +39,7 @@ public class WebUITest extends FluentTest {
 	static String baseUrl;
 
 	// SELENIUM INIT **************
-	
+
 	@BeforeClass
 	public static void startServer() throws ServletException {
 
@@ -60,13 +53,13 @@ public class WebUITest extends FluentTest {
 		server.stop();
 		driver.quit();
 	}
-	
+
 	// FLUENTLENIUM INIT **********
 
 	// Override of this method to change the driver
 	@Override
 	public WebDriver getDefaultDriver() {
-		
+
 		// INIT WEB BROWSER (SELENIUM + PHANTOMJS)
 		driver = new PhantomJSDriver(new DesiredCapabilities(ImmutableMap.of( //
 				PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, //
@@ -74,18 +67,18 @@ public class WebUITest extends FluentTest {
 						.getAbsolutePath())));
 		baseUrl = "http://localhost:8080/20150225-test-fluentlenium";
 		driver.manage().timeouts().implicitlyWait(5, SECONDS);
-		
+
 		return driver;
 	}
 
 	@Page
 	MainPage mainPage;
-	
+
 	@Page
 	MainPage1 page1;
 
 	// TESTS **********************
-	
+
 	@Test
 	public void test_QUAND_acces_site_ETANT_DONNE_main_page_ALORS_afficher_main_page() {
 
