@@ -6,21 +6,15 @@ Feature: Entrepôt de données 'Personne'
     When Je crée une Personne
     Then J'obtiens l'ID de la Personne créée et l'entrepôt contient plus de N Personnes
 
-  # EXEMPLE AVEC DATA TABLES
+  # EXEMPLE SIMPLE
   Scenario: Suppression
-    Given L'entrepôt contient les Personnes suivantes
-      | id | prenom | nom       | naissance |
-      | 1  | Anakin | Skywalker | 41.9 BBY  |
+    Given L'entrepôt contient la Personnes Anakin Skywalker
     When Je supprime la Personne 1
-    Then L'entrepôt contient N-X Personnes
+    Then L'entrepôt contient moins de N Personnes
 
   # EXEMPLE AVEC SUBSTITUTION (SCENARIO OUTLINES + EXAMPLES)
   Scenario Outline: Lecture
-    Given L'entrepôt contient les Personnes suivantes
-      | id | prenom | nom         | naissance |
-      | 1  | Anakin | Skywalker   | 41.9 BBY  |
-      | 2  | Luke   | Skywalker   | 19 BBY    |
-      | 3  | Leia   | Organa Solo | 19 BBY    |
+    Given L'entrepôt contient N Personnes
     When Je recupère la Personne <id>
     Then J'obtiens la Personne d'identifiant <id> contenant les données <prenom>, <nom>, <naissance>
 
@@ -30,7 +24,7 @@ Feature: Entrepôt de données 'Personne'
       | 2  | Luke   | Skywalker   | 19 BBY    |
       | 3  | Leia   | Organa Solo | 19 BBY    |
 
-  # EXEMPLE AVEC SUBSTITUTION (SCENARIO OUTLINES + EXAMPLES)
+  # EXEMPLE AVEC DATA TABLES
   Scenario Outline: Modification
     Given L'entrepôt contient les Personnes suivantes
       | id | prenom | nom         | naissance |

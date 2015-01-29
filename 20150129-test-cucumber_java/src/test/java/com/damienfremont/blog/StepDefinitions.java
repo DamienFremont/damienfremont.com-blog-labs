@@ -14,39 +14,22 @@ import cucumber.api.java.en.When;
 public class StepDefinitions {
 
 	// CE QUI EST A TESTER
-	
+
 	private PersonRepository personRepositoryToTest = new PersonRepository();
 
 	// DONNEES COMMUNES ENTRE STEPS
-	
+
 	private long givenPersonSize;
 	private PersonModel whenPersonId;
 	private PersonModel whenPerson;
+
+	// # EXEMPLE SIMPLE
 
 	@Given("^L'entrepôt contient N Personnes$")
 	public void l_entrepôt_contient_N_Personnes() throws Throwable {
 		// L'entrepôt contient N Personnes
 		givenPersonSize = personRepositoryToTest.count();
 		assertThat(givenPersonSize).isPositive();
-	}
-	
-	@When("^Je recupère la Personne (\\d+)$")
-	public void je_recupère_la_Personne(int arg1) throws Throwable {
-		// Je recupère la Personne
-		whenPerson = personRepositoryToTest.read(arg1);
-	}
-
-	@Then("^J'obtiens la Personne d'identifiant (\\d+) contenant les données (.*), (.*), (.*)$")
-	public void j_obtiens_la_Personne_d_identifiant_contenant_les_données(
-			int arg1, String prenom, String nom, String naissance)
-			throws Throwable {
-		// J'obtiens la Personne d'identifiant
-		assertThat(whenPerson).isNotNull();
-		assertThat(whenPerson.getId()).isEqualTo(arg1);
-		// avec les données
-		assertThat(whenPerson.getPrenom()).isEqualTo(prenom);
-		assertThat(whenPerson.getNom()).isEqualTo(nom);
-		assertThat(whenPerson.getNaissance()).isEqualTo(naissance);
 	}
 
 	@When("^Je crée une Personne$")
@@ -66,6 +49,52 @@ public class StepDefinitions {
 		assertThat(thenPersonCount).isGreaterThan(givenPersonSize);
 	}
 
+	// # EXEMPLE SIMPLE
+
+	@Given("^L'entrepôt contient la Personnes Anakin Skywalker$")
+	public void l_entrepôt_contient_la_Personnes_Anakin_Skywalker()
+			throws Throwable {
+		givenPersonSize = personRepositoryToTest.count();
+		// L'entrepôt contient la Personnes Anakin Skywalker
+		PersonModel p = personRepositoryToTest.read(1);
+		assertThat(p.getPrenom()).isEqualTo("Anakin");
+	}
+
+	@When("^Je supprime la Personne (\\d+)$")
+	public void je_supprime_la_Personne(int arg1) throws Throwable {
+		// Je supprime la Personne
+		personRepositoryToTest.delete(arg1);
+	}
+
+	@Then("^L'entrepôt contient moins de N Personnes$")
+	public void l_entrepôt_contient_moins_de_N_Personnes() throws Throwable {
+		// L'entrepôt contient N-X Personnes
+		assertThat(personRepositoryToTest.count()).isLessThan(givenPersonSize);
+	}
+
+	// # EXEMPLE AVEC SUBSTITUTION (SCENARIO OUTLINES + EXAMPLES)
+
+	@When("^Je recupère la Personne (\\d+)$")
+	public void je_recupère_la_Personne(int arg1) throws Throwable {
+		// Je recupère la Personne
+		whenPerson = personRepositoryToTest.read(arg1);
+	}
+
+	@Then("^J'obtiens la Personne d'identifiant (\\d+) contenant les données (.*), (.*), (.*)$")
+	public void j_obtiens_la_Personne_d_identifiant_contenant_les_données(
+			int arg1, String prenom, String nom, String naissance)
+			throws Throwable {
+		// J'obtiens la Personne d'identifiant
+		assertThat(whenPerson).isNotNull();
+		assertThat(whenPerson.getId()).isEqualTo(arg1);
+		// avec les données
+		assertThat(whenPerson.getPrenom()).isEqualTo(prenom);
+		assertThat(whenPerson.getNom()).isEqualTo(nom);
+		assertThat(whenPerson.getNaissance()).isEqualTo(naissance);
+	}
+
+	// # EXEMPLE AVEC DATA TABLES
+	
 	@Given("^L'entrepôt contient les Personnes suivantes$")
 	public void l_entrepôt_contient_les_Personnes_suivantes(DataTable expected)
 			throws Throwable {
@@ -84,18 +113,6 @@ public class StepDefinitions {
 				}
 			});
 		}
-	}
-
-	@When("^Je supprime la Personne (\\d+)$")
-	public void je_supprime_la_Personne(int arg1) throws Throwable {
-		// Je supprime la Personne
-		personRepositoryToTest.delete(arg1);
-	}
-
-	@Then("^L'entrepôt contient moins de N Personnes$")
-	public void l_entrepôt_contient_moins_de_N_Personnes() throws Throwable {
-		// L'entrepôt contient N-X Personnes
-		assertThat(personRepositoryToTest.count()).isLessThan(givenPersonSize);
 	}
 
 	@When("^Je modifie la Personne (\\d+) avec (.*)$")
