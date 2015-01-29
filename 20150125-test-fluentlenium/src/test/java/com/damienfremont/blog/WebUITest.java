@@ -44,7 +44,7 @@ public class WebUITest extends FluentTest {
 	public static void startServer() throws ServletException {
 
 		// INIT WEB SERVER (TOMCAT)
-		server = new EmbeddedServer(8080, "/20150225-test-fluentlenium");
+		server = new EmbeddedServer(8080, "/20150125-test-fluentlenium");
 		server.start();
 	}
 
@@ -65,7 +65,7 @@ public class WebUITest extends FluentTest {
 				PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, //
 				new PhantomJsDownloader().downloadAndExtract()
 						.getAbsolutePath())));
-		baseUrl = "http://localhost:8080/20150225-test-fluentlenium";
+		baseUrl = "http://localhost:8080/20150125-test-fluentlenium";
 		driver.manage().timeouts().implicitlyWait(5, SECONDS);
 
 		return driver;

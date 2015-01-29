@@ -12,7 +12,7 @@ public class MainPage extends FluentPage {
 	
 	@Override
 	public String getUrl() {
-		return "http://localhost:8080/20150225-test-fluentlenium/";
+		return "http://localhost:8080/20150125-test-fluentlenium/";
 	}
 
 	@Override
