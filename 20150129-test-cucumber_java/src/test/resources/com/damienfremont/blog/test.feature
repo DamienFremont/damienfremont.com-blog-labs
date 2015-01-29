@@ -1,15 +1,12 @@
 Feature: Entrepôt de données 'Personne'
 
-  Scenario: Compter
-    Given L'entrepôt contient N Personnes
-    When Je compte le nombre de Personnes
-    Then J'obtiens le nombre N <nombre> Personnes
-
+  # EXEMPLE SIMPLE
   Scenario: Création
     Given L'entrepôt contient N Personnes
     When Je crée une Personne
-    Then J'obtiens l'ID de la Personne créée et l'entrepôt contient N+X Personnes
+    Then J'obtiens l'ID de la Personne créée et l'entrepôt contient plus de N Personnes
 
+  # EXEMPLE AVEC DATA TABLES
   Scenario: Suppression
     Given L'entrepôt contient les Personnes suivantes
       | id | prenom | nom       | naissance |
@@ -17,6 +14,7 @@ Feature: Entrepôt de données 'Personne'
     When Je supprime la Personne 1
     Then L'entrepôt contient N-X Personnes
 
+  # EXEMPLE AVEC SUBSTITUTION (SCENARIO OUTLINES + EXAMPLES)
   Scenario Outline: Lecture
     Given L'entrepôt contient les Personnes suivantes
       | id | prenom | nom         | naissance |
@@ -32,6 +30,7 @@ Feature: Entrepôt de données 'Personne'
       | 2  | Luke   | Skywalker   | 19 BBY    |
       | 3  | Leia   | Organa Solo | 19 BBY    |
 
+  # EXEMPLE AVEC SUBSTITUTION (SCENARIO OUTLINES + EXAMPLES)
   Scenario Outline: Modification
     Given L'entrepôt contient les Personnes suivantes
       | id | prenom | nom         | naissance |

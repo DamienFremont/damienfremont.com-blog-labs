@@ -20,7 +20,6 @@ public class StepDefinitions {
 	// DONNEES COMMUNES ENTRE STEPS
 	
 	private long givenPersonSize;
-	private long whenPersonCount;
 	private PersonModel whenPersonId;
 	private PersonModel whenPerson;
 
@@ -30,19 +29,7 @@ public class StepDefinitions {
 		givenPersonSize = personRepositoryToTest.count();
 		assertThat(givenPersonSize).isPositive();
 	}
-
-	@When("^Je compte le nombre de Personnes$")
-	public void je_compte_le_nombre_de_Personnes() throws Throwable {
-		// Je compte le nombre de Personnes
-		whenPersonCount = personRepositoryToTest.count();
-	}
-
-	@Then("^J'obtiens le nombre N <nombre> Personnes$")
-	public void j_obtiens_le_nombre_N_nombre_Personnes() throws Throwable {
-		// J'obtiens le nombre N <nombre> Personnes
-		assertThat(whenPersonCount).isEqualTo(givenPersonSize);
-	}
-
+	
 	@When("^Je recupère la Personne (\\d+)$")
 	public void je_recupère_la_Personne(int arg1) throws Throwable {
 		// Je recupère la Personne
@@ -69,8 +56,8 @@ public class StepDefinitions {
 		whenPersonId = personRepositoryToTest.create(person);
 	}
 
-	@Then("^J'obtiens l'ID de la Personne créée et l'entrepôt contient N\\+X Personnes$")
-	public void j_obtiens_l_ID_de_la_Personne_créée_et_l_entrepôt_contient_N_X_Personnes()
+	@Then("^J'obtiens l'ID de la Personne créée et l'entrepôt contient plus de N Personnes$")
+	public void j_obtiens_l_ID_de_la_Personne_créée_et_l_entrepôt_contient_plus_de_N_Personnes()
 			throws Throwable {
 		// J'obtiens l'ID de la Personne créée
 		assertThat(whenPersonId).isNotNull();
@@ -105,8 +92,8 @@ public class StepDefinitions {
 		personRepositoryToTest.delete(arg1);
 	}
 
-	@Then("^L'entrepôt contient N-X Personnes$")
-	public void l_entrepôt_contient_N_X_Personnes() throws Throwable {
+	@Then("^L'entrepôt contient moins de N Personnes$")
+	public void l_entrepôt_contient_moins_de_N_Personnes() throws Throwable {
 		// L'entrepôt contient N-X Personnes
 		assertThat(personRepositoryToTest.count()).isLessThan(givenPersonSize);
 	}
