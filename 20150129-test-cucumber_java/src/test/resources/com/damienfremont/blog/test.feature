@@ -6,7 +6,7 @@ Feature: Entrepôt de données 'Personne'
     When Je crée une Personne
     Then J'obtiens l'ID de la Personne créée et l'entrepôt contient plus de N Personnes
 
-  # EXEMPLE SIMPLE
+  # EXEMPLE SPECIFIQUE
   Scenario: Suppression
     Given L'entrepôt contient la Personnes Anakin Skywalker
     When Je supprime la Personne 1

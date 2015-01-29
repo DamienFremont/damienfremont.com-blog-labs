@@ -49,7 +49,7 @@ public class StepDefinitions {
 		assertThat(thenPersonCount).isGreaterThan(givenPersonSize);
 	}
 
-	// # EXEMPLE SIMPLE
+	// # EXEMPLE SPECIFIQUE
 
 	@Given("^L'entrepôt contient la Personnes Anakin Skywalker$")
 	public void l_entrepôt_contient_la_Personnes_Anakin_Skywalker()
@@ -94,7 +94,7 @@ public class StepDefinitions {
 	}
 
 	// # EXEMPLE AVEC DATA TABLES
-	
+
 	@Given("^L'entrepôt contient les Personnes suivantes$")
 	public void l_entrepôt_contient_les_Personnes_suivantes(DataTable expected)
 			throws Throwable {
