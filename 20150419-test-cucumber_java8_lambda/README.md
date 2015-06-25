@@ -1,3 +1,3 @@
-See the full tutorial here :
+See the full tutorial at :
 
 http://damienfremont.com/2015/04/19/tests-bdd-cucumber-simplifies-avec-les-lambdas-java8/
