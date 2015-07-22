@@ -7,6 +7,6 @@
 		<artifactId>20150722-test-cucumber_scenario_reuse</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>coree</artifactId>
+	<artifactId>person-core</artifactId>
 	<packaging>jar</packaging>
 </project>

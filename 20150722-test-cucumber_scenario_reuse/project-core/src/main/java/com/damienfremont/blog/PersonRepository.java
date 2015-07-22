@@ -4,47 +4,33 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
-public class PersonRepository {
+class PersonRepository {
 
-	/* DATAS */
+	static Map<String, PersonModel> datas = new HashMap<>();
 
-	private static Map<Integer, PersonModel> datas = null;
-
-	public PersonRepository() {
-		datas = new HashMap<>();
-		datas.put(1, new PersonModel(1, "Anakin", "Skywalker", "41.9 BBY"));
-		datas.put(2, new PersonModel(2, "Luke", "Skywalker", "19 BBY"));
-		datas.put(3, new PersonModel(3, "Leia", "Organa Solo", "19 BBY"));
-	}
-
-	public long count() {
+	long count() {
 		return datas.size();
 	}
 
-	/* CRUD METHODS */
-
-	public PersonModel create(PersonModel entity) {
-		int randomNum = new Random().nextInt();
-		entity.setId(randomNum);
-		datas.put(entity.getId(), entity);
+	PersonModel create(PersonModel entity) {
+		datas.put(entity.name, entity);
 		return entity;
 	}
 
-	public PersonModel read(Integer id) {
-		return datas.get(id);
+	PersonModel read(String name) {
+		return datas.get(name);
 	}
 
-	public List<PersonModel> readAll() {
+	List<PersonModel> readAll() {
 		return new ArrayList<PersonModel>(datas.values());
 	}
 
-	public PersonModel update(PersonModel entity) {
-		return datas.put(entity.getId(), entity);
+	PersonModel update(PersonModel entity) {
+		return datas.put(entity.name, entity);
 	}
 
-	public void delete(Integer id) {
+	void delete(Long id) {
 		datas.remove(id);
 	}
 
