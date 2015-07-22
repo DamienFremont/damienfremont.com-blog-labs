@@ -9,6 +9,4 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(strict = true, features = "../features")
 public class RunBDDTest {
 
-	static PersonRepository INSTANCE = new PersonRepository();
-
 }

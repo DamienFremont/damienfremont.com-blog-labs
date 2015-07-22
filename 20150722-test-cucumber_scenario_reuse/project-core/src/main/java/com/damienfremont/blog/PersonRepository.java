@@ -18,8 +18,8 @@ class PersonRepository {
 		return entity;
 	}
 
-	PersonModel read(String name) {
-		return datas.get(name);
+	PersonModel read(String id) {
+		return datas.get(id);
 	}
 
 	List<PersonModel> readAll() {
@@ -30,7 +30,7 @@ class PersonRepository {
 		return datas.put(entity.name, entity);
 	}
 
-	void delete(Long id) {
+	void delete(String id) {
 		datas.remove(id);
 	}
 
