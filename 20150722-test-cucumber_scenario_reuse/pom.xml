@@ -5,7 +5,7 @@
 	<groupId>com.damienfremont.blog</groupId>
 	<artifactId>20150722-test-cucumber_scenario_reuse</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<dependencies>
 
 		<dependency>
