@@ -8,8 +8,15 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>project-core</module>
+		<module>project-service</module>
+		<module>project-webapp</module>
 	</modules>
 	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
