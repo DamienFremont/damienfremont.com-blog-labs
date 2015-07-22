@@ -6,8 +6,10 @@
 	<artifactId>20150722-test-cucumber_scenario_reuse</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<modules>
+		<module>project-core</module>
+	</modules>
 	<dependencies>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -20,7 +22,6 @@
 			<version>3.1.0</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
@@ -33,7 +34,6 @@
 			<version>1.2.3</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 	<build>
 		<plugins>
