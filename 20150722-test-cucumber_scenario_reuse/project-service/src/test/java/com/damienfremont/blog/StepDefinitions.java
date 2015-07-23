@@ -20,7 +20,7 @@ public class StepDefinitions implements En {
 					.statusCode(200)
 					.body("results", hasSize(0))
 				.when()
-					.get("/server/api/person/all"));
+					.get("/server/api/person"));
 
 		When("I create a new Person named '(.*)' with the system", 
 			(String name) -> 
@@ -38,7 +38,7 @@ public class StepDefinitions implements En {
 					.statusCode(200)
 					.body("name", hasItems(name))
 				.when()
-					.get("/server/api/person/all"));
+					.get("/server/api/person"));
 		
 		Before(
 			()-> {
@@ -49,5 +49,10 @@ public class StepDefinitions implements En {
 					throw Throwables.propagate(e);
 				}
 		});
+		
+		After(
+			()-> {
+				SYSTEM.stop();
+			});
 	}
 }

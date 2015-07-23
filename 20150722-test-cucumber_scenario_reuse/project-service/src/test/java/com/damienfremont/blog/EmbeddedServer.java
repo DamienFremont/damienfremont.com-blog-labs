@@ -20,7 +20,7 @@ public class EmbeddedServer implements Runnable {
 		tomcat.setPort(port);
 		tomcat.setBaseDir("target/tomcat");
 		tomcat.addWebapp(contextPath,
-				new File("src/main/webapp").getAbsolutePath());
+				new File("src/test/webapp").getAbsolutePath());
 		serverThread = new Thread(this);
 
 	}

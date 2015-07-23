@@ -12,12 +12,17 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/person")
-@Consumes(MediaType.TEXT_PLAIN)
+@Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON})
 @Produces(MediaType.APPLICATION_JSON)
 public class PersonService {
 
-	private PersonRepository dao = new PersonRepository();
-
+	private static PersonRepository dao = new PersonRepository();
+	
+	@GET
+	public List<PersonModel> readPersons() {
+		return dao.readAll();
+	}
+	
 	/* CRUD METHODS */
 
 	@POST
@@ -26,25 +31,19 @@ public class PersonService {
 	}
 
 	@GET
-	@Path("/id/{id}")
+	@Path("/{id}")
 	public PersonModel readPerson(@PathParam("id") String id) {
 		return dao.read(id);
 	}
-
-	@GET
-	@Path("/all")
-	public List<PersonModel> readPersons() {
-		return dao.readAll();
-	}
 	
 	@POST
-	@Path("/id/{id}")
+	@Path("/{id}")
 	public void updatePerson(@PathParam("id") String id, PersonModel person) {
 		dao.update(person);
 	}
 
 	@DELETE
-	@Path("/id/{id}")
+	@Path("/{id}")
 	public void deletePerson(@PathParam("id") String id) {
 		dao.delete(id);
 	}
