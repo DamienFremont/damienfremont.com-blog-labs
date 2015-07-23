@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="personApp">
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-resource.min.js"></script>
+<script src="app.js"></script>
+<script src="service.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+	<div class="span4">
+		<div class="tabs-spacer"></div>
+		<div ng-controller="PersonListController as personList" class="">
+			<h2>Person</h2>
+			<span id="message">{{personList.items.length}} items</span>
+			<ul id="items" class="unstyled">
+				<li ng-repeat="item in personList.items" class="well"><span>{{item.name}}</span>
+				</li>
+			</ul>
+			<form ng-submit="personList.add()">
+				<input id="newItem" type="text" ng-model="personList.name" size="30"
+					placeholder="add new person here">
+				<input id="newButton"
+					class="btn-primary" type="submit" value="add">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
