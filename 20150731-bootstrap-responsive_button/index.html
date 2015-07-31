@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+/* Small devices (tablets, 768px and up) */
+@media ( max-width : 768px ) {
+  .btn-xs-text.btn-default:not(span) {
+    font-size: 0pt !important;
+  }
+  .btn-xs-text.btn-default.btn-lg .glyphicon {
+    font-size: 18pt !important;
+  }
+  .btn-xs-text.btn-default .glyphicon {
+    font-size: 14pt !important;
+  }
+  .btn-xs-text.btn-default.btn-sm .glyphicon {
+    font-size: 12pt !important;
+  }
+  .btn-xs-text.btn-default.btn-xs .glyphicon {
+    font-size: 12pt !important;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media ( max-width : 992px ) {
+  .btn-md-text.btn-default:not(span) {
+    font-size: 0pt !important;
+  }
+  .btn-md-text.btn-default.btn-lg .glyphicon {
+    font-size: 18pt !important;
+  }
+  .btn-md-text.btn-default .glyphicon {
+    font-size: 14pt !important;
+  }
+  .btn-md-text.btn-default.btn-sm .glyphicon {
+    font-size: 12pt !important;
+  }
+  .btn-md-text.btn-default.btn-xs .glyphicon {
+    font-size: 12pt !important;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media ( max-width : 1200px ) {
+  .btn-lg-text.btn-default:not(span) {
+    font-size: 0pt !important;
+  }
+  .btn-lg-text.btn-default.btn-lg .glyphicon {
+    font-size: 18pt !important;
+  }
+  .btn-lg-text.btn-default .glyphicon {
+    font-size: 14pt !important;
+  }
+  .btn-lg-text.btn-default.btn-sm .glyphicon {
+    font-size: 12pt !important;
+  }
+  .btn-lg-text.btn-default.btn-xs .glyphicon {
+    font-size: 12pt !important;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+  
+    <h1>Default Buttons</h1>
+
+    <div class="btn-toolbar" role="toolbar">
+      <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Large
+      </button>
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Default
+      </button>
+      <button type="button" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Medium
+      </button>
+      <button type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Small
+      </button>
+    </div>
+
+    <h1>Responsive Buttons</h1>
+
+    <h2>Large Only</h2>
+
+    <div class="btn-toolbar" role="toolbar">
+      <button type="button" class="btn btn-default btn-lg btn-lg-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Large
+      </button>
+      <button type="button" class="btn btn-default        btn-lg-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Default
+      </button>
+      <button type="button" class="btn btn-default btn-sm btn-lg-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Medium
+      </button>
+      <button type="button" class="btn btn-default btn-xs btn-lg-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Small
+      </button>
+    </div>
+
+    <h2>Medium</h2>
+
+    <div class="btn-toolbar" role="toolbar">
+      <button type="button" class="btn btn-default btn-lg btn-md-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Large
+      </button>
+      <button type="button" class="btn btn-default        btn-md-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Default
+      </button>
+      <button type="button" class="btn btn-default btn-sm btn-md-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Medium
+      </button>
+      <button type="button" class="btn btn-default btn-xs btn-md-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Small
+      </button>
+    </div>
+
+    <h2>Small</h2>
+
+    <div class="btn-toolbar" role="toolbar">
+      <button type="button" class="btn btn-default btn-lg btn-xs-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Large
+      </button>
+      <button type="button" class="btn btn-default        btn-xs-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Default
+      </button>
+      <button type="button" class="btn btn-default btn-sm btn-xs-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Medium
+      </button>
+      <button type="button" class="btn btn-default btn-xs btn-xs-text">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Small
+      </button>
+    </div>
+
+  </div>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
