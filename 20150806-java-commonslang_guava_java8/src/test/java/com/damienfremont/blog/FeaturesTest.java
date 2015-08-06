@@ -27,7 +27,7 @@ public class FeaturesTest {
 	public static Iterable<Object[]> data() {
 		return asList(new Object[][] { //
 		//
-				{ new Java4aVanillaImpl() }, //
+				{ new Java4AVanillaImpl() }, //
 				{ new Java4CommonsLangImpl() }, //
 				{ new Java6CommonsLangImpl() }, //
 				{ new Java6GuavaImpl() }, //
