@@ -1,11 +1,18 @@
 package com.damienfremont.blog;
 
+import java.util.List;
+
 public interface Features {
-	void check(String argument);
 
-	String[] transform(String[] input);
+	boolean condition(String arg);
+	void check(String arg);
 
-	String[] filter(String[] input, String filterValue);
+	List<String> filter(List<String> input);
+	List<String> map(List<String> input);
 
-	void errorHandling();
+	void errorHandling(Exception e);
+
+	String loadFile(String path) throws Exception;
+	String loadResource(String name) throws Exception;
+
 }
