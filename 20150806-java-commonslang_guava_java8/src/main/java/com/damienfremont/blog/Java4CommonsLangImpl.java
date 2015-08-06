@@ -9,7 +9,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
 // STABLE: COMMONS-LANG
-public class Java4CommonsLangImpl implements Features {
+public class Java4CommonsLangImpl implements IJavaUseCases {
 
 	public boolean condition(String arg) {
 		return StringUtils.isNotBlank(arg);

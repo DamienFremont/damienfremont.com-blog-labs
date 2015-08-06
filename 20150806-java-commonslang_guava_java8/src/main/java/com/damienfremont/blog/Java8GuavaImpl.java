@@ -13,7 +13,7 @@ import com.google.common.base.Throwables;
 
 // STABLE: GUAVA UTILS, JAVA 8 UTILS
 // FAST: JAVA 8 IMPL
-public class Java8GuavaImpl implements Features {
+public class Java8GuavaImpl implements IJavaUseCases {
 
 	public boolean condition(String arg) {
 		return !Strings.nullToEmpty(arg).trim().isEmpty();

@@ -19,7 +19,7 @@ import com.google.common.io.Resources;
 
 // STABLE: GUAVA UTILS
 // FAST: GUAVA IMPL
-public class Java6GuavaImpl implements Features {
+public class Java6GuavaImpl implements IJavaUseCases {
 
 	public boolean condition(String arg) {
 		return !Strings.nullToEmpty(arg).trim().isEmpty();

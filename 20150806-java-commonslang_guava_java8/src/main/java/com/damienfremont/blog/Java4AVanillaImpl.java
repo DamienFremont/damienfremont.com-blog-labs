@@ -8,8 +8,8 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-// UNSTABLE: UNTYPED COLLECTIONS, BOILERPLATES
-public class Java4AVanillaImpl implements Features {
+// UNSTABLE: UNSAFE COLLECTIONS, BOILERPLATES
+public class Java4AVanillaImpl implements IJavaUseCases {
 
 	public boolean condition(String arg) {
 		return arg != null && arg.trim().length() > 0;
