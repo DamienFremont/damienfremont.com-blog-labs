@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // UNSTABLE: UNTYPED COLLECTIONS, BOILERPLATES
-public class Java4aVanillaImpl implements Features {
+public class Java4AVanillaImpl implements Features {
 
 	public boolean condition(String arg) {
 		return arg != null && arg.trim().length() > 0;
