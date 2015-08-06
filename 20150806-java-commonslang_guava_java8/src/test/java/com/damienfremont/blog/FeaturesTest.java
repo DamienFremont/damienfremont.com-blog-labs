@@ -61,12 +61,9 @@ public class FeaturesTest {
 
 	@Test
 	public void test_Transform() {
-		// ARRANGE
 		List<String> args = asList(new String[] { "a", "b", "c" });
 		List<String> expected = asList(new String[] { "A", "B", "C" });
-		// ACT
 		List<String> result = classToTest.map(args);
-		// ASSERT
 		assertNotNull(result);
 		assertEquals(expected.size(), result.size());
 		for (int i = 0; i < result.size(); i++) {
@@ -76,12 +73,9 @@ public class FeaturesTest {
 
 	@Test
 	public void test_Filter() {
-		// ARRANGE
 		List<String> args = asList(new String[] { "a", "", "c" });
 		List<String> expected = asList(new String[] { "a", "c" });
-		// ACT
 		List<String> result = classToTest.filter(args);
-		// ASSERT
 		assertNotNull(result);
 		assertEquals(expected.size(), result.size());
 		for (int i = 0; i < result.size(); i++) {
