@@ -13,8 +13,8 @@ import cucumber.api.java8.En;
 import cucumber.api.junit.Cucumber;
 
 // It's modular code and functions reuse is possible. But it's not very productive because of the duplicate annotation/function syntax.
-@RunWith(Cucumber.class)
-@CucumberOptions(strict = true, features = "features")
+//@RunWith(Cucumber.class)
+//@CucumberOptions(strict = true, features = "features")
 public class C_CucumberJava6Test implements En {
 
 	ClassToTest classToTest;
