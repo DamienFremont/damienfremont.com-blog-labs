@@ -2,9 +2,9 @@ package com.damienfremont.blog;
 
 import static org.assertj.core.api.StrictAssertions.assertThat;
 
+import org.junit.Before;
 import org.junit.Test;
 
-import cucumber.api.java.Before;
 
 // It's stable and behaviour-oriented code. But functions reuse is not possible, and Javadoc is not an open collaboration format for other people like Product-Owner.
 /**

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20150807-test-cucumber_java_from_junit</artifactId>
+	<artifactId>20150807-test-cucumber_migrating_from_junit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<dependencies>
