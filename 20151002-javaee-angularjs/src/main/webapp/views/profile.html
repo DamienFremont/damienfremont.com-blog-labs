@@ -1,0 +1,119 @@
+<style type="text/css">
+body .shadowed {
+  background: url("img/bg-page-pneu.png") no-repeat scroll 0 170px white;
+}
+</style>
+
+<div class="columns">
+
+  <div class="row">
+    <h3 id="dotdem-title">Demande d'intervention</h3>
+    <p ng-show="dotaDemande!=null">
+      <small>Emise le {{dotaDemande.creationDate}} {{dotaDemande.creationHeure}}</small>
+    </p>
+  </div>
+
+  <div ng-show="dotaDemande==null" id="dotdem-closed-panel">
+    <p class="panel alert">
+      <i class="icon-exclamation-sign"> </i><strong>Cette demande n'existe plus, elle a déjà été traitée. A
+        bientôt sur MySPEEDYFLEET.</strong>
+    </p>
+  </div>
+
+  <div ng-show="dotaDemande!=null" id="dotdem-open-panel">
+
+    <div class="panel row">
+      <p>
+        L'immatriculation <strong>{{immat}}</strong> appartenant au compte de regroupement <strong>{{compte.raisonSociale}}</strong>
+        (compte {{agence.code}}:{{agence.raisonSociale}}) a demandé une intervention pour un <strong>remplacement de
+          {{dotaDemande.demande.quantitePneuDemandee}} pneus</strong>.
+      </p>
+      <p ng-show="dotaDemande.demande.codeMotif1">Motif(s): {{dotaDemande.demande.codeMotif1}}
+        {{dotaDemande.demande.codeMotif2}} {{dotaDemande.demande.codeMotif3}} {{dotaDemande.demande.codeMotif4}}
+        {{dotaDemande.demande.codeMotif5}} {{dotaDemande.demande.codeMotif6}}</p>
+      <div ng-include src="dotationGauge"></div>
+    </div>
+
+    <div class="row">
+      <p>
+        <i class="icon-time"></i> Heure maximum de réponse {{dotaDemande.expirationDate}} <br /> <i
+          class="icon-warning-sign"></i> Une fois ce temps écoulé, la réponse 'Autoriser' sera automatiquement envoyée.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="large-offset-6 large-3 columns">
+        <button id="authoriserDotation" class="small button radius expand success" ng-click="doAuthoriser()">
+          <i class="icon-thumbs-up"></i> Authoriser
+        </button>
+      </div>
+      <div class="large-3 columns">
+        <button id="refuserDotation" class="small button radius expand alert" ng-click="doRefuser()">
+          <i class="icon-thumbs-down"></i> Refuser
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="dotationErrorModal" class="reveal-modal">
+  <a ng-click="doModalClose()" class="close-reveal-modal">&#215;</a>
+  <h2>Erreur</h2>
+  <div class="columns">
+    <div class="row">
+      <p>Veuillez recommencer ultérieurement.</p>
+    </div>
+    <div class="row">
+      <div class="large-offset-3 large-9 columns">
+        <button class="button radius secondary" ng-click="doModalClose()">
+          <i class="icon-arrow-left"></i> Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="augmenterDotationInfoModal" class="reveal-modal">
+  <a ng-click="doExit()" class="close-reveal-modal">&#215;</a>
+  <h2>Réponse envoyée</h2>
+  <div class="columns">
+    <div class="row">
+      <p>Savez-vous que pour être moins solicité vous pouvez paramétrer le quota de dotation ? (possible dans
+        le menu DOTATIONS de SPEEDYFLEET)</p>
+    </div>
+    <div class="row">
+      <div class="offset-3 large-9 columns">
+        <button class="button radius secondary" ng-click="doExit()">
+          <i class="icon-arrow-left"></i> Fermer
+        </button>
+        <button id="dotationAugmenterButton" class="button radius" ng-click="doGoDotation()">
+          <i class="icon-ok"></i> Augmenter Dotations
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="refuserModal" class="reveal-modal">
+  <a ng-click="doModalClose()" class="close-reveal-modal">&#215;</a>
+  <h2>Refus</h2>
+  <div class="columns">
+    <div class="row">
+      <label for="motifRefus">Motif</label>
+      <textarea id="motifRefus" ng-model="dotaDemande.status.motifStatus" type="text" required
+        placeholder="Veuillez saisir le motif de refus ici..."></textarea>
+    </div>
+    <div class="row">
+      <div class="offset-3 large-9 columns">
+        <button class="button radius secondary" ng-click="doModalClose()">
+          <i class="icon-arrow-left"></i> Annuler
+        </button>
+        <button class="button radius alert" ng-click="doRefuserConfirm()">
+          <i class="icon-ok"></i> Confirmer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

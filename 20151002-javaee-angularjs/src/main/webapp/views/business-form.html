@@ -1,0 +1,59 @@
+<style type="text/css">
+body .shadowed {
+  background: url("img/bg-page-meca.png") no-repeat scroll 0 170px white;
+}
+</style>
+<div class="row">
+  <div class="large-9 columns">
+    <h3 id="dashboardTitle">Mon tableau de bord</h3>
+  </div>
+  <div ng-include src="yearSelect"></div>
+</div>
+<div class="row">
+  <h4>Groupe</h4>
+</div>
+<div class="row">
+  <table ng-show="groupe" width="100%">
+    <thead>
+      <tr>
+        <th>&nbsp;&nbsp;&nbsp;</th>
+        <th><a href="" ng-click="predicateCompte = 'code'; reverse=!reverse"><i class="icon-sort"></i>Code</a></th>
+        <th><a href="" ng-click="predicateCompte = 'code'; reverse=!reverse"><i class="icon-sort"></i>Compte</a></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="comptes">
+      <tr ng-click="openGroupeDashboard(groupe.code)" class="clickable">
+        <td><i class="icon-building"></i></td>
+        <td>{{groupe.code}}</td>
+        <td>{{groupe.raisonSociale}}</td>
+        <td><i class="icon-chevron-right"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="row">
+  <h4>Compte<ng-pluralize count="comptes.length" when="{1:'', other:'s'}" /></h4>
+</div>
+<div class="row">
+  <p ng-show="comptes.length == 0">Aucun compte</p>
+  <table ng-show="comptes.length" width="100%">
+    <thead>
+      <tr>
+        <th>&nbsp;&nbsp;&nbsp;</th>
+        <th><a href="" ng-click="predicateCompte = 'code'; reverse=!reverse"><i class="icon-sort"></i>Code</a></th>
+        <th><a href="" ng-click="predicateCompte = 'code'; reverse=!reverse"><i class="icon-sort"></i>Compte</a></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="comptes">
+      <tr ng-repeat="compte in comptes | orderBy:predicateCompte:reverse | filter:searchText"
+        ng-click="openCompteDashboard(compte.code)" class="clickable">
+        <td><i class="icon-building"></i></td>
+        <td>{{compte.code}}</td>
+        <td>{{compte.raisonSociale}}</td>
+        <td><i class="icon-chevron-right"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
