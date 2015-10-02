@@ -1,0 +1,9 @@
+.classpath
+.project
+.settings/
+bin/
+target/
+WebContent/
+.idea/
+*.iml
+git.properties
