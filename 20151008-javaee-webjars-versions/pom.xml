@@ -1,74 +1,74 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20151008-javaee-webjars-versions</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<properties>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.damienfremont.blog</groupId>
+  <artifactId>20151008-javaee-webjars-versions</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <properties>
 
-		<!-- WEB DEPENDENCIES VERSIONS (USED FOR FILTERING AND URL RESOLUTION) -->
-		<bootstrap.version>3.3.5</bootstrap.version>
-		<jquery.version>2.1.4</jquery.version>
+    <!-- WEB DEPENDENCIES VERSIONS (USED FOR FILTERING AND URL RESOLUTION) -->
+    <bootstrap.version>3.3.5</bootstrap.version>
+    <jquery.version>2.1.4</jquery.version>
 
-	</properties>
-	<dependencies>
+  </properties>
+  <dependencies>
 
-		<!-- WEB DEPENDENCIES -->
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>webjars-servlet-2.x</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>${bootstrap.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>jquery</artifactId>
-			<version>${jquery.version}</version>
-		</dependency>
+    <!-- WEB DEPENDENCIES -->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-servlet-2.x</artifactId>
+      <version>1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>${bootstrap.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>jquery</artifactId>
+      <version>${jquery.version}</version>
+    </dependency>
 
-	</dependencies>
+  </dependencies>
 
-	<!-- RESOURCES FILTERING ONLY ON JSP FILES TO AVOID HTML TEMPLATES MODIFICATION -->
+  <!-- RESOURCES FILTERING ONLY ON JSP FILES TO AVOID HTML TEMPLATES MODIFICATION -->
 
-	<build>
-		<resources>
+  <build>
+    <resources>
 
-			<!-- FILTERING FOR WTP PLUGIN -->
+      <!-- FILTERING FOR WTP PLUGIN -->
 
-			<resource>
-				<directory>src/main/webapp</directory>
-				<filtering>true</filtering>
-				<targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
-				<includes>
-					<include>*.jsp</include>
-				</includes>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<webResources>
+      <resource>
+        <directory>src/main/webapp</directory>
+        <filtering>true</filtering>
+        <targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
+        <includes>
+          <include>*.jsp</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <webResources>
 
-						<!-- FILTERING FOR PACKAGING -->
+            <!-- FILTERING FOR PACKAGING -->
 
-						<resource>
-							<directory>src/main/webapp</directory>
-							<filtering>true</filtering>
-							<includes>
-								<include>*.jsp</include>
-							</includes>
-						</resource>
-					</webResources>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+            <resource>
+              <directory>src/main/webapp</directory>
+              <filtering>true</filtering>
+              <includes>
+                <include>*.jsp</include>
+              </includes>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
