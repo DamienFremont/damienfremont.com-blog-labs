@@ -42,9 +42,9 @@
     </div>
     
     <div ng-controller="ModalDemoCtrl">
-        <h1>AngularUI Test</h1>
-        <p>Bootstrap JS integration here...</p>
-    <script type="text/ng-template" id="myModalContent.html">
+      <h1>AngularUI + Bootstrap JS Test</h1>
+      <p>Bootstrap JS integration here...</p>
+      <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
             <h3 class="modal-title">I'm a modal!</h3>
         </div>
@@ -60,17 +60,16 @@
             <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
             <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
         </div>
-    </script>
-
-    <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
-    <button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
-    <button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
-    <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
-    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-</div>
+      </script>
+      <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+      <button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
+      <button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
+      <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+      <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+    </div>
 
     <div ng-controller="StatusCtrl">
-        <h1>JavaEE Test</h1>
+        <h1>JavaEE + AngularJs Rest client Test</h1>
         <p>REST call here...</p>
     </div>
   
