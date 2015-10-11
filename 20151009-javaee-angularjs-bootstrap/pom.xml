@@ -8,14 +8,17 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<java.version>7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>7</java.version>
+		<jersey.version>2.22.1</jersey.version>
 		<angularjs.version>1.4.7</angularjs.version>
 		<angular-ui-bootstrap.version>0.13.4</angular-ui-bootstrap.version>
 		<bootstrap.version>3.3.5</bootstrap.version>
 	</properties>
 
 	<dependencies>
+
+		<!-- JAVA -->
 
 		<dependency>
 			<groupId>javax</groupId>
@@ -25,11 +28,19 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		
+		<!-- WEB -->
+
+		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-servlet-2.x</artifactId>
 			<version>1.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>angularjs</artifactId>
