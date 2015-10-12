@@ -1,6 +1,7 @@
 <!DOCTYPE html >
 <head>
-
+  <link rel="icon" href="favicon.ico">
+      
   <!-- LIBS CSS -->
   <link rel="stylesheet" href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
   <link rel="stylesheet" href="styles/main.css">
@@ -71,6 +72,8 @@
     <div ng-controller="StatusCtrl">
         <h1>JavaEE + AngularJs Rest client Test</h1>
         <p>REST call here...</p>
+        <p>Response from /api/status is {{status === null ? "ERROR" : "OK" }}</p>
+        <p>Response from /api/status/details is JSON object {{details}}</p>
     </div>
   
 </body>
