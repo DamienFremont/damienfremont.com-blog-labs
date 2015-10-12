@@ -72,8 +72,10 @@
     <div ng-controller="StatusCtrl">
         <h1>JavaEE + AngularJs Rest client Test</h1>
         <p>REST call here...</p>
-        <p>Response from /api/status is {{status === null ? "ERROR" : "OK" }}</p>
-        <p>Response from /api/status/details is JSON object {{details}}</p>
+        <p>Response from /api/status is 
+          <span class="label label-default">{{status === null ? "ERROR" : "OK" }}</span></p>
+        <p>Response from /api/status/details is 
+          <span class="label label-default">{{details.value}}</span> at {{details.date}} (JSON object mapped to {{details}})</p>
     </div>
   
 </body>
