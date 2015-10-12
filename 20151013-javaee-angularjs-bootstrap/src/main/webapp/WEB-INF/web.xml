@@ -4,6 +4,8 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+  
+
   <servlet>
     <servlet-name>WEBJARS</servlet-name>
     <servlet-class>org.webjars.servlet.WebjarsServlet</servlet-class>
@@ -17,4 +19,5 @@
     <servlet-name>WEBJARS</servlet-name>
     <url-pattern>/webjars/*</url-pattern>
   </servlet-mapping>
+  
 </web-app>
