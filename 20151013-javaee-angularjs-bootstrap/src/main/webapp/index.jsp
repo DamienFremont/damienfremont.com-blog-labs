@@ -19,11 +19,13 @@
 <body>
   <div class="container" ng-app="ui.bootstrap.demo">
   
+ 	<!-- BOOTSTRAP -->
+  
     <div>
       <div>
         <h1>Bootstrap Test</h1>
         <p>CSS button here...</p>
-      <div class="bs-example" data-example-id="btn-variants">
+        <div class="bs-example" data-example-id="btn-variants">
           <button type="button" class="btn btn-default">Default</button>
           <button type="button" class="btn btn-primary">Primary</button>
           <button type="button" class="btn btn-success">Success</button>
@@ -35,12 +37,17 @@
       </div>
     </div>
     
+    <!-- ANGULARJS -->
+    
     <div>
         <h1>AngularJs Test</h1>
         <p>Basic MVC here...</p>
         <p>Name : <input type="text" ng-model="name" placeholder="type your name here..."></p>
         <h3>Hello {{name}}</h3>
     </div>
+    
+    <!-- ANGULARJS + UIBOOTSTRAP -->
+
     
     <div ng-controller="ModalDemoCtrl">
       <h1>AngularUI + Bootstrap JS Test</h1>
@@ -68,6 +75,8 @@
       <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
       <div ng-show="selected">Selection from a modal: {{ selected }}</div>
     </div>
+    
+    <!-- ANGULARJS + JAVAEE REST SERVER -->
 
     <div ng-controller="StatusCtrl">
         <h1>JavaEE + AngularJs Rest client Test</h1>

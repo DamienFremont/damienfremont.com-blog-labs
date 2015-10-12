@@ -16,33 +16,33 @@ import javax.ws.rs.core.Response;
 @Path("/status")
 public class StatusService {
 
-	@GET
-	public Response ping() {
-		return status(OK).build();
-	}
+  @GET
+  public Response ping() {
+    return status(OK).build();
+  }
 
-	@GET
-	@Path("details")
-	@Produces(MediaType.APPLICATION_JSON)
-	public StatusModel details() {
-		String pattern = "yyyy-MM-dd hh:mm:ss";
-		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-		String date = sdf.format(new Date());
-		return new StatusModel("OK", date);
-	}
+  @GET
+  @Path("details")
+  @Produces(MediaType.APPLICATION_JSON)
+  public StatusModel details() {
+    String pattern = "yyyy-MM-dd hh:mm:ss";
+    SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+    String date = sdf.format(new Date());
+    return new StatusModel("OK", date);
+  }
 
-	class StatusModel implements Serializable {
-		private static final long serialVersionUID = 9167120287441116359L;
-		
-		public String value;
+  class StatusModel implements Serializable {
+    private static final long serialVersionUID = 9167120287441116359L;
+    
+    public String value;
 
-		public StatusModel(String value, String date) {
-			super();
-			this.value = value;
-			this.date = date;
-		}
+    public StatusModel(String value, String date) {
+      super();
+      this.value = value;
+      this.date = date;
+    }
 
-		public String date;
-	}
+    public String date;
+  }
 
 }
