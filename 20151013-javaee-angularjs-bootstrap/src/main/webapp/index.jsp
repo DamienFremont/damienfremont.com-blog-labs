@@ -22,7 +22,6 @@
  	<!-- BOOTSTRAP -->
   
     <div>
-      <div>
         <h1>Bootstrap Test</h1>
         <p>CSS button here...</p>
         <div class="bs-example" data-example-id="btn-variants">
@@ -34,7 +33,6 @@
           <button type="button" class="btn btn-danger">Danger</button>
           <button type="button" class="btn btn-link">Link</button>
         </div>
-      </div>
     </div>
     
     <!-- ANGULARJS -->
