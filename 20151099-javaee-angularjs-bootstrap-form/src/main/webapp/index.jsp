@@ -1,11 +1,8 @@
 <html ng-app="myApp">
 <head>
-<link rel="icon" href="favicon.ico">
-
 <!-- LIBS CSS -->
 <link rel="stylesheet"
 	href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
-<link rel="stylesheet" href="styles/main.css">
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
@@ -20,7 +17,6 @@
 </head>
 <body>
 	<div class="container" ng-app="ui.bootstrap.demo">
-
 		<!-- MAIN CONTENT AND INJECTED VIEWS -->
 		<div id="main">
 			<!-- angular templating -->
