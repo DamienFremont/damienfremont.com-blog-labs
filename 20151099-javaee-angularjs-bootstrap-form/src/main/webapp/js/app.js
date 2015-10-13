@@ -19,12 +19,12 @@ myApp.config(function($routeProvider) {
         // route for the about page
         .when('/person', {
             templateUrl : 'views/person.html',
-            controller  : 'personCtrl'
+            controller  : 'PersonCtrl'
         })
 
         // route for the contact page
         .when('/person/edit', {
             templateUrl : 'pages/personEdit.html',
-            controller  : 'personEditCtrl'
+            controller  : 'PersonEditCtrl'
         });
 });
