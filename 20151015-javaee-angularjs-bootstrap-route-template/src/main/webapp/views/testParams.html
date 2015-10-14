@@ -1,0 +1,12 @@
+<h1>Test Params</h1>
+<p>This is page {{$routeParams.id}} !</p>
+<pre>
+$location.path() = {{$location.path()}}
+$route.current.templateUrl = {{$route.current.templateUrl}}
+$route.current.params = {{$route.current.params}}
+$route.current.scope.name = {{$route.current.scope.name}}
+$routeParams = {{$routeParams}}
+</pre>
+<button class="btn btn-default" ng-click="goBack()">
+  <span class="glyphicon glyphicon-chevron-left"></span> Home
+</button>
