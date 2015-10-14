@@ -12,11 +12,13 @@
 	src="webjars/angular-ui-bootstrap/${angular-ui-bootstrap.version}/ui-bootstrap-tpls.js"></script>
 <!-- YOUR JS -->
 <script src="js/app.js"></script>
+<script src="js/controllers/HomeCtrl.js"></script>
 <script src="js/controllers/PersonCtrl.js"></script>
+<script src="js/controllers/PersonEditCtrl.js"></script>
 <script src="js/services/PersonResource.js"></script>
 </head>
 <body>
-	<div class="container" ng-app="ui.bootstrap.demo">
+	<div class="container">
 		<!-- MAIN CONTENT AND INJECTED VIEWS -->
 		<div id="main">
 			<!-- angular templating -->

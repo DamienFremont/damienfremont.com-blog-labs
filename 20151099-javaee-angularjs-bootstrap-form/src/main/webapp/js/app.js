@@ -13,7 +13,8 @@ myApp.config(function($routeProvider) {
 
         // route for the home page
         .when('/', {
-            templateUrl : 'views/home.html'
+            templateUrl : 'views/home.html',
+            controller  : 'HomeCtrl'
         })
 
         // route for the about page
@@ -24,7 +25,10 @@ myApp.config(function($routeProvider) {
 
         // route for the contact page
         .when('/person/edit', {
-            templateUrl : 'pages/personEdit.html',
+            templateUrl : 'views/personEdit.html',
             controller  : 'PersonEditCtrl'
+        })
+        .otherwise({
+            redirectTo: '/'
         });
 });
