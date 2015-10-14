@@ -14,13 +14,13 @@
 <script src="js/controllers/testParamsCtrl.js"></script>
 </head>
 <body>
-	<div class="container">
-		<!-- MAIN CONTENT AND INJECTED VIEWS -->
-		<div id="main">
-			<!-- angular templating -->
-			<!-- this is where content will be injected -->
-			<div ng-view class="view-animate"></div>
-		</div>
-	</div>
+  <div class="container">
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view class="view-animate"></div>
+    </div>
+  </div>
 </body>
 </html>
