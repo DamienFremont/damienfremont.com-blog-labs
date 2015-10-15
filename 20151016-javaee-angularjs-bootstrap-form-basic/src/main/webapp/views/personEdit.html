@@ -1,28 +1,28 @@
 <div class="form-horizontal">
   <div class="form-group">
-    <label for="inputFirstName" class="col-sm-2 control-label">First Name</label>
+    <label class="col-sm-2 control-label">First Name</label>
     <div class="col-sm-10">
-      <input class="form-control" id="inputFirstName" placeholder="FirstName">
+      <input class="form-control" placeholder="FirstName" ng-model="person.firstName">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
+    <label class="col-sm-2 control-label">Last Name</label>
     <div class="col-sm-10">
-      <input class="form-control" id="inputLastName" placeholder="Last Name">
+      <input class="form-control" placeholder="Last Name" ng-model="person.lastName">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputBirthDate" class="col-sm-2 control-label">Birth Date</label>
+    <label class="col-sm-2 control-label">Birth Year</label>
     <div class="col-sm-10">
-      <input type="date" class="form-control" id="inputBirthDate" placeholder="BirthDate">
+      <input class="form-control" placeholder="Birth Year" ng-model="person.birthYear">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputActive" class="col-sm-2 control-label">Active</label>
+    <label class="col-sm-2 control-label">Active</label>
     <div class="col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox" id="inputActive">
+          <input type="checkbox" ng-model="person.active">
         </label>
       </div>
     </div>

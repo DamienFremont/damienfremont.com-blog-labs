@@ -12,7 +12,7 @@ myApp.controller('PersonCtrl', function($scope, Person, $location) {
   
   // EDIT FORM
   $scope.update = function() {
-    Person.save(function(obj) {
+    Person.save($scope.person ,function(obj) {
       // this callback will be called asynchronously
       // when the response is available
       $scope.person = obj;

@@ -1,9 +1,10 @@
 package com.damienfremont.blog;
 
 import java.io.Serializable;
-import java.util.Date;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -16,22 +17,34 @@ public class PersonResource {
 	public Person get() {
 		return data;
 	}
-
-	// MOCK
-
-	static Person data;
-
-	static {
-		data = new Person();
-		data.firstName = "John";
-		data.lastName = "Doe";
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void post(Person data) {
+		this.data = data;
 	}
-
+	
+	// MODEL
+	
 	static class Person implements Serializable {
 		private static final long serialVersionUID = 9167120287441116359L;
 		public String firstName;
 		public String lastName;
-		public Date birthDate;
+		public Integer birthYear;
+		public Boolean active;
 	}
+	
+	// MOCK
+
+	static Person data;
+	static {
+		data = new Person();
+		data.firstName = "Damien";
+		data.lastName = "FREMONT";
+		data.birthYear = 1984;
+		data.active = Boolean.TRUE;
+	}
+
+
 
 }
