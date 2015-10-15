@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.damienfremont.blog</groupId>
-  <artifactId>20151099-javaee-angularjs-bootstrap-form</artifactId>
+  <artifactId>20151016-javaee-angularjs-bootstrap-form-basic</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
