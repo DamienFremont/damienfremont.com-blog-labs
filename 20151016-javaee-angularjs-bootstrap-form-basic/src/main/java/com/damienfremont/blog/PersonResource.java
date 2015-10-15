@@ -12,39 +12,37 @@ import javax.ws.rs.core.MediaType;
 @Path("/person")
 public class PersonResource {
 
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public Person get() {
-		return data;
-	}
-	
-	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	public void post(Person data) {
-		this.data = data;
-	}
-	
-	// MODEL
-	
-	static class Person implements Serializable {
-		private static final long serialVersionUID = 9167120287441116359L;
-		public String firstName;
-		public String lastName;
-		public Integer birthYear;
-		public Boolean active;
-	}
-	
-	// MOCK
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public Person get() {
+    return data;
+  }
+  
+  @POST
+  @Consumes(MediaType.APPLICATION_JSON)
+  public void post(Person data) {
+    this.data = data;
+  }
+  
+  // MODEL
+  
+  static class Person implements Serializable {
+    private static final long serialVersionUID = 9167120287441116359L;
+    public String firstName;
+    public String lastName;
+    public Integer birthYear;
+    public Boolean active;
+  }
+  
+  // MOCK
 
-	static Person data;
-	static {
-		data = new Person();
-		data.firstName = "Albert";
-		data.lastName = "Einstein";
-		data.birthYear = 1909;
-		data.active = Boolean.FALSE;
-	}
-
-
+  static Person data;
+  static {
+    data = new Person();
+    data.firstName = "Albert";
+    data.lastName = "Einstein";
+    data.birthYear = 1909;
+    data.active = Boolean.FALSE;
+  }
 
 }
