@@ -39,10 +39,10 @@ public class PersonResource {
 	static Person data;
 	static {
 		data = new Person();
-		data.firstName = "Damien";
-		data.lastName = "FREMONT";
-		data.birthYear = 1984;
-		data.active = Boolean.TRUE;
+		data.firstName = "Albert";
+		data.lastName = "Einstein";
+		data.birthYear = 1909;
+		data.active = Boolean.FALSE;
 	}
 
 
