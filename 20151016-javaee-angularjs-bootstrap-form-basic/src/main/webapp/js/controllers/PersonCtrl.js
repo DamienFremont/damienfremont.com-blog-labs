@@ -1,7 +1,7 @@
 'use strict';
 
-myApp.controller('PersonCtrl', ['$scope', 'Person', function($scope, Person) {
+myApp.controller('personCtrl', function($scope, Person) {
 	Person.get(function(obj) {
 		 $scope.person = obj;
 	});
-}]);
+});
