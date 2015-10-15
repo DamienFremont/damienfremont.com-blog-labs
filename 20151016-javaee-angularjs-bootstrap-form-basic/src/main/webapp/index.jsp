@@ -15,9 +15,10 @@
 <script src="js/services/PersonSrv.js"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="container" ng-controller="AlertCtrl">
     <h1>Person</h1>
-    <div ng-view class="view-animate">
+    <div ng-view class="view-animate"></div>
+    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
   </div>
 </body>
 </html>

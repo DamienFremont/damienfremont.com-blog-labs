@@ -24,3 +24,11 @@ myApp.config(function($routeProvider) {
     redirectTo: '/person'
   });
 });
+
+myApp.controller('AlertCtrl', function($scope) {
+  $scope.alerts = [ ];
+  $scope.closeAlert = function(index) {
+    $scope.alerts.splice(index, 1);
+  };
+});
+
