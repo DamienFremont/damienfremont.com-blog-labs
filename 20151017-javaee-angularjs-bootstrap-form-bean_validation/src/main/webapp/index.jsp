@@ -48,7 +48,6 @@
           <input class="form-control" placeholder="E-Mail..." ng-model="person.email" type="email"
           required> <!-- VALIDATION HERE -->
         </div>
-        <p ng-show="userForm.person.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
       </div>
       <!-- BUTTON -->
       <div class="form-group">
