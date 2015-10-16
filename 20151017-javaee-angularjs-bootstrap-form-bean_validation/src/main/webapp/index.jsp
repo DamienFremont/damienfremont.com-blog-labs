@@ -2,7 +2,7 @@
 <head>
 <!-- LIBS CSS -->
 <link rel="stylesheet" href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
-<link rel="stylesheet" href="validation.css">
+<link rel="stylesheet" href="styles.css">
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>

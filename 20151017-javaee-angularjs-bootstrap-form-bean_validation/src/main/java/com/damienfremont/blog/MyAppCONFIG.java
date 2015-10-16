@@ -10,7 +10,6 @@ public class MyAppCONFIG extends Application {
   public Set<Class<?>> getClasses() {
     Set<Class<?>> s = new HashSet<Class<?>>();
     s.add(PersonJAXRS.class);
-//    s.add(ValidationConfigurationContextResolver)
     return s;
   }
 }
