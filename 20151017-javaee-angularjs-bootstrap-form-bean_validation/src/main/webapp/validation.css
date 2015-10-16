@@ -1,0 +1,9 @@
+form input.ng-invalid {
+  background-color: #f2dede;
+}
+form input.ng-valid {
+  background-color: #dff0d8;
+}
+form input.ng-touched {
+  background-color: #fcf8e3;
+}

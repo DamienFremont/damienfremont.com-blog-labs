@@ -2,7 +2,7 @@
 <head>
 <!-- LIBS CSS -->
 <link rel="stylesheet" href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
-<link rel="stylesheet" href="styles/animation.css">
+<link rel="stylesheet" href="validation.css">
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
@@ -16,35 +16,44 @@
   <div class="container" ng-controller="AlertCtrl">
     <h1>Person</h1>
 	<!-- FORM -->
-    <div class="form-horizontal" ng-controller="PersonCtrl">
+    <form class="form-horizontal" ng-controller="PersonCtrl">
       <div class="form-group">
         <label class="col-sm-2 control-label">First Name</label>
         <div class="col-sm-10">
-          <input class="form-control" placeholder="FirstName..." ng-model="person.firstName">
+          <input class="form-control" placeholder="FirstName..." ng-model="person.firstName"
+          required> <!-- VALIDATION HERE -->
         </div>
       </div>
       <div class="form-group">
         <label class="col-sm-2 control-label">Last Name</label>
         <div class="col-sm-10">
-          <input class="form-control" placeholder="Last Name..." ng-model="person.lastName">
+          <input class="form-control" placeholder="Last Name..." ng-model="person.lastName"
+          required> <!-- VALIDATION HERE -->
         </div>
       </div>
       <div class="form-group">
         <label class="col-sm-2 control-label">Birth Year</label>
         <div class="col-sm-10">
-          <input class="form-control" placeholder="Birth Year..." ng-model="person.birthYear" type="number">
+          <input class="form-control" placeholder="Birth Year..." ng-model="person.birthYear" type="number"
+          required> <!-- VALIDATION HERE -->
         </div>
       </div>
       <div class="form-group">
+        <label class="col-sm-2 control-label">E-Mail</label>
+        <div class="col-sm-10">
+          <input class="form-control" placeholder="E-Mail..." ng-model="person.email" type="email"
+          required> <!-- VALIDATION HERE -->
+        </div>
+      </div>
+      <!-- BUTTON -->
+      <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary" ng-click="update()">
-            <span class="glyphicon glyphicon-ok"></span> Update
-          </button>
+          <button type="submit" class="btn btn-primary" ng-click="update()">Update</button>
         </div>
       </div>
     </div>
     <!-- ALERT -->
     <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
-  </div>
+  </form>
 </body>
 </html>
