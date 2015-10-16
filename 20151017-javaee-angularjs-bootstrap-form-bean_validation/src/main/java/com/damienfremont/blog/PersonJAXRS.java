@@ -35,7 +35,7 @@ public class PersonJAXRS {
   }
   
   // MODEL
-  class Person implements Serializable {
+  static class Person implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
     @NotNull
     public String firstName;
@@ -49,13 +49,13 @@ public class PersonJAXRS {
   }
   
   // MOCK
-  Person data;
-  {
+  static Person data;
+  static {
     data = new Person();
     data.firstName = "Albert";
     data.lastName = "Einstein";
     data.birthYear= 1909;
-    data.email= null;
+    data.email= "aeinstein@lycos.com";
   }
 
 }

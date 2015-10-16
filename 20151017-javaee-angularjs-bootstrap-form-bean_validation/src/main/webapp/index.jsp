@@ -16,7 +16,7 @@
   <div class="container" ng-controller="AlertCtrl">
     <h1>Person</h1>
 	<!-- FORM -->
-    <form class="form-horizontal" ng-controller="PersonCtrl">
+    <form class="form-horizontal" ng-controller="PersonCtrl" name="userForm">
       <div class="form-group">
         <label class="col-sm-2 control-label">First Name</label>
         <div class="col-sm-10">
@@ -44,11 +44,14 @@
           <input class="form-control" placeholder="E-Mail..." ng-model="person.email" type="email"
           required> <!-- VALIDATION HERE -->
         </div>
+        <p ng-show="userForm.person.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
       </div>
       <!-- BUTTON -->
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary" ng-click="update()">Update</button>
+          <button type="submit" class="btn btn-primary" ng-click="update()"
+            ng-disabled="userForm.$invalid"> <!-- VALIDATION HERE -->
+            Update</button>
         </div>
       </div>
     </div>
