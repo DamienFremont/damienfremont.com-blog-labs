@@ -1,6 +1,3 @@
 form input.ng-invalid.ng-touched {
   background-color: #f2dede;
 }
-form input.ng-valid.ng-touched {
-  background-color: #dff0d8;
-}

@@ -15,6 +15,10 @@
 <body>
   <div class="container" ng-controller="AlertCtrl">
     <h1>Person</h1>
+
+    <!-- ALERT -->
+    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+
 	<!-- FORM -->
     <form class="form-horizontal" ng-controller="PersonCtrl" name="userForm">
       <div class="form-group">
@@ -55,8 +59,6 @@
         </div>
       </div>
     </div>
-    <!-- ALERT -->
-    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
   </form>
 </body>
 </html>
