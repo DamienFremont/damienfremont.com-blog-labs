@@ -39,7 +39,7 @@ myApp.controller('PersonCtrl', function($scope, Person, $location) {
 	    }, function(error) {
 	      // called asynchronously if an error occurs
 	      // or server returns response with an error status.
-		  $scope.$parent.alerts.push({type: 'danger', msg: 'Update Error! '+error.statusText});
+		  $scope.$parent.alerts.push({type: 'danger', msg: 'Server: '+error.statusText});
 	    });
 	  }
 	  $scope.cancel = function() {
