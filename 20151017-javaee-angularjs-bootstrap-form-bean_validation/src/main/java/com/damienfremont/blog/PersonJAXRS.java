@@ -1,16 +1,10 @@
 package com.damienfremont.blog;
 
 import java.io.Serializable;
-import java.util.Calendar;
-import java.util.Set;
 
-import javax.validation.ConstraintViolation;
 import javax.validation.Valid;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
+import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.executable.ValidateOnExecution;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -38,27 +32,25 @@ public class PersonJAXRS {
   
   // MODEL
   
-  static class Person implements Serializable {
+  class Person implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
     @NotNull
     public String firstName;
     @NotNull
     public String lastName;
     @NotNull
-    @Past
-    public Calendar birthDate;
-    public Boolean active;
+    @DecimalMax("2015")
+    public Integer birthYear;
   }
   
   // MOCK
 
-  static Person data;
-  static {
+  Person data;
+  {
     data = new Person();
     data.firstName = "Albert";
     data.lastName = "Einstein";
-    data.birthDate = null;
-    data.active = Boolean.FALSE;
+    data.birthYear= 1909;
   }
 
 }
