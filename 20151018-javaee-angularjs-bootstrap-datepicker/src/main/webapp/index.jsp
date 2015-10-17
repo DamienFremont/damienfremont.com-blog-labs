@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="col-sm-3 control-label">DatePicker to Java String</label>
+        <label class="col-sm-3 control-label">Widget to Java String</label>
         <div class="col-sm-6">
             <p class="input-group">
               <input class="form-control" ng-model="model.testDatePicker"
@@ -48,7 +48,7 @@
       </div>
       <!-- BUTTON -->
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-9">
           <button type="submit" class="btn btn-primary" ng-click="update()">Update</button>
         </div>
       </div>

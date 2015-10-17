@@ -14,50 +14,39 @@ myApp.controller('AlertCtrl', function($scope) {
 });
 
 myApp.factory('Model', function($resource) {
-	return $resource('api');
+  return $resource('api', {}, {
+    get: {
+      transformResponse: function(data, headers) {
+        // MAP DATES
+        var data = angular.fromJson(data);
+        data.testDateInput  = data.testDateInput  === null ? null : new Date(data.testDateInput);
+        data.testDatePicker = data.testDatePicker === null ? null : new Date(data.testDatePicker);
+        return data;
+      }
+    }
+  });
 });
 
 myApp.controller('DatepickerCtrl', function($scope, Model, $location) {
 	
   // READ
   Model.get(function(obj) {
-    $scope.model = {
-      testDateInput: new Date(obj.testDateInput),
-      testDatePicker: new Date(obj.testDatePicker)
-    };
+    $scope.model = obj;
   });
   
   // UPDATE
   $scope.update = function() {
-    Model.save($scope.model ,function(obj) {
+    Model.save($scope.model, function(obj) {
 	  $scope.$parent.alerts.push({type: 'success', msg: 'Updated!'});
     }, function(error) {
 	  $scope.$parent.alerts.push({type: 'danger', msg: 'Server: '+error.statusText});
     });
   }
   
+  // DATEPICKER BUTTON
+  $scope.status = { opened: false };
   $scope.open = function($event) {
-	    $scope.status.opened = true;
-	  };
-	  
-	  $scope.status = {
-			    opened: false
-			  };
-	  
-	  var tomorrow = new Date();
-	  tomorrow.setDate(tomorrow.getDate() + 1);
-	  var afterTomorrow = new Date();
-	  afterTomorrow.setDate(tomorrow.getDate() + 2);
-	  
-	  $scope.events =
-		    [
-		      {
-		        date: tomorrow,
-		        status: 'full'
-		      },
-		      {
-		        date: afterTomorrow,
-		        status: 'partially'
-		      }
-		    ];
+    $scope.status.opened = true;
+  };  
+
 });
