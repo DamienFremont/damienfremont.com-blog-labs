@@ -13,16 +13,15 @@
 </head>
 <body>
   <div class="container" ng-controller="AlertCtrl">
-    <h1>Person</h1>
+    <h1>Date</h1>
 
     <!-- ALERT -->
     <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
 
 	<!-- FORM -->
     <form class="form-horizontal" ng-controller="DatepickerCtrl">
-    {{person.testDateInput}}
       <div class="form-group">
-        <label class="col-sm-3 control-label">Date Input to Java String</label>
+        <label class="col-sm-3 control-label">Input to Java String</label>
         <div class="col-sm-6">
           <input class="form-control" ng-model="model.testDateInput" 
             type="date">
