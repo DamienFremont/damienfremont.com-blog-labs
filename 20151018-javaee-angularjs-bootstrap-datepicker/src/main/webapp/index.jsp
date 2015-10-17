@@ -1,3 +1,4 @@
+<!DOCTYPE html> <!-- DON'T FORGET DOCTYPE OR THERE WILL BE .btn CLASS HEIGHT BUGS! https://github.com/twbs/bootstrap/issues/10482 -->
 <html ng-app="myApp">
 <head>
 <!-- LIBS CSS -->
@@ -21,24 +22,29 @@
     <form class="form-horizontal" ng-controller="DatepickerCtrl">
     {{person.testDateInput}}
       <div class="form-group">
-        <label class="col-sm-2 control-label">Date-Input to Java-String</label>
-        <div class="col-sm-10">
-          <input class="form-control" ng-model="model.testDateInput" type="date" placeholder="yyyy-MM-dd">
+        <label class="col-sm-3 control-label">Date Input to Java String</label>
+        <div class="col-sm-6">
+          <input class="form-control" ng-model="model.testDateInput" 
+            type="date">
         </div>
       </div>
       <div class="form-group">
-        <label class="col-sm-2 control-label">Date-Picker to Java-String</label>
-        <div class="col-sm-10">
-            <div class="input-group">
-              <input type="date" class="form-control" 
-                uib-datepicker-popup 
-                ng-model="model.testDatePicker" 
+        <label class="col-sm-3 control-label">DatePicker to Java String</label>
+        <div class="col-sm-6">
+            <p class="input-group">
+              <input class="form-control" ng-model="model.testDatePicker"
+                type="date" 
+                uib-datepicker-popup
                 is-open="status.opened" 
                 datepicker-options="dateOptions" 
                 date-disabled="disabled(date, mode)" 
                 close-text="Close" />
-                <a class="input-group-addon" ng-click="open($event)" href="#"><i class="glyphicon glyphicon-calendar"></i></a>
-            </div>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" 
+                  ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </p>
         </div>
       </div>
       <!-- BUTTON -->
