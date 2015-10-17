@@ -13,32 +13,51 @@ myApp.controller('AlertCtrl', function($scope) {
   };
 });
 
-myApp.factory('Person', function($resource) {
-	return $resource('api/person');
+myApp.factory('Model', function($resource) {
+	return $resource('api');
 });
 
-myApp.controller('PersonCtrl', function($scope, Person, $location) {
+myApp.controller('DatepickerCtrl', function($scope, Model, $location) {
 	
   // READ
-  Person.get(function(obj) {
-    $scope.person = obj;
-    $scope.person = {
-      testDateInput: new Date(obj.testDateInput)
+  Model.get(function(obj) {
+    $scope.model = {
+      testDateInput: new Date(obj.testDateInput),
+      testDatePicker: new Date(obj.testDatePicker)
     };
   });
   
-  // SAVE
+  // UPDATE
   $scope.update = function() {
-    Person.save($scope.person ,function(obj) {
-      // this callback will be called asynchronously
-      // when the response is available
-      $scope.person = obj;
-      $location.path( "/person" );
+    Model.save($scope.model ,function(obj) {
 	  $scope.$parent.alerts.push({type: 'success', msg: 'Updated!'});
     }, function(error) {
-      // called asynchronously if an error occurs
-      // or server returns response with an error status.
 	  $scope.$parent.alerts.push({type: 'danger', msg: 'Server: '+error.statusText});
     });
   }
+  
+  $scope.open = function($event) {
+	    $scope.status.opened = true;
+	  };
+	  
+	  $scope.status = {
+			    opened: false
+			  };
+	  
+	  var tomorrow = new Date();
+	  tomorrow.setDate(tomorrow.getDate() + 1);
+	  var afterTomorrow = new Date();
+	  afterTomorrow.setDate(tomorrow.getDate() + 2);
+	  
+	  $scope.events =
+		    [
+		      {
+		        date: tomorrow,
+		        status: 'full'
+		      },
+		      {
+		        date: afterTomorrow,
+		        status: 'partially'
+		      }
+		    ];
 });

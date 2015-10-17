@@ -15,13 +15,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/person")
+@Path("/")
 public class ServiceJAXRS {
   
   // READ
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public Person get() {
+  public Model get() {
     return data;
   }
   
@@ -29,12 +29,12 @@ public class ServiceJAXRS {
   @POST
   @Consumes(MediaType.APPLICATION_JSON)
   @ValidateOnExecution
-  public void post(@Valid Person data) {
+  public void post(@Valid Model data) {
     this.data = data;
   }
   
   // MODEL
-  static class Person implements Serializable {
+  static class Model implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
     @Past
     public Date testDateInput;
@@ -43,9 +43,9 @@ public class ServiceJAXRS {
   }
   
   // MOCK
-  static Person data;
+  static Model data;
   static {
-    data = new Person();
+    data = new Model();
     data.testDateInput= new Date();
     data.testDatePicker= new Date();
   }

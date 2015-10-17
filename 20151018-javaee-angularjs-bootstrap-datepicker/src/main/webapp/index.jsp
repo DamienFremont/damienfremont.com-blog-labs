@@ -18,17 +18,27 @@
     <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
 
 	<!-- FORM -->
-    <form class="form-horizontal" ng-controller="PersonCtrl" name="userForm">
+    <form class="form-horizontal" ng-controller="DatepickerCtrl">
     {{person.testDateInput}}
       <div class="form-group">
         <label class="col-sm-2 control-label">Date-Input to Java-String</label>
         <div class="col-sm-10">
-          <input class="form-control" ng-model="person.testDateInput" type="date" placeholder="yyyy-MM-dd">
+          <input class="form-control" ng-model="model.testDateInput" type="date" placeholder="yyyy-MM-dd">
         </div>
       </div>
       <div class="form-group">
         <label class="col-sm-2 control-label">Date-Picker to Java-String</label>
         <div class="col-sm-10">
+            <div class="input-group">
+              <input type="date" class="form-control" 
+                uib-datepicker-popup 
+                ng-model="model.testDatePicker" 
+                is-open="status.opened" 
+                datepicker-options="dateOptions" 
+                date-disabled="disabled(date, mode)" 
+                close-text="Close" />
+                <a class="input-group-addon" ng-click="open($event)" href="#"><i class="glyphicon glyphicon-calendar"></i></a>
+            </div>
         </div>
       </div>
       <!-- BUTTON -->
