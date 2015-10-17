@@ -22,30 +22,15 @@
 	<!-- FORM -->
     <form class="form-horizontal" ng-controller="PersonCtrl" name="userForm">
       <div class="form-group">
-        <label class="col-sm-2 control-label">First Name</label>
+        <label class="col-sm-2 control-label">Date-Input to Java-String</label>
         <div class="col-sm-10">
-          <input class="form-control" placeholder="FirstName..." ng-model="person.firstName"
-          required> <!-- VALIDATION HERE -->
+          <input class="form-control" ng-model="person.testDateInput" type="date">
         </div>
       </div>
       <div class="form-group">
-        <label class="col-sm-2 control-label">Last Name</label>
+        <label class="col-sm-2 control-label">Date-Picker to Java-String</label>
         <div class="col-sm-10">
-          <input class="form-control" placeholder="Last Name..." ng-model="person.lastName"
-          required> <!-- VALIDATION HERE -->
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-2 control-label">Birth Year</label>
-        <div class="col-sm-10">
-          <input class="form-control" placeholder="Birth Year..." ng-model="person.birthYear" type="number"
-          required> <!-- VALIDATION HERE -->
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-2 control-label">E-Mail</label>
-        <div class="col-sm-10">
-          <input class="form-control" placeholder="E-Mail..." ng-model="person.email" type="email"
+          <input class="form-control" ng-model="person.testDatePicker" type="date"
           required> <!-- VALIDATION HERE -->
         </div>
       </div>

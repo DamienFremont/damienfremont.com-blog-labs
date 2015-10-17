@@ -1,11 +1,9 @@
 package com.damienfremont.blog;
 
 import java.io.Serializable;
-import java.util.Calendar;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.executable.ValidateOnExecution;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -17,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/person")
 public class ServiceJAXRS {
-
+  
   // READ
   @GET
   @Produces(MediaType.APPLICATION_JSON)
@@ -37,15 +35,16 @@ public class ServiceJAXRS {
   static class Person implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
     @NotNull
-    @Past
-    public Calendar birthDate;
-  }
+    public String testDateInput;
+    @NotNull
+    public String testDatePicker;
+  } 
   
   // MOCK
   static Person data;
   static {
     data = new Person();
-    data.birthDate= Calendar.getInstance();
+    data.testDateInput= "1990-05-01";
+    data.testDatePicker= "1999-12-31";
   }
-
 }
