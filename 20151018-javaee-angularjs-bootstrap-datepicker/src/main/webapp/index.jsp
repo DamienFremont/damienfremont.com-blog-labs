@@ -20,6 +20,9 @@
 
 	<!-- FORM -->
     <form class="form-horizontal" ng-controller="DatepickerCtrl">
+
+       <!-- DATE INPUT -->
+
       <div class="form-group">
         <label class="col-sm-3 control-label">Input to Java String</label>
         <div class="col-sm-6">
@@ -27,6 +30,9 @@
             type="date">
         </div>
       </div>
+      
+      <!-- DATEPICKER -->
+      
       <div class="form-group">
         <label class="col-sm-3 control-label">Widget to Java String</label>
         <div class="col-sm-6">
@@ -46,7 +52,8 @@
             </p>
         </div>
       </div>
-      <!-- BUTTON -->
+      
+      <!-- UPDATE -->
       <div class="form-group">
         <div class="col-sm-offset-3 col-sm-9">
           <button type="submit" class="btn btn-primary" ng-click="update()">Update</button>
