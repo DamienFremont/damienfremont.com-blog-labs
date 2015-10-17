@@ -4,7 +4,6 @@ var myApp = angular.module(
   'myApp', 
   [ 'ngAnimate', 
     'ui.bootstrap',
-    'ngRoute',
     'ngResource']);
 
 myApp.controller('AlertCtrl', function($scope) {
@@ -22,7 +21,10 @@ myApp.controller('PersonCtrl', function($scope, Person, $location) {
 	
   // READ
   Person.get(function(obj) {
-     $scope.person = obj;
+    $scope.person = obj;
+    $scope.person = {
+      testDateInput: new Date(obj.testDateInput)
+    };
   });
   
   // SAVE

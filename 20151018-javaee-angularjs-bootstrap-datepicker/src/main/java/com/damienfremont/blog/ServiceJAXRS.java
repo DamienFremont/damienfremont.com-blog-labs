@@ -1,9 +1,11 @@
 package com.damienfremont.blog;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.executable.ValidateOnExecution;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -34,17 +36,17 @@ public class ServiceJAXRS {
   // MODEL
   static class Person implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
-    @NotNull
-    public String testDateInput;
-    @NotNull
-    public String testDatePicker;
-  } 
+    @Past
+    public Date testDateInput;
+    @Past
+    public Date testDatePicker;
+  }
   
   // MOCK
   static Person data;
   static {
     data = new Person();
-    data.testDateInput= "1990-05-01";
-    data.testDatePicker= "1999-12-31";
+    data.testDateInput= new Date();
+    data.testDatePicker= new Date();
   }
 }
