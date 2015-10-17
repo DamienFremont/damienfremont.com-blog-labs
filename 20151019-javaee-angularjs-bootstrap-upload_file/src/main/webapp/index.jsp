@@ -20,8 +20,18 @@
     <h1>Upload</h1>
 
 	<!-- FORM -->
-    <form class="form-horizontal" ng-controller="DatepickerCtrl">
+    <form class="form-horizontal" ng-controller="MyCtrl">
 
+Upload on form submit or button click
+<input type="file" ngf-select="" ng-model="picFile" name="file" accept="image/*" required="" class="ng-valid-pattern ng-valid-min-size ng-valid-max-size ng-valid-validate-fn ng-dirty ng-valid ng-valid-required">
+<i ng-show="myForm.file.$error.required" class="ng-hide">*required</i>
+<br>
+<button ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">Submit</button>
+<img ngf-src="picFile" class="thumb" src="blob:https%3A//angular-file-upload.appspot.com/6be43742-c2ed-4a09-8692-4529d607c422">
+<span class="progress" ng-show="picFile.progress >= 0">
+                  <div style="width:100%" ng-bind="picFile.progress + '%'" class="ng-binding">100%</div>
+              </span>
+<span ng-show="picFile.result" class="">Upload Successful</span>
 
     </form>
   </div>
