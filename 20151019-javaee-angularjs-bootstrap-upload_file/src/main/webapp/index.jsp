@@ -19,7 +19,8 @@
 	<!-- PICTURE FILE -->
 	
    <form name="myForm" ng-controller="SubmitFileCtrl">
-     <h2>Upload Picture on form submit</h2>
+     <h1>Picture</h1>
+     <p>Upload Picture on form submit, Alerts</p>
 	 <div class="form-group">
        <input type="file" 
          ngf-select 
@@ -52,41 +53,32 @@
 	
 	<!-- FILES -->
 	
-	<form ng-controller="MyCtrl">
-      <fieldset>
-        <legend>Multiples Files, one request, progress bar</legend>
+    <form ng-controller="FilesCtrl">
+      <h1>Files</h1>
+      <p>Multiples Files, Progress Bars</p>
+	  <div class="form-group">
 	    <button class="btn btn-primary" 
-	    	ngf-select="uploadFiles($files)" 
-	    	multiple 
-	        accept="*">
-	        <i class="glyphicon glyphicon-folder-open"></i>&nbsp;&nbsp;Browse Files
+          ngf-select="uploadFiles($files)" 
+          multiple 
+	      accept="*">
+	      <i class="glyphicon glyphicon-folder-open"></i>&nbsp;&nbsp;Browse Files
 	    </button>
-	    <br>
-	    <br>Files:
-	    <ul>
-	        <li class="uploadedfile" ng-repeat="f in files" style="font:smaller">
-	            <i class="glyphicon glyphicon-file"></i> <span ng-class="{removed: f.removed}">{{f.name}}</span>
-	            <!-- REMOVE -->
-	            <button class="btn btn-danger btn-xs" 
-	              ng-click="removeFile(f)" 
-	              ng-hide="f.removed">
-	              <i class="glyphicon glyphicon-remove"></i> Remove
-	            </button>
-	        </li>
-	    </ul>
-	    <div class="progress" ng-show="progress >= 0">
-	      <div class="progress-bar" role="progressbar"
-	        aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
-            <span class="sr-only">{{progress}}% Complete</span>
-            {{progress}}%
+	  </div>
+	  Files:
+	  <div class="uploadedfile" ng-repeat="f in files" style="font:smaller">
+	    <!-- FILE -->
+	    <i class="glyphicon glyphicon-file"></i><span ng-class="{removed: f.removed}">{{f.name}} {{f.$errorParam}}</span>
+	    <!-- PROGRESS -->
+	    <div class="progress" ng-show="f.progress >= 0">
+	      <div class="progress-bar progress-bar-success" role="progressbar"
+	        aria-valuenow="{{f.progress}}" aria-valuemin="0" aria-valuemax="100" 
+	        style="width: {{f.progress}}%">
+            <span class="sr-only">{{f.progress}}% Complete</span> {{f.progress}}%
           </div>
-	    </div>	    
-	    {{errorMsg}}
-      </fieldset>
+        </div>
+	  </div>
+	  {{errorMsg}}
     </form>
-    
-	<!-- PICTURE -->
-
     
   </div>
 </body>

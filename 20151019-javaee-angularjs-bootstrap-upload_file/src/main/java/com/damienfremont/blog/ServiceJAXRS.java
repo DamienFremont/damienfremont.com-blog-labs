@@ -22,7 +22,7 @@ public class ServiceJAXRS {
 	@POST
 	@Path("/file")
 	@Consumes({MediaType.MULTIPART_FORM_DATA})
-	public Response uploadPdfFile(
+	public Response uploadFile(
 			@FormDataParam("file") InputStream fileInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileMetaData) throws Exception {
 		try {
@@ -41,6 +41,5 @@ public class ServiceJAXRS {
 		}
 		return Response.ok("Data uploaded successfully !!").build();
 	}
-	
 	
 }
