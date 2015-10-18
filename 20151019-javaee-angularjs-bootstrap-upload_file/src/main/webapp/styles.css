@@ -4,6 +4,3 @@
     float: none;
     position: relative;
 }
-.uploadedfile .removed {
-  text-decoration: line-through;
-}

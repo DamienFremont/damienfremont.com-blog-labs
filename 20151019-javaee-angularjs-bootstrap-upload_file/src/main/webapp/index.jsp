@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- DON'T FORGET DOCTYPE OR THERE WILL BE .btn CLASS HEIGHT BUGS! https://github.com/twbs/bootstrap/issues/10482 -->
+<!DOCTYPE html>
 <html ng-app="app">
 <head>
 <!-- LIBS CSS -->
