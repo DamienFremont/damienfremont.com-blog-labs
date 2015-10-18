@@ -1,8 +1,9 @@
 <!DOCTYPE html> <!-- DON'T FORGET DOCTYPE OR THERE WILL BE .btn CLASS HEIGHT BUGS! https://github.com/twbs/bootstrap/issues/10482 -->
-<html ng-app="myApp">
+<html ng-app="app">
 <head>
 <!-- LIBS CSS -->
 <link rel="stylesheet" href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
+<link rel="stylesheet" href="styles.css">
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
@@ -13,27 +14,44 @@
 <script src="app.js"></script>
 </head>
 <body>
-  <div class="container" ng-controller="AlertCtrl">
-    <!-- ALERT -->
-    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
-
-    <h1>Upload</h1>
-
-	<!-- FORM -->
-    <form class="form-horizontal" ng-controller="MyCtrl">
-
-Upload on form submit or button click
-<input type="file" ngf-select="" ng-model="picFile" name="file" accept="image/*" required="" class="ng-valid-pattern ng-valid-min-size ng-valid-max-size ng-valid-validate-fn ng-dirty ng-valid ng-valid-required">
-<i ng-show="myForm.file.$error.required" class="ng-hide">*required</i>
-<br>
-<button ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">Submit</button>
-<img ngf-src="picFile" class="thumb" src="blob:https%3A//angular-file-upload.appspot.com/6be43742-c2ed-4a09-8692-4529d607c422">
-<span class="progress" ng-show="picFile.progress >= 0">
-                  <div style="width:100%" ng-bind="picFile.progress + '%'" class="ng-binding">100%</div>
-              </span>
-<span ng-show="picFile.result" class="">Upload Successful</span>
-
+  <div class="container">
+	
+	<h1>Upload Files</h1>
+	
+	<!-- FILES -->
+	
+	<form ng-controller="MyCtrl">
+	    <h4>Multiples Files, one request</h4>
+	    <button class="btn btn-primary" 
+	    	ngf-select="uploadFiles($files)" 
+	    	multiple 
+	        accept="*">
+	        <i class="glyphicon glyphicon-folder-open"></i>&nbsp;&nbsp;Browse Files
+	    </button>
+	    <br>
+	    <br>Files:
+	    <ul>
+	        <li class="uploadedfile" ng-repeat="f in files" style="font:smaller">
+	            <i class="glyphicon glyphicon-file"></i> <span ng-class="{removed: f.removed}">{{f.name}}</span>
+	            <!-- REMOVE -->
+	            <button class="btn btn-danger btn-xs" ng-click="removeFile(f)" ng-hide="f.removed">
+	              <i class="glyphicon glyphicon-remove"></i> Remove
+	            </button>
+	        </li>
+	    </ul>
+	    <div class="progress" ng-show="progress >= 0">
+	      <div class="progress-bar" role="progressbar"
+	        aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
+            <span class="sr-only">{{progress}}% Complete</span>
+            {{progress}}%
+          </div>
+	    </div>	    
+	    {{errorMsg}}
     </form>
+    
+	<!-- PICTURE -->
+
+    
   </div>
 </body>
 </html>

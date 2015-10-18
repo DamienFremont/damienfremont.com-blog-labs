@@ -1,30 +1,50 @@
 'use strict';
 
-var myApp = angular.module(
-  'myApp', 
+var app = angular.module(
+  'app', 
   [ 'ngAnimate', 
     'ui.bootstrap',
     'ngResource',
     'ngFileUpload' ]);
 
-myApp.controller('AlertCtrl', function($scope) {
-  $scope.alerts = [ ];
-  $scope.closeAlert = function(index) {
-    $scope.alerts.splice(index, 1);
-  };
-});
-
-myApp.factory('Model', function($resource) {
+app.factory('Model', function($resource) {
   return $resource('api/upload');
 });
 
-myApp.controller('MyCtrl', function($scope, Model, Upload) {
-
-	$scope.uploadPic = function (file) {
-	    $scope.formUpload = true;
-	    if (file != null) {
-	      $scope.upload(file)
-	    }
-	  };
-    
+app.controller('MyCtrl', function ($scope, Upload, $timeout, Model) {
+    $scope.uploadFiles = function (files) {
+        $scope.files = files;
+        if (files && files.length) {
+            Upload.upload({
+                url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+                data: {
+                    files: files
+                }
+            }).then(function (response) {
+                $timeout(function () {
+                    $scope.result = response.data;
+                });
+            }, function (response) {
+                if (response.status > 0) {
+                    $scope.errorMsg = response.status + ': ' + response.data;
+                }
+            }, function (evt) {
+                $scope.progress = 
+                    Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+            });
+        }
+    };
+    $scope.removeFile = function (file) {
+    	var array = $scope.files;
+    	for(var i = array.length - 1; i >= 0; i--) {
+    	    if(array[i].name === file.name) {
+    	    	array[i] = {
+    	    			name: array[i].name,
+        	    		removed: true
+    	    	};
+    	    }
+    	}
+    	$scope.files = array;
+    	
+    }
 });
