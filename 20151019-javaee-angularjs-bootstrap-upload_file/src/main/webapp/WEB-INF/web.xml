@@ -11,6 +11,10 @@
       <param-name>javax.ws.rs.Application</param-name>
       <param-value>com.damienfremont.blog.MyAppCONFIG</param-value>
     </init-param>
+    <init-param>
+      <param-name>jersey.config.server.provider.classnames</param-name>
+      <param-value>org.glassfish.jersey.media.multipart.MultiPartFeature</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>

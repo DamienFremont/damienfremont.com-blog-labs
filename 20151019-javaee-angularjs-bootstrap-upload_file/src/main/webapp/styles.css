@@ -3,7 +3,6 @@
     height: 24px;
     float: none;
     position: relative;
-    top: 7px;
 }
 .uploadedfile .removed {
   text-decoration: line-through;
