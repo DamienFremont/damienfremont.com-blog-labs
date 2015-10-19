@@ -21,6 +21,7 @@
    <form name="myForm" ng-controller="SubmitFileCtrl">
      <h1>Picture</h1>
      <p>Upload Picture on form submit, Alerts</p>
+     <!-- BROWSE -->
 	 <div class="form-group">
        <input type="file" 
          ngf-select 
@@ -30,6 +31,7 @@
          required>
          <i ng-show="myForm.file.$error.maxSize">File too large {{picFile.size / 1000000|number:1}}MB: max 2M</i>
      </div>
+     <!-- PREVIEW -->
 	 <div class="form-group">
 	   <img class="thumb"
 	     ng-show="myForm.file.$valid" 
@@ -40,11 +42,13 @@
          <i class="glyphicon glyphicon-remove"></i> Remove
        </button>
      </div>
+     <!-- SUBMIT -->
      <button class="btn btn-success" 
        ng-disabled="!myForm.$valid" 
        ng-click="uploadPic(picFile)">
        <i class="glyphicon glyphicon-ok"></i> Submit
      </button>
+     <!-- ALERT -->
 	 <p>
        <div class="alert alert-danger" ng-show="errorMsg">Upload Error!</div>
        <div class="alert alert-success" ng-show="picFile.result">Upload Successful.</div>
@@ -56,6 +60,7 @@
     <form ng-controller="FilesCtrl">
       <h1>Files</h1>
       <p>Multiples Files, Progress Bars</p>
+     <!-- BROWSE -->
 	  <div class="form-group">
 	    <button class="btn btn-primary" 
           ngf-select="uploadFiles($files)" 
