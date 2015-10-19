@@ -49,11 +49,27 @@
       <th>#</th>
       <th>First Name</th>
       <th>Last Name</th>
+      <th></th>
     </tr>
     <tr ng-repeat="i in items">
       <td>{{i.id}}</td>
       <td>{{i.firstName}}</td>
       <td>{{i.lastName}}</td>
+      <td>
+        <!-- ADD -->
+        <button class="btn btn-default">
+          <i class="glyphicon glyphicon-minus"></i> Remove
+         </button>
+      
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <!-- ADD -->
+        <button class="btn btn-default">
+          <i class="glyphicon glyphicon-plus"></i> Add row
+         </button>
+      </td>
     </tr>
   </table>
   <!-- UPDATE -->
