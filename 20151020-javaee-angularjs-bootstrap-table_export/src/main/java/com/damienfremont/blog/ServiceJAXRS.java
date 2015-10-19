@@ -55,7 +55,8 @@ public class ServiceJAXRS {
 	static {
 		datas = new ArrayList<>();
 		datas.add(new Person(1L, "Albert", "Einstein"));
-		datas.add(new Person(2L, "Albert", "Einstein"));
-		datas.add(new Person(3L, "Albert", "Einstein"));
+		datas.add(new Person(2L, "Isaac", "Newton"));
+		datas.add(new Person(3L, "Marie", "Curie"));
+		datas.add(new Person(4L, "Galileo", "Galilei"));
 	}
 }

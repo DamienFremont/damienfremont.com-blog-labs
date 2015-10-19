@@ -13,17 +13,12 @@ public class GenerateCSV {
 		try {
 			File file = new File("temp");
 			FileWriter writer = new FileWriter(file);
-			writer.append("ID");
-			writer.append(',');
-			writer.append("FIRST NAME");
-			writer.append(',');
-			writer.append("LAST NAME");
-			writer.append('\n');
+			char separator = ';';
 			for (Person i : datas) {
 				writer.append(i.id.toString());
-				writer.append(',');
+				writer.append(separator);
 				writer.append(i.firstName);
-				writer.append(',');
+				writer.append(separator);
 				writer.append(i.lastName);
 				writer.append('\n');
 			}
