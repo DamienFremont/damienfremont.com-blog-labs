@@ -7,12 +7,20 @@ var app = angular.module(
     'ngResource' ]);
 
 app.factory('Person', function($resource) {
-  return $resource('api/person');
+	  return $resource('api/person');
+});
+app.factory('PersonCSV', function($resource) {
+	  return 'api/person/csv';
 });
 
-app.controller('TableCtrl', function ($scope, Person) {
+app.controller('TableCtrl', function ($scope, Person, PersonCSV, $window) {
 
-  Person.query(function(data) {
-	  $scope.items = data;
+  Person.query(function(datas) {
+	  $scope.items = datas;
   });
+  
+  $scope.downloadCSV = function() {
+	  var url = PersonCSV;
+      $window.open(url);
+  }
 });

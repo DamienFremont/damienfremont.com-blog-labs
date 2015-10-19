@@ -33,7 +33,8 @@
     </tr>
   </table>
   <!-- EXPORT -->
-  <button class="btn btn-default">
+  <button class="btn btn-default" 
+    ng-click="downloadCSV()">
     <i class="glyphicon glyphicon-export"></i> Export to Excel
   </button>
 </form>
