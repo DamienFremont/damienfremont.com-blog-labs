@@ -6,13 +6,13 @@ var app = angular.module(
     'ui.bootstrap',
     'ngResource' ]);
 
-app.factory('Model', function($resource) {
-  return $resource('api/upload');
+app.factory('Person', function($resource) {
+  return $resource('api/person');
 });
 
-app.controller('TableCtrl', function ($scope) {
-	$scope.items = [
-	                { id: 1, firstName:'Albert', lastName:'Einsten', birthYear:'1909'}
-	                ];
+app.controller('TableCtrl', function ($scope, Person) {
 
+  Person.query(function(data) {
+	  $scope.items = data;
+  });
 });

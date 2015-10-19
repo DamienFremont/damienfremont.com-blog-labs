@@ -25,13 +25,11 @@
       <th>#</th>
       <th>First Name</th>
       <th>Last Name</th>
-      <th>Birth Year</th>
     </tr>
     <tr ng-repeat="i in items">
       <td>{{i.id}}</td>
       <td>{{i.firstName}}</td>
       <td>{{i.lastName}}</td>
-      <td>{{i.birthYear}}</td>
     </tr>
   </table>
 
