@@ -43,7 +43,7 @@ app.controller('DataTableCtrl', function ($scope, Person) {
     $scope.items.splice(i, 1);
   }
   
-  $scope.update = function(data) {
+  $scope.update = function() {
 	Person.save($scope.items ,function() {
   	  alert('updated!');
     }, function() {
@@ -61,18 +61,44 @@ app.controller('DataTableCtrl', function ($scope, Person) {
 
 app.directive('focus', function($timeout) {
   return {
-  scope : {
-   trigger : '@focus'
-   },
-   link : function(scope, element) {
-   scope.$watch('trigger', function(value) {
-    if (value === "true") {
-     $timeout(function() {
-     element[0].focus();
-     });
+    scope : {
+      trigger : '@focus'
+    },
+    link : function(scope, element) {
+      scope.$watch('trigger', function(value) {
+        if (value === "true") {
+          $timeout(function() {
+            element[0].focus();
+          });
+        }
+      });
     }
-   });
-     }
-    };
-   }
-  ); 
+  };
+});
+
+app.directive('contenteditable', function() {
+  return {
+    require: 'ngModel',
+    link: function(scope, elm, attrs, ctrl) {
+      // view -> model
+       elm.bind('blur', function() {
+         scope.$apply(function() {
+           ctrl.$setViewValue(elm.html());
+         });
+       });
+       // model -> view
+       ctrl.render = function(value) {
+         elm.html(value);
+       };
+       elm.bind('keydown', function(event) {
+         var esc = event.which == 27,
+         el = event.target;
+         if (esc) {
+           ctrl.$setViewValue(elm.html());
+           el.blur();
+           event.preventDefault();
+         }
+       });
+    }
+  };
+});

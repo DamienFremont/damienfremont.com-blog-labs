@@ -14,11 +14,11 @@
 </head>
 <body>
 <div class="container">
-<h1>Table</h1>
+<h1>DataTable</h1>
 	
 <!-- SIMPLE TABLE -->
 <form name="readForm" ng-controller="TableCtrl">
-  <h2>Read-Only and Export</h2>
+  <h2>Read-Only, Export</h2>
   <!-- TABLE -->
   <table id="table"  class="table table-bordered table-striped">
     <tr>
@@ -33,7 +33,7 @@
     </tr>
   </table>
   <!-- EXPORT -->
-  <button class="btn btn-default" 
+  <button class="btn btn-success" 
     ng-click="downloadCSV()">
     <i class="glyphicon glyphicon-export"></i> Export to Excel
   </button>
@@ -42,7 +42,7 @@
 <!-- DATATABLE -->
 	
 <form name="editForm" ng-controller="DataTableCtrl">
-  <h2>DataTable (Editable, Excel-like)</h2>
+  <h2>Editable, Excel-like</h2>
   <!-- TABLE -->
   <table id="datatable" class="table table-bordered table-hover">
     <tr>
@@ -53,30 +53,36 @@
     </tr>
     <tr ng-repeat="i in items">
       <td>{{i.id}}</td>
-      <td contenteditable='true' focus="true">{{i.firstName}}</td>
-      <td contenteditable='true'>{{i.lastName}}</td>
+      <td contentEditable='true' 
+        focus="true"
+        ng-model="i.firstName">{{i.firstName}}</td>
+      <td contentEditable='true' 
+        ng-model="i.lastName">{{i.lastName}}</td>
       <td>
         <!-- REMOVE -->
-        <button class="btn btn-warning btn-xs" ng-click="remove(i)">
-          <i class="glyphicon glyphicon-minus"></i> Remove
+        <button class="btn btn-danger btn-xs" 
+          ng-click="remove(i)">
+          <i class="glyphicon glyphicon-minus"></i> 
          </button>
       </td>
     </tr>
+    <!-- ADD -->
     <tr>
       <td colspan="4">
-        <!-- ADD -->
-        <button class="btn btn-default btn-xs" ng-click="add()">
+        <button class="btn btn-primary btn-xs" 
+          ng-click="add()">
           <i class="glyphicon glyphicon-plus"></i> Add row
          </button>
       </td>
     </tr>
   </table>
   <!-- UPDATE -->
-  <button class="btn btn-primary" ng-click="update()">
+  <button class="btn btn-success" 
+    ng-click="update()" ng>
     <i class="glyphicon glyphicon-save"></i> Update
   </button>
   <!-- UNDO -->
-  <button class="btn btn-default"
+  <button class="btn btn-warning"
     ng-click="undo()">
     <i class="glyphicon glyphicon-remove"></i> Undo Changes
   </button>
