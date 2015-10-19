@@ -14,12 +14,12 @@
 </head>
 <body>
 <div class="container">
+<h1>Table</h1>
 	
-<!-- TABLE -->
-	
-<form name="myForm" ng-controller="TableCtrl">
-  <h1>Table</h1>
-
+<!-- SIMPLE TABLE -->
+<form name="readForm" ng-controller="TableCtrl">
+  <h2>Read/Export</h2>
+  <!-- TABLE -->
   <table class="table table-bordered table-striped table-hover ">
     <tr>
       <th>#</th>
@@ -32,10 +32,38 @@
       <td>{{i.lastName}}</td>
     </tr>
   </table>
-
-	<!-- EXPORT -->
-
+  <!-- EXPORT -->
+  <button class="btn btn-default">
+    <i class="glyphicon glyphicon-export"></i> Export to Excel
+  </button>
 </form>
+
+<!-- EDITABLE TABLE -->
+	
+<form name="editForm" ng-controller="TableCtrl">
+  <h2>Editable (Excel-like)</h2>
+  <!-- TABLE -->
+  <table class="table table-bordered table-striped table-hover ">
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+    <tr ng-repeat="i in items">
+      <td>{{i.id}}</td>
+      <td>{{i.firstName}}</td>
+      <td>{{i.lastName}}</td>
+    </tr>
+  </table>
+  <!-- UPDATE -->
+  <button class="btn btn-primary">
+    <i class="glyphicon glyphicon-save"></i> Update
+  </button>
+  <button class="btn btn-default">
+    <i class="glyphicon glyphicon-remove"></i> Undo Changes
+  </button>
+</form>
+
     
 </div>
 </body>
