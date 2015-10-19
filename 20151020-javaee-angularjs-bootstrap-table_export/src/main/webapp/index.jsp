@@ -18,9 +18,9 @@
 	
 <!-- SIMPLE TABLE -->
 <form name="readForm" ng-controller="TableCtrl">
-  <h2>Read/Export</h2>
+  <h2>Read-Only and Export</h2>
   <!-- TABLE -->
-  <table class="table table-bordered table-striped table-hover ">
+  <table id="table"  class="table table-bordered table-striped">
     <tr>
       <th>#</th>
       <th>First Name</th>
@@ -39,12 +39,12 @@
   </button>
 </form>
 
-<!-- EDITABLE TABLE -->
+<!-- DATATABLE -->
 	
-<form name="editForm" ng-controller="EditCtrl">
-  <h2>Editable (Excel-like)</h2>
+<form name="editForm" ng-controller="DataTableCtrl">
+  <h2>DataTable (Editable, Excel-like)</h2>
   <!-- TABLE -->
-  <table class="table table-bordered table-striped table-hover ">
+  <table id="datatable" class="table table-bordered table-hover">
     <tr>
       <th>#</th>
       <th>First Name</th>
@@ -53,35 +53,34 @@
     </tr>
     <tr ng-repeat="i in items">
       <td>{{i.id}}</td>
-      <td>{{i.firstName}}</td>
-      <td>{{i.lastName}}</td>
+      <td contenteditable='true' focus="true">{{i.firstName}}</td>
+      <td contenteditable='true'>{{i.lastName}}</td>
       <td>
-        <!-- ADD -->
-        <button class="btn btn-default">
+        <!-- REMOVE -->
+        <button class="btn btn-warning btn-xs" ng-click="remove(i)">
           <i class="glyphicon glyphicon-minus"></i> Remove
          </button>
-      
       </td>
     </tr>
     <tr>
       <td colspan="4">
         <!-- ADD -->
-        <button class="btn btn-default">
+        <button class="btn btn-default btn-xs" ng-click="add()">
           <i class="glyphicon glyphicon-plus"></i> Add row
          </button>
       </td>
     </tr>
   </table>
   <!-- UPDATE -->
-  <button class="btn btn-primary">
+  <button class="btn btn-primary" ng-click="update()">
     <i class="glyphicon glyphicon-save"></i> Update
   </button>
+  <!-- UNDO -->
   <button class="btn btn-default"
     ng-click="undo()">
     <i class="glyphicon glyphicon-remove"></i> Undo Changes
   </button>
 </form>
-
     
 </div>
 </body>
