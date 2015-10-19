@@ -16,7 +16,7 @@
 <body>
   <div class="container">
 	
-	<!-- PICTURE FILE -->
+   <!-- PICTURE FILE -->
 	
    <form name="myForm" ng-controller="SubmitFileCtrl">
      <h1>Picture</h1>
@@ -53,9 +53,9 @@
        <div class="alert alert-danger" ng-show="errorMsg">Upload Error!</div>
        <div class="alert alert-success" ng-show="picFile.result">Upload Successful.</div>
      </p>
-   </form>
+    </form>
 	
-	<!-- FILES -->
+    <!-- FILES -->
 	
     <form ng-controller="FilesCtrl">
       <h1>Files</h1>
