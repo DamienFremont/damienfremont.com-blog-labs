@@ -24,3 +24,16 @@ app.controller('TableCtrl', function ($scope, Person, PersonCSV, $window) {
       $window.open(url);
   }
 });
+
+app.controller('EditCtrl', function ($scope, Person) {
+
+	  Person.query(function(datas) {
+		  $scope.items = datas;
+	  });
+	  
+	  $scope.undo = function() {
+		  Person.query(function(datas) {
+			  $scope.items = datas;
+		  });
+	  }
+});

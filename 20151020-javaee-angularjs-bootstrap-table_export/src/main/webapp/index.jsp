@@ -41,7 +41,7 @@
 
 <!-- EDITABLE TABLE -->
 	
-<form name="editForm" ng-controller="TableCtrl">
+<form name="editForm" ng-controller="EditCtrl">
   <h2>Editable (Excel-like)</h2>
   <!-- TABLE -->
   <table class="table table-bordered table-striped table-hover ">
@@ -60,7 +60,8 @@
   <button class="btn btn-primary">
     <i class="glyphicon glyphicon-save"></i> Update
   </button>
-  <button class="btn btn-default">
+  <button class="btn btn-default"
+    ng-click="undo()">
     <i class="glyphicon glyphicon-remove"></i> Undo Changes
   </button>
 </form>
