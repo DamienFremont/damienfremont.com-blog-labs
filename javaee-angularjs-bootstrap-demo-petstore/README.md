@@ -48,12 +48,13 @@ JavaEE API
 * SECURITY
 * Servlet 3
 
-Server
+Back
 * Tomcat
 * Jersey
 * HibernateValdiator
 * Hibernate
 * WebJars
+
 Front
 * AngularJS
 * Bootstrap
