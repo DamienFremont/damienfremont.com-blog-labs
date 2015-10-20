@@ -17,12 +17,14 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 @Path("/person")
 public class ServiceJAXRS {
 
+  @Path("/all")
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public List<Person> getAll() {
     return datas;
   }
   
+  @Path("/all")
   @POST
   @Consumes(MediaType.APPLICATION_JSON)
   public void saveAll(List<Person>  datas) {
@@ -30,7 +32,7 @@ public class ServiceJAXRS {
   }
   
   @GET
-  @Path("/csv")
+  @Path("/all/csv")
   @Produces("application/pdf")
   public Response getFile() {
     File file = GenerateCSV.generateCsvFile(datas);
