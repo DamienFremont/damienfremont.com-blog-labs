@@ -39,7 +39,7 @@ http://damienfremont.com
 
 ## Technical Stack
 
-MJAJ ?
+MJAJ Application? ;-)
 
 MySQL, Jersey, AngularJs, Java
 
