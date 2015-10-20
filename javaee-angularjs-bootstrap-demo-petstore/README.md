@@ -39,6 +39,12 @@ http://damienfremont.com
 
 ## Technical Stack
 
+MJAJ ?
+
+MySQL, Jersey, AngularJs, Java
+
+(DB, REST, MVC, RUNTIME)
+
 JavaEE API
 * Bean Validation
 * JAXRS
