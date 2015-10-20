@@ -39,10 +39,9 @@ http://damienfremont.com
 
 ## Technical Stack
 
-MJAJ Application? ;-)
+SJAJ Application? (VS MEAN)
 
-MySQL, Jersey, AngularJs, Java
-
+SQL-Jersey-AngularJS-Java VS MongoDB-Express-AngularJS-NodeJS
 (DB, REST, MVC, RUNTIME)
 
 JavaEE API
