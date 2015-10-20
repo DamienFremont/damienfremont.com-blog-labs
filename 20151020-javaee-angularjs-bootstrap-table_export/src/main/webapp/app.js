@@ -2,9 +2,7 @@
 
 var app = angular.module(
   'app', 
-  [ 'ngAnimate', 
-    'ui.bootstrap',
-    'ngResource' ]);
+  [ 'ngResource' ]);
 
 app.factory('Person', function($resource) {
 	  return $resource('api/person/all');
