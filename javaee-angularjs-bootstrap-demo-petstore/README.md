@@ -39,10 +39,7 @@ http://damienfremont.com
 
 ## Technical Stack
 
-SJAJ Application? (VS MEAN)
-
-SQL-Jersey-AngularJS-Java VS MongoDB-Express-AngularJS-NodeJS
-(DB, REST, MVC, RUNTIME)
+SJAJ Application for SQL-Jersey-AngularJS-Java? (VS MEAN)
 
 JavaEE API
 * Bean Validation
