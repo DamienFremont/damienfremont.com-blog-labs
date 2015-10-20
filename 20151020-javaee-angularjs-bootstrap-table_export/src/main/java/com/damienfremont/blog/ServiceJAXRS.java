@@ -43,7 +43,6 @@ public class ServiceJAXRS {
   }
 
   // MODEL
-
   static class Person implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
     public Long id;
@@ -68,9 +67,7 @@ public class ServiceJAXRS {
   }
 
   // MOCK
-
   static List<Person> datas;
-
   static {
     datas = new ArrayList<>();
     datas.add(new Person(1L, "Albert", "Einstein"));

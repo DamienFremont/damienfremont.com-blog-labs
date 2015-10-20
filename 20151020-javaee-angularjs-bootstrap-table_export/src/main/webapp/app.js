@@ -7,6 +7,9 @@ var app = angular.module(
 app.factory('Person', function($resource) {
 	  return $resource('api/person/all');
 });
+
+//TABLE
+
 app.factory('PersonCSV', function($resource) {
 	  return 'api/person/all/csv';
 });
@@ -22,6 +25,8 @@ app.controller('TableCtrl', function ($scope, Person, PersonCSV, $window) {
       $window.open(url);
   }
 });
+
+// DATATABLE
 
 app.controller('DataTableCtrl', function ($scope, Person) {
 
