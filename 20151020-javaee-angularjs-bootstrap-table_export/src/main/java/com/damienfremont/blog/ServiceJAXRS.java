@@ -45,33 +45,25 @@ public class ServiceJAXRS {
   // MODEL
   static class Person implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
-    public Long id;
+    public Integer id;
     public String firstName;
     public String lastName;
     public Person() {
 
     }
-    public Person(Long id, String firstName, String lastName) {
-      super();
+    public Person(Integer id, String firstName, String lastName) {
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
-    }
-    public Person(int id, String firstName, String lastName) {
-      super();
-      this.id = (long) id;
-      this.firstName = firstName;
-      this.lastName = lastName;
-    }
-    
+    }    
   }
 
   // MOCK
   static List<Person> datas;
   static {
     datas = new ArrayList<>();
-    datas.add(new Person(1L, "Albert", "Einstein"));
-    datas.add(new Person(2L, "Isaac", "Newton"));
-    datas.add(new Person(3L, "Marie", "Curie"));
+    datas.add(new Person(1, "Albert", "Einstein"));
+    datas.add(new Person(2, "Isaac", "Newton"));
+    datas.add(new Person(3, "Marie", "Curie"));
   }
 }
