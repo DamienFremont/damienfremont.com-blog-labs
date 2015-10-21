@@ -8,13 +8,7 @@ app.factory('Person', function($resource) {
 	  return $resource('api/person/all');
 });
 
-//TABLE
-
-app.factory('PersonCSV', function($resource) {
-	  return 'api/person/all/csv';
-});
-
-app.controller('PersonSearchCtrl', function ($scope, Person, PersonCSV, $window) {
+app.controller('PersonSearchCtrl', function ($scope, Person) {
 
   Person.query(function(datas) {
 	  $scope.items = datas;

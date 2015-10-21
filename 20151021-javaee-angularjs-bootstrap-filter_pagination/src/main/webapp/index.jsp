@@ -11,8 +11,8 @@
 </head>
 <body>
 <div class="container">
-<h1>DataTable</h1>
-	
+
+<h1>List Filter</h1>
 <form name="readForm" ng-controller="PersonSearchCtrl">
   <table id="table"  class="table table-bordered table-striped">
     <tr>
@@ -26,11 +26,6 @@
       <td>{{i.lastName}}</td>
     </tr>
   </table>
-  <!-- EXPORT -->
-  <button class="btn btn-success" 
-    ng-click="downloadCSV()">
-    <i class="glyphicon glyphicon-export"></i> Export to Excel
-  </button>
 </form>
     
 </div>
