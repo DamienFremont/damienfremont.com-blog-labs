@@ -22,12 +22,12 @@ public class ServiceJAXRS {
 		  @QueryParam("like") final String like, 
 		  @QueryParam("pfirst") final Integer pfirst,
 	      @QueryParam("pmax") final Integer pmax) {
-	int vpfirst = 0;
-    int vpmax = 10;
+	int vpfirst = (pfirst == null ? 0 : pfirst);
+    int vpmax = (pmax == null ? 10 : pmax);
 	  // TODO use spring datas
 	List<Person> res = new ArrayList<>();
 	for (int i = 0; i < datas.size(); i++) {
-		if(i>=vpfirst && i<vpmax) {
+		if(i>=vpfirst && i<vpfirst+vpmax) {
 			res.add(datas.get(i));
 		}
 	}
