@@ -13,6 +13,7 @@
 <div class="container">
 
 <h1>List Filter</h1>
+
 <form name="readForm" ng-controller="PersonSearchCtrl">
   <table id="table"  class="table table-bordered table-striped">
     <tr>
