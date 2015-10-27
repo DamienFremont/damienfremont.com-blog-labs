@@ -7,7 +7,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public final class CucumberQuitAfterScenario {
-	
+
 	private static final String TAG = "@important";
 	private static boolean prevScenarioFailed = false;
 
@@ -22,9 +22,8 @@ public final class CucumberQuitAfterScenario {
 
 	@Before
 	public void quit_if_tagged_scenario_failed(Scenario scenario) {
-		if (!isTagged(scenario) && prevScenarioFailed) {
+		if (!isTagged(scenario) && prevScenarioFailed)
 			throw new IllegalStateException("An important scenario has failed! Cucumber wants to quit.");
-		}
 	}
 
 	private boolean isTagged(Scenario scenario) {

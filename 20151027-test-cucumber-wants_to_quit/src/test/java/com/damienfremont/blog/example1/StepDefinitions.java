@@ -14,5 +14,6 @@ public class StepDefinitions {
 	public void quit() throws Throwable {
 		// Tell Cucumber to quit after this scenario is done
 		CucumberWantsToQuit.wantsToQuit = true;
+		throw new RuntimeException("Fail!");
 	}
 }
