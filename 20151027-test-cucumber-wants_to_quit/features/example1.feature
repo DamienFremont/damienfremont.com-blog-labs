@@ -10,7 +10,7 @@ Feature: Example Quit
     When something
     Then quit
 
-  Scenario: error because wants to quit
+  Scenario: error, because wants to quit
     Given something
     When something
     Then something
