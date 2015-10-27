@@ -1,24 +1,17 @@
-package com.damienfremont.blog;
+package com.damienfremont.blog.example1;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class StepDefinitions {
 
-	@Given("^nothing$")
-	public void nothing() throws Throwable {
-		// nothing
-	}
-
-	@When("^do something$")
+	@When("^something$")
 	public void do_something() throws Throwable {
 		// something
 	}
 
 	@Then("^quit$")
 	public void quit() throws Throwable {
-		CucumberHooksQuit.wantsToQuit();
+		CucumberWantsToQuit.wantsToQuit();
 	}
-
 }

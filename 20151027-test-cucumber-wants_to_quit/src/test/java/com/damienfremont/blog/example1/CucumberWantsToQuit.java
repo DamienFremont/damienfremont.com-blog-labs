@@ -1,9 +1,9 @@
-package com.damienfremont.blog;
+package com.damienfremont.blog.example1;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.Before;
 
-public final class CucumberHooksQuit {
+public final class CucumberWantsToQuit {
 
 	public static void wantsToQuit() {
 		wantsToQuit = true;
