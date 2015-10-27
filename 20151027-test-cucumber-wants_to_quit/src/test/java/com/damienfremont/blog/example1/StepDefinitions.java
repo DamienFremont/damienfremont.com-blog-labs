@@ -12,6 +12,7 @@ public class StepDefinitions {
 
 	@Then("^quit$")
 	public void quit() throws Throwable {
-		CucumberWantsToQuit.wantsToQuit();
+		// Tell Cucumber to quit after this scenario is done
+		CucumberWantsToQuit.wantsToQuit = true;
 	}
 }

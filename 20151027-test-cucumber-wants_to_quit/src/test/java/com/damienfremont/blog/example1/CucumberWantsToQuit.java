@@ -4,12 +4,8 @@ import cucumber.api.Scenario;
 import cucumber.api.java.Before;
 
 public final class CucumberWantsToQuit {
-
-	public static void wantsToQuit() {
-		wantsToQuit = true;
-	}
-
-	private static boolean wantsToQuit = false;
+	
+	public static boolean wantsToQuit = false;
 
 	@Before
 	public void quitIfRequested(Scenario scenario) {
