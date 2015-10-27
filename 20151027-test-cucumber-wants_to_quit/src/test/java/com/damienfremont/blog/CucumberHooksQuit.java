@@ -3,7 +3,7 @@ package com.damienfremont.blog;
 import cucumber.api.Scenario;
 import cucumber.api.java.Before;
 
-public final class CucumberQuit {
+public final class CucumberHooksQuit {
 
 	public static void wantsToQuit() {
 		wantsToQuit = true;
