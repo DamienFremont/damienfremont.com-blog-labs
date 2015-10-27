@@ -18,7 +18,7 @@ public class StepDefinitions {
 	}
 	
 	@After
-	public void quit(Scenario s) throws Exception {
+	public void after(Scenario s) throws Exception {
 		// Tell Cucumber to quit after this scenario is done - if it failed.
 		CucumberHooks.wantsToQuit = true == s.isFailed();
 	}
