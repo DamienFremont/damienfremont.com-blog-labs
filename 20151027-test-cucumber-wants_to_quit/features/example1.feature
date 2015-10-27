@@ -8,7 +8,7 @@ Feature: Example Quit
   Scenario: quit...
     Given something
     When something
-    Then quit
+    Then something bad
 
   Scenario: error, because wants to quit
     Given something

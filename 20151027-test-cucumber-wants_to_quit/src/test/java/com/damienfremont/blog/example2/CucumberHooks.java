@@ -6,7 +6,7 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public final class CucumberQuitAfterScenario {
+public final class CucumberHooks {
 
 	private static final String TAG = "@important";
 	private static boolean prevScenarioFailed = false;

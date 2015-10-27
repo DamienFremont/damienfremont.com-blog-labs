@@ -1,5 +1,7 @@
 package com.damienfremont.blog.example1;
 
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -10,10 +12,14 @@ public class StepDefinitions {
 		// something
 	}
 
-	@Then("^quit$")
+	@Then("^something bad$")
 	public void quit() throws Throwable {
-		// Tell Cucumber to quit after this scenario is done
-		CucumberWantsToQuit.wantsToQuit = true;
 		throw new RuntimeException("Fail!");
+	}
+	
+	@After
+	public void quit(Scenario s) throws Exception {
+		// Tell Cucumber to quit after this scenario is done - if it failed.
+		CucumberHooks.wantsToQuit = true == s.isFailed();
 	}
 }
