@@ -5,7 +5,7 @@ Feature: Example Quit
     When something
     Then something
 
-  Scenario: quit...
+  Scenario: failure...
     Given something
     When something
     Then something bad
