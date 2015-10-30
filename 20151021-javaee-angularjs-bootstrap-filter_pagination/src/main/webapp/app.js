@@ -12,12 +12,6 @@ app.controller('PersonSearchCtrl', function ($scope, Person) {
   
   $scope.like = '';
 
-  Person.query({
-        like : $scope.like
-      }, function(datas) {
-	  $scope.items = datas;
-  });
-
   $scope.doFilter = function(like) {
 	  $scope.like = like;
 	  Person.query({
@@ -26,5 +20,13 @@ app.controller('PersonSearchCtrl', function ($scope, Person) {
 		  $scope.items = datas;
 	  });
   }
+
+  $scope.doClear = function() {
+	  $scope.like = '';
+	  $scope.doFilter($scope.like);
+  }
+
+  // INIT
+  $scope.doClear();
   
 });

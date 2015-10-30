@@ -20,7 +20,7 @@
       <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span>
       <input class="form-control" placeholder="type anything here to filter the table..." ng-model="like" ng-change="doFilter(like)">
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">
+        <button class="btn btn-primary" type="button" ng-click="doClear()">
           <span class="glyphicon glyphicon-remove"></span> Clear
         </button>
       </span>
