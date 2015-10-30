@@ -13,17 +13,24 @@
 <div class="container">
 
 <h1>List Filter</h1>
-<form name="searchForm" ng-controller="PersonSearchCtrl">
-  <div class="form-horizontal">
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Filter</label>
-      <div class="col-sm-10">
-        <input class="form-control" placeholder="type anything here..." ng-model="like" ng-change="doFilter(like)">
-      </div>
+<form ng-controller="PersonSearchCtrl">
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="input-group">
+      <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span>
+      <input class="form-control" placeholder="type anything here to filter the table..." ng-model="like" ng-change="doFilter(like)">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button">
+          <span class="glyphicon glyphicon-remove"></span> Clear
+        </button>
+      </span>
     </div>
   </div>
-  <p ng-show="!items.length">Not found! Maybe change your criteria filter.</p>
-  <table id="table"  class="table table-bordered table-striped">
+</div>
+<br/>
+  <p ng-show="!items.length" class="text-center alert alert-info">
+    <strong>Not found!</strong> Maybe change your criteria filter.</p>
+  <table ng-show="items.length" id="table"  class="table table-striped">
     <tr>
       <th>#</th>
       <th>First Name</th>

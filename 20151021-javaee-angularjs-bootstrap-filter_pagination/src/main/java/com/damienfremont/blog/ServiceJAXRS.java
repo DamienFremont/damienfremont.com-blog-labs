@@ -63,8 +63,10 @@ public class ServiceJAXRS {
     datas = new ArrayList<>();
     for (int i = 0; i < 100; i++) {
         datas.add(new Person(i+1, "John", "Doe"));
-        datas.add(new Person(i+++1, "Mich", "Jogger"));
-        datas.add(new Person(i+++1, "Santa", "Close"));
+        i++;
+        datas.add(new Person(i+1, "Mich", "Jogger"));
+        i++;
+        datas.add(new Person(i+1, "Santa", "Close"));
     }
   }
 }
