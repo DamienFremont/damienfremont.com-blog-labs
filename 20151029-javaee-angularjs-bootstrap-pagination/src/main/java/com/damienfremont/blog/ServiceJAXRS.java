@@ -19,16 +19,30 @@ public class ServiceJAXRS {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public List<Person> getAll(
-		  @QueryParam("like") final String like) {
+		  @QueryParam("like") final String like, 
+		  @QueryParam("pfirst") final Integer pfirst,
+	      @QueryParam("pmax") final Integer pmax) {
+	int vpfirst = (pfirst == null ? 0 : pfirst);
+    int vpmax = (pmax == null ? 10 : pmax);
 	List<Person> res = new ArrayList<>();
-	for (Person i : datas) {
-		if((i.firstName+i.lastName).toLowerCase().contains(like.toLowerCase())) {
-			res.add(i);
-		}		
+	for (int i = 0; i < datas.size(); i++) {
+		if(i>=vpfirst && i<vpfirst+vpmax) {
+			Person person = datas.get(i);
+			if((person.firstName+person.lastName).toLowerCase().contains(like.toLowerCase())) {
+				res.add(person);
+			}
+		}
 	}
     return res;
   }
-    
+  
+  @Path("/{id}")
+  @GET
+  @Consumes(MediaType.APPLICATION_JSON)
+  public Person get(@PathParam("id") Integer id) {
+    return datas.get(id);
+  }
+  
   // MODEL
   static class Person implements Serializable {
     private static final long serialVersionUID = 9167120287441116359L;
