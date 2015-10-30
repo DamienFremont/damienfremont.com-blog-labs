@@ -4,10 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -19,22 +17,27 @@ public class ServiceJAXRS {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public List<Person> getAll(
-		  @QueryParam("like") final String like) {
-	List<Person> res = new ArrayList<>();
-	for (Person i : datas) {
-		boolean isSkipped = false;
-		for (String like2 : like.split(" ")) {
-			String dataLike = (i.id+i.firstName+i.lastName).toLowerCase();
-			String argLike = like2.toLowerCase();
-			if(!dataLike.contains(argLike)) {
-				isSkipped = true;
-			}
-		}
-		if(!isSkipped) {
-			res.add(i);
-		}	
-	}
+      @QueryParam("like") final String like) {
+  List<Person> res = filter(like);
     return res;
+  }
+  
+  private List<Person> filter(final String like) {
+  List<Person> res = new ArrayList<>();
+  for (Person i : datas) {
+    boolean isSkipped = false;
+    for (String likePart : like.split(" ")) {
+      String dataLike = (i.id+i.firstName+i.lastName).toLowerCase();
+      String argLike = likePart.toLowerCase();
+      if(!dataLike.contains(argLike)) {
+        isSkipped = true;
+      }
+    }
+    if(!isSkipped) {
+      res.add(i);
+    }  
+  }
+  return res;
   }
     
   // MODEL
@@ -62,6 +65,6 @@ public class ServiceJAXRS {
         datas.add(new Person(i+1, "John", "Doe"));
         datas.add(new Person(i+++1, "Mich", "Jogger"));
         datas.add(new Person(i+++1, "Santa", "Close"));
-	}
+    }
   }
 }
