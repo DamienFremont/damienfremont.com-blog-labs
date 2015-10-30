@@ -10,12 +10,10 @@ app.factory('Person', function($resource) {
 
 app.controller('PersonSearchCtrl', function ($scope, Person) {
 
-  Person.query(function(datas) {
+  Person.query({
+        like : 'doe'
+      }, function(datas) {
 	  $scope.items = datas;
   });
   
-  $scope.downloadCSV = function() {
-	  var url = PersonCSV;
-      $window.open(url);
-  }
 });

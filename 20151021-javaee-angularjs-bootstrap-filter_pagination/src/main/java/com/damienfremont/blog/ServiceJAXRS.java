@@ -24,11 +24,13 @@ public class ServiceJAXRS {
 	      @QueryParam("pmax") final Integer pmax) {
 	int vpfirst = (pfirst == null ? 0 : pfirst);
     int vpmax = (pmax == null ? 10 : pmax);
-	  // TODO use spring datas
 	List<Person> res = new ArrayList<>();
 	for (int i = 0; i < datas.size(); i++) {
 		if(i>=vpfirst && i<vpfirst+vpmax) {
-			res.add(datas.get(i));
+			Person person = datas.get(i);
+			if((person.firstName+person.lastName).toLowerCase().contains(like.toLowerCase())) {
+				res.add(person);
+			}
 		}
 	}
     return res;
@@ -64,6 +66,8 @@ public class ServiceJAXRS {
     datas = new ArrayList<>();
     for (int i = 0; i < 5000; i++) {
         datas.add(new Person(i+1, "John", "Doe"));
+        datas.add(new Person(i+++1, "Mich", "Jogger"));
+        datas.add(new Person(i+++1, "Santa", "Close"));
 	}
   }
 }
