@@ -13,8 +13,16 @@
 <div class="container">
 
 <h1>List Filter</h1>
-
-<form name="readForm" ng-controller="PersonSearchCtrl">
+<form name="searchForm" ng-controller="PersonSearchCtrl">
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Filter</label>
+    <div class="col-sm-10">
+      <input class="form-control" placeholder="type anything here..." ng-model="like" ng-change="doFilter(like)">
+    </div>
+  </div>
+</div>
+  <p ng-show="!items.length">Not found! Maybe change your criteria filter.</p>
   <table id="table"  class="table table-bordered table-striped">
     <tr>
       <th>#</th>

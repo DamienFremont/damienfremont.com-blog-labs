@@ -22,9 +22,17 @@ public class ServiceJAXRS {
 		  @QueryParam("like") final String like) {
 	List<Person> res = new ArrayList<>();
 	for (Person i : datas) {
-		if((i.firstName+i.lastName).toLowerCase().contains(like.toLowerCase())) {
+		boolean isSkipped = false;
+		for (String like2 : like.split(" ")) {
+			String dataLike = (i.id+i.firstName+i.lastName).toLowerCase();
+			String argLike = like2.toLowerCase();
+			if(!dataLike.contains(argLike)) {
+				isSkipped = true;
+			}
+		}
+		if(!isSkipped) {
 			res.add(i);
-		}		
+		}	
 	}
     return res;
   }
@@ -50,7 +58,7 @@ public class ServiceJAXRS {
   static List<Person> datas;
   static {
     datas = new ArrayList<>();
-    for (int i = 0; i < 5000; i++) {
+    for (int i = 0; i < 100; i++) {
         datas.add(new Person(i+1, "John", "Doe"));
         datas.add(new Person(i+++1, "Mich", "Jogger"));
         datas.add(new Person(i+++1, "Santa", "Close"));
