@@ -29,10 +29,9 @@
     </div>
   </div>
 </div>
-
 <br/>
-  <p ng-show="!items.length" class="text-center alert alert-info">
-    <strong>Not found!</strong> Maybe change your criteria filter.</p>
+
+<!-- RESULTS -->
   <table ng-show="items.length" id="table"  class="table table-striped">
     <tr>
       <th>#</th>
@@ -45,6 +44,12 @@
       <td>{{i.lastName}}</td>
     </tr>
   </table>
+  
+<!-- EMPTY RESULT ALERT -->
+  <p ng-show="!items.length" class="text-center alert alert-info">
+    <strong>Not found!</strong> Maybe change your criteria filter.
+  </p>
+  
 </form>
     
 </div>
