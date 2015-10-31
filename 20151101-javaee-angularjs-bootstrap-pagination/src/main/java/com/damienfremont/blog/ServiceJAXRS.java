@@ -19,7 +19,7 @@ public class ServiceJAXRS {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public List<Person> getAll(
-		  @QueryParam("like") final String like, 
+		  @QueryParam("sort") final String sort, 
 		  @QueryParam("pfirst") final Integer pfirst,
 	      @QueryParam("pmax") final Integer pmax) {
 	int vpfirst = (pfirst == null ? 0 : pfirst);

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20151021-javaee-angularjs-bootstrap-filter_pagination</artifactId>
+	<artifactId>20151101-javaee-angularjs-bootstrap-pagination</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -58,11 +58,6 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>angular-ui-bootstrap</artifactId>
 			<version>${angular-ui-bootstrap.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>ngInfiniteScroll</artifactId>
-			<version>1.2.1</version>
 		</dependency>
 
 		<dependency>
