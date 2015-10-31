@@ -14,6 +14,8 @@
 
 <h1>List Filter</h1>
 <form ng-controller="PersonSearchCtrl">
+
+<!-- SEARCH INPUT -->
 <div class="row">
   <div class="col-lg-6 col-lg-offset-3">
     <div class="input-group">
@@ -27,6 +29,7 @@
     </div>
   </div>
 </div>
+
 <br/>
   <p ng-show="!items.length" class="text-center alert alert-info">
     <strong>Not found!</strong> Maybe change your criteria filter.</p>

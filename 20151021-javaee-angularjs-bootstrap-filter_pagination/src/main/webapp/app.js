@@ -26,7 +26,5 @@ app.controller('PersonSearchCtrl', function ($scope, Person) {
 	  $scope.doFilter($scope.like);
   }
 
-  // INIT
   $scope.doClear();
-  
 });
