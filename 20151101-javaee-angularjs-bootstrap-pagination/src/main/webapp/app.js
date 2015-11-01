@@ -5,15 +5,16 @@ var app = angular.module(
   [ 'ngResource' ]);
 
 app.factory('Person', function($resource) {
-	  return $resource('api/person/all');
+	  return $resource('api/person/page');
 });
 
 app.controller('PersonSearchCtrl', function ($scope, Person) {
 
-  Person.query({
-        like : 'doe'
-      }, function(datas) {
-	  $scope.items = datas;
+  Person.get({
+        page : 0,
+        size : 10,
+      }, function(page) {
+	  $scope.items = page.content;
   });
   
 });

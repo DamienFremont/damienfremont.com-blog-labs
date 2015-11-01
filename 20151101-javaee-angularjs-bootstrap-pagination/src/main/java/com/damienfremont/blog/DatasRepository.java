@@ -16,12 +16,15 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 
 	// MOCK
 	static List<Person> datas;
+
 	static {
 		datas = new ArrayList<>();
 		for (int i = 0; i < 5000; i++) {
 			datas.add(new Person(i + 1, "John", "Doe"));
-			datas.add(new Person(i++ + 1, "Mich", "Jogger"));
-			datas.add(new Person(i++ + 1, "Santa", "Close"));
+			i++;
+			datas.add(new Person(i + 1, "Mich", "Jogger"));
+			i++;
+			datas.add(new Person(i + 1, "Santa", "Close"));
 		}
 	}
 
@@ -29,20 +32,19 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 	public Page<Person> findAll(Pageable arg0) {
 		int pSize = arg0.getPageSize();
 		int pNumb = arg0.getPageNumber();
-		int pFirst = pNumb*pSize;
-		int pLast = pFirst+pSize;
-	    int total = datas.size();
+		int pFirst = pNumb * pSize;
+		int pLast = pFirst + pSize;
+		int total = datas.size();
 		List<Person> content = new ArrayList<>();
 		for (int i = 0; i < total; i++) {
-	      if(i>=pFirst && i<pLast) {
-	        Person data = datas.get(i);
-	        content.add(data);
-	      }
-	    }
+			if (i >= pFirst && i < pLast) {
+				Person data = datas.get(i);
+				content.add(data);
+			}
+		}
 		return new PageImpl<>(content, arg0, total);
 	}
 
-	
 	@Override
 	public long count() {
 		// TODO Auto-generated method stub
@@ -114,6 +116,5 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 
 }

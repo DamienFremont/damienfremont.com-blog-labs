@@ -12,10 +12,9 @@
 <body>
 <div class="container">
 
-<h1>List Filter</h1>
-
-<form name="readForm" ng-controller="PersonSearchCtrl">
-  <table id="table"  class="table table-bordered table-striped">
+<h1>Page and Sort</h1>
+<form ng-controller="PersonSearchCtrl">
+  <table id="table"  class="table table-striped">
     <tr>
       <th>#</th>
       <th>First Name</th>

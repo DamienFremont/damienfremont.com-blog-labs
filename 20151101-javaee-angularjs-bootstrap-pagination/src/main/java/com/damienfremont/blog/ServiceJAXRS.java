@@ -17,7 +17,7 @@ public class ServiceJAXRS {
 
 	DatasRepository datas = new DatasRepository();
 
-	@Path("/all")
+	@Path("/page")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Page<Person> getAll( //
