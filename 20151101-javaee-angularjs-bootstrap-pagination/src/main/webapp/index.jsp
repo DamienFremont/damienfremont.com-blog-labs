@@ -6,6 +6,7 @@
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
+<script src="vendors/paging.js"></script>
 <!-- YOUR JS -->
 <script src="app.js"></script>
 </head>
@@ -14,6 +15,21 @@
 
 <h1>Page and Sort</h1>
 <form ng-controller="PersonSearchCtrl">
+
+<!-- PAGINATION -->
+<nav class="text-center">
+
+<div paging
+  page="pageable.number" 
+  page-size="pageable.size" 
+  total="pageable.totalPages"
+  paging-action="doChangePage('bar', page)">
+</div>
+</nav>
+
+<!-- SORT -->
+
+<!-- CONTENT -->
   <table id="table"  class="table table-striped">
     <tr>
       <th>#</th>
