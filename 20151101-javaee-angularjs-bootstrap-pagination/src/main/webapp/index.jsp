@@ -18,11 +18,11 @@
 
 <!-- PAGINATION -->
 <nav class="text-center">
-
 <div paging
   page="pageable.number" 
   page-size="pageable.size" 
   total="pageable.totalPages"
+  show-prev-next="true"
   paging-action="doChangePage('bar', page)">
 </div>
 </nav>

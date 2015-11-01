@@ -22,8 +22,8 @@ public class ServiceJAXRS {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Page<Person> getAll( //
 			@QueryParam("sort") String sort, //
-			@QueryParam("pfirst") Integer page, //
-			@QueryParam("pmax") Integer size) {
+			@QueryParam("page") Integer page, //
+			@QueryParam("size") Integer size) {
 		Pageable pageRequest = new PageRequest( //
 				(page == null ? 0 : page), //
 				(size == null ? 10 : size));
