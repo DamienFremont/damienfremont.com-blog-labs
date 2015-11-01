@@ -26,7 +26,7 @@ app.controller('PersonSearchCtrl', function ($scope, Person) {
   $scope.doChangePage = function(foo, page) {
     $scope.findAll({
       page : page,
-    size : 10
+      size : 10
     });
   }
 

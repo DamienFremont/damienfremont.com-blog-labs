@@ -25,8 +25,8 @@ public class ServiceJAXRS {
 			@QueryParam("page") Integer page, //
 			@QueryParam("size") Integer size) {
 		Pageable pageRequest = new PageRequest( //
-				(page == null ? 0 : page), //
-				(size == null ? 10 : size));
+				((page == null) ? 0 : (page-1)), //
+				((size == null) ? 10 : size));
 		return datas.findAll(pageRequest);
 	}
 

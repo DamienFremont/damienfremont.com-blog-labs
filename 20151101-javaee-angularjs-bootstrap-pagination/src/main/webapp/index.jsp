@@ -19,7 +19,7 @@
 <!-- PAGINATION -->
 <nav class="text-center">
 <div paging
-  page="pageable.number" 
+  page="pageable.number + 1" 
   page-size="pageable.size" 
   total="pageable.totalPages"
   show-prev-next="true"
@@ -30,7 +30,7 @@
 <!-- SORT -->
 
 <!-- CONTENT -->
-  <table id="table"  class="table table-striped">
+  <table id="table"  class="table">
     <tr>
       <th>#</th>
       <th>First Name</th>
