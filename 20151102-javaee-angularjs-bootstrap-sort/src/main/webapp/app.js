@@ -2,9 +2,7 @@
 
 var app = angular.module(
   'app', 
-  [ 'ngResource',
-    'bw.paging'
-    ]);
+  [ 'ngResource' ]);
 
 app.factory('Person', function($resource) {
     return $resource('api/person/page');
@@ -23,17 +21,15 @@ app.controller('PersonSearchCtrl', function ($scope, Person) {
     });
   }
     
-  $scope.doChangePage = function(foo, page) {
+  $scope.doSort = function(sort) {
     $scope.findAll({
-      page : page,
-      size : 10
+      sort : sort
     });
   }
 
   // INIT
   $scope.findAll({
-    number : 0,
-    size : 10
+      sort : 'id ASC'
   });
 
 });

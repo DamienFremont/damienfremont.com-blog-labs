@@ -6,26 +6,18 @@
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
-<script src="vendors/paging.js"></script>
 <!-- YOUR JS -->
 <script src="app.js"></script>
 </head>
 <body>
 <div class="container">
 
-<h1>Page</h1>
+<h1>Sort</h1>
 <form ng-controller="PersonSearchCtrl">
 
-<!-- PAGINATION -->
+<!-- SORT -->
 <nav class="text-center">
-<div paging
-  page="pageable.number + 1" 
-  page-size="pageable.size" 
-  total="pageable.totalPages"
-  show-prev-next="true"
-  hide-if-empty="true"
-  paging-action="doChangePage('bar', page)">
-</div>
+
 </nav>
 
 <!-- CONTENT -->

@@ -19,7 +19,7 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 
 	static {
 		datas = new ArrayList<>();
-		for (int i = 0; i < 5000; i++) {
+		for (int i = 0; i < 100; i++) {
 			datas.add(new Person(i + 1, "John", "Doe"));
 			i++;
 			datas.add(new Person(i + 1, "Mich", "Jogger"));
@@ -30,19 +30,9 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 
 	@Override
 	public Page<Person> findAll(Pageable arg0) {
-		int pSize = arg0.getPageSize();
-		int pNumb = arg0.getPageNumber();
-		int pFirst = pNumb * pSize;
-		int pLast = pFirst + pSize;
 		int total = datas.size();
-		List<Person> content = new ArrayList<>();
-		for (int i = 0; i < total; i++) {
-			if (i >= pFirst && i < pLast) {
-				Person data = datas.get(i);
-				content.add(data);
-			}
-		}
-		return new PageImpl<>(content, arg0, total);
+		List<Person> content = new ArrayList<>(datas);
+		return new PageImpl<>(datas, arg0, datas.size());
 	}
 
 	@Override
