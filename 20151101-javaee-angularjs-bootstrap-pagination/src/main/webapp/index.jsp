@@ -13,7 +13,7 @@
 <body>
 <div class="container">
 
-<h1>Page and Sort</h1>
+<h1>Page</h1>
 <form ng-controller="PersonSearchCtrl">
 
 <!-- PAGINATION -->
@@ -23,11 +23,10 @@
   page-size="pageable.size" 
   total="pageable.totalPages"
   show-prev-next="true"
+  hide-if-empty="true"
   paging-action="doChangePage('bar', page)">
 </div>
 </nav>
-
-<!-- SORT -->
 
 <!-- CONTENT -->
   <table id="table"  class="table">
