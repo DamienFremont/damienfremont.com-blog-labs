@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20151101-javaee-angularjs-bootstrap-pagination</artifactId>
+	<artifactId>20151102-javaee-angularjs-bootstrap-pagination</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 

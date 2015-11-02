@@ -3,7 +3,7 @@
 var app = angular.module(
   'app', 
   [ 'ngResource',
-    'bw.paging'
+    'smart-table'
     ]);
 
 app.factory('Person', function($resource) {

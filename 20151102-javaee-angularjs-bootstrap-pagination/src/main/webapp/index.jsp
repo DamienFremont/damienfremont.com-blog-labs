@@ -6,7 +6,7 @@
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
-<script src="webjars/angular-smart-table/${angular-smart-table}/dist/smart-table.js"></script>
+<script src="webjars/angular-smart-table/${angular-smart-table.version}/dist/smart-table.js"></script>
 <!-- YOUR JS -->
 <script src="app.js"></script>
 </head>
@@ -29,7 +29,7 @@
 </nav>
 
 <!-- CONTENT -->
-  <table id="table"  class="table">
+  <table class="table" st-table="items">
     <tr>
       <th>#</th>
       <th>First Name</th>
