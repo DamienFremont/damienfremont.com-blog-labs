@@ -6,34 +6,25 @@ var app = angular.module(
     'smart-table'
     ]);
 
-app.factory('Person', function($resource) {
+app.factory('Service', function($resource) {
     return $resource('api/person/page');
 });
 
-app.controller('PersonSearchCtrl', function ($scope, Person) {
-
-  // TODO url
-
-  $scope.findAll = function(pageRequest) {
-    Person.get(
-      pageRequest,
+app.controller('TableCtrl', function ($scope, Service) {
+  $scope.callServer = function(tableState) {
+    $scope.isLoading = true;
+	var pagination = tableState.pagination;
+	var start = pagination.start || 0;
+	var number = pagination.number || 10;
+	Service.get({
+      page : 1+(start/number),
+	  size : number
+	  },
       function(pageable) {
         $scope.pageable = pageable;
         $scope.items = pageable.content;
+        tableState.pagination.numberOfPages = pageable.totalPages;
+        $scope.isLoading = false;
     });
-  }
-    
-  $scope.doChangePage = function(foo, page) {
-    $scope.findAll({
-      page : page,
-      size : 10
-    });
-  }
-
-  // INIT
-  $scope.findAll({
-    number : 0,
-    size : 10
-  });
-
+  };
 });

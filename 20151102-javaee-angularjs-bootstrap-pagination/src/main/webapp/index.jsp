@@ -12,37 +12,34 @@
 </head>
 <body>
 <div class="container">
-
-<h1>Page</h1>
-<form ng-controller="PersonSearchCtrl">
+<h1>Pagination</h1>
+<form ng-controller="TableCtrl">
+<table class="table" st-table="items" st-pipe="callServer">
+<thead>
 
 <!-- PAGINATION -->
-<nav class="text-center">
-<div paging
-  page="pageable.number + 1" 
-  page-size="pageable.size" 
-  total="pageable.totalPages"
-  show-prev-next="true"
-  hide-if-empty="true"
-  paging-action="doChangePage('bar', page)">
-</div>
-</nav>
+<tr>
+  <td class="text-center" st-pagination="" st-items-by-page="10" colspan="3"></td>
+</tr>
+    
+<!-- HEADERS -->
+<tr>
+  <th>#</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+</tr>
+</thead>
 
 <!-- CONTENT -->
-  <table class="table" st-table="items">
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-    <tr ng-repeat="i in items">
-      <td>{{i.id}}</td>
-      <td>{{i.firstName}}</td>
-      <td>{{i.lastName}}</td>
-    </tr>
-  </table>
-</form>
-    
+<tbody>
+<tr ng-repeat="i in items">
+  <td>{{i.id}}</td>
+  <td>{{i.firstName}}</td>
+  <td>{{i.lastName}}</td>
+</tr>
+</tbody>
+</table>
+</form>    
 </div>
 </body>
 </html>
