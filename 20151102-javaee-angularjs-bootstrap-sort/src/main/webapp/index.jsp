@@ -19,7 +19,8 @@
 <nav class="text-center">
 
 </nav>
-
+<!-- SORT -->
+<!-- CLEAR SORT -->
 <!-- CONTENT -->
   <table id="table"  class="table">
     <tr>

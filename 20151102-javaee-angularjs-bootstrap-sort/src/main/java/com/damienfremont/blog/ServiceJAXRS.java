@@ -11,6 +11,8 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Order;
 
 @Path("/person")
 public class ServiceJAXRS {
@@ -25,8 +27,9 @@ public class ServiceJAXRS {
 			@QueryParam("page") Integer page, //
 			@QueryParam("size") Integer size) {
 		Pageable pageRequest = new PageRequest( //
-				((page == null) ? 0 : (page-1)), //
-				((size == null) ? 10 : size));
+				((page == null) ? 0 : (page - 1)), //
+				((size == null) ? 10 : size), //
+				new Sort(sort));
 		return datas.findAll(pageRequest);
 	}
 

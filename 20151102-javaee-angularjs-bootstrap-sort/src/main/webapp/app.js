@@ -29,7 +29,7 @@ app.controller('PersonSearchCtrl', function ($scope, Person) {
 
   // INIT
   $scope.findAll({
-      sort : 'id ASC'
+      sort : 'firstName'
   });
 
 });
