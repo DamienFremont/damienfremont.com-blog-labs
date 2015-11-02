@@ -11,11 +11,14 @@ app.factory('Service', function($resource) {
 });
 
 app.controller('TableCtrl', function ($scope, Service) {
+	
+  $scope.itemsByPage = 10;
+	
   $scope.callServer = function(tableState) {
     $scope.isLoading = true;
 	var pagination = tableState.pagination;
 	var start = pagination.start || 0;
-	var number = pagination.number || 10;
+	var number = pagination.number || itemsByPage;
 	Service.get({
       page : 1+(start/number),
 	  size : number

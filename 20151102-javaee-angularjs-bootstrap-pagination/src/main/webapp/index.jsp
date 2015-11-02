@@ -14,12 +14,29 @@
 <div class="container">
 <h1>Pagination</h1>
 <form ng-controller="TableCtrl">
-<table class="table" st-table="items" st-pipe="callServer">
+<table class="table" 
+  st-table="items"
+  st-pipe="callServer">
 <thead>
 
-<!-- PAGINATION -->
+<!-- PAGE SIZE -->
 <tr>
-  <td class="text-center" st-pagination="" st-items-by-page="10" colspan="3"></td>
+  <td colspan="3">
+    <div class="btn-group pull-right ng-scope">
+      <button type="button" 
+        ng-class="{'active':itemsByPage==10}" 
+        ng-click="itemsByPage=10" 
+        class="btn btn-default">10</button>
+      <button type="button" 
+        ng-class="{'active':itemsByPage==25}" 
+        ng-click="itemsByPage=25" 
+        class="btn btn-default">25</button>
+      <button type="button" 
+        ng-class="{'active':itemsByPage==50}" 
+        ng-click="itemsByPage=59" 
+        class="btn btn-default">50</button>
+    </div>
+  </td>
 </tr>
     
 <!-- HEADERS -->
@@ -38,6 +55,18 @@
   <td>{{i.lastName}}</td>
 </tr>
 </tbody>
+
+<!-- PAGINATION -->
+<tfoot>
+<tr>
+  <td colspan="3" class="text-center">
+    <div 
+      st-template="pagination.html" 
+      st-pagination="" 
+      st-items-by-page="itemsByPage"></div>
+  </td>
+</tr>
+</tfoot>
 </table>
 </form>    
 </div>
