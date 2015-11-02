@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20151101-javaee-angularjs-bootstrap-paging</artifactId>
+	<artifactId>20151101-javaee-angularjs-bootstrap-pagination</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -17,6 +17,7 @@
 		<angularjs.version>1.4.7</angularjs.version>
 		<angular-ui-bootstrap.version>0.14.0</angular-ui-bootstrap.version>
 		<bootstrap.version>3.3.5</bootstrap.version>
+		<angular-smart-table.version>2.1.4</angular-smart-table.version>
 	</properties>
 
 	<dependencies>
@@ -65,6 +66,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>angular-ui-bootstrap</artifactId>
 			<version>${angular-ui-bootstrap.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars.bower</groupId>
+			<artifactId>angular-smart-table</artifactId>
+			<version>${angular-smart-table.version}</version>
 		</dependency>
 
 		<dependency>
