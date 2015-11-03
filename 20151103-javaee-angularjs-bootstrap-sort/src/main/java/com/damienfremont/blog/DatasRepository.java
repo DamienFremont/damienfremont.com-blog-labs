@@ -24,7 +24,7 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 
   static {
     datas = new ArrayList<>();
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
       datas.add(new Person(i + 1, "John" + i + 1, "Doe"));
       i++;
       datas.add(new Person(i + 1, "Mich" + i + 1, "Jogger"));
