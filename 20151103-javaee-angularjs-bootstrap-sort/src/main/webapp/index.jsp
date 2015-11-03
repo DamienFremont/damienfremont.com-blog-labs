@@ -14,7 +14,8 @@
 </head>
 <body>
 <div class="container">
-<h1>Pagination</h1>
+
+<h1>Sort</h1>
 <form 
   ng-controller="TableCtrl">
 <table class="table" 
