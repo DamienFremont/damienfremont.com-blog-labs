@@ -1,116 +1,122 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20151102-javaee-angularjs-bootstrap-sort</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+  <groupId>com.damienfremont.blog</groupId>
+  <artifactId>20151103-javaee-angularjs-bootstrap-sort</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- JAVAEE -->
-		<java.version>7</java.version>
-		<javaee.version>7.0</javaee.version>
-		<jersey.version>2.22.1</jersey.version>
-		<!-- WEB -->
-		<angularjs.version>1.4.7</angularjs.version>
-		<angular-ui-bootstrap.version>0.14.0</angular-ui-bootstrap.version>
-		<bootstrap.version>3.3.5</bootstrap.version>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- JAVAEE -->
+    <java.version>7</java.version>
+    <javaee.version>7.0</javaee.version>
+    <jersey.version>2.22.1</jersey.version>
+    <!-- WEB -->
+    <bootstrap.version>3.3.5</bootstrap.version>
+    <angularjs.version>1.4.7</angularjs.version>
+    <angular-ui-bootstrap.version>0.14.0</angular-ui-bootstrap.version>
+    <angular-smart-table.version>2.1.4</angular-smart-table.version>
+  </properties>
 
-	<dependencies>
+  <dependencies>
 
-		<!-- JAVA -->
+    <!-- JAVA -->
 
-		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>${javaee.version}</version>
-			<scope>provided</scope>
-		</dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>${javaee.version}</version>
+      <scope>provided</scope>
+    </dependency>
 
-		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-			<version>${jersey.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey.media</groupId>
-			<artifactId>jersey-media-json-jackson</artifactId>
-			<version>${jersey.version}</version>
-		</dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
+      <version>${jersey.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-json-jackson</artifactId>
+      <version>${jersey.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-commons</artifactId>
-			<version>1.9.0.RELEASE</version>
-		</dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-commons</artifactId>
+      <version>1.9.0.RELEASE</version>
+    </dependency>
 
 
-		<!-- WEB -->
+    <!-- WEB -->
 
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>webjars-servlet-2.x</artifactId>
-			<version>1.1</version>
-		</dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-servlet-2.x</artifactId>
+      <version>1.1</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>angularjs</artifactId>
-			<version>${angularjs.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>angular-ui-bootstrap</artifactId>
-			<version>${angular-ui-bootstrap.version}</version>
-		</dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angularjs</artifactId>
+      <version>${angularjs.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angular-ui-bootstrap</artifactId>
+      <version>${angular-ui-bootstrap.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>angular-smart-table</artifactId>
+      <version>${angular-smart-table.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>${bootstrap.version}</version>
-		</dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>${bootstrap.version}</version>
+    </dependency>
 
-	</dependencies>
-	<build>
-		<resources>
-			<resource>
-				<directory>src/main/webapp</directory>
-				<filtering>true</filtering>
-				<targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
-				<includes>
-					<include>*.jsp</include>
-				</includes>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<webResources>
-						<resource>
-							<directory>src/main/webapp</directory>
-							<filtering>true</filtering>
-							<includes>
-								<include>*.jsp</include>
-							</includes>
-						</resource>
-					</webResources>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.${java.version}</source>
-					<target>1.${java.version}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/webapp</directory>
+        <filtering>true</filtering>
+        <targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
+        <includes>
+          <include>*.jsp</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <webResources>
+            <resource>
+              <directory>src/main/webapp</directory>
+              <filtering>true</filtering>
+              <includes>
+                <include>*.jsp</include>
+              </includes>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.${java.version}</source>
+          <target>1.${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
