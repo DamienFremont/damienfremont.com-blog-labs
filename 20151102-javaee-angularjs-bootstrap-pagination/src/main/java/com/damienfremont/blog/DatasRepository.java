@@ -16,7 +16,6 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 
 	// MOCK
 	static List<Person> datas;
-
 	static {
 		datas = new ArrayList<>();
 		for (int i = 0; i < 5000; i++) {
