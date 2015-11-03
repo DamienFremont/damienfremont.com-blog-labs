@@ -1,6 +1,6 @@
 See the full tutorial at :
 
-http://damienfremont.com/2015/11/02/javaee-angularjs-bootstrap-how-to-pagination-with-smart-table/
+http://damienfremont.com/2015/11/03/javaee-angularjs-bootstrap-how-to-sort-with-smart-table/
 
 ![ScreenShot](screenshots/ScreenShot001.png)
 

@@ -43,8 +43,7 @@ public class ServiceJAXRS {
     public String firstName;
     public String lastName;
 
-    public Person() {
-    }
+    public Person() { }
 
     public Person(Integer id, String firstName, String lastName) {
       super();
