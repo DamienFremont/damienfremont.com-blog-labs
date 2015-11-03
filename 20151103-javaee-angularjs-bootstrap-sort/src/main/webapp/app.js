@@ -12,22 +12,16 @@ app.factory('Service', function($resource) {
 
 app.controller('TableCtrl', function ($scope, Service) {
 	
-  $scope.itemsByPage = 100;
-	
   $scope.callServer = function(tableState) {
-    $scope.isLoading = true;
-	var pagination = tableState.pagination;
-	var start = pagination.start || 0;
-	var number = pagination.number || $scope.itemsByPage;
+	var sort = tableState.sort;
+	var predicate = sort.predicate || 'id';
+	var reverse = sort.reverse || false;
 	Service.get({
-      page : 1+(start/number),
-	  size : number
+        sort : predicate,
+        reverse : reverse
 	  },
       function(pageable) {
-        $scope.pageable = pageable;
         $scope.items = pageable.content;
-        tableState.pagination.numberOfPages = pageable.totalPages;
-        $scope.isLoading = false;
     });
   };
 });

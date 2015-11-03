@@ -1,5 +1,8 @@
 package com.damienfremont.blog;
 
+import static org.springframework.data.domain.Sort.Direction.ASC;
+import static org.springframework.data.domain.Sort.Direction.DESC;
+
 import java.io.Serializable;
 
 import javax.ws.rs.GET;
@@ -11,6 +14,8 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 
 @Path("/person")
 public class ServiceJAXRS {
@@ -21,13 +26,14 @@ public class ServiceJAXRS {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public Page<Person> getAll( //
-      @QueryParam("sort") String sort, //
-      @QueryParam("page") Integer page, //
-      @QueryParam("size") Integer size) {
-    Pageable pageRequest = new PageRequest( //
-        ((page == null) ? 0 : (page - 1)), //
-        ((size == null) ? 10 : size));
-    return datas.findAll(pageRequest);
+      @QueryParam("sort") String sortPredicate, //
+      @QueryParam("reverse") Boolean sortReverse //
+  ) {
+    Direction order = sortReverse ? DESC : ASC;
+    Sort sort = new Sort(order, sortPredicate);
+    Pageable pageRequest = new PageRequest(0, 100, sort);
+    Page<Person> page = datas.findAll(pageRequest);
+    return page;
   }
 
   // MODEL
@@ -38,7 +44,6 @@ public class ServiceJAXRS {
     public String lastName;
 
     public Person() {
-
     }
 
     public Person(Integer id, String firstName, String lastName) {

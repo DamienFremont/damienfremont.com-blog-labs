@@ -4,6 +4,7 @@
 <head>
 <!-- LIBS CSS -->
 <link rel="stylesheet" href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
+<link rel="stylesheet" href="style.css">
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
@@ -23,9 +24,12 @@
     
 <!-- HEADERS -->
 <tr>
-  <th>#</th>
-  <th>First Name</th>
-  <th>Last Name</th>
+  <th st-sort="id">
+    <a href="#">#</a></th>
+  <th st-sort="firstName">
+    <a href="#">First Name</a></th>
+  <th st-sort="lastName">
+    <a href="#">Last Name</a></th>
 </tr>
 </thead>
 
