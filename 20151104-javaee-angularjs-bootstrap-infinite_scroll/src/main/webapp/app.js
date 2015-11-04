@@ -2,18 +2,39 @@
 
 var app = angular.module(
   'app', 
-  [ 'ngResource' ]);
+  [ 'ngResource',
+    'infinite-scroll'
+    ]);
 
-app.factory('Person', function($resource) {
-	  return $resource('api/person/all');
+app.factory('Service', function($resource) {
+    return $resource('api/message/page');
 });
 
-app.controller('PersonSearchCtrl', function ($scope, Person) {
+app.controller('MainCtrl', function ($scope, Service) {
+  const itemsByPage = 20;
+  var lastStart = 0;
+  $scope.items = [];
+  $scope.busy = false;
 
-  Person.query({
-        like : 'doe'
-      }, function(datas) {
-	  $scope.items = datas;
-  });
+  // GET PAGE
+  function getAPage(start, number) {
+    $scope.busy = true;
+	Service.get({
+	  page : 1+(start/number),
+	  size : number
+	  },
+	  function(pageable) {
+	    $scope.items = $scope.items.concat(pageable.content);
+        lastStart = start+number;
+        $scope.busy = false;
+	    });
+  }
+
+  
+  // SCROLL
+  
+  $scope.addMoreItems = function() {
+	  getAPage(lastStart, itemsByPage);
+  };
   
 });

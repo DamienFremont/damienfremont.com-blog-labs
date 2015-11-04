@@ -6,29 +6,40 @@
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
+<script src="webjars/angular-smart-table/${angular-smart-table.version}/dist/smart-table.js"></script>
+<script src="webjars/ngInfiniteScroll/${ngInfiniteScroll.version}/build/ng-infinite-scroll.js"></script>
 <!-- YOUR JS -->
 <script src="app.js"></script>
 </head>
-<body>
+<body ng-controller="MainCtrl">
 <div class="container">
+<h1>Infinite-Scroll</h1>
 
-<h1>List Filter</h1>
-
-<form name="readForm" ng-controller="PersonSearchCtrl">
-  <table id="table"  class="table table-bordered table-striped">
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-    <tr ng-repeat="i in items">
-      <td>{{i.id}}</td>
-      <td>{{i.firstName}}</td>
-      <td>{{i.lastName}}</td>
-    </tr>
-  </table>
-</form>
+<!-- SCROLL -->
+<div infinite-scroll="addMoreItems()">
     
+<!-- CONTENT -->
+<div class="list-group">
+<div class="list-group-item" href="#" ng-repeat='i in items'>
+  <h4 class="list-group-item-heading">
+	{{i.title}}
+  </h4>
+  <p class="list-group-item-text">
+    by {{i.author}} - Comments <span class="badge">{{i.num_comments}}</span>
+  </p>
+  <br>
+    <a class="btn btn-default btn-xs" href="#">
+      <span class="glyphicon glyphicon-share-alt"></span> Reply</a>
+    <a class="btn btn-default btn-xs" href="#">
+      <span class="glyphicon glyphicon-retweet"></span> Forward</a>     
+    <a class="btn btn-default btn-xs" href="#">
+      <span class="glyphicon glyphicon-star"></span> Like</a>
+</div>
+</div>
+</div>
+
+<!-- LOADING -->
+<div ng-show='busy'>Loading data...</div>
 </div>
 </body>
 </html>

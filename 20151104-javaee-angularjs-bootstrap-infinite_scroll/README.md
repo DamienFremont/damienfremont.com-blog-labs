@@ -1,6 +1,6 @@
 See the full tutorial at :
 
-http://damienfremont.com/2015/10/20/javaee-angularjs-bootstrap-datatable-and-excel-export/
+http://damienfremont.com/2015/11/04/javaee-angularjs-bootstrap-how-to-infinite-scroll/
 
 ![ScreenShot](screenshots/ScreenShot001.png)
 
@@ -9,13 +9,3 @@ http://damienfremont.com/2015/10/20/javaee-angularjs-bootstrap-datatable-and-exc
 ![ScreenShot](screenshots/ScreenShot003.png)
 
 ![ScreenShot](screenshots/ScreenShot004.png)
-
-![ScreenShot](screenshots/ScreenShot005.png)
-
-![ScreenShot](screenshots/ScreenShot006.png)
-
-![ScreenShot](screenshots/ScreenShot007.png)
-
-![ScreenShot](screenshots/ScreenShot008.png)
-
-![ScreenShot](screenshots/ScreenShot009.png)
