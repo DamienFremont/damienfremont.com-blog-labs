@@ -11,7 +11,7 @@ app.factory('Service', function($resource) {
 });
 
 app.controller('MainCtrl', function ($scope, Service) {
-  const itemsByPage = 20;
+  const itemsByPage = 10;
   var lastStart = 0;
   $scope.items = [];
   $scope.busy = false;
@@ -32,9 +32,10 @@ app.controller('MainCtrl', function ($scope, Service) {
 
   
   // SCROLL
-  
   $scope.addMoreItems = function() {
     getAPage(lastStart, itemsByPage);
   };
   
+  // INIT
+  getAPage(lastStart, 20);
 });
