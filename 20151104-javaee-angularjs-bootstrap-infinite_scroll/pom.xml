@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20151021-javaee-angularjs-bootstrap-filter_pagination</artifactId>
+	<artifactId>20151104-javaee-angularjs-bootstrap-infinite_scroll</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
