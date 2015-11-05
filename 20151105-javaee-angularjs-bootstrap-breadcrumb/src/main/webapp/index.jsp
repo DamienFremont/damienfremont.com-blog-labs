@@ -13,6 +13,22 @@
 <div class="container">
 <h1>Breadcrumb</h1>
 
+<!-- MENU -->
+
+<!-- BREADCRUMB -->
+<div ng-controller="BreadcrumbsController">
+  <ol class="breadcrumb" 
+    ng-show="route.current.breadcrumbs">
+    <li ng-class="{active: $last}" 
+      ng-repeat="breadcrumb in route.current.breadcrumbs">
+      <a href="{{breadcrumb.href}}">
+        {{breadcrumb.label}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- VIEW/PAGE -->
 <div ng-view></div>
 
 </div>
