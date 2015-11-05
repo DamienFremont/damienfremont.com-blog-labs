@@ -17,7 +17,6 @@
 		<bootstrap.version>3.3.5</bootstrap.version>
 		<angularjs.version>1.4.7</angularjs.version>
 		<angular-ui-bootstrap.version>0.14.0</angular-ui-bootstrap.version>
-		<angular-smart-table.version>2.1.4</angular-smart-table.version>
 		<ngInfiniteScroll.version>1.2.1</ngInfiniteScroll.version>
 	</properties>
 
@@ -72,11 +71,6 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>angular-ui-bootstrap</artifactId>
 			<version>${angular-ui-bootstrap.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars.bower</groupId>
-			<artifactId>angular-smart-table</artifactId>
-			<version>${angular-smart-table.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars.bower</groupId>

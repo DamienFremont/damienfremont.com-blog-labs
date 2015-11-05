@@ -6,7 +6,6 @@
 <!-- LIBS JS -->
 <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
-<script src="webjars/angular-smart-table/${angular-smart-table.version}/dist/smart-table.js"></script>
 <script src="webjars/ngInfiniteScroll/${ngInfiniteScroll.version}/build/ng-infinite-scroll.js"></script>
 <!-- YOUR JS -->
 <script src="app.js"></script>
