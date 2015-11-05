@@ -29,7 +29,6 @@ app.controller('MainCtrl', function ($scope, Service) {
         $scope.busy = false;
       });
   }
-
   
   // SCROLL
   $scope.addMoreItems = function() {
