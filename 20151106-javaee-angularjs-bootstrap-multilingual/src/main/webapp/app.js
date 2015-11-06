@@ -5,10 +5,10 @@ var app = angular.module('app',
     'pascalprecht.translate' ]);
 
 var translationsEN = {
-  'FOO': 'This is a paragraph'
+  'FOO': 'This is a paragraph.'
 }
 var translationsFR = {
-  'FOO': 'C\'est un paragraph'
+  'FOO': 'C\'est un paragraph.'
 }
 app.config( function ($translateProvider) {
   // ADD LANG
@@ -16,7 +16,7 @@ app.config( function ($translateProvider) {
   $translateProvider.translations('fr', translationsFR);
   $translateProvider.preferredLanguage('en');
   // REMEMBER
-//  $translateProvider.useLocalStorage();
+  $translateProvider.useCookieStorage();
   });
 
 app.controller('MainCtrl', function($scope, $translate) {

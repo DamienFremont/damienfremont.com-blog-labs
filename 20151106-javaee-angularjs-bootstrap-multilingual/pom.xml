@@ -16,7 +16,8 @@
 		<!-- WEB -->
 		<bootstrap.version>3.3.5</bootstrap.version>
 		<angularjs.version>1.4.7</angularjs.version>
-		<angular-translate.version>2.7.2</angular-translate.version>
+		<angular-translate.version>2.8.1</angular-translate.version>
+		<angular-translate-storage-cookie.version>2.8.0</angular-translate-storage-cookie.version>
 		<jquery.version>2.1.4</jquery.version>
 	</properties>
 
@@ -62,10 +63,16 @@
 			<version>${angularjs.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.webjars</groupId>
+			<groupId>org.webjars.bower</groupId>
 			<artifactId>angular-translate</artifactId>
-			<version>2.7.2</version>
+			<version>${angular-translate.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.webjars.bower</groupId>
+			<artifactId>angular-translate-storage-cookie</artifactId>
+			<version>${angular-translate-storage-cookie.version}</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.webjars</groupId>

@@ -11,6 +11,7 @@
 <script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
 <script src="webjars/angularjs/${angularjs.version}/angular-cookies.js"></script>
 <script src="webjars/angular-translate/${angular-translate.version}/angular-translate.js"></script>
+<script src="webjars/angular-translate-storage-cookie/${angular-translate-storage-cookie.version}/angular-translate-storage-cookie.js"></script>
 <!-- YOUR JS -->
 <script src="app.js"></script>
 </head>
@@ -27,14 +28,11 @@
   </button>
   <ul class="dropdown-menu">
     <li><a href="#" ng-click="changeLanguage('en','us')">
-      <img src="img/us.png" /> 
-      English (US)</a></li>
+      <img src="img/us.png" /> English (US)</a></li>
     <li><a href="#" ng-click="changeLanguage('en','gb')">
-      <img src="img/gb.png" /> 
-      English (GB)</a></li>
+      <img src="img/gb.png" /> English (GB)</a></li>
     <li><a href="#" ng-click="changeLanguage('fr','fr')">
-      <img src="img/fr.png" /> 
-      Francais</a></li>
+      <img src="img/fr.png" /> Francais</a></li>
   </ul>
 </div>
 
