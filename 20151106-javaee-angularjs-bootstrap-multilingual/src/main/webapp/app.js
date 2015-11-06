@@ -1,41 +1,34 @@
 'use strict';
 
 var app = angular.module('app', 
-  [ 'ngResource', 
-    'ngRoute',
-    'ngCookies',
+  [ 'ngCookies',
     'pascalprecht.translate' ]);
 
-app.config(['$translateProvider', function ($translateProvider) {
-	  $translateProvider.translations('en', {
-	    'TITLE': 'Hello',
-	    'FOO': 'This is a paragraph'
-	  });
-	 
-	  $translateProvider.translations('fr', {
-	    'TITLE': 'Bonjour',
-	    'FOO': 'C\'est un paragraph'
-	  });
-	 
-	  $translateProvider.preferredLanguage('en');
-	}]);
+var translationsEN = {
+  'FOO': 'This is a paragraph'
+}
+var translationsFR = {
+  'FOO': 'C\'est un paragraph'
+}
+app.config( function ($translateProvider) {
+  // ADD LANG
+  $translateProvider.translations('en', translationsEN);
+  $translateProvider.translations('fr', translationsFR);
+  $translateProvider.preferredLanguage('en');
+  // REMEMBER
+//  $translateProvider.useLocalStorage();
+  });
 
-app.controller('MainCtrl', function($window, $scope, $cookies, $route, $translate) {
-	function useLang(lang) {
-		$scope.lang = lang;
-		$cookies.put('lang', lang);
-		$translate.use(lang);
-	}
+app.controller('MainCtrl', function($scope, $translate) {
 
-	// CHANGE LANG
-	$scope.doChangeLang = function(lang) {
-		useLang(lang);
-		$translate.refresh();
-	}
-	
-	// INIT
-	$scope.lang = $window.navigator.language || $window.navigator.userLanguage;
-    useLang($scope.lang);
-    $scope.periodStart = 2001;
+  // CHANGE LANG
+  $scope.changeLanguage = function(langKey, localKey) {
+    $translate.use(langKey);
+    $scope.lang  = langKey;
+    $scope.local = localKey;
+  }
+  
+  // INIT
+  $scope.periodStart = 2001;
 });
 

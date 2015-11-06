@@ -1,6 +1,6 @@
 See the full tutorial at :
 
-http://damienfremont.com/2015/11/04/javaee-angularjs-bootstrap-how-to-infinite-scroll/
+http://damienfremont.com/2015/11/06/javaee-angularjs-bootstrap-how-to-multilingual/
 
 ![ScreenShot](screenshots/ScreenShot001.png)
 

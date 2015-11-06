@@ -22,25 +22,27 @@
   <button class="btn btn-default dropdown-toggle" 
     data-toggle="dropdown"
     aria-haspopup="true" aria-expanded="true">
-    Select Language ({{lang}})
+    Language ({{lang}}-{{local}})
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="#" ng-click="doChangeLang('en')">
+    <li><a href="#" ng-click="changeLanguage('en','us')">
       <img src="img/us.png" /> 
-      English</a></li>
-    <li><a href="#" ng-click="doChangeLang('fr')">
+      English (US)</a></li>
+    <li><a href="#" ng-click="changeLanguage('en','gb')">
+      <img src="img/gb.png" /> 
+      English (GB)</a></li>
+    <li><a href="#" ng-click="changeLanguage('fr','fr')">
       <img src="img/fr.png" /> 
       Francais</a></li>
   </ul>
 </div>
 
 <br/>
-
-<p>{{ 'TITLE' | translate }}</p>
-<p>{{ 'FOO' | translate }}</p>
-{{periodStart | date:'mediumDate'}} 
-
+<div class="alert alert-info col-md-5">
+  <p>{{ 'FOO' | translate }}</p>
+  {{periodStart | date:'mediumDate'}} 
+</div>
 
 </div>
 </body>
