@@ -1,7 +1,5 @@
-{
-title : Title,
-foo : It's a beautiful day!,
-plural.1s2 : there is ,
-plural.2s2 : apple
-ctrl.message : 
+{  
+    "COLOR" : "Color",
+    "HELLO" : "Hello",
+    "HELLO_WORLD" : "Hello world!"
 }

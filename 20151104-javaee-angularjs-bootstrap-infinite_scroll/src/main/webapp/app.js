@@ -10,7 +10,7 @@ app.factory('Service', function($resource) {
     return $resource('api/message/page');
 });
 
-app.controller('MainCtrl', function ($scope, Service) {
+app.controller('MainCtrl', function ($scope, $route, Service) {
   const itemsByPage = 10;
   var lastStart = 0;
   $scope.items = [];
