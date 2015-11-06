@@ -27,19 +27,20 @@
   </button>
   <ul class="dropdown-menu">
     <li><a href="#" ng-click="doChangeLang('en')">
+      <img src="img/us.png" /> 
       English</a></li>
     <li><a href="#" ng-click="doChangeLang('fr')">
+      <img src="img/fr.png" /> 
       Francais</a></li>
   </ul>
 </div>
 
+<br/>
 
-<h2>Locale:</h2>
-{{periodStart | date:'mediumDate'}} 
-
-<h2>Language:</h2>
 <p>{{ 'TITLE' | translate }}</p>
 <p>{{ 'FOO' | translate }}</p>
+{{periodStart | date:'mediumDate'}} 
+
 
 </div>
 </body>

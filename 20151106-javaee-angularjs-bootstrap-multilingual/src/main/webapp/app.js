@@ -21,19 +21,21 @@ app.config(['$translateProvider', function ($translateProvider) {
 	}]);
 
 app.controller('MainCtrl', function($window, $scope, $cookies, $route, $translate) {
-	// INIT
-	var lang = $window.navigator.language || $window.navigator.userLanguage;
-	
-	$scope.periodStart = 2001;
-	$scope.lang = lang;
-	$cookies.put('lang', lang);
-	$translate.use(lang);
+	function useLang(lang) {
+		$scope.lang = lang;
+		$cookies.put('lang', lang);
+		$translate.use(lang);
+	}
 
 	// CHANGE LANG
 	$scope.doChangeLang = function(lang) {
-		$scope.lang = $cookies.lang = lang;
-		$translate.use(lang);
+		useLang(lang);
 		$translate.refresh();
 	}
+	
+	// INIT
+	$scope.lang = $window.navigator.language || $window.navigator.userLanguage;
+    useLang($scope.lang);
+    $scope.periodStart = 2001;
 });
 
