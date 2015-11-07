@@ -12,8 +12,10 @@ var translationsFR = {
 }
 app.config( function ($translateProvider) {
   // ADD LANG
-  $translateProvider.translations('en', translationsEN);
-  $translateProvider.translations('fr', translationsFR);
+  $translateProvider.useStaticFilesLoader({
+    prefix: 'i18n/locale-',
+    suffix: '.json'
+  });
   $translateProvider.preferredLanguage('en');
   // REMEMBER
   $translateProvider.useCookieStorage();
@@ -24,11 +26,9 @@ app.controller('MainCtrl', function($scope, $translate) {
   // CHANGE LANG
   $scope.changeLanguage = function(langKey, localKey) {
     $translate.use(langKey);
-    $scope.lang  = langKey;
-    $scope.local = localKey;
   }
   
   // INIT
-  $scope.periodStart = 2001;
+  $scope.periodStart = 1288323623006;
 });
 
