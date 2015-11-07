@@ -21,5 +21,3 @@ http://damienfremont.com/2015/11/06/javaee-angularjs-bootstrap-how-to-multilingu
 ![ScreenShot](screenshots/ScreenShot008.png)
 
 ![ScreenShot](screenshots/ScreenShot009.png)
-
-![ScreenShot](screenshots/ScreenShot010.png)
