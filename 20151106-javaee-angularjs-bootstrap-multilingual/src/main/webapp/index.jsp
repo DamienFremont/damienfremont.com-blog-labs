@@ -13,6 +13,7 @@
 <script src="webjars/angular-translate/${angular-translate.version}/angular-translate.js"></script>
 <script src="webjars/angular-translate-storage-cookie/${angular-translate-storage-cookie.version}/angular-translate-storage-cookie.js"></script>
 <script src="webjars/angular-translate-loader-static-files/${angular-translate-loader-static-files.version}/angular-translate-loader-static-files.js"></script>
+<script src="webjars/angular-dynamic-locale/${angular-dynamic-locale.version}/dist/tmhDynamicLocale.js"></script>
 <!-- YOUR JS -->
 <script src="app.js"></script>
 </head>
@@ -21,33 +22,36 @@
 <h1>Multilingual</h1>
 
 <!-- CHANGE LANGUAGE -->
-<div role="presentation" class="dropdown">
+<div class="dropdown">
   <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
     <i class="glyphicon glyphicon-menu-hamburger"></i>
-     Language <span class="caret"></span>
+     Language ({{model.selectedLocale}})
+     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="#" ng-click="changeLanguage('en','us')">
-      <img src="img/flag_icons/us.png" /> 
-      English (US)</a></li>
-    <li><a href="#" ng-click="changeLanguage('en','gb')">
-      <img src="img/flag_icons/gb.png" /> 
-      English (GB)</a></li>
-    <li><a href="#" ng-click="changeLanguage('fr','fr')">
-      <img src="img/flag_icons/fr.png" /> 
-      Francais</a></li>
+    <li ng-repeat="(key, value) in availableLocales">
+      <a href="#" ng-click="changeLocale(key)">
+      <img src="img/flag_icons/{{key | limitTo:2:3}}.png" /> 
+      {{value}}</a></li>
   </ul>
 </div>
-
+<br/>
+<div class="alert alert-info col-md-5">
+<p>Current locale id: {{$locale.id}}</p>
+<br/>
+  
+<!-- i18n: LANGUAGE -->
+<strong>i18n: LANGUAGE</strong>
+<p>{{ 'PARAGRAPH' | translate }}</p>
+  
 <br/>
 
-<div class="alert alert-info col-md-5">
-  
-  <!-- i18n: LANGUAGE -->
-  <p>{{ 'PARAGRAPH' | translate }}</p>
-  
-  <!-- l10n: LOCALE -->
-  {{periodStart | date:'mediumDate'}}
+<!-- l10n: LOCALE -->
+<strong>l10n: LOCALE</strong>
+<p>A big number: {{1234567890 | number}}</p>
+<p>The Epoch was on: {{0 | date:'longDate'}}</p>
+<p>The Time was on: {{0 | date:'shortTime'}}</p>
+<p>One million of the local currency: {{1000000 | currency}}</p>
 </div>
 
 </div>
