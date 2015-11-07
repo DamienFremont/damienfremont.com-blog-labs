@@ -7,23 +7,29 @@ var app = angular.module('app',
 
 // i18n: LANGUAGE
 app.config( function ($translateProvider) {
+	
   // ADD LANG
   $translateProvider
   .useStaticFilesLoader({
     prefix: 'i18n/locale-',
     suffix: '.json'
   })
+  
   // REMEMBER
   .preferredLanguage('en')
   .fallbackLanguage('en')
-  .useSanitizeValueStrategy('escape')
-  .useCookieStorage();
+  .useCookieStorage()
+  
+  // SECURITY
+  .useSanitizeValueStrategy('escape');
 });
 
 // l10n: LOCALE
 app.config(function(tmhDynamicLocaleProvider) {
   const locales = 'webjars/angular-i18n/1.4.7/angular-locale_{{locale}}.js';
   tmhDynamicLocaleProvider
+
+  // REMEMBER
   .localeLocationPattern(locales)
   .useCookieStorage();
 })

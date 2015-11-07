@@ -30,7 +30,8 @@
   </button>
   <ul class="dropdown-menu">
     <li ng-repeat="(key, value) in availableLocales">
-      <a href="#" ng-click="changeLocale(key)">
+      <a href="#" 
+        ng-click="changeLocale(key)">
       <img src="img/flag_icons/{{key | limitTo:2:3}}.png" /> 
       {{value}}</a></li>
   </ul>
