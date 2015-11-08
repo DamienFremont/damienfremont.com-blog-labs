@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
+<!-- YOU NEED THIS TAG TO PREVENT D3JS CHARACTER ERROR!!! -->
+<meta charset="utf-8">
 
 <!-- LIBS CSS -->
 <link rel="stylesheet" href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
 <link rel="stylesheet" href="webjars/nvd3/${nvd3.version}/nv.d3.css">
 </head>
-<body ng-app="app">
-<div class="container" ng-controller="MainCtrl">
+<body>
+<div class="container">
 <h1>Charts</h1>
 
 <!-- LINE -->
+<div ng-controller="LineCtrl">
+	<nvd3-line-chart
+    	data="exampleData"
+        xAxisTickFormat="xAxisTickFormatFunction()"
+        yAxisTickFormat="yAxisTickFormatFunction()"
+        showXAxis="true"
+        showYAxis="true">
+        	<svg></svg>
+    </nvd3-line-chart>
+</div>
+
+<!-- STACKED -->
+
+
 <!-- BARS -->
+<div ng-controller="BarCtrl">
+<nvd3-discrete-bar-chart
+    	data="exampleData"
+        id="exampleId"
+        showXAxis="true"
+        showYAxis="true"
+        xAxisTickFormat="xAxisTickFormatFunction()"
+        width="550"
+        height="400">
+        	<svg></svg>
+    </nvd3-discrete-bar-chart>
+</div>
+
 <!-- PIE -->
 <!-- REAL TIME -->
 
