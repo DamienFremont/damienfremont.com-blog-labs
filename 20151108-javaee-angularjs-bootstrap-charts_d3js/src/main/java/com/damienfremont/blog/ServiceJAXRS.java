@@ -37,9 +37,9 @@ public class ServiceJAXRS {
   static {
     long mockStart = 1025409600000L;
     long mockInterval = 2592000000L;
-   for (int i = 1; i < 10; i++) {
-     mockStart = mockStart + mockInterval;
-     mockDatas.add(newValue(mockStart));
+    for (int i = 1; i < 10; i++) {
+      mockStart = mockStart + mockInterval;
+      mockDatas.add(newValue(mockStart));
     }
   }
   
