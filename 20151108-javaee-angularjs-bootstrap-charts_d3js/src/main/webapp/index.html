@@ -12,28 +12,11 @@
 <div class="container">
 <h1>Charts</h1>
 
-<!-- LINE -->
-<h4>Line Charts</h4>
-<div ng-controller="LineCtrl">
-	<nvd3-line-chart
-    	data="exampleData"
-        xAxisTickFormat="xAxisTickFormatFunction()"
-        yAxisTickFormat="yAxisTickFormatFunction()"
-        showXAxis="true"
-        showYAxis="true">
-        	<svg></svg>
-    </nvd3-line-chart>
-</div>
-
-<!-- STACKED -->
-
-
 <!-- BARS -->
-<h4>Pie Charts</h4>
+<h4>Bar Charts</h4>
 <div ng-controller="BarCtrl">
 <nvd3-discrete-bar-chart
     	data="exampleData"
-        id="exampleId"
         showXAxis="true"
         showYAxis="true"
         xAxisTickFormat="xAxisTickFormatFunction()"
@@ -42,8 +25,6 @@
         	<svg></svg>
     </nvd3-discrete-bar-chart>
 </div>
-
-<!-- PIE -->
 
 <!-- REAL TIME -->
 <h4>Real Time Charts</h4>
