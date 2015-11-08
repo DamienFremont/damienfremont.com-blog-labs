@@ -11,3 +11,5 @@ http://damienfremont.com/2015/11/08/javaee-angularjs-bootstrap-howto-charts-with
 ![ScreenShot](screenshots/ScreenShot004.png)
 
 ![ScreenShot](screenshots/ScreenShot005.png)
+
+![ScreenShot](screenshots/ScreenShot006.png)
