@@ -1,52 +1,63 @@
 package com.damienfremont.blog;
 
-import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 
-
-@Path("/message")
+@Path("/datas")
 public class ServiceJAXRS {
 
-  DatasRepository datas = new DatasRepository();
-
-  @Path("/page")
+  @Path("/values")
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public Page<Message> getAll( //
-      @QueryParam("page") Integer page, //
-      @QueryParam("size") Integer size) {
-    Pageable pageRequest = new PageRequest( //
-        ((page == null) ? 0 : (page - 1)), //
-        ((size == null) ? 10 : size));
-    return datas.findAll(pageRequest);
+  public List<List> getAll() {
+    return mockDatas;
   }
-
-  // MODEL
-  static class Message implements Serializable {
-    private static final long serialVersionUID = 9167120287441116359L;
-    public Integer score;
-    public String title;
-    public String author;
-    public Integer num_comments;
-
-    public Message() {
-    }
-
-    public Message(Integer score, String title, String author, Integer num_comments) {
-      super();
-      this.score = score;
-      this.title = title;
-      this.author = author;
-      this.num_comments = num_comments;
+  
+  @Path("/values-big")
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public List<List> getAllReal() {
+    // MOCK: UPDATE FOR REAL TIME
+    mockDatasReal.remove(0);
+    mockStart = mockStart + mockInterval;
+    mockDatasReal.add(newValue(mockStart));
+    return mockDatasReal;
+  }
+  
+  // MOCK
+  // MOCK: INIT
+  static ArrayList<List> mockDatas = new ArrayList<>();
+  static {
+    long mockStart = 1025409600000L;
+    long mockInterval = 2592000000L;
+   for (int i = 1; i < 10; i++) {
+     mockStart = mockStart + mockInterval;
+     mockDatas.add(newValue(mockStart));
     }
   }
+  
+  static ArrayList<List> mockDatasReal = new ArrayList<>();
+  static long mockStart = 1;
+  static long mockInterval = 1;
+  static {
+    for (int i = 1; i < 50; i++) {
+      mockStart = mockStart + mockInterval;
+      mockDatasReal.add(newValue(mockStart));
+    }
+  }
+  private static ArrayList<Long> newValue(long start) {
+    long randomNum = new Random().nextInt(50) + 1;
+    ArrayList<Long> value = new ArrayList<>();
+    value.add(start);
+    value.add(randomNum);
+    return value;
+  }
+
 }
