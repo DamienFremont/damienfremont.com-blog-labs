@@ -2,12 +2,11 @@
 
 var app = angular.module('app', [ 'ngResource', 'nvd3ChartDirectives' ]);
 
+// BAR *************
+
 app.factory('Service', function($resource) {
   return $resource('api/datas/values');
 });
-app.factory('ServiceReal', function($resource) {
-	  return $resource('api/datas/values-big');
-	});
 
 app.controller('BarCtrl', function($scope, Service) {
 
@@ -27,10 +26,16 @@ app.controller('BarCtrl', function($scope, Service) {
   });
 });
 
+// LINE IN REAL TIME ******
+
+app.factory('ServiceReal', function($resource) {
+  return $resource('api/datas/values-big');
+});
+
 app.controller('RealTimeCtrl', function($scope, Service, ServiceReal) {
 	
-  // REFRESH VALUE:  1 SEC
-  var refreshInterval = 1 * 1;
+  // REFRESH VALUE:  0.1 SEC
+  var refreshInterval = 1 * 1000;
   
   // UPDATE
   $scope.fetchData = function() {
@@ -53,14 +58,15 @@ app.controller('RealTimeCtrl', function($scope, Service, ServiceReal) {
 	        } ];
 	      });
 	  }
-
-  $scope.exampleData = $scope.fetchData();
-  $scope.exampleData2 = $scope.fetchData2();
-  // REFRESH EVERY X TIME
+    
+  // EVERY X TIME
   setInterval(function() {
     $scope.$apply(function() {
         $scope.fetchData2();
     })
   }, refreshInterval);
-
+  
+  // INIT
+  $scope.fetchData();
+  $scope.fetchData2();
 });
