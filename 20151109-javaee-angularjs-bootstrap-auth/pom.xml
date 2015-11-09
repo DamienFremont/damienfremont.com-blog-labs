@@ -17,7 +17,7 @@
 		<bootstrap.version>3.3.5</bootstrap.version>
 		<angularjs.version>1.4.7</angularjs.version>
 		<satellizer.version>0.12.5</satellizer.version>
-		<ui-router.version>0.2.15</ui-router.version>
+		<ui-router.version>0.2.9</ui-router.version>
 	</properties>
 
 	<dependencies>
@@ -68,7 +68,7 @@
 			<version>${angularjs.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.webjars</groupId>
+			<groupId>org.webjars.bower</groupId>
 			<artifactId>ui-router</artifactId>
 			<version>${ui-router.version}</version>
 		</dependency>

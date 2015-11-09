@@ -1,9 +1,23 @@
 'use strict';
 
-var app = angular.module('app', [ 'ngResource', 'satellizer' ]);
+var app = angular.module('app', [ 'ngResource', 'ui.router', 'satellizer' ]);
 
 // BAR *************
-app.config(function($urlRouterProvider, $authProvider) {
+app.config(function($authProvider) {
+	
+	$authProvider.withCredentials = true;
+	$authProvider.tokenRoot = null;
+	$authProvider.cordova = false;
+	$authProvider.baseUrl = './api/';
+	$authProvider.loginUrl = '/auth/login';
+	$authProvider.signupUrl = '/auth/signup';
+	$authProvider.unlinkUrl = '/auth/unlink/';
+	$authProvider.tokenName = 'token';
+	$authProvider.tokenPrefix = 'satellizer';
+	$authProvider.authHeader = 'Authorization';
+	$authProvider.authToken = 'Bearer';
+	$authProvider.storageType = 'localStorage';
+	
 //    $stateProvider
 //    .state('home', {
 //      url: '/',
@@ -40,7 +54,7 @@ app.config(function($urlRouterProvider, $authProvider) {
 //      }
 //    });
     
-    $urlRouterProvider.otherwise('/caca');
+//    $urlRouterProvider.otherwise('/caca');
 });
 
 app.factory('Service', function($resource) {
@@ -49,6 +63,9 @@ app.factory('Service', function($resource) {
 
 app.controller('LoginCtrl', function($scope, $auth) {
 
+	$scope.email = 'm';
+	$scope.password = 'p';
+	
 	var user = {
 		email : $scope.email,
 		password : $scope.password
