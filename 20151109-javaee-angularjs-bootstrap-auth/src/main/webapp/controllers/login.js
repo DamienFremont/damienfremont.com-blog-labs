@@ -2,18 +2,18 @@
 
 app.controller('LoginCtrl', function($scope, $auth) {
 
-  $scope.email = 'm';
-  $scope.password = 'p';
-  
-  var user = {
-    email : $scope.email,
-    password : $scope.password
-  };
-
-  $auth.login(user).then(function(response) {
-    // Redirect user here after a successful log in.
-  }).catch(function(response) {
-    // Handle errors here, such as displaying a notification
-    // for invalid email and/or password.
-  });
+  $scope.emailLogin = function() {
+        $auth.login({ email: $scope.email, password: $scope.password })
+          .then(function(response) {
+            $window.localStorage.currentUser = JSON.stringify(response.data.user);
+            $rootScope.currentUser = JSON.parse($window.localStorage.currentUser);
+          })
+          .catch(function(response) {
+            $scope.errorMessage = {};
+            angular.forEach(response.data.message, function(message, field) {
+              $scope.loginForm[field].$setValidity('server', false);
+              $scope.errorMessage[field] = response.data.message[field];
+            });
+          });
+      };
 });

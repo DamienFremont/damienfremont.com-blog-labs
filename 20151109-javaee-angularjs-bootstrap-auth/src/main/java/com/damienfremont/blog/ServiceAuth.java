@@ -12,14 +12,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/data")
-public class ServiceJAXRS {
+@Path("/auth")
+public class ServiceAuth {
 
-  @GET
-  @Produces(MediaType.APPLICATION_JSON)
-  public String get() {
-    // TODO auth
-    return "content";
+  @Path("/login")
+  @POST
+  @Consumes(MediaType.APPLICATION_JSON)
+  public void login(Object o) {
+    // TODO
   }  
 
 }

@@ -15,15 +15,10 @@ app.config(function($routeProvider, $authProvider) {
       templateUrl: 'views/login.html',
       controller: 'LoginCtrl'
     })
-    .when('/signup', {
-      templateUrl: 'views/signup.html',
-      controller: 'SignupCtrl'
+    .when('/notfound', {
+      templateUrl: 'views/404.html'
     })
-    .when('/photo/:id', {
-      templateUrl: 'views/detail.html',
-      controller: 'DetailCtrl'
-    })
-    .otherwise('/');
+    .otherwise('/notfound');
 
   // SECURITY
   $authProvider.withCredentials = true;
@@ -42,7 +37,7 @@ app.config(function($routeProvider, $authProvider) {
 });
 
 app.factory('Service', function($resource) {
-  return $resource('api/datas/values');
+  return $resource('api/data');
 });
 
 // COMMON CTRL
