@@ -1,27 +1,31 @@
 'use strict';
 
-var app = angular.module('app', [ 'ngResource', 'ui.router', 'satellizer' ]);
+var app = angular.module('app', [ 'ngResource', 'ngRoute',  'ui.router', 'satellizer' ]);
 
-myApp.config(function($routeProvider) {
+// CONFIG
+app.config(function($routeProvider, $authProvider) {
+	
+  // ROUTE
   $routeProvider
-  // ROUTE FOR THE READ PAGE
-  .when('/', {
-    templateUrl : 'templates/home.html',
-    controller  : 'PersonCtrl'
-  })
-  // ROUTE FOR THE EDIT PAGE
-  .when('/login', {
-    templateUrl : 'templates/login.html',
-    controller  : 'PersonCtrl'
-  })
-  // DEFAULT
-  .otherwise({
-    redirectTo: '/'
-  });
-});
+    .when('/', {
+      templateUrl: 'views/home.html',
+      controller: 'HomeCtrl'
+    })
+    .when('/login', {
+      templateUrl: 'views/login.html',
+      controller: 'LoginCtrl'
+    })
+    .when('/signup', {
+      templateUrl: 'views/signup.html',
+      controller: 'SignupCtrl'
+    })
+    .when('/photo/:id', {
+      templateUrl: 'views/detail.html',
+      controller: 'DetailCtrl'
+    })
+    .otherwise('/');
 
-app.config(function($authProvider) {
-  
+  // SECURITY
   $authProvider.withCredentials = true;
   $authProvider.tokenRoot = null;
   $authProvider.cordova = false;
@@ -35,63 +39,20 @@ app.config(function($authProvider) {
   $authProvider.authToken = 'Bearer';
   $authProvider.storageType = 'localStorage';
   
-//    $stateProvider
-//    .state('home', {
-//      url: '/',
-//      controller: 'HomeCtrl',
-//      templateUrl: 'partials/home.html'
-//    })
-//    .state('login', {
-//      url: '/login',
-//      templateUrl: 'partials/login.html',
-//      controller: 'LoginCtrl',
-//      resolve: {
-//        skipIfLoggedIn: skipIfLoggedIn
-//      }
-//    })
-//    .state('signup', {
-//      url: '/signup',
-//      templateUrl: 'partials/signup.html',
-//      controller: 'SignupCtrl',
-//      resolve: {
-//        skipIfLoggedIn: skipIfLoggedIn
-//      }
-//    })
-//    .state('logout', {
-//      url: '/logout',
-//      template: null,
-//      controller: 'LogoutCtrl'
-//    })
-//    .state('profile', {
-//      url: '/profile',
-//      templateUrl: 'partials/profile.html',
-//      controller: 'ProfileCtrl',
-//      resolve: {
-//        loginRequired: loginRequired
-//      }
-//    });
-    
-//    $urlRouterProvider.otherwise('/caca');
 });
 
 app.factory('Service', function($resource) {
   return $resource('api/datas/values');
 });
 
-app.controller('LoginCtrl', function($scope, $auth) {
+// COMMON CTRL
 
-  $scope.email = 'm';
-  $scope.password = 'p';
-  
-  var user = {
-    email : $scope.email,
-    password : $scope.password
+app.controller('ParentCtrl', function($scope, $auth) {
+  $scope.isAuthenticated = function() {
+    return $auth.isAuthenticated();
   };
-
-  $auth.login(user).then(function(response) {
-    // Redirect user here after a successful log in.
-  }).catch(function(response) {
-    // Handle errors here, such as displaying a notification
-    // for invalid email and/or password.
-  });
 });
+
+app.controller('NavbarCtrl', function($scope, $auth) {
+});
+
