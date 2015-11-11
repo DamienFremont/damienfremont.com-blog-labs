@@ -23,21 +23,15 @@
 <div class="navbar-collapse collapse" 
   id="bs-example-navbar-collapse-1" 
   aria-expanded="true">
-  <ul class="nav navbar-nav">
-    
-    <!-- HOME -->
-    <li class="active"><a href="#/home">
-    Home <span class="sr-only"> (current)</span></a></li>
-    
+<ul class="nav navbar-nav">
+  <li><a href="#/">Home</a></li>
+    <li ng-if="isAuthenticated()"><a href="#/profile">Profile</a></li>
   </ul>
   <ul ng-if="!isAuthenticated()" class="nav navbar-nav pull-right">
-    <!-- LOGIN -->
     <li><a href="#/login">Login</a></li>
-    <!-- SINGUP -->
     <li><a href="#/signup">Sign up</a></li>
   </ul>
   <ul ng-if="isAuthenticated()" class="nav navbar-nav pull-right">
-    <!-- LOGOUT -->
     <li><a href="#/logout">Logout</a></li>
   </ul>
 </div>
