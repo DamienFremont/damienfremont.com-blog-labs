@@ -15,10 +15,7 @@ app.config(function($routeProvider, $authProvider) {
       templateUrl: 'views/login.html',
       controller: 'LoginCtrl'
     })
-    .when('/notfound', {
-      templateUrl: 'views/404.html'
-    })
-    .otherwise('/notfound');
+    .otherwise('/');
 
   // SECURITY
   $authProvider.withCredentials = true;
@@ -49,5 +46,6 @@ app.controller('ParentCtrl', function($scope, $auth) {
 });
 
 app.controller('NavbarCtrl', function($scope, $auth) {
+  
 });
 

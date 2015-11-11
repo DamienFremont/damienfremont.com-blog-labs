@@ -1,5 +1,5 @@
 
-<div class="panel col-md-4 col-md-offset-4">
+<div class="panel panel-default col-md-4 col-md-offset-4">
   <div class="panel-body">
     <h4 class="text-center">
       <i class="glyphicon glyphicon-log-in"></i> Log in
@@ -10,7 +10,7 @@
         ng-class="{ 'has-error': loginForm.email.$invalid && loginForm.email.$dirty }">
         <input server-error class="form-control input-lg" type="text"
           name="email" ng-model="email" placeholder="Email" required
-          autofocus> <span class="ion-at form-control-feedback"></span>
+          autofocus>
         <div class="help-block" ng-if="loginForm.email.$dirty"
           ng-messages="loginForm.email.$error">
           <div ng-message="required">Please enter your email</div>
@@ -22,8 +22,7 @@
         ng-class="{ 'has-error': loginForm.password.$invalid && loginForm.password.$dirty }">
         <input server-error class="form-control input-lg"
           type="password" name="password" ng-model="password"
-          placeholder="Password" required> <span
-          class="ion-key form-control-feedback"></span>
+          placeholder="Password" required>
         <div class="help-block" ng-if="loginForm.password.$dirty"
           ng-messages="loginForm.password.$error">
           <div ng-message="required">Please enter your password</div>
