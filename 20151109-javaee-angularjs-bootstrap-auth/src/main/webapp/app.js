@@ -21,7 +21,10 @@ app.config(function($routeProvider, $authProvider) {
     })
     .when('/datas', {
       templateUrl: 'views/datas.html',
-      controller: 'DatasCtrl'
+      controller: 'DatasCtrl',
+      resolve: {
+          loginRequired: loginRequired
+        }
     })
     .otherwise('/');
 
@@ -40,6 +43,26 @@ app.config(function($routeProvider, $authProvider) {
   $authProvider.storageType = 'localStorage';
   
 });
+
+function skipIfLoggedIn($q, $auth) {
+    var deferred = $q.defer();
+    if ($auth.isAuthenticated()) {
+      deferred.reject();
+    } else {
+      deferred.resolve();
+    }
+    return deferred.promise;
+  }
+
+  function loginRequired($q, $location, $auth) {
+    var deferred = $q.defer();
+    if ($auth.isAuthenticated()) {
+      deferred.resolve();
+    } else {
+      $location.path('/login');
+    }
+    return deferred.promise;
+  }
 
 app.factory('Service', function($resource) {
   return $resource('api/data');
