@@ -15,6 +15,14 @@ app.config(function($routeProvider, $authProvider) {
       templateUrl: 'views/login.html',
       controller: 'LoginCtrl'
     })
+    .when('/logout', {
+      templateUrl: 'views/home.html',
+      controller: 'LogoutCtrl'
+    })
+    .when('/datas', {
+      templateUrl: 'views/datas.html',
+      controller: 'DatasCtrl'
+    })
     .otherwise('/');
 
   // SECURITY
@@ -48,4 +56,3 @@ app.controller('ParentCtrl', function($scope, $auth) {
 app.controller('NavbarCtrl', function($scope, $auth) {
   
 });
-
