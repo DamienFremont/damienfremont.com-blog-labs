@@ -1,3 +1,4 @@
+<!-- FROM https://github.com/sahat/satellizer/blob/master/examples/client/partials/login.html -->
 
 <div class="panel panel-default col-md-4 col-md-offset-4">
   <div class="panel-body">
@@ -6,6 +7,8 @@
     </h4>
 
     <form name="loginForm" ng-submit="emailLogin()" novalidate>
+
+      <!-- LOGIN -->
       <div class="form-group has-feedback"
         ng-class="{ 'has-error': loginForm.email.$invalid && loginForm.email.$dirty }">
         <input server-error class="form-control input-lg" type="text"
@@ -18,6 +21,7 @@
         </div>
       </div>
 
+      <!-- PASSWORD -->
       <div class="form-group has-feedback"
         ng-class="{ 'has-error': loginForm.password.$invalid && loginForm.password.$dirty }">
         <input server-error class="form-control input-lg"
@@ -30,6 +34,7 @@
         </div>
       </div>
 
+      <!-- SUBMIT -->
       <button type="submit" class="btn btn-block btn-success"
         ng-disabled="loginForm.$invalid">Log in</button>
 

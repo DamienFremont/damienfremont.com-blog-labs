@@ -19,6 +19,9 @@ import com.damienfremont.blog.ServiceJAXRS.Content;
 import com.google.common.base.Optional;
 import com.nimbusds.jose.JOSEException;
 
+/**
+ * @see https://github.com/sahat/satellizer/blob/master/examples/server/java/src/main/java/com/example/helloworld/resources/AuthResource.java
+ */
 @Path("/auth")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
