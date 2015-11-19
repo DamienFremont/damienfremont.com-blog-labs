@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20151109-javaee-angularjs-bootstrap-auth</artifactId>
+	<artifactId>20151119-javaee-angularjs-bootstrap-auth_basic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
