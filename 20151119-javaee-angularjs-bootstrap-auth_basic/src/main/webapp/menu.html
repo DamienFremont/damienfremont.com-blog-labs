@@ -27,10 +27,10 @@
   <li><a href="#/">Home</a></li>
   <li ng-if="isAuthenticated()"><a href="#/datas">Datas</a></li>
 </ul>
-  <ul ng-if="!isAuthenticated()" class="nav navbar-nav pull-right">
+  <ul ng-if="!isAuthenticated()" class="nav navbar-nav navbar-right">
     <li><a href="#/login">Login</a></li>
   </ul>
-  <ul ng-if="isAuthenticated()" class="nav navbar-nav pull-right">
+  <ul ng-if="isAuthenticated()" class="nav navbar-nav navbar-right">
     <li><a href="#/logout">Logout</a></li>
   </ul>
 </div>
