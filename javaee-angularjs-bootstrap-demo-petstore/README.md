@@ -1,6 +1,6 @@
 See the full tutorial at :
 
-http://damienfremont.com
+http://damienfremont.com/tag/angularjs/
 
 ## Based on
 
