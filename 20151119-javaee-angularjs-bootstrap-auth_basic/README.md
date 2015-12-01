@@ -6,7 +6,7 @@ http://damienfremont.com/2015/11/19/javaee-angularjs-bootstrap-how-to-authent-ba
 
 ![ScreenShot](screenshots/ScreenShot002.png)
 
-![ScreenShot](screenshots/ScreenShot003.gif)
+![ScreenShot](screenshots/ScreenShot003.png)
 
 ![ScreenShot](screenshots/ScreenShot004.png)
 
