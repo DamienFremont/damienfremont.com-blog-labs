@@ -3,5 +3,5 @@
 angular.module('app') //
 
 .controller('HomeCtrl', function($scope) {
-  $scope.message = 'Nothing is like home 2.';
+  $scope.message = 'Nothing is like home.';
 });

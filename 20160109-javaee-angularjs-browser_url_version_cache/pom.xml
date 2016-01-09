@@ -5,14 +5,15 @@
   <artifactId>20160109-javaee-angularjs-browser_url_version_cache</artifactId>
   
   <!-- APP VERSION (USED FOR CACHE) -->
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   
   <packaging>war</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>7</java.version>
     
     <!-- WEB JAR VERSION (USED FOR CACHE) -->
-    <angularjs.version>1.4.8</angularjs.version>
+    <angularjs.version>1.4.7</angularjs.version>
     
   </properties>
   <dependencies>
@@ -55,6 +56,15 @@
               </includes>
             </resource>
           </webResources>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.${java.version}</source>
+          <target>1.${java.version}</target>
         </configuration>
       </plugin>
     </plugins>
