@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="utf-8">
+
+<!-- APP CSS-->
+<link rel="stylesheet" href="css/main.css?nocache=${project.version}">
+
+</head>
+<body>
+
+    <!-- VIEW/PAGE -->
+    <div ng-view>Loading...</div>
+		
+	<!-- LIBS JS -->
+	<script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
+	<script src="webjars/angularjs/${angularjs.version}/angular-route.js"></script>
+	<script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
+	<script src="webjars/angularjs/${angularjs.version}/angular-cookies.js"></script>
+	<script src="webjars/angularjs/${angularjs.version}/angular-animate.js"></script>
+
+	<!-- APP JS -->
+	<script src="app.js?nocache=${project.version}"></script>
+	<script src="modules/home/home.js?nocache=${project.version}"></script>
+
+</body>
+</html>
