@@ -1,6 +1,6 @@
 See the full tutorial at :
 
-http://damienfremont.com/2015/11/19/javaee-angularjs-bootstrap-how-to-authent-basic/
+http://damienfremont.com/2016/01/09/javaee-angularjs-browser-urls-cache-and-version/
 
 ![ScreenShot](screenshots/ScreenShot001.png)
 
