@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.damienfremont.blog</groupId>
-  <artifactId>20160109-javaee-angularjs-browser_cache_url</artifactId>
+  <artifactId>20160109-javaee-angularjs-browser_url_version_cache</artifactId>
   
   <!-- APP VERSION (USED FOR CACHE) -->
   <version>0.0.2-SNAPSHOT</version>
