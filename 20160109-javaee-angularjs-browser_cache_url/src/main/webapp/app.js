@@ -1,18 +1,18 @@
 'use strict';
 
-angular.module('app', [ 'ngResource', 'ngRoute', 'ngAnimate', 'ngCookies' ])
+angular.module('app', [ 'ngRoute' ])
 
 // CONFIG
 
 .config(function($routeProvider) {
   
-  var versionUrl = '?nocache=${project.version}';
+  var version = '?nocache=${project.version}';
   
   // ROUTE: URLs
   $routeProvider
   // HOME
   .when('/home', {
-    templateUrl : 'modules/home/home.html'+versionUrl
+    templateUrl : 'modules/home/home.html'+version
   })
   // DEFAULT
   .otherwise('/home');

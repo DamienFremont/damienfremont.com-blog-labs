@@ -5,14 +5,14 @@
   <artifactId>20160109-javaee-angularjs-browser_cache_url</artifactId>
   
   <!-- APP VERSION (USED FOR CACHE) -->
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   
   <packaging>war</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
     <!-- WEB JAR VERSION (USED FOR CACHE) -->
-    <angularjs.version>1.4.7</angularjs.version>
+    <angularjs.version>1.4.8</angularjs.version>
     
   </properties>
   <dependencies>
