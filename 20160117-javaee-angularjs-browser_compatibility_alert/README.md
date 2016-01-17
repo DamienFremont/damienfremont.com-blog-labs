@@ -1,6 +1,6 @@
 See the full tutorial at :
 
-http://damienfremont.com/2016/01/09/javaee-angularjs-browser-urls-cache-and-version/
+http://damienfremont.com/2016/01/17/javaee-angularjs-browser-compatibility-alert/
 
 ![ScreenShot](screenshots/ScreenShot001.png)
 
@@ -14,18 +14,3 @@ http://damienfremont.com/2016/01/09/javaee-angularjs-browser-urls-cache-and-vers
 
 ![ScreenShot](screenshots/ScreenShot006.png)
 
-![ScreenShot](screenshots/ScreenShot007.png)
-
-![ScreenShot](screenshots/ScreenShot100.png)
-
-![ScreenShot](screenshots/ScreenShot101.png)
-
-![ScreenShot](screenshots/ScreenShot102.png)
-
-![ScreenShot](screenshots/ScreenShot200.png)
-
-![ScreenShot](screenshots/ScreenShot201.png)
-
-![ScreenShot](screenshots/ScreenShot202.png)
-
-![ScreenShot](screenshots/ScreenShot300.png)
