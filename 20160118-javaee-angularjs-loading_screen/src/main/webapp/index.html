@@ -1,51 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="app">
-<head>
-  <meta charset="utf-8">
-  
-  <!-- YOUR CSS 1rst -->
-  <link rel="stylesheet" href="css/main.css?version=${project.version}">
-</head>
 <body>
-
-<!--[if lte IE 8]>
-<style type="text/css">
-.ie8-alert {
-  padding-top: 20%;
-  padding: 20%;
-  background-color: #FDF2AB;
-  height: 100%;
-  widht: 100%;
-  margin: 0px;
-}
-.ie8-alert a {
-  color: #fff;
-  background-color: #0370ea;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.3;
-  display: inline-block;
-  padding: 6px 12px;
-  margin: 6px 12px;
-}
-</style>
-<div class="ie8-alert"">
-  <p>
-    <img src="img/browsers/dialog-warning.gif"/>
-    Your browser (Internet Explorer 8) is out of date.
-    It has known security flaws and may not display all
-    features of this and other websites. 
-    <strong>Please use another Internet Browser like Firefox, Chrome or InternetExplorer10</strong>.
-  </p>
-  <p>
-    <a href="https://browser-update.org/en/update.html">
-      Learn how to update your browser
-    </a>
-  </p>
-</div>
-<![endif]-->
-<!--[if gte IE 9]>
-
 
   <!-- LOADING SCREEN-->
   <div class="m-app-loading" ng-if="false">
@@ -87,26 +42,26 @@
         line-height: 35px ;
         margin: 0px 0px 20px 0px ;
       }
-      div.m-app-loading p {
-        font-size: 18px ;
-        line-height: 14px ;
-        margin: 0px 0px 0px 0px ;
-      }
     </style>
     <!-- BEGIN: Actual animated container. -->
     <div class="animated-container" ng-class="ng-leave">
       <div class="messaging">
         <h1>
-          AUDIT is Loading
+          MY APP
         </h1>
          <img class="spinner" src="img/loading-blue.gif"> 
       </div>
     </div>
     <!-- END: Actual animated container. -->
-  </div>    
+  </div>
+
+  <!-- VIEW/PAGE -->
+  <div ng-controller="ExampleCtrl">
+    Loading...{{message}}
+  </div>
+
   <!-- YOUR JS 2nd -->
   <script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
-  <script src="webjars/angularjs/${angularjs.version}/angular-route.js"></script>
   <script src="app.js?version=${project.version}"></script>
 </body>
 </html>

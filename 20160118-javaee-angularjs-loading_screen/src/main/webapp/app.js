@@ -1,19 +1,8 @@
 'use strict';
 
-angular.module('app', [ 'ngRoute' ])
+angular.module('app', []);
 
-// CONFIG
-
-.config(function($routeProvider) {
-  
-  var version = '?nocache=${project.version}';
-  
-  // ROUTE: URLs
-  $routeProvider
-  // HOME
-  .when('/home', {
-    templateUrl : 'modules/home/home.html'+version
-  })
-  // DEFAULT
-  .otherwise('/home');
+angular.module('app')
+.controller('ExampleCtrl', function($scope) {
+	$scope.message = 'Loaded!';
 });
