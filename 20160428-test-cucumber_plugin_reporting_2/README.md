@@ -6,7 +6,12 @@ It is often useful to show the results of our tests to others people who are not
 
 This tutorial will cover 3 reports plugins : JSON, HTML Pretty and HTML Reports.
 
-![screenshots/screenshot001.jpg]
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+
+![alt text][screenshots/screenshot001.jpg]
 
  ScreenShot002 ScreenShot003
 
