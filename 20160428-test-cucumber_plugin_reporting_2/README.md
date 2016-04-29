@@ -1,48 +1,24 @@
-# How to Cucumber : Test Reporting Plugin with Maven and Java
+How to Cucumber : Test Reporting Plugin with Maven and Java
+======
 
 It is often useful to show the results of our tests to others people who are not developers, like managers or executive. This tutorial shows how to integrate a Cucumber reporting a Java plugin in Maven project. The result is a simple web page, which does not require a special tool to be read.
 
 
 This tutorial will cover 3 reports plugins : JSON, HTML Pretty and HTML Reports.
 
-ScreenShot001 ScreenShot002 ScreenShot003
+![screenshots/screenshot001.jpg]
+
+ ScreenShot002 ScreenShot003
 
 Native JSON Result
+------
 
 ScreenShot001
 
 How to:
 
 pom.xml
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -71,21 +47,18 @@ pom.xml
         </dependency>
     </dependencies>
 </project>
+```
 RunBDDTest.java
-
-1
-2
-3
-4
-5
-6
+```java
 @RunWith(Cucumber.class)
 @CucumberOptions(strict = false, features = "features", format = { "pretty",
         "json:target/cucumber.json" }, tags = { "~@ignore" })
 public class RunBDDTest {
  
 }
-Demo:
+```
+
+# Demo:
 
 Launch with JUnit or
 
@@ -381,6 +354,6 @@ References
 
 https://cucumber.io/docs/reference/jvm
 
-https://github.com/masterthought/cucumber-reporting
+ttps://github.com/masterthought/cucumber-reporting
 
 http://www.masterthought.net/section/cucumber-reporting
