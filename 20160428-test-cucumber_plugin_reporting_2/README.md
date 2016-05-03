@@ -16,6 +16,7 @@ Native JSON Result
 ![alt text](screenshots/screenshot001.jpg)
 
 How to:
+------
 
 pom.xml
 ```xml
@@ -58,24 +59,29 @@ public class RunBDDTest {
 }
 ```
 
-# Demo:
+Demo:
+------
 
 Launch with JUnit or
 
-1
+```
 >mvn test
+```
+
 The result is at /target/cucumber.json
 
-ScreenShot009
+![alt text](screenshots/screenshot009.jpg)
 
 Native HTML Plugin
+------
 
-ScreenShot002
+![alt text](screenshots/screenshot002.jpg)
 
 How to:
+------
 
 RunBDDTest.java
-
+```java
 @RunWith(Cucumber.class)
 @CucumberOptions(strict = false, features = "features", format = { "pretty",
         "html:target/site/cucumber-pretty",
@@ -83,26 +89,33 @@ RunBDDTest.java
 public class RunBDDTest {
  
 }
+```
+
 Demo:
+------
 
 Launch with JUnit or
 
-1
+```
 >mvn test
+```
+
 The result is at /target/site/cucumber-pretty/index.html
 
-ScreenShot008
+![alt text](screenshots/screenshot008.jpg)
 
 Cucumber-Reports HTML Plugin
+------
 
-ScreenShot003
+![alt text](screenshots/screenshot003.jpg)
 
-ScreenShot004
+![alt text](screenshots/screenshot004.jpg)
 
 How to:
+------
 
 pom.xml
-
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -201,14 +214,12 @@ pom.xml
         </plugins>
     </build>
 </project>
-And two libs (external to Maven repositories)
+```
 
-https://code.google.com/p/totallylazy/downloads/list
-
-ScreenShot005
+![alt text](screenshots/screenshot005.jpg)
 
 RunBDDTest.java
-
+```java
 @RunWith(Cucumber.class)
 @CucumberOptions(strict = false, features = "features", format = { "pretty",
         "html:target/site/cucumber-pretty",
@@ -216,17 +227,23 @@ RunBDDTest.java
 public class RunBDDTest {
  
 }
+```
+
 Demo:
+------
 
 Launch with
 
-1
+```
 mvn clean install
+```
+
 The result is at /target/site/cucumber-reports/feature-overview.html
 
-ScreenShot007
+![alt text](screenshots/screenshot007.jpg)
 
 Conclusion
+------
 
 JSON is OK for integration with other tools (jenkins plugin, reports, etc).
 
@@ -235,10 +252,12 @@ Pretty HTML is OK during development phase (like a JUnit or Surefire report for 
 Cucumber-Reports is good for reporting outside of the dev team (like managers).
 
 Source
+------
 
 https://github.com/DamienFremont/blog/tree/master/20150730-test-cucumber_plugin_reporting
 
 References
+------
 
 https://cucumber.io/docs/reference/jvm
 
