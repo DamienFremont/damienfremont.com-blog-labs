@@ -7,7 +7,7 @@ It is often useful to show the results of our tests to others people who are not
 
 This tutorial will cover 3 reports plugins : JSON, HTML Pretty and HTML Reports.
 
-| ![alt text](screenshots/screenshot001.jpg) | ![alt text](screenshots/screenshot002.jpg) | ![alt text](screenshots/screenshot003.jpg) |
+| ![alt text](screenshots/screenshot001.jpg) | ![alt text](screenshots/screenshot002.png) | ![alt text](screenshots/screenshot003.png) |
 | ------------- |:-------------:| -----:|
 
 Native JSON Result
@@ -107,9 +107,9 @@ The result is at /target/site/cucumber-pretty/index.html
 Cucumber-Reports HTML Plugin
 ------
 
-![alt text](screenshots/screenshot003.jpg)
+![alt text](screenshots/screenshot003.png)
 
-![alt text](screenshots/screenshot004.jpg)
+![alt text](screenshots/screenshot004.png)
 
 How to:
 ------
