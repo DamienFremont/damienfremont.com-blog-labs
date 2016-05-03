@@ -7,13 +7,13 @@ It is often useful to show the results of our tests to others people who are not
 
 This tutorial will cover 3 reports plugins : JSON, HTML Pretty and HTML Reports.
 
-| ![alt text](screenshots/screenshot001.jpg) | ![alt text](screenshots/screenshot002.png) | ![alt text](screenshots/screenshot003.png) |
+| ![alt text](screenshots/screenshot001.png) | ![alt text](screenshots/screenshot002.png) | ![alt text](screenshots/screenshot003.png) |
 | ------------- |:-------------:| -----:|
 
 Native JSON Result
 ------
 
-![alt text](screenshots/screenshot001.jpg)
+![alt text](screenshots/screenshot001.png)
 
 How to:
 ------
