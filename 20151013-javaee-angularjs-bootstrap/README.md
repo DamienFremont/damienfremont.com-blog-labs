@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: Integration
 ======
  
-![alt text][screenshots/160503174736749.png]
+![alt text][screenshots/160503221932918.png]
  
 # Why?
  
@@ -448,7 +448,7 @@ h1 {
 }
 ```
  
-![alt text][screenshots/160503174740143.jpg]
+![alt text][screenshots/160503221934185.jpg]
  
  
  
@@ -462,27 +462,27 @@ Run this project on your webapp server (Tomcat for example), and test on:
  
 The main page test all frameworks.
  
-![alt text][screenshots/160503174740222.jpg]
+![alt text][screenshots/160503221934251.jpg]
  
 Here is AngularJS MVC
  
-![alt text][screenshots/160503174740284.jpg]
+![alt text][screenshots/160503221934307.jpg]
  
 Here is UI Bootstrap for AngularJS
  
-![alt text][screenshots/160503174740331.jpg]
+![alt text][screenshots/160503221934344.jpg]
  
 Here is AngularJS REST Client and JavaEE REST Server
  
-![alt text][screenshots/160503174740362.jpg]
+![alt text][screenshots/160503221934381.jpg]
  
 [http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status](http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status)
  
-![alt text][screenshots/160503174740409.jpg]
+![alt text][screenshots/160503221934419.jpg]
  
 [http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details](http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details)
  
-![alt text][screenshots/160503174740456.jpg]
+![alt text][screenshots/160503221934461.jpg]
  
 # Conclusion
  
