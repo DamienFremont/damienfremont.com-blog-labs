@@ -3,7 +3,7 @@ How to Cucumber : Test Reporting Plugin with Maven and Java
 
 <p align="right"><img src="screenshots/cucumber-logo.png" width="100px;"/></p>
 
-It is often useful to show the results of our tests to others people who are not developers, like managers or executive. This tutorial shows how to integrate a Cucumber reporting a Java plugin in Maven project. The result is a simple web page, which does not require a special tool to be read. 
+It is often useful to show the results of our tests to others people who are not developers, like managers or executive. This tutorial shows how to integrate a Cucumber reporting a Java plugin in Maven project. The result is a simple web page, which does not require a special tool to be read.
 
 This tutorial will cover 3 reports plugins : JSON, HTML Pretty and HTML Reports.
 
@@ -75,7 +75,7 @@ The result is at /target/cucumber.json
 Native HTML Plugin
 ------
 
-![alt text](screenshots/screenshot002.jpg)
+![alt text](screenshots/screenshot002.png)
 
 How to:
 ------
@@ -215,8 +215,6 @@ pom.xml
     </build>
 </project>
 ```
-
-![alt text](screenshots/screenshot005.jpg)
 
 RunBDDTest.java
 ```java
