@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: Integration
 ======
  
-![alt text][screenshots/160503221932918.png]
+![alt text](screenshots/160503221932918.png)
  
 # Why?
  
