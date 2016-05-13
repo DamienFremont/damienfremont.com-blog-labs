@@ -1,7 +1,7 @@
 From JUnit3 to Junit4
 ======
  
-![alt text](screenshots/160513133323986.jpg)
+![alt text](screenshots/160513135336170.jpg)
  
 A post about simple JUnit tests. Unit testing is necessary, but reduce its volume (source test) is always interresting … it reduces development and maintenance tasks (code analyzer tools are your best friends). We need tools : a code analyzer : PMD, and … a testing framework : JUnit.
  
@@ -198,4 +198,7 @@ public class JUnit4WrongTest {
  
 [https://github.com/damienfremont/blog/tree/master/20120227-junit3_to_junit4](https://github.com/damienfremont/blog/tree/master/20120227-junit3_to_junit4)
 https://github.com/damienfremont/blog/tree/master/20120227-junit3_to_junit4
+ 
+ 
+[https://damienfremont.com/2012/02/27/from-junit-to-junit4/](https://damienfremont.com/2012/02/27/from-junit-to-junit4/)
  
