@@ -1,7 +1,7 @@
 Java batch simple helloworld repeat example (without dependencies)
 ======
  
-![alt text](screenshots/160513135626237.png)
+![alt text](screenshots/160520002508756.png)
  
 In Java, the development of batch can be achieved with few solutions. Most applications use their own code from scratch. Here’s a quick example of full java batch, without any external dependecy.
  
