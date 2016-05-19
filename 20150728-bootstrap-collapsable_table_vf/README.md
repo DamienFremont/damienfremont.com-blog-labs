@@ -1,30 +1,28 @@
-How to expand/collapse table rows with Bootstrap
+Comment agrandir / réduire les lignes d’un tableau avec Bootstrap
 ======
  
-![alt text](screenshots/160520002537829.jpg)
+![alt text](screenshots/160520005856210.jpg)
  
-How to do accordions effect on table rows with Bootstrap? We will see that using a HTML table to make a table … is not a good idea!
+Comment faire des accordéons dans des lignes de tableau en Twitter Bootstrap ? Nous verrons qu’utiliser une table pour faire un tableau …n’est pas une si bonne idée !
  
-
+# Objectif
  
-# Goal
+Faire un tableau dont chaque ligne est cliquable pour afficher un sous-contenu masqué (partie gauche) et/ou pour naviguer avec des boutons cliquables (partie droite).
  
-Make a table where each row is clickable to show a hidden sub-content (left side) and / or to navigate with clickable buttons (right).
- 
-![alt text](screenshots/160520002537898.jpg)
+![alt text](screenshots/160520005856279.jpg)
  
 
  
-[bootstrap collapse component](http://getbootstrap.com/2.3.2/javascript.html#collapse)
-[stylish buttons](http://getbootstrap.com/2.3.2/base-css.html#buttons)
-We must therefore integrate bootstrap collapse component and stylish buttons.
+[composant collapse de bootstrap](http://getbootstrap.com/2.3.2/javascript.html#collapse)
+[boutons stylés](http://getbootstrap.com/2.3.2/base-css.html#buttons)
+Il faut donc intégrer le composant collapse de bootstrap  et des boutons stylés.
  
-# Bad Idea with table
+# Approche 1 avec table
  
-## Step 1 : table
+## Etape 1 : table
  
-[it is the one bootstrap offers us a simple table](http://getbootstrap.com/2.3.2/base-css.html#tables)
-Nothing to say is the most logical solution, because it is the one bootstrap offers us a simple table.
+[bootstrap nous propose pour un simple tableau](http://getbootstrap.com/2.3.2/base-css.html#tables)
+Rien à dire, c’est la solution la plus logique, car c’est celle que bootstrap nous propose pour un simple tableau
  
 ```xml
 <tr>
@@ -41,18 +39,18 @@ Nothing to say is the most logical solution, because it is the one bootstrap off
 </tr>
 ```
  
-![alt text](screenshots/160520002537935.jpg)
+![alt text](screenshots/160520005856304.jpg)
  
 
  
-## Step 2 : table + collapse
+## Etape 2 : table + collapse
  
-[bootstrap the doc with only data-target and collapse](http://getbootstrap.com/2.3.2/javascript.html#collapse)
-You must use the bootstrap the doc with only data-target and collapse.
+[variante sans accordion de la doc bootstra](http://getbootstrap.com/2.3.2/javascript.html#collapse)
+Il faut utiliser la variante sans accordion de la doc bootstrap avec seulement data-target et collapse.
  
-Problem: The collapse does not work with a TR tag for target.
+Problème : le collapse ne fonctionne pas pour une balise TR en target.
  
-Solution: Create a DIV in a sub-TR (optional: add CSS to hide the permanent residual margin/padding of the hidden/collapsed line).
+Solution : créer un DIV dans un sous-TR (facultatif : ajouter du CSS pour cacher le résidu permanent de margin/padding de la ligne cachée/collapsed) .
  
 ```xml
 <tr class="accordion-toggle"  data-toggle="collapse" data-target="#collapseOne">
@@ -73,17 +71,17 @@ Solution: Create a DIV in a sub-TR (optional: add CSS to hide the permanent resi
 </tr>
 ```
  
-![alt text](screenshots/160520002537968.jpg)
+![alt text](screenshots/160520005856331.jpg)
  
 
  
-## Step 3 : table + collapse + buttons
+## Etape 3 : table + collapse + buttons
  
-Problem: a click on a button causes a side effect of expand/collapse the container row. It’s bad when you click for a new tab/window on the details button to displays, because it will activate the accordion effect on the current row (example: click on edit).
+Problème : un clique sur un bouton provoque un effet de bord d’expand/collapse de la ligne le contenant. C’est gênant quand on fait nouvel onglet sur un bouton car le détails s’affiche.
  
-Solution: you must prevent the expand/collapse from triggering when a button is clicked. It is therefore necessary to assign the click to expand each cell rather than on the TD TR tags.
+Solution : il faut empêcher l’expand/collapse de se déclencher en cas d’appui sur un bouton. Il faut donc assigner le click expand à chaque cellule td plutot que sur le tr.
  
-It works BUT JavaScript lags on expanding/collapsing when there are dozens of roww and sub-rows on the page and there are duplicate code.
+Ça fonctionne, MAIS le Javascript rame au expand/collapse quand il y a plusieurs dizaines de lignes et sous-lignes sur la page ET il y a du code dupliqué.
  
 ```xml
 <tr class="accordion-toggle"  >
@@ -105,20 +103,20 @@ It works BUT JavaScript lags on expanding/collapsing when there are dozens of ro
 </tr>
 ```
  
-![alt text](screenshots/160520002538001.jpg)
+![alt text](screenshots/160520005856361.jpg)
  
 
  
-# Better Idea with div
+# Approche 2 avec div
  
-## Step 1 : div
+## Etape 1 : div
  
-[Bootstrap grid system](http://getbootstrap.com/2.3.2/scaffolding.html#gridSystem)
-You must use the Bootstrap grid system.
+[système de grille sur lequel repose bootstrap](http://getbootstrap.com/2.3.2/scaffolding.html#gridSystem)
+On utilise le système de grille sur lequel repose bootstrap.
  
-Problem: table style is lost.
+Problème : les styles de table sont perdus.
  
-Solution: (optional) You must duplicate the CSS if you will get the same rendering as before (top row border, cell width, header bold).
+Solution : (facultatif) Il faut refaire du CSS si l’on veut obtenir le même rendu que précédemment (row top border, cell width, header bold).
  
 ```xml
 <div class="row-fluid" >
@@ -129,17 +127,19 @@ Solution: (optional) You must duplicate the CSS if you will get the same renderi
 </div>
 ```
  
-![alt text](screenshots/160520002538036.jpg)
+![alt text](screenshots/160520005856396.jpg)
  
 
  
-## Step 2 : div + collapse
+## Etape 2 : div + collapse
  
-(same solution table and collapse)
+(idem solution table+collapse)
  
-Problem: The cursor’s shape does not change when being over the clickable row (“hand” icon expected here).
+Problème : le curseur ne change pas de forme lors du survole de la ligne cliquable (icone “main”).
  
-Solution: (optional) use a personal style or re-use the class accordion-toggle on the collapsable DIV.
+Solution : (facultatif) utiliser un style perso ou re-utiliser la class accordion-toggle sur la div collapsable.
+ 
+# Solution
  
 ```xml
 <div class="row-fluid" data-toggle="collapse" data-target="#collapseTwo">
@@ -158,19 +158,17 @@ Solution: (optional) use a personal style or re-use the class accordion-toggle o
 </div>
 ```
  
-![alt text](screenshots/160520002538074.jpg)
+![alt text](screenshots/160520005856425.jpg)
  
 
  
-## Step 3 : div + collapse + buttons
+Etape 3 : div + collapse + buttons
  
-(same solution collapse + table + buttons)
+(idem solution table+collapse+buttons)
  
-Problem: Adding buttons also add conflicts with the collapse/expand effect.
+Problème : L’ajout de boutons entre également en conflit avec le collapse/expand.
  
-Solution: remove the button form the DIV toggler.
- 
-# Solution
+Solution : sortir le bouton de la div toggler.
  
 ```xml
 <div class="row-fluid" >
@@ -198,17 +196,17 @@ Solution: remove the button form the DIV toggler.
  
 # Conclusion
  
-I currently use the DIV version. With TABLE, fhe final page was not reactive enough, the source code was duplicated, and there were a lot of bugs/maintenance and technical solution TABLE was not always understandable, even with the doc bootstrap support.
+J’utilise actuellement la version avec DIV après avoir utilisé TABLE. Au final la page n’était plus assez réactive, le code dupliqué était source de bugs/maintenance et la solution technique avec TABLE n’était pas toujours compréhensible, même avec la doc de bootstrap à coté.
  
 COLLAPSABLE TABLE
  
-* Pro : defaut bootstrap CSS style
-* Con : it’s a hack, performance issues, code duplication
+* Pro : style par defaut dans bootstrap, aimer les tables ?
+* Con : solution de contournement, performances, duplication de code
  
 COLLAPSABLE  DIV
  
-* Pro : responsive, fast, reliable
-* Con : custom style for cursor and TABLE
+* Pro : responsive, performant
+* Con : styles curseur et tableau à redéfinir
  
 # Sources
  
@@ -233,5 +231,5 @@ http://getbootstrap.com/2.3.2/scaffolding.html
 http://getbootstrap.com/2.3.2/components.html
  
  
-[https://damienfremont.com/2014/12/19/how-to-expandcollapse-table-rows-with-bootstrap](https://damienfremont.com/2014/12/19/how-to-expandcollapse-table-rows-with-bootstrap)
+[https://damienfremont.com/2015/07/28/comment-agrandir-reduire-les-lignes-dun-tableau-avec-bootstrap/ ](https://damienfremont.com/2015/07/28/comment-agrandir-reduire-les-lignes-dun-tableau-avec-bootstrap/ )
  

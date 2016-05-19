@@ -1,7 +1,7 @@
 How to expand/collapse table rows with Bootstrap
 ======
  
-![alt text](screenshots/160520002537829.jpg)
+![alt text](screenshots/160520005717672.jpg)
  
 How to do accordions effect on table rows with Bootstrap? We will see that using a HTML table to make a table … is not a good idea!
  
@@ -11,7 +11,7 @@ How to do accordions effect on table rows with Bootstrap? We will see that using
  
 Make a table where each row is clickable to show a hidden sub-content (left side) and / or to navigate with clickable buttons (right).
  
-![alt text](screenshots/160520002537898.jpg)
+![alt text](screenshots/160520005717745.jpg)
  
 
  
@@ -41,7 +41,7 @@ Nothing to say is the most logical solution, because it is the one bootstrap off
 </tr>
 ```
  
-![alt text](screenshots/160520002537935.jpg)
+![alt text](screenshots/160520005717777.jpg)
  
 
  
@@ -73,7 +73,7 @@ Solution: Create a DIV in a sub-TR (optional: add CSS to hide the permanent resi
 </tr>
 ```
  
-![alt text](screenshots/160520002537968.jpg)
+![alt text](screenshots/160520005717806.jpg)
  
 
  
@@ -105,7 +105,7 @@ It works BUT JavaScript lags on expanding/collapsing when there are dozens of ro
 </tr>
 ```
  
-![alt text](screenshots/160520002538001.jpg)
+![alt text](screenshots/160520005717839.jpg)
  
 
  
@@ -129,7 +129,7 @@ Solution: (optional) You must duplicate the CSS if you will get the same renderi
 </div>
 ```
  
-![alt text](screenshots/160520002538036.jpg)
+![alt text](screenshots/160520005717875.jpg)
  
 
  
@@ -158,7 +158,7 @@ Solution: (optional) use a personal style or re-use the class accordion-toggle o
 </div>
 ```
  
-![alt text](screenshots/160520002538074.jpg)
+![alt text](screenshots/160520005717905.jpg)
  
 
  

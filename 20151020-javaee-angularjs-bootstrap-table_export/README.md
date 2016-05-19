@@ -1,41 +1,62 @@
 JavaEE AngularJS Bootstrap: DataTable and Excel Export
 ======
  
-![alt text](screenshots/160503224427712.png)
+![alt text](screenshots/160520010058445.png)
+ 
+This is a read-only table with a CSV export button, then an editable table form like Excel tab (DataTable) with add, remove, undo and update buttons. There is also a default focus on last editable row.
  
 # Demo
  
 [http://localhost:8080/20151020-javaee-angularjs-bootstrap-table_export/](http://localhost:8080/20151020-javaee-angularjs-bootstrap-table_export/)
+http://localhost:8080/20151020-javaee-angularjs-bootstrap-table_export/
  
-![alt text](screenshots/160503224427874.png)
+![alt text](screenshots/160520010058516.png)
+ 
+
  
 Here is a read-only table with CSV Export Button, from REST API @GET /person/all
  
-![alt text](screenshots/160503224427925.png)
+![alt text](screenshots/160520010058561.png)
+ 
+
  
 A CSV file is send by REST API @GET /person/all/csv.
  
-![alt text](screenshots/160503224427952.png)
+![alt text](screenshots/160520010058590.png)
  
-![alt text](screenshots/160503224427983.png)
+
+ 
+![alt text](screenshots/160520010058614.png)
+ 
+
  
 Here is a DataTable, editable like an Excel Window, with focus set on the last row’s cell.
  
-![alt text](screenshots/160503224428010.png)
+![alt text](screenshots/160520010058654.png)
+ 
+
  
 You can add or remove table’s row with buttons, then update.
  
-![alt text](screenshots/160503224428035.png)
+![alt text](screenshots/160520010058678.png)
  
-![alt text](screenshots/160503224428060.png)
+
+ 
+![alt text](screenshots/160520010058702.png)
+ 
+
  
 And send to REST API @POST /person/all.
  
-![alt text](screenshots/160503224428088.png)
+![alt text](screenshots/160520010058728.png)
+ 
+
  
 # Source
  
-![alt text](screenshots/160503224428131.png)
+![alt text](screenshots/160520010058751.png)
+ 
+GenerateCSV.java
  
 ```java
 package com.damienfremont.blog;
@@ -417,18 +438,28 @@ index.jsp
 # Project
  
 [https://github.com/DamienFremont/blog/tree/master/20151020-javaee-angularjs-bootstrap-table_export](https://github.com/DamienFremont/blog/tree/master/20151020-javaee-angularjs-bootstrap-table_export)
+https://github.com/DamienFremont/blog/tree/master/20151020-javaee-angularjs-bootstrap-table_export
  
 # References
  
 [https://docs.angularjs.org/api/ng/directive/ngRepeat](https://docs.angularjs.org/api/ng/directive/ngRepeat)
+https://docs.angularjs.org/api/ng/directive/ngRepeat
  
 [http://getbootstrap.com/css/#tables](http://getbootstrap.com/css/#tables)
+http://getbootstrap.com/css/#tables
  
 [http://www.mkyong.com/java/how-to-export-data-to-csv-file-java/](http://www.mkyong.com/java/how-to-export-data-to-csv-file-java/)
+http://www.mkyong.com/java/how-to-export-data-to-csv-file-java/
  
 [http://www.mkyong.com/webservices/jax-rs/download-pdf-file-from-jax-rs/](http://www.mkyong.com/webservices/jax-rs/download-pdf-file-from-jax-rs/)
+http://www.mkyong.com/webservices/jax-rs/download-pdf-file-from-jax-rs/
  
 [http://www.angulartutorial.net/2014/04/angular-js-auto-focus-for-input-box.html](http://www.angulartutorial.net/2014/04/angular-js-auto-focus-for-input-box.html)
+http://www.angulartutorial.net/2014/04/angular-js-auto-focus-for-input-box.html
  
 [http://jsfiddle.net/bonamico/cahz7/](http://jsfiddle.net/bonamico/cahz7/)
+http://jsfiddle.net/bonamico/cahz7/
+ 
+ 
+[https://damienfremont.com/2015/10/20/javaee-angularjs-bootstrap-datatable-and-excel-export/](https://damienfremont.com/2015/10/20/javaee-angularjs-bootstrap-datatable-and-excel-export/)
  

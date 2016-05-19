@@ -1,7 +1,7 @@
 Test web-UI automatisé avec FluentLenium Java
 ======
  
-![alt text](screenshots/160520002622049.jpg)
+![alt text](screenshots/160520005755479.jpg)
  
 [Tester une webapp avec Selenium Java, PhantomJS et un webserver embarqué ?](http://damienfremont.com/2015/01/18/tester-une-webapp-avec-selenium-java-phantomjs-et-un-webserver-embarque/)
 Ce tuto permet de tester une interface web de façon rapide et maintenable en utilisant Fluentlenium avec les classiques JUnit, Selenium et FestAssert. C’est une version améliorée du tuto Tester une webapp avec Selenium Java, PhantomJS et un webserver embarqué ?
@@ -12,7 +12,7 @@ Ce tuto permet de tester une interface web de façon rapide et maintenable en ut
  
 “FluentLenium is a framework that helps you to write Selenium tests. FluentLenium provides you afluent interface to the Selenium Web Driver. FluentLenium lets you use the assertion framework you like, either jUnit assertions, Hamcrest or AssertJ” source : https://github.com/FluentLenium/FluentLenium
  
-![alt text](screenshots/160520002622115.jpg)
+![alt text](screenshots/160520005755545.jpg)
  
 
  
@@ -136,7 +136,7 @@ public class WebUITest extends FluentTest {
  
 La dernière étape consiste à coder en PagePattern (une page web / écran = une classe, héritant de FluentPage). Visuellement, ces classes Java “ressembleront de loin” dans la forme à vos pages web testées (avec un peu de code utilitaire à coté).
  
-![alt text](screenshots/160520002622175.jpg)
+![alt text](screenshots/160520005755601.jpg)
  
 Ainsi, la 1ere page du site…
  
@@ -172,7 +172,7 @@ public class MainPage extends FluentPage {
 }
 ```
  
-![alt text](screenshots/160520002622209.jpg)
+![alt text](screenshots/160520005755632.jpg)
  
 Et la seconde page…
  
@@ -203,7 +203,7 @@ public class MainPage1 extends FluentPage {
  
 Ce qui donne le projet Java suivant.
  
-![alt text](screenshots/160520002622240.jpg)
+![alt text](screenshots/160520005755665.jpg)
  
 
  
@@ -314,7 +314,7 @@ pom.xml config Maven
  
 Comme pour des tests unitaires, il suffit de lancer les tests du projet ou de la classe WebUITest.java.
  
-![alt text](screenshots/160520002622282.jpg)
+![alt text](screenshots/160520005755707.jpg)
  
 
  
@@ -325,7 +325,7 @@ En effet, tout est embarqué DANS le test JUnit :
  
 Le comportement est également le même qu’un test unitaire, avec son rapport.
  
-![alt text](screenshots/160520002622316.jpg)
+![alt text](screenshots/160520005755741.jpg)
  
 
  

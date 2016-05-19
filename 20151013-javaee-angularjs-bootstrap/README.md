@@ -1,7 +1,9 @@
 JavaEE AngularJS Bootstrap: Integration
 ======
  
-![alt text](screenshots/160503222438384.png)
+![alt text](screenshots/160520005947655.png)
+ 
+This tutorial is a basic integration of AngularJS, Bootstrap3, JavaEE JAX-RS, Maven and WebJars. Usefull for replacing your old JSF or GWT application from intranet.
  
 # Why?
  
@@ -448,7 +450,9 @@ h1 {
 }
 ```
  
-![alt text](screenshots/160503222438704.jpg)
+![alt text](screenshots/160520005947837.jpg)
+ 
+And you’ll have a simple project like this:
  
  
  
@@ -459,30 +463,45 @@ h1 {
 Run this project on your webapp server (Tomcat for example), and test on:
  
 [http://localhost:8080/20151013-javaee-angularjs-bootstrap/](http://localhost:8080/20151013-javaee-angularjs-bootstrap/)
+http://localhost:8080/20151013-javaee-angularjs-bootstrap/
  
 The main page test all frameworks.
  
-![alt text](screenshots/160503222438768.jpg)
+![alt text](screenshots/160520005948117.jpg)
+ 
+
  
 Here is AngularJS MVC
  
-![alt text](screenshots/160503222438826.jpg)
+![alt text](screenshots/160520005948482.jpg)
+ 
+
  
 Here is UI Bootstrap for AngularJS
  
-![alt text](screenshots/160503222438860.jpg)
+![alt text](screenshots/160520005948748.jpg)
+ 
+
  
 Here is AngularJS REST Client and JavaEE REST Server
  
-![alt text](screenshots/160503222438897.jpg)
+![alt text](screenshots/160520005949198.jpg)
+ 
+
  
 [http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status](http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status)
+http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status
  
-![alt text](screenshots/160503222438936.jpg)
+![alt text](screenshots/160520005949730.jpg)
+ 
+
  
 [http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details](http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details)
+http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details
  
-![alt text](screenshots/160503222438974.jpg)
+![alt text](screenshots/160520005950039.jpg)
+ 
+
  
 # Conclusion
  
@@ -495,22 +514,34 @@ Cons: not so shiny from a web developer point of view (legacy, performance)
 # Sources
  
 [https://github.com/DamienFremont/blog/tree/master/20151013-javaee-angularjs-bootstrap](https://github.com/DamienFremont/blog/tree/master/20151013-javaee-angularjs-bootstrap)
+https://github.com/DamienFremont/blog/tree/master/20151013-javaee-angularjs-bootstrap
  
 # References
  
 [http://www.webjars.org/](http://www.webjars.org/)
+http://www.webjars.org/
  
 [https://github.com/webjars/webjars-servlet-2.x](https://github.com/webjars/webjars-servlet-2.x)
+https://github.com/webjars/webjars-servlet-2.x
  
 [http://getbootstrap.com/](http://getbootstrap.com/)
+http://getbootstrap.com/
  
 [http://www.w3schools.com/angular/](http://www.w3schools.com/angular/)
+http://www.w3schools.com/angular/
  
 [https://angular-ui.github.io/](https://angular-ui.github.io/)
+https://angular-ui.github.io/
  
 [https://docs.angularjs.org/tutorial/step_11](https://docs.angularjs.org/tutorial/step_11)
+https://docs.angularjs.org/tutorial/step_11
  
 [https://jersey.java.net/nonav/documentation/2.0/deployment.html](https://jersey.java.net/nonav/documentation/2.0/deployment.html)
+https://jersey.java.net/nonav/documentation/2.0/deployment.html
  
 [https://scotch.io/tutorials/how-to-correctly-use-bootstrapjs-and-angularjs-together](https://scotch.io/tutorials/how-to-correctly-use-bootstrapjs-and-angularjs-together)
+https://scotch.io/tutorials/how-to-correctly-use-bootstrapjs-and-angularjs-together
+ 
+ 
+[https://damienfremont.com/2015/10/13/javaee-angularjs-bootstrap-integration/](https://damienfremont.com/2015/10/13/javaee-angularjs-bootstrap-integration/)
  

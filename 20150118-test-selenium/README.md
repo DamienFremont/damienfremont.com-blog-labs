@@ -1,7 +1,7 @@
 Tester une webapp avec Selenium Java, PhantomJS et un webserver embarqué ?
 ======
  
-![alt text](screenshots/160520002603229.jpg)
+![alt text](screenshots/160520005741952.jpg)
  
 Vous avez besoin de tester en permanence votre webapp ? Mais ne disposez pas d’une infrastructure de test (preprod) ni d’une équipe de testeurs humains ? Ou vous aimeriez tester le front avec le même confort qu’un test unitaire. Ce tuto permet de lancer un mini environnement navigateur+webserver via JUnit et de tester votre interface web.
  
@@ -11,7 +11,7 @@ Vous avez besoin de tester en permanence votre webapp ? Mais ne disposez pas d�
  
 Les outils utilisés sont JUnit, Selenium et un environnement de base navigateur (Phantomjs) / server web (Tomcat).
  
-![alt text](screenshots/160520002603299.jpg)
+![alt text](screenshots/160520005742021.jpg)
  
 
  
@@ -31,25 +31,25 @@ Pour ces tests, de simples pages web avec quelques liens suffisent.
  
 Main page
  
-![alt text](screenshots/160520002603577.jpg)
+![alt text](screenshots/160520005742053.jpg)
  
 
  
 Page 1
  
-![alt text](screenshots/160520002603622.jpg)
+![alt text](screenshots/160520005742094.jpg)
  
 
  
 Page 2 (une 404, pour tester une erreur)
  
-![alt text](screenshots/160520002603647.jpg)
+![alt text](screenshots/160520005742125.jpg)
  
 
  
 # Code
  
-![alt text](screenshots/160520002604073.jpg)
+![alt text](screenshots/160520005742151.jpg)
  
 
  
@@ -183,17 +183,17 @@ public class WebUITest {
  
 WebUITest.java 2/2 : les tests
  
-![alt text](screenshots/160520002604469.svg)
+![alt text](screenshots/160520005742190.svg)
  
 Les tests fonctionnent à base de sélection d’élèments dans le DOM de la page web. Du coup, il faut utiliser à font les cssSelector pour sélectionner (ID, c’est dépassé ne pas les utiliser évite de les maintenir et redonne du sens à votre structure html). Un cssSelector, c’est tout simplement la règle css qui décrit comment sélectionner un élément dans le DOM (comme “#container h1” dans un fichier *.css pour appliquer une couleur). Heureusement, pour écrire ces formules quand on est pas un pro du CSS, il y a les outils.
  
 Exemple en utilisant le plugin de dev de votre navigateur (Chrome ici)
  
-![alt text](screenshots/160520002604562.jpg)
+![alt text](screenshots/160520005742259.jpg)
  
 
  
-![alt text](screenshots/160520002604976.jpg)
+![alt text](screenshots/160520005742284.jpg)
  
 
  
@@ -382,7 +382,7 @@ Il y a 2 façons de procéder selon le besoin.
  
 …le plus simple, il suffit de lancer les tests du projet ou de la classe WebUITest.
  
-![alt text](screenshots/160520002605627.jpg)
+![alt text](screenshots/160520005742353.jpg)
  
 
  
@@ -426,13 +426,13 @@ public class WebUITest {
  
 Puis lancer votre propre server si besoin, puis les tests.
  
-![alt text](screenshots/160520002606081.jpg)
+![alt text](screenshots/160520005742393.jpg)
  
 
  
 Dans les 2 cas, c’est la suite JUnit qui montrera le résultat.
  
-![alt text](screenshots/160520002606463.jpg)
+![alt text](screenshots/160520005742421.jpg)
  
 
  

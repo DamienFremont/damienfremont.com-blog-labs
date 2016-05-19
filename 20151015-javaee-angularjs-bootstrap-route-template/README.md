@@ -1,8 +1,11 @@
 JavaEE AngularJS Bootstrap: routes, templates, redirection and params
 ======
  
-![alt text](screenshots/160503223055987.png)
+![alt text](screenshots/160520005955427.png)
  
+A simple example about navigation inside a web application, using native AngularJS components.
+ 
+
  
 # Why ?
  
@@ -18,10 +21,14 @@ Using Animation to Enhance User Experience with more transitions.
  
 By using AngularJs’ rout, location and animation components.
  
-![alt text](screenshots/160503223056158.jpg)
+![alt text](screenshots/160520005955451.jpg)
+ 
+
  
 ## Template
  
+The template contains ng-view.
+index.jsp
  
 ```xml
 <html ng-app="myApp">
@@ -76,6 +83,8 @@ home.html
  
 ## Router
  
+App file contains the main router for app’s paths, providding a View/Controller assocation for each route.
+app.js
  
 ```javascript
 var myApp = angular.module(
@@ -238,38 +247,56 @@ main.css
 Deploy on your local Tomcat and test at:
  
 [http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template](http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template)
+http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template
  
  
  
 Here is home View (home.html + homeCtr.js) rendered inside the main Template (index.jsp).
  
-![alt text](screenshots/160503223056656.jpg)
+![alt text](screenshots/160520005955915.jpg)
+ 
+
  
 Here is animation when Viewchanges (from home Viewto testroute View).
  
-![alt text](screenshots/160503223057007.jpg)
+![alt text](screenshots/160520005956342.jpg)
  
-![alt text](screenshots/160503223057313.jpg)
+
+ 
+![alt text](screenshots/160520005956759.jpg)
+ 
+
  
 Here is route of Test Route View. The Route is ‘/testroute’.
  
 [http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testroute](http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testroute)
+http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testroute
  
-![alt text](screenshots/160503223057529.jpg)
+![alt text](screenshots/160520005957170.jpg)
+ 
+
  
 Here is routeParams for Test Params View.
  
-![alt text](screenshots/160503223057881.jpg)
+![alt text](screenshots/160520005957429.jpg)
+ 
+
  
 The Route is ‘/testparams/:id’.
  
 [http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/1](http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/1)
+http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/1
  
-![alt text](screenshots/160503223058423.jpg)
+![alt text](screenshots/160520005957704.jpg)
+ 
+
  
 [http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/2](http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/2)
+http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/2
  
-![alt text](screenshots/160503223059007.jpg)
+![alt text](screenshots/160520005958123.jpg)
+ 
+
  
 # Conclusion
  
@@ -278,14 +305,22 @@ Never put a raw url in your html for the sake of maintenability. It’s controll
 # Sources
  
 [https://github.com/DamienFremont/blog/tree/master/20151015-javaee-angularjs-bootstrap-route-template](https://github.com/DamienFremont/blog/tree/master/20151015-javaee-angularjs-bootstrap-route-template)
+https://github.com/DamienFremont/blog/tree/master/20151015-javaee-angularjs-bootstrap-route-template
  
 # References
  
 [https://docs.angularjs.org/api/ngRoute/service/$route](https://docs.angularjs.org/api/ngRoute/service/$route)
+https://docs.angularjs.org/api/ngRoute/service/$route
  
 [https://docs.angularjs.org/api/ngRoute/directive/ngView#animations](https://docs.angularjs.org/api/ngRoute/directive/ngView#animations)
+https://docs.angularjs.org/api/ngRoute/directive/ngView#animations
  
 [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07)
+https://docs.angularjs.org/tutorial/step_07
  
 [https://docs.angularjs.org/api/ng/directive/ngDisabled](https://docs.angularjs.org/api/ng/directive/ngDisabled)
+https://docs.angularjs.org/api/ng/directive/ngDisabled
+ 
+ 
+[https://damienfremont.com/2015/10/15/javaee-angularjs-bootstrap-routes-templates-redirection-and-params/](https://damienfremont.com/2015/10/15/javaee-angularjs-bootstrap-routes-templates-redirection-and-params/)
  

@@ -1,7 +1,7 @@
 TODO list exemple – full Javascript avec AngularJS NodeJS Express
 ======
  
-![alt text](screenshots/160520002517337.png)
+![alt text](screenshots/160520005659155.png)
  
 Ce tutoriel est le dev d’une simple TODO list de type client-serveur (front-end + back-end). Le but est d’utiliser une stack technique complète en JavaScript pour comparer avec d’autres technologies.
  
@@ -23,11 +23,11 @@ La structure (classique) est composé d’un MVC coté front et d’un service R
 # Code
  
 [github ici](https://github.com/damienfremont/blog/tree/master/20141214-todoapp-javascript)
-![alt text](screenshots/160520002517367.jpg)
+![alt text](screenshots/160520005659183.jpg)
  
 Récupérer le code à partir de github ici.
  
-![alt text](screenshots/160520002517718.jpg)
+![alt text](screenshots/160520005659406.jpg)
  
 La partie back se présente avec un fichier de conf, une app et des routes :
  
@@ -50,7 +50,7 @@ Faire un clique droit sur le fichier package.json pour lancer une commande Run A
 }
 ```
  
-![alt text](screenshots/160520002517873.jpg)
+![alt text](screenshots/160520005659560.jpg)
  
 
  
@@ -112,22 +112,22 @@ exports.save = function(req, res) {
  
 # Demo
  
-![alt text](screenshots/160520002518125.jpg)
+![alt text](screenshots/160520005659790.jpg)
  
 Lancer le server
  
-![alt text](screenshots/160520002518369.jpg)
+![alt text](screenshots/160520005700027.jpg)
  
 Vérifier les logs
  
 [http://localhost:3000/api/todos](http://localhost:3000/api/todos)
-![alt text](screenshots/160520002518598.jpg)
+![alt text](screenshots/160520005700251.jpg)
  
 Tester sur L’URL du back
 http://localhost:3000/api/todos
  
 [http://localhost:3000/index.html#/](http://localhost:3000/index.html#/)
-![alt text](screenshots/160520002518949.jpg)
+![alt text](screenshots/160520005700478.jpg)
  
 Tester sur L’URL du front
 http://localhost:3000/index.html#/
@@ -135,18 +135,18 @@ http://localhost:3000/index.html#/
 Jouer avec l’application.
 Le client doit envoyer des requetes PUT et GET au serveur. Serveur qui trace tout dans la console.
  
-![alt text](screenshots/160520002519276.jpg)
+![alt text](screenshots/160520005700885.jpg)
  
 
  
-![alt text](screenshots/160520002519790.jpg)
+![alt text](screenshots/160520005701380.jpg)
  
 
  
 PS : en cas d’erreur lors de npm install, tenter la commande
 npm install -g express
  
-![alt text](screenshots/160520002520233.jpg)
+![alt text](screenshots/160520005701662.jpg)
  
 
  

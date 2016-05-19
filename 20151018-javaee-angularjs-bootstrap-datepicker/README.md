@@ -1,40 +1,62 @@
 JavaEE AngularJS Bootstrap: Date Picker
 ======
  
-![alt text](screenshots/160503223856041.png)
+![alt text](screenshots/160520010033299.png)
  
+Build a DatePicker with AngularUI Widget from Bootstrap and post it to a REST Java server with Jersey and Bean Validation.
+ 
+
  
 # Demo
  
 [http://localhost:8080/20151018-javaee-angularjs-bootstrap-datepicker/](http://localhost:8080/20151018-javaee-angularjs-bootstrap-datepicker/)
+http://localhost:8080/20151018-javaee-angularjs-bootstrap-datepicker/
  
 A responsive layout switching from large to small screen.
  
-![alt text](screenshots/160503223856214.png)
+![alt text](screenshots/160520010033368.png)
  
-![alt text](screenshots/160503223856270.png)
+
+ 
+![alt text](screenshots/160520010034138.png)
+ 
+
  
 A post to Java Server with transformation from Javascript Date to JSON String.
  
-![alt text](screenshots/160503223856300.png)
+![alt text](screenshots/160520010034722.png)
+ 
+
  
 A DatePicker widget.
  
-![alt text](screenshots/160503223856329.png)
+![alt text](screenshots/160520010035215.png)
  
-![alt text](screenshots/160503223856358.png)
+
  
-![alt text](screenshots/160503223856383.png)
+![alt text](screenshots/160520010035861.png)
+ 
+
+ 
+![alt text](screenshots/160520010036363.png)
+ 
+
  
 And back end validation on futur Date.
  
-![alt text](screenshots/160503223856408.png)
+![alt text](screenshots/160520010036943.png)
  
-![alt text](screenshots/160503223856434.png)
+
+ 
+![alt text](screenshots/160520010037460.png)
+ 
+
  
 # Source
  
-![alt text](screenshots/160503223856459.png)
+![alt text](screenshots/160520010038062.png)
+ 
+
  
  
  
@@ -404,22 +426,34 @@ pom.xml
  
 # BUG: DatePicker Button Height
  
+Don’t forget <!DOCTYPE html> or there will be .btn CLass height bugs!
  
 [https://github.com/twbs/bootstrap/issues/10482](https://github.com/twbs/bootstrap/issues/10482)
+https://github.com/twbs/bootstrap/issues/10482
  
-![alt text](screenshots/160503223856564.png)
+![alt text](screenshots/160520010038444.png)
+ 
+
  
 # Project
  
 [https://github.com/DamienFremont/blog/tree/master/20151018-javaee-angularjs-bootstrap-datepicker](https://github.com/DamienFremont/blog/tree/master/20151018-javaee-angularjs-bootstrap-datepicker)
+https://github.com/DamienFremont/blog/tree/master/20151018-javaee-angularjs-bootstrap-datepicker
  
 # References
  
 [https://angular-ui.github.io/bootstrap/](https://angular-ui.github.io/bootstrap/)
+https://angular-ui.github.io/bootstrap/
  
 [https://docs.angularjs.org/api/ng/filter/date](https://docs.angularjs.org/api/ng/filter/date)
+https://docs.angularjs.org/api/ng/filter/date
  
 [https://docs.angularjs.org/api/ng/input/input%5Bdate%5D](https://docs.angularjs.org/api/ng/input/input%5Bdate%5D)
+https://docs.angularjs.org/api/ng/input/input%5Bdate%5D
  
 [https://docs.angularjs.org/api/ngResource/service/$resource](https://docs.angularjs.org/api/ngResource/service/$resource)
+https://docs.angularjs.org/api/ngResource/service/$resource
+ 
+ 
+[https://damienfremont.com/2015/10/17/javaee-angularjs-bootstrap-date-picker/](https://damienfremont.com/2015/10/17/javaee-angularjs-bootstrap-date-picker/)
  

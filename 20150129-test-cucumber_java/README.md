@@ -1,7 +1,7 @@
 Tests BDD avec Cucumber Java
 ======
  
-![alt text](screenshots/160520002628848.png)
+![alt text](screenshots/160520005801451.png)
  
 Ce tutorial explique comment écrire et coder des tests BDD (Behavior Driven Development) grâce à Cucumber pour Java, permettant des cas de test plus fonctionnels, maintenables par des MOA, afin de partager la responsabilité de la qualité et gagner en productivité.
  
@@ -11,13 +11,13 @@ Ce tutorial explique comment écrire et coder des tests BDD (Behavior Driven Dev
  
 Cucumber Java, c’est quoi ? C’est un outil qui permet de tester. Il automatise les tests d’acceptation par un formalise axé sur le style de développement BDD et sur un vocabulaire précis (Given, When, Then …Etant donnée, Quand, Alors …Arrange, Act, Assert).
  
-![alt text](screenshots/160520002628917.png)
+![alt text](screenshots/160520005801519.png)
  
 [https://github.com/cucumber/cucumber/wiki/Feature-Introduction](https://github.com/cucumber/cucumber/wiki/Feature-Introduction)
 https://github.com/cucumber/cucumber/wiki/Feature-Introduction
 Le besoin se situe entre le TDD/TU et le test d’acceptance, au coeur du fonctionnel.
  
-![alt text](screenshots/160520002628965.png)
+![alt text](screenshots/160520005801561.png)
  
 
  
@@ -89,7 +89,7 @@ pom.xml (Maven)
 [http://cukes.info/cucumber-eclipse/](http://cukes.info/cucumber-eclipse/)
 http://cukes.info/cucumber-eclipse/
  
-![alt text](screenshots/160520002629018.jpg)
+![alt text](screenshots/160520005801597.jpg)
  
 
  
@@ -99,7 +99,7 @@ Les tests vont porter sur un entrepôt de donnée (une simple DAO) autour de l�
  
 Les étapes décrites sur le site de Cucumber sont reprises ici, mais pour du Java et avec un peu plus de Français.
  
-![alt text](screenshots/160520002629046.jpg)
+![alt text](screenshots/160520005801627.jpg)
  
 
  
@@ -166,11 +166,11 @@ public class RunBDDTest {
 }
 ```
  
-![alt text](screenshots/160520002629086.jpg)
+![alt text](screenshots/160520005801668.jpg)
  
 
  
-![alt text](screenshots/160520002629130.jpg)
+![alt text](screenshots/160520005801712.jpg)
  
 
  
@@ -365,11 +365,11 @@ public class RunBDDTest {
 }
 ```
  
-![alt text](screenshots/160520002629189.jpg)
+![alt text](screenshots/160520005801771.jpg)
  
 
  
-![alt text](screenshots/160520002629218.jpg)
+![alt text](screenshots/160520005801800.jpg)
  
 
  
@@ -483,7 +483,7 @@ public class PersonRepository {
  
 ## 5. Run again and see the step pass
  
-![alt text](screenshots/160520002629264.jpg)
+![alt text](screenshots/160520005801843.jpg)
  
 
  
@@ -505,4 +505,77 @@ Les moins :
  
 * un peu laborieux car travail très manuel (peu de compilation) mais la productivité est au rendez-vous
 * Pas d’erreur si un step n’est pas trouvé, juste un skip du test.
-* Pour un projet qui bouge beaucoup, Cucumber-JS ou Ruby semblent plus indiqués (voir problème de duplication de code ci-dessous s
+* Pour un projet qui bouge beaucoup, Cucumber-JS ou Ruby semblent plus indiqués (voir problème de duplication de code ci-dessous sur un langage compilé comme Java), même si cela oblige à manipuler 2 contextes d’exécution (JS + la techno de votre projet, Java par exemple).
+* Feedbacks un peu léger pour les débutants sur les erreurs de syntax dans un fichier feature. Et le plugin Cucumber-Eclipse n’apporte rien de plus à ce niveau là.
+ 
+* Par contre le pendant Cucumber-Java est lourd à utiliser car il implique de la duplication de code par rapport à Cucumber-JS lors de l’étape de définition des steps.
+ 
+Cucumber-Java (il faut taper un nom de méthode en plus)
+ 
+```java
+@Given("^I have entered (.*) into the calculator$")
+public void i_have_entered_into_the_calculator() throws Throwable {
+// express the regexp above with the code you wish you had
+}
+```
+ 
+Cucumber-JS
+ 
+```javascript
+Given( /^I have entered (.*) into the calculator$/, function(callback) {
+// express the regexp above with the code you wish you had
+callback.pending();
+});
+```
+ 
+Cucumber-RUBY
+ 
+```ruby
+Given /^I have entered (.*) into the calculator$/ do |arg1|
+pending # express the regexp above with the code you wish you had
+end
+```
+ 
+Attention, ce genre de test n’est pas fait pour des tests unitaires de briques logiciels. A privilégier plutôt pour des suites de tests fonctionnels, à rédiger en binôme avec vos responsables fonctionnels / MOA / PO.
+ 
+# Pour aller plus loin
+ 
+Il faudrait ajouter du reporting plus propre pour la MOA avec Maven Surefire Report Plugin ou une page de rapport de server de build type Bamboo ou Jenkins.
+ 
+Et un éditeur tel que Gherkin ou sa version collaborative pour permettre à des non-devs d’écrirent ces scénarios.
+ 
+![alt text](screenshots/160520005801905.png)
+ 
+
+ 
+[https://github.com/cucumber/gherkin-editor](https://github.com/cucumber/gherkin-editor)
+https://github.com/cucumber/gherkin-editor
+ 
+# Source
+ 
+[https://github.com/damienfremont/blog/tree/master/20150129-test-cucumber_java](https://github.com/damienfremont/blog/tree/master/20150129-test-cucumber_java)
+https://github.com/damienfremont/blog/tree/master/20150129-test-cucumber_java
+ 
+# References
+ 
+[http://cukes.info/](http://cukes.info/)
+http://cukes.info/
+ 
+[http://cukes.info/install-cucumber-jvm.html](http://cukes.info/install-cucumber-jvm.html)
+http://cukes.info/install-cucumber-jvm.html
+ 
+[http://cukes.info/step-definitions.html](http://cukes.info/step-definitions.html)
+http://cukes.info/step-definitions.html
+ 
+[http://www.goodercode.com/wp/using-cucumber-tests-with-maven-and-java/](http://www.goodercode.com/wp/using-cucumber-tests-with-maven-and-java/)
+http://www.goodercode.com/wp/using-cucumber-tests-with-maven-and-java/
+ 
+[https://thomassundberg.wordpress.com/2014/05/29/cucumber-jvm-hello-world/](https://thomassundberg.wordpress.com/2014/05/29/cucumber-jvm-hello-world/)
+https://thomassundberg.wordpress.com/2014/05/29/cucumber-jvm-hello-world/
+ 
+[http://cukes.info/cucumber-eclipse/](http://cukes.info/cucumber-eclipse/)
+http://cukes.info/cucumber-eclipse/
+ 
+ 
+[https://damienfremont.com/2015/01/29/tests-bdd-avec-cucumber-java/](https://damienfremont.com/2015/01/29/tests-bdd-avec-cucumber-java/)
+ 

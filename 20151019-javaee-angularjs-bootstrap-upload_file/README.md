@@ -1,47 +1,74 @@
 JavaEE AngularJS Bootstrap: File Upload
 ======
  
-![alt text](screenshots/160503224200259.png)
+![alt text](screenshots/160520010045614.png)
  
 A simple picture upload with preview with alert messages for avatar and a multiple files upload with progress bar.
+ 
 
+ 
 # Demo
  
 [http://localhost:8080/20151019-javaee-angularjs-bootstrap-upload_file/](http://localhost:8080/20151019-javaee-angularjs-bootstrap-upload_file/)
+http://localhost:8080/20151019-javaee-angularjs-bootstrap-upload_file/
  
-![alt text](screenshots/160503224200450.png)
+![alt text](screenshots/160520010045687.png)
+ 
+
  
 Here is Picture upload.
  
-![alt text](screenshots/160503224200497.png)
+![alt text](screenshots/160520010045731.png)
  
-![alt text](screenshots/160503224200522.png)
+
  
-![alt text](screenshots/160503224200562.png)
+![alt text](screenshots/160520010046231.png)
  
-![alt text](screenshots/160503224200587.png)
+
+ 
+![alt text](screenshots/160520010047075.png)
+ 
+
+ 
+![alt text](screenshots/160520010047556.png)
+ 
+
  
  
  
  
  
-![alt text](screenshots/160503224200618.png)
+![alt text](screenshots/160520010048225.png)
+ 
+
  
 Here is multiple files upload.
  
-![alt text](screenshots/160503224200643.png)
+![alt text](screenshots/160520010048703.png)
  
-![alt text](screenshots/160503224200669.png)
+
  
-![alt text](screenshots/160503224200712.png)
+![alt text](screenshots/160520010049256.png)
  
-![alt text](screenshots/160503224200737.png)
+
  
-![alt text](screenshots/160503224200761.png)
+![alt text](screenshots/160520010049990.png)
+ 
+
+ 
+![alt text](screenshots/160520010050386.png)
+ 
+
+ 
+![alt text](screenshots/160520010051013.png)
+ 
+
  
 # Source
  
-![alt text](screenshots/160503224200783.png)
+![alt text](screenshots/160520010051337.png)
+ 
+
  
 MyAppCONFIG.java
  
@@ -323,12 +350,19 @@ styles.css
 # Project
  
 [https://github.com/DamienFremont/blog/tree/master/20151019-javaee-angularjs-bootstrap-upload_file](https://github.com/DamienFremont/blog/tree/master/20151019-javaee-angularjs-bootstrap-upload_file)
+https://github.com/DamienFremont/blog/tree/master/20151019-javaee-angularjs-bootstrap-upload_file
  
 # References
  
 [https://github.com/danialfarid/ng-file-upload](https://github.com/danialfarid/ng-file-upload)
+https://github.com/danialfarid/ng-file-upload
  
 [https://angular-file-upload.appspot.com/](https://angular-file-upload.appspot.com/)
+https://angular-file-upload.appspot.com/
  
 [http://howtodoinjava.com/2015/08/05/jersey-file-upload-example/](http://howtodoinjava.com/2015/08/05/jersey-file-upload-example/)
+http://howtodoinjava.com/2015/08/05/jersey-file-upload-example/
+ 
+ 
+[https://damienfremont.com/2015/10/19/javaee-angularjs-bootstrap-file-upload/](https://damienfremont.com/2015/10/19/javaee-angularjs-bootstrap-file-upload/)
  

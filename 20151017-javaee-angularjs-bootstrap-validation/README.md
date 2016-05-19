@@ -1,52 +1,76 @@
 JavaEE AngularJS Bootstrap: Form Bean Validation (front and back)
 ======
  
-![alt text](screenshots/160503223619634.png)
+![alt text](screenshots/160520010020906.png)
+ 
+
  
 Dual Validation, on Web side and Server side (UI and API), using AngularJs Validation directives and JavaEE BeanValidation API.
  
+
  
 # Demo
  
 A simple User form, with REST HTTP Get then Post.
  
-![alt text](screenshots/160503223619827.png)
+![alt text](screenshots/160520010020975.png)
  
-![alt text](screenshots/160503223619887.png)
+
+ 
+![alt text](screenshots/160520010021497.png)
+ 
+
  
 Disable submit button with tag (if form is $invalid).
  
-![alt text](screenshots/160503223619915.png)
+![alt text](screenshots/160520010021523.png)
+ 
+
  
 ng-valid and ng-invalid will automatically determine if a field is valid based on the tags placed in your form.
  
-![alt text](screenshots/160503223619943.png)
+![alt text](screenshots/160520010021999.png)
  
-![alt text](screenshots/160503223619971.png)
+
+ 
+![alt text](screenshots/160520010022582.png)
+ 
+
  
 Her we are testing the back end validation, which is more extended than UI Validation
  
 Validation: Birth Year < 2015
  
-![alt text](screenshots/160503223619999.png)
+![alt text](screenshots/160520010023126.png)
+ 
+
  
 This message is from the Java Server.
  
-![alt text](screenshots/160503223620027.png)
+![alt text](screenshots/160520010023151.png)
+ 
+
  
 Here the HTTP Request.
  
-![alt text](screenshots/160503223620053.png)
+![alt text](screenshots/160520010023590.png)
+ 
+
  
 and Response from Java Server (Bad Request).
  
-![alt text](screenshots/160503223620078.png)
+![alt text](screenshots/160520010024143.png)
+ 
+
  
 # Source
  
 [http://localhost:8080/20151017-javaee-angularjs-bootstrap-form-bean_validation/#/person](http://localhost:8080/20151017-javaee-angularjs-bootstrap-form-bean_validation/#/person)
+http://localhost:8080/20151017-javaee-angularjs-bootstrap-form-bean_validation/#/person
  
-![alt text](screenshots/160503223620104.png)
+![alt text](screenshots/160520010024165.png)
+ 
+
  
  
  
@@ -417,10 +441,16 @@ pom.xml
 # Project
  
 [https://github.com/DamienFremont/blog/tree/master/20151017-javaee-angularjs-bootstrap-validation](https://github.com/DamienFremont/blog/tree/master/20151017-javaee-angularjs-bootstrap-validation)
+https://github.com/DamienFremont/blog/tree/master/20151017-javaee-angularjs-bootstrap-validation
  
 # References
  
 [http://blog.xebia.fr/2010/07/15/bean-validation/](http://blog.xebia.fr/2010/07/15/bean-validation/)
+http://blog.xebia.fr/2010/07/15/bean-validation/
  
 [https://docs.angularjs.org/guide/forms](https://docs.angularjs.org/guide/forms)
+https://docs.angularjs.org/guide/forms
+ 
+ 
+[https://damienfremont.com/2015/10/17/javaee-angularjs-bootstrap-form-bean-validation-front-and-back/](https://damienfremont.com/2015/10/17/javaee-angularjs-bootstrap-form-bean-validation-front-and-back/)
  

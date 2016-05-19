@@ -1,7 +1,7 @@
 From JUnit3 to Junit4
 ======
  
-![alt text](screenshots/160520002504898.jpg)
+![alt text](screenshots/160520005647016.jpg)
  
 A post about simple JUnit tests. Unit testing is necessary, but reduce its volume (source test) is always interresting … it reduces development and maintenance tasks (code analyzer tools are your best friends). We need tools : a code analyzer : PMD, and … a testing framework : JUnit.
  
