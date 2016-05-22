@@ -36,13 +36,6 @@
       <version>${angular-ui-bootstrap.version}</version>
     </dependency>
     
-	<!-- bootstrap -->
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>bootstrap</artifactId>
-      <version>${bootstrap.version}</version>
-    </dependency>
-
   </dependencies>
   <build>
     <resources>
