@@ -1,91 +1,158 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.damienfremont.blog</groupId>
-  <artifactId>20160522-javaee-angularjs-webpackaging_min_single_file</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+	<groupId>com.damienfremont.blog</groupId>
+	<artifactId>20160522-javaee-angularjs-webpackaging_min_single_file</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>7</java.version>
-    <angularjs.version>1.4.7</angularjs.version>
-    <angular-ui-bootstrap.version>0.13.4</angular-ui-bootstrap.version>
-    <bootstrap.version>3.3.5</bootstrap.version>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>7</java.version>
+		<angularjs.version>1.4.7</angularjs.version>
+	</properties>
 
-  <dependencies>
-    
-    <!-- WEB DEPENDENCIES MANAGER -->
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>webjars-servlet-2.x</artifactId>
-      <version>1.1</version>
-    </dependency>
-    
-	<!-- angularjs -->
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>angularjs</artifactId>
-      <version>${angularjs.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>angular-ui-bootstrap</artifactId>
-      <version>${angular-ui-bootstrap.version}</version>
-    </dependency>
-    
-  </dependencies>
-  <build>
-    <resources>
-    
-  	  <!-- REPLACE KEYS IN FILES (ECLIPSE IDE) -->
-      <resource>
-        <directory>src/main/webapp</directory>
-        <filtering>true</filtering>
-        <targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
-        <includes>
-          <include>*.html</include>
-        </includes>
-      </resource>
-    </resources>
-    <plugins>
-    
-      <!-- REPLACE KEYS IN FILES (BUILD) -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.6</version>
-        <configuration>
-          <webResources>
-            <resource>
-              <directory>src/main/webapp</directory>
-              <filtering>true</filtering>
-              <includes>
-                <include>*.html</include>
-              </includes>
-            </resource>
-          </webResources>
-        </configuration>
-      </plugin>
-      
-      <!-- HTML TO JS 
-      <plugin>
-    <groupId>com.keithbranton.mojo</groupId>
-    <artifactId>angular-maven-plugin</artifactId>
-    <version>0.3.4</version>
-</plugin> -->
+	<dependencies>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>1.${java.version}</source>
-          <target>1.${java.version}</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+		<!-- WEB DEPENDENCIES MANAGER -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-servlet-2.x</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<!-- angularjs -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>angularjs</artifactId>
+			<version>${angularjs.version}</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<resources>
+
+			<!-- REPLACE KEYS IN FILES (ECLIPSE IDE) -->
+			<resource>
+				<directory>src/main/webapp</directory>
+				<filtering>true</filtering>
+				<targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
+				<includes>
+					<include>*.html</include>
+					<include>web.xml</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.${java.version}</source>
+					<target>1.${java.version}</target>
+				</configuration>
+			</plugin>
+
+			<!-- REPLACE KEYS IN FILES (BUILD) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>src/main/webapp</directory>
+							<filtering>true</filtering>
+							<includes>
+								<include>*.html</include>
+								<include>web.xml</include>
+							</includes>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+
+			<!-- HTML TO JS (BUILD) -->
+			<plugin>
+				<groupId>com.keithbranton.mojo</groupId>
+				<artifactId>angular-maven-plugin</artifactId>
+				<version>0.3.4</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>html2js</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceDir>${basedir}/src/main/webapp/modules/</sourceDir>
+					<angularDependency>angular</angularDependency>
+					<include>**/*.html</include>
+					<exclude>index*.html</exclude>
+					<target>${basedir}/src/main/webapp/templates.js</target>
+					<addRequireWrapper>true</addRequireWrapper>
+					<prefix>/templateCachePrefix</prefix>
+					<multiModule>true</multiModule>
+					<preambles>
+						<preamble>/*jshint -W099 */</preamble>
+					</preambles>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!-- HTML TO JS (FOR ECLIPSE IDE) -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.keithbranton.mojo</groupId>
+										<artifactId>angular-maven-plugin</artifactId>
+										<versionRange>[0.1-SNAPSHOT,)</versionRange>
+										<goals>
+											<goal>html2js</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute>
+											<runOnIncremental>true</runOnIncremental>
+										</execute>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<profile.id>dev</profile.id>
+				<javascript.min></javascript.min>
+				<webjars.disablecache>true</webjars.disablecache>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<profile.id>prod</profile.id>
+				<javascript.min>.min</javascript.min>
+				<webjars.disablecache>false</webjars.disablecache>
+			</properties>
+		</profile>
+	</profiles>
 </project>
