@@ -1,198 +1,200 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.damienfremont.blog</groupId>
-	<artifactId>20160522-javaee-angularjs-webpackaging_min_single_file</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+  <groupId>com.damienfremont.blog</groupId>
+  <artifactId>20160522-javaee-angularjs-webpackaging_min_single_file</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>7</java.version>
-		<angularjs.version>1.4.7</angularjs.version>
-		<requirejs.version>2.2.0</requirejs.version>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>7</java.version>
+    <angularjs.version>1.4.7</angularjs.version>
+    <requirejs.version>2.2.0</requirejs.version>
+  </properties>
 
-	<dependencies>
+  <dependencies>
 
-		<!-- WEB DEPENDENCIES MANAGER -->
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>webjars-servlet-2.x</artifactId>
-			<version>1.1</version>
-		</dependency>
+    <!-- WEB DEPENDENCIES MANAGER -->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-servlet-2.x</artifactId>
+      <version>1.1</version>
+    </dependency>
 
-		<!-- WEB DEPENDENCIES -->
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>angularjs</artifactId>
-			<version>${angularjs.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>requirejs</artifactId>
-			<version>${requirejs.version}</version>
-		</dependency>
+    <!-- WEB DEPENDENCIES -->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angularjs</artifactId>
+      <version>${angularjs.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>requirejs</artifactId>
+      <version>${requirejs.version}</version>
+    </dependency>
 
-	</dependencies>
-	<build>
-		<resources>
+  </dependencies>
+  <build>
+    <resources>
 
-			<!-- REPLACE KEYS IN FILES (ECLIPSE IDE) -->
-			<resource>
-				<directory>src/main/webapp</directory>
-				<filtering>true</filtering>
-				<targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
-				<includes>
-					<include>*.html</include>
-					<include>WEB-INF/web.xml</include>
-				</includes>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.${java.version}</source>
-					<target>1.${java.version}</target>
-				</configuration>
-			</plugin>
+      <!-- REPLACE KEYS IN FILES (ECLIPSE IDE) -->
+      <resource>
+        <directory>src/main/webapp</directory>
+        <filtering>true</filtering>
+        <targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
+        <includes>
+          <include>*.html</include>
+          <include>WEB-INF/web.xml</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.${java.version}</source>
+          <target>1.${java.version}</target>
+        </configuration>
+      </plugin>
 
-			<!-- REPLACE KEYS IN FILES (BUILD) -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<webResources>
-						<resource>
-							<directory>src/main/webapp</directory>
-							<filtering>true</filtering>
-							<includes>
-								<include>*.html</include>
-								<include>WEB-INF/web.xml</include>
-							</includes>
-						</resource>
-					</webResources>
-				</configuration>
-			</plugin>
+      <!-- REPLACE KEYS IN FILES (BUILD) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <webResources>
+            <resource>
+              <directory>src/main/webapp</directory>
+              <filtering>true</filtering>
+              <includes>
+                <include>*.html</include>
+                <include>WEB-INF/web.xml</include>
+              </includes>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
 
-			<!-- HTML TO JS (BUILD) -->
-			<plugin>
-				<groupId>com.keithbranton.mojo</groupId>
-				<artifactId>angular-maven-plugin</artifactId>
-				<version>0.3.4</version>
-				<executions>
-					<execution>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>html2js</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<sourceDir>${basedir}/src/main/webapp/js/</sourceDir>
-					<angularDependency>angular</angularDependency>
-					<include>**/*.html</include>
-					<exclude>index*.html</exclude>
-					<target>${basedir}/src/main/webapp/js/templates.js</target>
-					<addRequireWrapper>false</addRequireWrapper>
-					<prefix>/js</prefix>
-					<multiModule>false</multiModule>
-					<preambles>
-						<preamble>/*jshint -W099 */</preamble>
-					</preambles>
-				</configuration>
-			</plugin>
+      <!-- HTML TO JS (BUILD) -->
+      <plugin>
+        <groupId>com.keithbranton.mojo</groupId>
+        <artifactId>angular-maven-plugin</artifactId>
+        <version>0.3.4</version>
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>html2js</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <sourceDir>${basedir}/src/main/webapp/js/</sourceDir>
+          <angularDependency>angular</angularDependency>
+          <include>**/*.html</include>
+          <exclude>index*.html</exclude>
+          <target>${basedir}/src/main/webapp/js/templates.js</target>
+          <addRequireWrapper>false</addRequireWrapper>
+          <prefix>/js</prefix>
+          <multiModule>false</multiModule>
+          <preambles>
+            <preamble>/*jshint -W099 */</preamble>
+          </preambles>
+        </configuration>
+      </plugin>
 
-			<!-- ASSEMBLE AND MINIFY -->
-			<plugin>
-				<groupId>com.samaxes.maven</groupId>
-				<artifactId>minify-maven-plugin</artifactId>
-				<version>1.7.4</version>
-				<executions>
-					<execution>
-						<id>default-minify</id>
-						<goals>
-							<goal>minify</goal>
-						</goals>
-						<configuration>
-							<charset>UTF-8</charset>
-							<cssSourceIncludes>
-								<cssSourceInclude>**/*.css</cssSourceInclude>
-							</cssSourceIncludes>
-							<cssSourceExcludes>
-								<cssSourceExclude>**/*.min.css</cssSourceExclude>
-							</cssSourceExcludes>
-							<jsSourceIncludes>
-								<jsSourceInclude>**/app.js</jsSourceInclude>
-								<jsSourceInclude>**/template.js</jsSourceInclude>
-								<jsSourceInclude>**/**/*.*js</jsSourceInclude>
-							</jsSourceIncludes>
-							<jsEngine>CLOSURE</jsEngine>
-							<jsFinalFile></jsFinalFile>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+      <!-- ASSEMBLE AND MINIFY -->
+      <plugin>
+        <groupId>com.samaxes.maven</groupId>
+        <artifactId>minify-maven-plugin</artifactId>
+        <version>1.7.4</version>
+        <executions>
+          <execution>
+            <id>default-minify</id>
+            <goals>
+              <goal>minify</goal>
+            </goals>
+            <configuration>
+              <charset>UTF-8</charset>
+              <cssSourceIncludes>
+                <cssSourceInclude>**/*.css</cssSourceInclude>
+              </cssSourceIncludes>
+              <cssSourceExcludes>
+                <cssSourceExclude>**/*.min.css</cssSourceExclude>
+              </cssSourceExcludes>
+              <jsSourceIncludes>
+                <jsSourceInclude>**/app.js</jsSourceInclude>
+                <jsSourceInclude>**/template.js</jsSourceInclude>
+                <jsSourceInclude>**/**/*.*js</jsSourceInclude>
+              </jsSourceIncludes>
+              <jsEngine>CLOSURE</jsEngine>
+              <jsFinalFile></jsFinalFile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
 
-		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!-- HTML TO JS (FOR ECLIPSE IDE) -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>com.keithbranton.mojo</groupId>
-										<artifactId>angular-maven-plugin</artifactId>
-										<versionRange>[0.1-SNAPSHOT,)</versionRange>
-										<goals>
-											<goal>html2js</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute>
-											<runOnIncremental>true</runOnIncremental>
-										</execute>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-	<profiles>
-		<profile>
-			<!-- NO ASSEMBLY, NO MINIFIY, NO CACHE -->
-			<id>dev</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<profile.id>dev</profile.id>
-				<javascript.min></javascript.min>
-				<webjars.disablecache>true</webjars.disablecache>
-			</properties>
-		</profile>
-		<profile>
-			<!-- ASSEMBLY, MINIFIY, NOCACHE -->
-			<id>prod</id>
-			<properties>
-				<profile.id>prod</profile.id>
-				<javascript.min>.min</javascript.min>
-				<webjars.disablecache>false</webjars.disablecache>
-			</properties>
-		</profile>
-	</profiles>
+    </plugins>
+    <pluginManagement>
+      <plugins>
+        <!-- HTML TO JS (FOR ECLIPSE IDE) -->
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>com.keithbranton.mojo</groupId>
+                    <artifactId>angular-maven-plugin</artifactId>
+                    <versionRange>[0.1-SNAPSHOT,)</versionRange>
+                    <goals>
+                      <goal>html2js</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <execute>
+                      <runOnIncremental>true</runOnIncremental>
+                    </execute>
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  <profiles>
+    <profile>
+    
+      <!-- NO ASSEMBLY, NO MINIFIY, NO CACHE -->
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <profile.id>dev</profile.id>
+        <javascript.min></javascript.min>
+        <webjars.disablecache>true</webjars.disablecache>
+      </properties>
+    </profile>
+    <profile>
+    
+      <!-- ASSEMBLY, MINIFIY, NOCACHE -->
+      <id>prod</id>
+      <properties>
+        <profile.id>prod</profile.id>
+        <javascript.min>.min</javascript.min>
+        <webjars.disablecache>false</webjars.disablecache>
+      </properties>
+    </profile>
+  </profiles>
 </project>
