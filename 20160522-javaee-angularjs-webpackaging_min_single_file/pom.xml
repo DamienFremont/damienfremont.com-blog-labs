@@ -101,7 +101,7 @@
 					<exclude>index*.html</exclude>
 					<target>${basedir}/src/main/webapp/js/templates.js</target>
 					<addRequireWrapper>false</addRequireWrapper>
-					<prefix>/js2</prefix>
+					<prefix>/js</prefix>
 					<multiModule>false</multiModule>
 					<preambles>
 						<preamble>/*jshint -W099 */</preamble>
