@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<!-- LIBS CSS -->
+<link rel="stylesheet" href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
+<link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body ng-app="app">
+<div class="container">
+
+  <h1>Packaging</h1>
+
+  <!-- MAIN CONTENT -->
+  <div class="view-animate" ng-view ></div>
+
+</div>
+
+<!-- LIBS JS -->
+<script src="webjars/bootstrap/${bootstrap.version}/js/bootstrap.js"></script>
+<script src="webjars/angularjs/${angularjs.version}/angular.js"></script>
+<script src="webjars/angularjs/${angularjs.version}/angular-resource.js"></script>
+<script src="webjars/angularjs/${angularjs.version}/angular-route.js"></script>
+
+<!-- YOUR JS -->
+<script src="app.js"></script>
+<script src="modules/page1/page1.js"></script>
+<script src="modules/page2/page2.js"></script>
+
+</body>
+</html>
