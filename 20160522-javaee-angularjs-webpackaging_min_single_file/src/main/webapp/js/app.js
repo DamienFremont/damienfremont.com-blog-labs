@@ -2,7 +2,8 @@
 
 angular.module('myapp', [ //
 'ngResource', //
-'ngRoute'//
+'ngRoute', //
+'templates-main' //
 ])
 
 // CONFIG
@@ -13,12 +14,12 @@ angular.module('myapp', [ //
 
 	// PAGE1
 	.when('/page1', {
-		templateUrl : 'modules/page1/page1.html',
+		templateUrl : '/js2/page1/page1.html',
 		controller : 'Page1Ctrl'
 	})
 	// PAGE 2
 	.when('/page2', {
-		templateUrl : 'modules/page2/page2.html',
+		templateUrl : '/js2/page2/page2.html',
 		controller : 'Page2Ctrl'
 	})
 	// DEFAULT

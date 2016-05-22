@@ -11,6 +11,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>7</java.version>
 		<angularjs.version>1.4.7</angularjs.version>
+		<requirejs.version>2.2.0</requirejs.version>
 	</properties>
 
 	<dependencies>
@@ -27,6 +28,12 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>angularjs</artifactId>
 			<version>${angularjs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>requirejs</artifactId>
+			<version>${requirejs.version}</version>
 		</dependency>
 
 	</dependencies>
@@ -74,33 +81,6 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
-				<groupId>com.samaxes.maven</groupId>
-				<artifactId>minify-maven-plugin</artifactId>
-				<version>1.7.4</version>
-				<executions>
-					<execution>
-						<id>default-minify</id>
-						<configuration>
-							<charset>UTF-8</charset>
-							<cssSourceFiles>
-								<cssSourceFile>${basedir}/src/main/webapp/styles/page1.css</cssSourceFile>
-								<cssSourceFile>${basedir}/src/main/webapp/styles/page2.css</cssSourceFile>
-							</cssSourceFiles>
-							<jsSourceFiles>
-								<jsSourceFile>${basedir}/src/main/webapp/app.js</jsSourceFile>
-								<jsSourceFile>${basedir}/src/main/webapp/template.js</jsSourceFile>
-								<jsSourceFile>${basedir}/src/main/webapp/modules/page1/page1.js</jsSourceFile>
-							</jsSourceFiles>
-							<jsEngine>CLOSURE</jsEngine>
-						</configuration>
-						<goals>
-							<goal>minify</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
 			<!-- HTML TO JS (BUILD) -->
 			<plugin>
 				<groupId>com.keithbranton.mojo</groupId>
@@ -115,18 +95,48 @@
 					</execution>
 				</executions>
 				<configuration>
-					<sourceDir>${basedir}/src/main/webapp/modules/</sourceDir>
+					<sourceDir>${basedir}/src/main/webapp/js/</sourceDir>
 					<angularDependency>angular</angularDependency>
 					<include>**/*.html</include>
 					<exclude>index*.html</exclude>
-					<target>${basedir}/src/main/webapp/templates.js</target>
-					<addRequireWrapper>true</addRequireWrapper>
-					<prefix>/templateCachePrefix</prefix>
-					<multiModule>true</multiModule>
+					<target>${basedir}/src/main/webapp/js/templates.js</target>
+					<addRequireWrapper>false</addRequireWrapper>
+					<prefix>/js2</prefix>
+					<multiModule>false</multiModule>
 					<preambles>
 						<preamble>/*jshint -W099 */</preamble>
 					</preambles>
 				</configuration>
+			</plugin>
+
+			<!-- ASSEMBLE AND MINIFY -->
+			<plugin>
+				<groupId>com.samaxes.maven</groupId>
+				<artifactId>minify-maven-plugin</artifactId>
+				<version>1.7.4</version>
+				<executions>
+					<execution>
+						<id>default-minify</id>
+						<configuration>
+							<charset>UTF-8</charset>
+							<cssSourceIncludes>
+								<cssSourceInclude>**/*.css</cssSourceInclude>
+							</cssSourceIncludes>
+							<cssSourceExcludes>
+								<cssSourceExclude>**/*.min.css</cssSourceExclude>
+							</cssSourceExcludes>
+							<jsSourceIncludes>
+								<jsSourceInclude>**/app.js</jsSourceInclude>
+								<jsSourceInclude>**/template.js</jsSourceInclude>
+								<jsSourceInclude>**/**/*.*js</jsSourceInclude>
+							</jsSourceIncludes>
+							<jsEngine>CLOSURE</jsEngine>
+						</configuration>
+						<goals>
+							<goal>minify</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 		<pluginManagement>
