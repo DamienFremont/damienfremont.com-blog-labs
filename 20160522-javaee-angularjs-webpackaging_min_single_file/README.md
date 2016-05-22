@@ -1,7 +1,7 @@
 JavaEE AngularJS : Web Packaging – Concat – Minify
 ======
  
-![alt text](screenshots/160523002241218.png)
+![alt text](screenshots/160523002716683.png)
  
 This tutorial is intended to make a Maven web packaging like NodeJS+Brunch or NodeJS+WebPack. With HTML to JS, Single JS file, Minify. It’s usefull for web release because you’ll to limit the number of HTTP request, have a simple artifact to update, and limit the size of your app.
  
@@ -9,11 +9,11 @@ This tutorial is intended to make a Maven web packaging like NodeJS+Brunch or No
  
 A simple two pages app: 2 templates, 2 controllers.
  
-![alt text](screenshots/160523002241389.png)
+![alt text](screenshots/160523002716885.png)
  
 
  
-![alt text](screenshots/160523002241413.png)
+![alt text](screenshots/160523002716911.png)
  
 
  
@@ -27,19 +27,19 @@ Build it with the default ‘dev’ maven profile.
 mvn package -P dev
 ```
  
-![alt text](screenshots/160523002241445.png)
+![alt text](screenshots/160523002716943.png)
  
 
  
 Before
  
-![alt text](screenshots/160523002241469.png)
+![alt text](screenshots/160523002716970.png)
  
 
  
 After
  
-![alt text](screenshots/160523002241493.png)
+![alt text](screenshots/160523002716996.png)
  
 
  
@@ -116,21 +116,21 @@ mvn package -P prod
  
 Before
  
-![alt text](screenshots/160523002241559.png)
+![alt text](screenshots/160523002717043.png)
  
 
  
-![alt text](screenshots/160523002241584.png)
+![alt text](screenshots/160523002717068.png)
  
 
  
 After
  
-![alt text](screenshots/160523002241607.png)
+![alt text](screenshots/160523002717093.png)
  
 
  
-![alt text](screenshots/160523002241630.png)
+![alt text](screenshots/160523002717116.png)
  
 
  
@@ -210,7 +210,7 @@ index_prod.html
  
 ## Project
  
-![alt text](screenshots/160523002241670.png)
+![alt text](screenshots/160523002717162.png)
  
 
  
@@ -646,6 +646,6 @@ http://maven.apache.org/plugins/maven-dependency-plugin/examples/unpacking-artif
 http://stackoverflow.com/questions/35784489/angular-javascript-minification-cause-error-injectormodulerr-module-error
  
  
-# Origin
+## Origin
 [https://damienfremont.com/2016/05/22/javaee-angularjs-web-packaging-concat-minify/](https://damienfremont.com/2016/05/22/javaee-angularjs-web-packaging-concat-minify/)
  
