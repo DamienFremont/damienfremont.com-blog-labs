@@ -1,7 +1,7 @@
 Développeur freelance en 2015 : la routine, les missions (2/3)
 ======
  
-![alt text](screenshots/160520010224967.jpg)
+![alt text](screenshots/160523003648393.jpg)
  
 Suite du post Développeur freelance en 2015 : se lancer (1/3), autour des missions et de la paperasse quotidienne.
  
@@ -46,7 +46,7 @@ Exemple : contacte pour une mission, demander :
  
 ## Négociation
  
-![alt text](screenshots/160520010225020.svg)
+![alt text](screenshots/160523003648453.svg)
  
 Le taux journalier demandé : rester ferme, il ne s’agit pas de courir à la faillite ni de démarrer la mission avec un arrière goût de défaite et encore moins de la quitter pour cette raison.
  
@@ -100,13 +100,13 @@ Gouv.fr ne fournit pas de modèle (merci…) mais vous pouvez en trouver sur le 
  
 Exemple de tampon/cachet (à fabriquer-coller avec Paint, pas la peine d’en commander un, ni de s’embêter plus que ça).
  
-![alt text](screenshots/160520010225121.png)
+![alt text](screenshots/160523003648558.png)
  
 
  
 ## 9. La routine en mission
  
-![alt text](screenshots/160520010225819.svg)
+![alt text](screenshots/160523003648602.svg)
  
 Rien ne change par rapport à avant, on retrouve le CRA mensuel
  
@@ -201,5 +201,6 @@ http://avis-situation-sirene.insee.fr/avisitu/
 http://www.urssaf.fr/
  
  
+## Origin
 [https://damienfremont.com/2015/12/03/developpeur-freelance-en-2015-la-routine-les-missions-23/](https://damienfremont.com/2015/12/03/developpeur-freelance-en-2015-la-routine-les-missions-23/)
  

@@ -1,7 +1,7 @@
 How to Cucumber : Test Reporting Plugin with Maven and Java
 ======
  
-![alt text](screenshots/160520005903774.png)
+![alt text](screenshots/160523003309297.png)
  
 It is often useful to show the results of our tests to others people who are not developers, like managers or executive. This tutorial shows how to integrate a Cucumber reporting a Java plugin in Maven project. The result is a simple web page, which does not require a special tool to be read.
  
@@ -13,17 +13,17 @@ How to Cucumber : Test Report Plugin 2 with Maven and Java
  
 This tutorial will cover 3 reports plugins : JSON, HTML Pretty and HTML Reports.
  
-![alt text](screenshots/160520005903844.jpg)
+![alt text](screenshots/160523003309374.jpg)
  
-![alt text](screenshots/160520005903870.jpg)
+![alt text](screenshots/160523003309396.jpg)
  
-![alt text](screenshots/160520005903895.jpg)
+![alt text](screenshots/160523003309419.jpg)
  
   
  
 # Native JSON Result
  
-![alt text](screenshots/160520005903921.jpg)
+![alt text](screenshots/160523003309447.jpg)
  
 
  
@@ -83,13 +83,13 @@ Launch with JUnit or
  
 The result is at /target/cucumber.json
  
-![alt text](screenshots/160520005903959.jpg)
+![alt text](screenshots/160523003309614.jpg)
  
 
  
 # Native HTML Plugin
  
-![alt text](screenshots/160520005903982.jpg)
+![alt text](screenshots/160523003309645.jpg)
  
 
  
@@ -117,17 +117,17 @@ Launch with JUnit or
  
 The result is at /target/site/cucumber-pretty/index.html
  
-![alt text](screenshots/160520005904015.jpg)
+![alt text](screenshots/160523003309700.jpg)
  
 
  
 # Cucumber-Reports HTML Plugin
  
-![alt text](screenshots/160520005904041.jpg)
+![alt text](screenshots/160523003309729.jpg)
  
 
  
-![alt text](screenshots/160520005904067.jpg)
+![alt text](screenshots/160523003309760.jpg)
  
 
  
@@ -241,7 +241,7 @@ And two libs (external to Maven repositories)
 [https://code.google.com/p/totallylazy/downloads/list](https://code.google.com/p/totallylazy/downloads/list)
 https://code.google.com/p/totallylazy/downloads/list
  
-![alt text](screenshots/160520005904106.jpg)
+![alt text](screenshots/160523003310048.jpg)
  
 
  
@@ -267,7 +267,7 @@ mvn clean install
  
 The result is at /target/site/cucumber-reports/feature-overview.html
  
-![alt text](screenshots/160520005904139.jpg)
+![alt text](screenshots/160523003310105.jpg)
  
 
  
@@ -296,5 +296,6 @@ https://github.com/masterthought/cucumber-reporting
 http://www.masterthought.net/section/cucumber-reporting
  
  
+## Origin
 [https://damienfremont.com/2015/07/30/how-to-cucumber-test-reporting-plugin-with-maven-and-java/](https://damienfremont.com/2015/07/30/how-to-cucumber-test-reporting-plugin-with-maven-and-java/)
  

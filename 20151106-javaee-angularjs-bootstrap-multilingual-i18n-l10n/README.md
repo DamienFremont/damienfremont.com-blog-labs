@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: How to Multilingual (i18n, l10n)
 ======
  
-![alt text](screenshots/160520010200251.png)
+![alt text](screenshots/160523003616659.png)
  
 
  
@@ -16,7 +16,7 @@ http://localhost:8080/20151106-javaee-angularjs-bootstrap-multilingual-i18n-l10n
  
 A simple content where language and locale can be change by country.
  
-![alt text](screenshots/160520010200327.png)
+![alt text](screenshots/160523003616731.png)
  
 
  
@@ -26,23 +26,23 @@ Here are three countries, including two with the same language (i18n) but differ
 * English (GB): lang=en, locale=gb
 * French (FR): lang=fr, locale=fr
  
-![alt text](screenshots/160520010200351.png)
+![alt text](screenshots/160523003617176.png)
  
 
  
 By switching from US to GB, only currency and date format has changed (l10n).
  
-![alt text](screenshots/160520010200377.png)
+![alt text](screenshots/160523003617532.png)
  
 
  
 With FR: language, date and currency change.
  
-![alt text](screenshots/160520010200401.png)
+![alt text](screenshots/160523003617799.png)
  
 
  
-![alt text](screenshots/160520010200424.png)
+![alt text](screenshots/160523003618230.png)
  
 
  
@@ -50,7 +50,7 @@ For each language, there are two files.
  
 * An l10n locale file (format of date, currency, calendar,etc)
  
-![alt text](screenshots/160520010200451.png)
+![alt text](screenshots/160523003618656.png)
  
 
  
@@ -58,7 +58,7 @@ For each language, there are two files.
  
  
  
-![alt text](screenshots/160520010200476.png)
+![alt text](screenshots/160523003619084.png)
  
 
  
@@ -69,13 +69,13 @@ Because this app use browser locale, cookie and fallback language, there are thr
 * 1st time : no cookies browser language is supported by the app (English or French)  => it will be the default language browser language is not supported (Deutch?) => the app fallbacks to English
 * 2nd time : cookies => the app use the previous used language
  
-![alt text](screenshots/160520010200501.png)
+![alt text](screenshots/160523003619598.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010200525.png)
+![alt text](screenshots/160523003620060.png)
  
 
  
@@ -425,5 +425,6 @@ https://docs.angularjs.org/api/ng/filter/date
 https://github.com/lgalfaso/angular-dynamic-locale
  
  
+## Origin
 [https://damienfremont.com/2015/11/06/javaee-angularjs-bootstrap-how-to-multilingual-i18n-l10n/](https://damienfremont.com/2015/11/06/javaee-angularjs-bootstrap-how-to-multilingual-i18n-l10n/)
  

@@ -1,7 +1,7 @@
 Webjars: Use Dynamic URLs for your Dependencies (VS Versionning Hell)
 ======
  
-![alt text](screenshots/160520005935842.png)
+![alt text](screenshots/160523003344256.png)
  
 WebJars is a useful tool. It’s a client-side web libraries (e.g. jQuery & Bootstrap) packaged into JAR (Java Archive) files. But a static URL for your dependency is painfull to maintain. This tutorial provides a simpler way of managing version and URL in only one location.
  
@@ -141,7 +141,7 @@ maven pom.xml (manage web dependencies)
  
 Eclipse Java Maven Project Structure
  
-![alt text](screenshots/160520005936198.jpg)
+![alt text](screenshots/160523003344343.jpg)
  
 
  
@@ -154,15 +154,15 @@ Run this project on your webapp server (Tomcat for example), and test on:
 [http://localhost:8080/20151008-javaee-webjars-versions/](http://localhost:8080/20151008-javaee-webjars-versions/)
 http://localhost:8080/20151008-javaee-webjars-versions/
  
-![alt text](screenshots/160520005936620.jpg)
+![alt text](screenshots/160523003344731.jpg)
  
 
  
-![alt text](screenshots/160520005937088.jpg)
+![alt text](screenshots/160523003345207.jpg)
  
 
  
-![alt text](screenshots/160520005937365.jpg)
+![alt text](screenshots/160523003345482.jpg)
  
 
  
@@ -196,5 +196,6 @@ https://github.com/webjars/webjars-servlet-2.x
 http://mvnrepository.com/artifact/org.webjars
  
  
+## Origin
 [https://damienfremont.com/2015/10/08/webjars-use-dynamic-urls-for-your-dependencies-vs-versionning-hell/](https://damienfremont.com/2015/10/08/webjars-use-dynamic-urls-for-your-dependencies-vs-versionning-hell/)
  

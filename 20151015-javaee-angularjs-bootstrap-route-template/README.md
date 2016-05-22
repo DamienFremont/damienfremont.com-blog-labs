@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: routes, templates, redirection and params
 ======
  
-![alt text](screenshots/160520005955427.png)
+![alt text](screenshots/160523003405942.png)
  
 A simple example about navigation inside a web application, using native AngularJS components.
  
@@ -21,7 +21,7 @@ Using Animation to Enhance User Experience with more transitions.
  
 By using AngularJs’ rout, location and animation components.
  
-![alt text](screenshots/160520005955451.jpg)
+![alt text](screenshots/160523003406012.jpg)
  
 
  
@@ -253,17 +253,17 @@ http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template
  
 Here is home View (home.html + homeCtr.js) rendered inside the main Template (index.jsp).
  
-![alt text](screenshots/160520005955915.jpg)
+![alt text](screenshots/160523003406476.jpg)
  
 
  
 Here is animation when Viewchanges (from home Viewto testroute View).
  
-![alt text](screenshots/160520005956342.jpg)
+![alt text](screenshots/160523003406894.jpg)
  
 
  
-![alt text](screenshots/160520005956759.jpg)
+![alt text](screenshots/160523003407142.jpg)
  
 
  
@@ -272,13 +272,13 @@ Here is route of Test Route View. The Route is ‘/testroute’.
 [http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testroute](http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testroute)
 http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testroute
  
-![alt text](screenshots/160520005957170.jpg)
+![alt text](screenshots/160523003407526.jpg)
  
 
  
 Here is routeParams for Test Params View.
  
-![alt text](screenshots/160520005957429.jpg)
+![alt text](screenshots/160523003407796.jpg)
  
 
  
@@ -287,14 +287,14 @@ The Route is ‘/testparams/:id’.
 [http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/1](http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/1)
 http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/1
  
-![alt text](screenshots/160520005957704.jpg)
+![alt text](screenshots/160523003408070.jpg)
  
 
  
 [http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/2](http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/2)
 http://localhost:8080/20151015-javaee-angularjs-bootstrap-route-template/#/testparams/2
  
-![alt text](screenshots/160520005958123.jpg)
+![alt text](screenshots/160523003408389.jpg)
  
 
  
@@ -322,5 +322,6 @@ https://docs.angularjs.org/tutorial/step_07
 https://docs.angularjs.org/api/ng/directive/ngDisabled
  
  
+## Origin
 [https://damienfremont.com/2015/10/15/javaee-angularjs-bootstrap-routes-templates-redirection-and-params/](https://damienfremont.com/2015/10/15/javaee-angularjs-bootstrap-routes-templates-redirection-and-params/)
  

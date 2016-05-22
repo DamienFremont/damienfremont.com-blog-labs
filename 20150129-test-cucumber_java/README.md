@@ -1,7 +1,7 @@
 Tests BDD avec Cucumber Java
 ======
  
-![alt text](screenshots/160520005801451.png)
+![alt text](screenshots/160523003208084.png)
  
 Ce tutorial explique comment écrire et coder des tests BDD (Behavior Driven Development) grâce à Cucumber pour Java, permettant des cas de test plus fonctionnels, maintenables par des MOA, afin de partager la responsabilité de la qualité et gagner en productivité.
  
@@ -11,13 +11,13 @@ Ce tutorial explique comment écrire et coder des tests BDD (Behavior Driven Dev
  
 Cucumber Java, c’est quoi ? C’est un outil qui permet de tester. Il automatise les tests d’acceptation par un formalise axé sur le style de développement BDD et sur un vocabulaire précis (Given, When, Then …Etant donnée, Quand, Alors …Arrange, Act, Assert).
  
-![alt text](screenshots/160520005801519.png)
+![alt text](screenshots/160523003208159.png)
  
 [https://github.com/cucumber/cucumber/wiki/Feature-Introduction](https://github.com/cucumber/cucumber/wiki/Feature-Introduction)
 https://github.com/cucumber/cucumber/wiki/Feature-Introduction
 Le besoin se situe entre le TDD/TU et le test d’acceptance, au coeur du fonctionnel.
  
-![alt text](screenshots/160520005801561.png)
+![alt text](screenshots/160523003208201.png)
  
 
  
@@ -89,7 +89,7 @@ pom.xml (Maven)
 [http://cukes.info/cucumber-eclipse/](http://cukes.info/cucumber-eclipse/)
 http://cukes.info/cucumber-eclipse/
  
-![alt text](screenshots/160520005801597.jpg)
+![alt text](screenshots/160523003208237.jpg)
  
 
  
@@ -99,7 +99,7 @@ Les tests vont porter sur un entrepôt de donnée (une simple DAO) autour de l�
  
 Les étapes décrites sur le site de Cucumber sont reprises ici, mais pour du Java et avec un peu plus de Français.
  
-![alt text](screenshots/160520005801627.jpg)
+![alt text](screenshots/160523003208267.jpg)
  
 
  
@@ -166,11 +166,11 @@ public class RunBDDTest {
 }
 ```
  
-![alt text](screenshots/160520005801668.jpg)
+![alt text](screenshots/160523003208309.jpg)
  
 
  
-![alt text](screenshots/160520005801712.jpg)
+![alt text](screenshots/160523003208353.jpg)
  
 
  
@@ -365,11 +365,11 @@ public class RunBDDTest {
 }
 ```
  
-![alt text](screenshots/160520005801771.jpg)
+![alt text](screenshots/160523003208420.jpg)
  
 
  
-![alt text](screenshots/160520005801800.jpg)
+![alt text](screenshots/160523003208450.jpg)
  
 
  
@@ -483,7 +483,7 @@ public class PersonRepository {
  
 ## 5. Run again and see the step pass
  
-![alt text](screenshots/160520005801843.jpg)
+![alt text](screenshots/160523003208502.jpg)
  
 
  
@@ -544,7 +544,7 @@ Il faudrait ajouter du reporting plus propre pour la MOA avec Maven Surefire Rep
  
 Et un éditeur tel que Gherkin ou sa version collaborative pour permettre à des non-devs d’écrirent ces scénarios.
  
-![alt text](screenshots/160520005801905.png)
+![alt text](screenshots/160523003208566.png)
  
 
  
@@ -577,5 +577,6 @@ https://thomassundberg.wordpress.com/2014/05/29/cucumber-jvm-hello-world/
 http://cukes.info/cucumber-eclipse/
  
  
+## Origin
 [https://damienfremont.com/2015/01/29/tests-bdd-avec-cucumber-java/](https://damienfremont.com/2015/01/29/tests-bdd-avec-cucumber-java/)
  

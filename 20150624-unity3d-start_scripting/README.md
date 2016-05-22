@@ -1,7 +1,7 @@
 How to Unity3d : start with javascript scripting only
 ======
  
-![alt text](screenshots/160520005816801.png)
+![alt text](screenshots/160523003222084.png)
  
 This tutorial is for those who choose to program rather than using the Unity3d IDE.
  
@@ -16,7 +16,7 @@ You’ll need Unity3d. Get the free version here :
 [https://unity3d.com/get-unity/](https://unity3d.com/get-unity/)
 https://unity3d.com/get-unity/
  
-![alt text](screenshots/160520005817248.jpg)
+![alt text](screenshots/160523003222126.jpg)
  
 
  
@@ -24,13 +24,13 @@ https://unity3d.com/get-unity/
  
 So create a new project.
  
-![alt text](screenshots/160520005817554.jpg)
+![alt text](screenshots/160523003222402.jpg)
  
 
  
 Choose a name for it.
  
-![alt text](screenshots/160520005817800.jpg)
+![alt text](screenshots/160523003222637.jpg)
  
 
  
@@ -40,13 +40,13 @@ Unity3d needs at least one scene and a game object, to attach scripts on. And be
  
 At this point, unity3d is launched with an empty scene.
  
-![alt text](screenshots/160520005818034.jpg)
+![alt text](screenshots/160523003222899.jpg)
  
 
  
 So create an empty game object.
  
-![alt text](screenshots/160520005818294.jpg)
+![alt text](screenshots/160523003223208.jpg)
  
 
  
@@ -56,37 +56,37 @@ JavaScript file needs to be attached to a game object.
  
 So select the new game object.
  
-![alt text](screenshots/160520005818573.jpg)
+![alt text](screenshots/160523003223476.jpg)
  
 
  
 Add a new component to it by clicking on component menu then add…
  
-![alt text](screenshots/160520005818811.jpg)
+![alt text](screenshots/160523003223730.jpg)
  
 
  
 At this point, Inspector view displays a new component form. Choose new script.
  
-![alt text](screenshots/160520005819050.jpg)
+![alt text](screenshots/160523003224092.jpg)
  
 
  
 Then type a name and choose a scripting language (Javascript here).
  
-![alt text](screenshots/160520005819329.jpg)
+![alt text](screenshots/160523003224372.jpg)
  
 
  
 Then click on create.
  
-![alt text](screenshots/160520005819591.jpg)
+![alt text](screenshots/160523003224620.jpg)
  
 
  
 Here is a new script ! When script is selected, the Inspector view display script content (source code).
  
-![alt text](screenshots/160520005819825.jpg)
+![alt text](screenshots/160523003224858.jpg)
  
 
  
@@ -94,19 +94,19 @@ Here is a new script ! When script is selected, the Inspector view display scrip
  
 Right click on the script file in the Asset view. Choose Open.
  
-![alt text](screenshots/160520005820099.jpg)
+![alt text](screenshots/160523003225214.jpg)
  
 
  
 Then the MonoDevelop editor starts…
  
-![alt text](screenshots/160520005820372.jpg)
+![alt text](screenshots/160523003225510.jpg)
  
 
  
 By default, a script has two function : start() and update(). Start function starts with the object, and so with the scene.
  
-![alt text](screenshots/160520005820631.jpg)
+![alt text](screenshots/160523003225724.jpg)
  
 
  
@@ -152,7 +152,7 @@ function Update () {
  
 Save your Javascript file.
  
-![alt text](screenshots/160520005820895.jpg)
+![alt text](screenshots/160523003225976.jpg)
  
 
  
@@ -162,7 +162,7 @@ Save your Script
  
 Open your Unity3d SDK and click on Play button.
  
-![alt text](screenshots/160520005821150.jpg)
+![alt text](screenshots/160523003226210.jpg)
  
 
  
@@ -170,25 +170,25 @@ And wait for the demo to start…
  
 Then wait 1 seconde.
  
-![alt text](screenshots/160520005821402.jpg)
+![alt text](screenshots/160523003226497.jpg)
  
 
  
 The demo add three new spheres to the scene.
  
-![alt text](screenshots/160520005821641.jpg)
+![alt text](screenshots/160523003226755.jpg)
  
 
  
 Then the demo print “Hello world” to the console.
  
-![alt text](screenshots/160520005821893.jpg)
+![alt text](screenshots/160523003227007.jpg)
  
 
  
 (and don’t forget to save your scene for later!)
  
-![alt text](screenshots/160520005822127.jpg)
+![alt text](screenshots/160523003227261.jpg)
  
 
  
@@ -212,5 +212,6 @@ http://docs.unity3d.com/Manual/CreatingAndUsingScripts.html
 https://unity3d.com/learn/tutorials/modules/beginner/scripting/classes
  
  
+## Origin
 [https://damienfremont.com/2015/06/24/how-to-unity3d-start-with-javascript-scripting-only/](https://damienfremont.com/2015/06/24/how-to-unity3d-start-with-javascript-scripting-only/)
  

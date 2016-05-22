@@ -1,7 +1,7 @@
 How to Unity3d : command build without build pipeline
 ======
  
-![alt text](screenshots/160520005825403.png)
+![alt text](screenshots/160523003230448.png)
  
 This tuturial explains how to build application without using the pro edition of Unity3d editor, wich integrates buildpipeline functionalities. Simply by using command line script.
  
@@ -16,17 +16,17 @@ http://docs.unity3d.com/Manual/BuildPlayerPipeline.html
  
 So create a new project.
  
-![alt text](screenshots/160520005825833.jpg)
+![alt text](screenshots/160523003230492.jpg)
  
 
  
-![alt text](screenshots/160520005826087.jpg)
+![alt text](screenshots/160523003230748.jpg)
  
 
  
 Save your project !
  
-![alt text](screenshots/160520005826374.jpg)
+![alt text](screenshots/160523003231028.jpg)
  
 
  
@@ -34,7 +34,7 @@ Save your project !
  
 This an important step because Unity3d only allows a single running instance of Unity3d.
  
-![alt text](screenshots/160520005826633.jpg)
+![alt text](screenshots/160523003231286.jpg)
  
 
  
@@ -42,7 +42,7 @@ This an important step because Unity3d only allows a single running instance of 
  
 Create a new file named build.bat at the project root folder, next to Assets folder.
  
-![alt text](screenshots/160520005826904.jpg)
+![alt text](screenshots/160523003231536.jpg)
  
 
  
@@ -76,13 +76,13 @@ build the gameproject for windows plateforme :
  
 Launch build.bat via command line for console output result, or just click on build.bat.
  
-![alt text](screenshots/160520005827142.jpg)
+![alt text](screenshots/160523003231796.jpg)
  
 
  
 A new window pops.
  
-![alt text](screenshots/160520005827391.jpg)
+![alt text](screenshots/160523003232055.jpg)
  
 
  
@@ -90,7 +90,7 @@ After a while (30 sec), the window closes itself. The build is finished !
  
 Go open the newly created build folder.
  
-![alt text](screenshots/160520005827664.jpg)
+![alt text](screenshots/160523003232309.jpg)
  
 
  
@@ -98,23 +98,23 @@ It contains your game executable.
  
 Click on build.exe
  
-![alt text](screenshots/160520005827905.jpg)
+![alt text](screenshots/160523003232544.jpg)
  
 
  
 The game launcher appears. Click on Play!
  
-![alt text](screenshots/160520005828133.jpg)
+![alt text](screenshots/160523003232794.jpg)
  
 
  
 Then your game launchs.
  
-![alt text](screenshots/160520005828372.jpg)
+![alt text](screenshots/160523003233055.jpg)
  
 
  
-![alt text](screenshots/160520005828629.jpg)
+![alt text](screenshots/160523003233309.jpg)
  
 
  
@@ -122,11 +122,11 @@ Then your game launchs.
  
 Build console output is in stdout.log file, next to build.bat file.
  
-![alt text](screenshots/160520005828898.jpg)
+![alt text](screenshots/160523003233615.jpg)
  
 
  
-![alt text](screenshots/160520005829189.jpg)
+![alt text](screenshots/160523003233876.jpg)
  
 
  
@@ -153,5 +153,6 @@ https://github.com/DamienFremont/blog/tree/master/20150625-unity3d-build_command
 http://docs.unity3d.com/Manual/CommandLineArguments.html
  
  
+## Origin
 [https://damienfremont.com/2015/06/25/how-to-unity3d-command-build-without-build-pipeline/](https://damienfremont.com/2015/06/25/how-to-unity3d-command-build-without-build-pipeline/)
  

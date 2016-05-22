@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: Form (Basic: read, post)
 ======
  
-![alt text](screenshots/160520010009078.png)
+![alt text](screenshots/160523003421022.png)
  
 A tutorial about form with AngularJS and a rest server. Featuring most current usecases like read only, post and placeholder.
  
@@ -27,37 +27,37 @@ http://localhost:8080/20151016-javaee-angularjs-bootstrap-form-basic
  
 First a read-only view.
  
-![alt text](screenshots/160520010009150.jpg)
+![alt text](screenshots/160523003421099.jpg)
  
 
  
 It’s animated with angular’s animate lib and animation.css style (fade-in effect here).
  
-![alt text](screenshots/160520010009626.jpg)
+![alt text](screenshots/160523003421512.jpg)
  
 
  
 An then an edit view.
  
-![alt text](screenshots/160520010010011.jpg)
+![alt text](screenshots/160523003422039.jpg)
  
 
  
 You can post the form then receive an alert (success here).
  
-![alt text](screenshots/160520010010421.jpg)
+![alt text](screenshots/160523003422441.jpg)
  
 
  
 Or post wrong datas and get another type of alert (error here for year format).
  
-![alt text](screenshots/160520010010840.jpg)
+![alt text](screenshots/160523003422843.jpg)
  
 
  
 It’s responsive too!
  
-![alt text](screenshots/160520010011131.jpg)
+![alt text](screenshots/160523003423119.jpg)
  
 
  
@@ -518,7 +518,7 @@ animation.css
  
 ## Project Structure
  
-![alt text](screenshots/160520010011534.jpg)
+![alt text](screenshots/160523003423615.jpg)
  
 
  
@@ -545,5 +545,6 @@ https://angular-ui.github.io/bootstrap/
 https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating
  
  
+## Origin
 [https://damienfremont.com/2015/10/16/javaee-angularjs-bootstrap-form-basic-read-post/](https://damienfremont.com/2015/10/16/javaee-angularjs-bootstrap-form-basic-read-post/)
  

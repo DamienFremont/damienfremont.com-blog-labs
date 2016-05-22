@@ -1,7 +1,7 @@
 How to Cucumber Java : Wants to quit
 ======
  
-![alt text](screenshots/160520010102454.png)
+![alt text](screenshots/160523003508509.png)
  
 
  
@@ -30,11 +30,11 @@ public void after(Scenario s) throws Exception {
  
 ## Before
  
-![alt text](screenshots/160520010102480.png)
+![alt text](screenshots/160523003508580.png)
  
 ## After
  
-![alt text](screenshots/160520010102788.png)
+![alt text](screenshots/160523003508602.png)
  
 
  
@@ -42,15 +42,15 @@ public void after(Scenario s) throws Exception {
  
 ## Before
  
-![alt text](screenshots/160520010103108.png)
+![alt text](screenshots/160523003508626.png)
  
 ## After
  
-![alt text](screenshots/160520010103455.png)
+![alt text](screenshots/160523003508648.png)
  
 # Source
  
-![alt text](screenshots/160520010103728.png)
+![alt text](screenshots/160523003508674.png)
  
 
  
@@ -262,5 +262,6 @@ Now, you have faster feedback:
 [https://github.com/cucumber/cucumber-java-skeleton](https://github.com/cucumber/cucumber-java-skeleton)
 [http://stackoverflow.com/questions/15272523/what-is-the-cucumber-jvm-equivalent-of-cucumber-wants-to-quit](http://stackoverflow.com/questions/15272523/what-is-the-cucumber-jvm-equivalent-of-cucumber-wants-to-quit)
  
+## Origin
 [https://damienfremont.com/2015/10/27/how-to-cucumber-java-wants-to-quit/](https://damienfremont.com/2015/10/27/how-to-cucumber-java-wants-to-quit/)
  

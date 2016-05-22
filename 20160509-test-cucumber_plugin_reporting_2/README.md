@@ -1,7 +1,7 @@
 How to Cucumber : Test Report Plugin 2 with Maven and Java
 ======
  
-![alt text](screenshots/160520010301948.png)
+![alt text](screenshots/160523003728982.png)
  
 It is often useful to show the results of our tests to others people who are not developers, like managers or executive. This tutorial shows how to integrate a Cucumber reporting a Java plugin in Maven project. The result is a simple web page, which does not require a special tool to be read.
  
@@ -9,13 +9,13 @@ It is often useful to show the results of our tests to others people who are not
  
 This tutorial will cover 3 reports plugins : JSON, HTML Pretty and Cucumber Report 2.
  
-![alt text](screenshots/160520010302012.png)
+![alt text](screenshots/160523003729065.png)
  
 
  
 # Native JSON Result
  
-![alt text](screenshots/160520010302075.png)
+![alt text](screenshots/160523003729133.png)
  
 
  
@@ -104,13 +104,13 @@ mvn test
  
 The result is at /target/cucumber.json
  
-![alt text](screenshots/160520010302264.jpg)
+![alt text](screenshots/160523003729178.jpg)
  
 
  
 # Native HTML Plugin
  
-![alt text](screenshots/160520010302290.png)
+![alt text](screenshots/160523003729208.png)
  
 
  
@@ -144,17 +144,17 @@ mvn test
  
 The result is at /target/site/cucumber-pretty/index.html
  
-![alt text](screenshots/160520010302355.jpg)
+![alt text](screenshots/160523003729243.jpg)
  
 
  
 # Cucumber-Reports HTML Plugin
  
-![alt text](screenshots/160520010302382.png)
+![alt text](screenshots/160523003729271.png)
  
 
  
-![alt text](screenshots/160520010302408.png)
+![alt text](screenshots/160523003729312.png)
  
 
  
@@ -266,7 +266,7 @@ mvn clean install
  
 The result is at /target/site/cucumber-reports/feature-overview.html
  
-![alt text](screenshots/160520010302522.jpg)
+![alt text](screenshots/160523003729368.jpg)
  
 
  
@@ -298,5 +298,6 @@ https://github.com/masterthought/cucumber-reporting
 http://www.masterthought.net/section/cucumber-reporting
  
  
+## Origin
 [https://damienfremont.com/2016/05/09/how-to-cucumber-test-report-plugin-2-with-maven-and-java/](https://damienfremont.com/2016/05/09/how-to-cucumber-test-report-plugin-2-with-maven-and-java/)
  

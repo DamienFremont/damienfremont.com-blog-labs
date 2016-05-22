@@ -1,7 +1,7 @@
 Développeur freelance en 2015 : se lancer (1/3)
 ======
  
-![alt text](screenshots/160520005804965.jpg)
+![alt text](screenshots/160523003211690.jpg)
  
 Ceci est mon retour d’expérience du passage de salarié en SSII vers développeur freelance après deux premiers mois d’activité.
  
@@ -21,7 +21,7 @@ Exemple : Dans mon cas, je ne voyais pas bien ce que m’apportait une structure
  
 j’ai changé d’appartement avant de démissionner (coût : 1000€), puis démissionné …avec un préavis de 3 mois (yeurk!)
  
-![alt text](screenshots/160520005805213.jpg)
+![alt text](screenshots/160523003211929.jpg)
  
 
  
@@ -65,13 +65,13 @@ La seule subtilité concerne les options fiscales. Il s’agit simplement du ré
 [http://www.guichet-entreprises.fr/](http://www.guichet-entreprises.fr/)
 http://www.guichet-entreprises.fr/
  
-![alt text](screenshots/160520005805703.jpg)
+![alt text](screenshots/160523003212000.jpg)
  
 
  
 (évitez le vieux site des URSSAF, qui fait la même chose en moins clair …j’ai passé 1h sur ce truc, qui n’a pas fonctionné au final)
  
-![alt text](screenshots/160520005806447.jpg)
+![alt text](screenshots/160523003212347.jpg)
  
 
  
@@ -82,7 +82,7 @@ TOUT est à conserver !
 [http://www.insee.fr/fr/service/default.asp?page=entreprises/sirene/immatriculation.htm](http://www.insee.fr/fr/service/default.asp?page=entreprises/sirene/immatriculation.htm)
 Comme l’explique l’INSEE ici http://www.insee.fr/fr/service/default.asp?page=entreprises/sirene/immatriculation.htm, il va se passer ça en environ 1 semaine. Au delà, contactez-les.
  
-![alt text](screenshots/160520005807148.png)
+![alt text](screenshots/160523003212929.png)
  
 
  
@@ -106,7 +106,7 @@ Vous devez souscrire immédiatement à une assurance pro (Responsabilité Civile
  
 Exemple : j’ai pris une assurance pro chez Hiscox (pour la seule raison que je pouvais tout faire en ligne et avoir un prélèvement mensuel de suite).
  
-![alt text](screenshots/160520005807673.jpg)
+![alt text](screenshots/160523003212960.jpg)
  
 
  
@@ -186,5 +186,6 @@ http://blog-du-consultant.fr/les-septs-galeres-du-consultant-independant/
 ## 
  
  
+## Origin
 [https://damienfremont.com/2015/03/16/developpeur-freelance-en-2015-se-lancer-13/](https://damienfremont.com/2015/03/16/developpeur-freelance-en-2015-se-lancer-13/)
  

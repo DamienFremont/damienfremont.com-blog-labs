@@ -1,7 +1,7 @@
 Responsive Button with Bootstrap : Toggable Text
 ======
  
-![alt text](screenshots/160520005909388.jpg)
+![alt text](screenshots/160523003315667.jpg)
  
 The default Bootstrap buttons is not responsive. When the device is too small, the grid is responsive and change the layout, but the buttons stay the same. This tutorial show how to toggle the text from a button when the device required it.
  
@@ -15,7 +15,7 @@ The default Bootstrap buttons is not responsive. When the device is too small, t
  
 The solution will be tested on different devices/resolutions: mobile, tablet, laptop, desktop
  
-![alt text](screenshots/160520005909459.jpg)
+![alt text](screenshots/160523003315744.jpg)
  
 
  
@@ -29,7 +29,7 @@ The default buttons Text is not responsive. On smaller device, it will break the
  
 ## Demo
  
-![alt text](screenshots/160520005909488.jpg)
+![alt text](screenshots/160523003315773.jpg)
  
 
  
@@ -62,7 +62,7 @@ html
  
 Responsive buttons needs to repond the same way as the grid. On smaller device, text is expected to disappeared on targeted buttons. Button icon must stay the same.
  
-![alt text](screenshots/160520005909518.jpg)
+![alt text](screenshots/160523003315806.jpg)
  
 
  
@@ -211,13 +211,13 @@ css
  
 Default Buttons:
  
-![alt text](screenshots/160520005909565.jpg)
+![alt text](screenshots/160523003315854.jpg)
  
 
  
 Responsive Buttons
  
-![alt text](screenshots/160520005909595.jpg)
+![alt text](screenshots/160523003315889.jpg)
  
 
  
@@ -238,5 +238,6 @@ http://getbootstrap.com/components/#glyphicons-examples
 http://getbootstrap.com/css/#grid
  
  
+## Origin
 [https://damienfremont.com/2015/07/31/responsive-button-with-bootstrap-toggable-text/](https://damienfremont.com/2015/07/31/responsive-button-with-bootstrap-toggable-text/)
  

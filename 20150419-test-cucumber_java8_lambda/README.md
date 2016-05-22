@@ -1,7 +1,7 @@
 Tests BDD Cucumber simplifiés avec les lambdas Java8
 ======
  
-![alt text](screenshots/160520005813242.png)
+![alt text](screenshots/160523003218729.png)
  
 Ce tutorial explique comment écrire et coder des tests BDD (Behavior Driven Development) grâce à Cucumber pour Java et se focalise sur l’apport des lambdas de Java8 pour cet outil. Notamment sur la simplicité d’écriture.
  
@@ -14,7 +14,7 @@ Suite et reprise du post Tests BDD avec Cucumber Java.
  
 # Environnement
  
-![alt text](screenshots/160520005813312.jpg)
+![alt text](screenshots/160523003218801.jpg)
  
 
  
@@ -310,5 +310,6 @@ https://cukes.info/docs/reference/jvm
 https://rmannibucau.wordpress.com/2015/01/26/cukespace-or-bdd-arquillian-and-java-8/
  
  
+## Origin
 [https://damienfremont.com/2015/04/19/tests-bdd-cucumber-simplifies-avec-les-lambdas-java8/](https://damienfremont.com/2015/04/19/tests-bdd-cucumber-simplifies-avec-les-lambdas-java8/)
  

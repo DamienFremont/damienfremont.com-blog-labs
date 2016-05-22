@@ -1,7 +1,7 @@
 JavaEE AngularJS : Web Packaging – Concat – Minify
 ======
  
-![alt text](screenshots/160523002716683.png)
+![alt text](screenshots/160523003744943.png)
  
 This tutorial is intended to make a Maven web packaging like NodeJS+Brunch or NodeJS+WebPack. With HTML to JS, Single JS file, Minify. It’s usefull for web release because you’ll to limit the number of HTTP request, have a simple artifact to update, and limit the size of your app.
  
@@ -9,11 +9,11 @@ This tutorial is intended to make a Maven web packaging like NodeJS+Brunch or No
  
 A simple two pages app: 2 templates, 2 controllers.
  
-![alt text](screenshots/160523002716885.png)
+![alt text](screenshots/160523003745023.png)
  
 
  
-![alt text](screenshots/160523002716911.png)
+![alt text](screenshots/160523003745046.png)
  
 
  
@@ -27,19 +27,19 @@ Build it with the default ‘dev’ maven profile.
 mvn package -P dev
 ```
  
-![alt text](screenshots/160523002716943.png)
+![alt text](screenshots/160523003745073.png)
  
 
  
 Before
  
-![alt text](screenshots/160523002716970.png)
+![alt text](screenshots/160523003745096.png)
  
 
  
 After
  
-![alt text](screenshots/160523002716996.png)
+![alt text](screenshots/160523003745121.png)
  
 
  
@@ -116,21 +116,21 @@ mvn package -P prod
  
 Before
  
-![alt text](screenshots/160523002717043.png)
+![alt text](screenshots/160523003745162.png)
  
 
  
-![alt text](screenshots/160523002717068.png)
+![alt text](screenshots/160523003745186.png)
  
 
  
 After
  
-![alt text](screenshots/160523002717093.png)
+![alt text](screenshots/160523003745210.png)
  
 
  
-![alt text](screenshots/160523002717116.png)
+![alt text](screenshots/160523003745231.png)
  
 
  
@@ -210,7 +210,7 @@ index_prod.html
  
 ## Project
  
-![alt text](screenshots/160523002717162.png)
+![alt text](screenshots/160523003745267.png)
  
 
  
@@ -647,5 +647,5 @@ http://stackoverflow.com/questions/35784489/angular-javascript-minification-caus
  
  
 ## Origin
-[https://damienfremont.com/2016/05/22/javaee-angularjs-web-packaging-concat-minify/](https://damienfremont.com/2016/05/22/javaee-angularjs-web-packaging-concat-minify/)
+[https://damienfremont.com/2016/05/22/javaee-angularjs-web-packaging-concat-minify/ ](https://damienfremont.com/2016/05/22/javaee-angularjs-web-packaging-concat-minify/ )
  

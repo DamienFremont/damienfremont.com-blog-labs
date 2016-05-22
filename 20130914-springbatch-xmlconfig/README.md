@@ -1,7 +1,7 @@
 SpringBatch xml config helloworld repeat example
 ======
  
-![alt text](screenshots/160520005655309.jpg)
+![alt text](screenshots/160523003044900.jpg)
  
 In Java, the development of batch can be achieved with few solutions. Most applications use SpringBatch. This is the SpringBatch framework with its XML configuration that is used here. Another example with the configuration JavaConfig follow.
  
@@ -173,5 +173,6 @@ http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
 https://github.com/damienfremont/blog/tree/master/20130914-springbatch-xmlconfig
  
  
+## Origin
 [https://damienfremont.com/2013/09/14/springbatch-xml-config-helloworld-repeat-example/](https://damienfremont.com/2013/09/14/springbatch-xml-config-helloworld-repeat-example/)
  

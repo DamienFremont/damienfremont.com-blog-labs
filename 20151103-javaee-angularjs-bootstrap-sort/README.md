@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: How to Sort with Smart-Table
 ======
  
-![alt text](screenshots/160520010130412.png)
+![alt text](screenshots/160523003537929.png)
  
 Here is a sortable data-table. Using Twitter Bootstrap,  ng-module SmartTable for front-end. And Spring-Data, Jersey JAXRS for backend.
  
@@ -14,31 +14,31 @@ http://localhost:8080/20151103-javaee-angularjs-bootstrap-sort/
  
 A data-table is displayed, with rows and sorter headers.
  
-![alt text](screenshots/160520010130499.png)
+![alt text](screenshots/160523003538000.png)
  
 
  
 By clicking on row’s header, the row’s data order change and a new icon is displayed.
  
-![alt text](screenshots/160520010130539.png)
+![alt text](screenshots/160523003538471.png)
  
 
  
 It’s possible to reverse the order.
  
-![alt text](screenshots/160520010130563.png)
+![alt text](screenshots/160523003538985.png)
  
 
  
 It work with both String and Nubmer type (see Java code).
  
-![alt text](screenshots/160520010130587.png)
+![alt text](screenshots/160523003539351.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010130610.png)
+![alt text](screenshots/160523003539776.png)
  
 
  
@@ -374,5 +374,6 @@ http://ngmodules.org/modules/Smart-Table
 http://lorenzofox3.github.io/smart-table-website/
  
  
+## Origin
 [https://damienfremont.com/2015/11/03/javaee-angularjs-bootstrap-how-to-sort-with-smart-table/](https://damienfremont.com/2015/11/03/javaee-angularjs-bootstrap-how-to-sort-with-smart-table/)
  

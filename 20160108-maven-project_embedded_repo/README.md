@@ -1,7 +1,7 @@
 Maven Project with Embedded Repository
 ======
  
-![alt text](screenshots/160520010229533.png)
+![alt text](screenshots/160523003652696.png)
  
 Use this when : a dependency is not available on a public Maven repository and you need your project portable (ex: unreachable repository), or it’s not a maven dependency at all (ex: proprietary IBM jars)
  
@@ -18,13 +18,13 @@ You’ll need Eclipse, Maven, Java.
  
 Two jars are embedded in the project. One in a system path way like Ant, and the other like an embedded Maven repo. The second solution is the better, because it looks like a maven repo and integrate easly in Maven lifecycle and plugins (versus systemPath where it’s not easy to embedded the jar in the final app, like a war).
  
-![alt text](screenshots/160520010229558.png)
+![alt text](screenshots/160523003652728.png)
  
 
  
 No compile error here: you can use these jars.
  
-![alt text](screenshots/160520010229839.png)
+![alt text](screenshots/160523003653059.png)
  
 
  
@@ -102,5 +102,6 @@ https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanis
 https://maven.apache.org/guides/introduction/introduction-to-repositories.html
  
  
+## Origin
 [https://damienfremont.com/2016/01/08/maven-project-with-embedded-repository/](https://damienfremont.com/2016/01/08/maven-project-with-embedded-repository/)
  

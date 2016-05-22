@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: Integration
 ======
  
-![alt text](screenshots/160520005947655.png)
+![alt text](screenshots/160523003357369.png)
  
 This tutorial is a basic integration of AngularJS, Bootstrap3, JavaEE JAX-RS, Maven and WebJars. Usefull for replacing your old JSF or GWT application from intranet.
  
@@ -450,7 +450,7 @@ h1 {
 }
 ```
  
-![alt text](screenshots/160520005947837.jpg)
+![alt text](screenshots/160523003357525.jpg)
  
 And you’ll have a simple project like this:
  
@@ -467,39 +467,39 @@ http://localhost:8080/20151013-javaee-angularjs-bootstrap/
  
 The main page test all frameworks.
  
-![alt text](screenshots/160520005948117.jpg)
+![alt text](screenshots/160523003357935.jpg)
  
 
  
 Here is AngularJS MVC
  
-![alt text](screenshots/160520005948482.jpg)
+![alt text](screenshots/160523003358472.jpg)
  
 
  
 Here is UI Bootstrap for AngularJS
  
-![alt text](screenshots/160520005948748.jpg)
+![alt text](screenshots/160523003358730.jpg)
  
 
  
 Here is AngularJS REST Client and JavaEE REST Server
  
-![alt text](screenshots/160520005949198.jpg)
+![alt text](screenshots/160523003359089.jpg)
  
 
  
 [http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status](http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status)
 http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status
  
-![alt text](screenshots/160520005949730.jpg)
+![alt text](screenshots/160523003359462.jpg)
  
 
  
 [http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details](http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details)
 http://localhost:8080/20151013-javaee-angularjs-bootstrap/api/status/details
  
-![alt text](screenshots/160520005950039.jpg)
+![alt text](screenshots/160523003359880.jpg)
  
 
  
@@ -543,5 +543,6 @@ https://jersey.java.net/nonav/documentation/2.0/deployment.html
 https://scotch.io/tutorials/how-to-correctly-use-bootstrapjs-and-angularjs-together
  
  
+## Origin
 [https://damienfremont.com/2015/10/13/javaee-angularjs-bootstrap-integration/](https://damienfremont.com/2015/10/13/javaee-angularjs-bootstrap-integration/)
  

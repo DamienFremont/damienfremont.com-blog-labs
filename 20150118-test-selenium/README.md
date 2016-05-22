@@ -1,7 +1,7 @@
 Tester une webapp avec Selenium Java, PhantomJS et un webserver embarqué ?
 ======
  
-![alt text](screenshots/160520005741952.jpg)
+![alt text](screenshots/160523003139356.jpg)
  
 Vous avez besoin de tester en permanence votre webapp ? Mais ne disposez pas d’une infrastructure de test (preprod) ni d’une équipe de testeurs humains ? Ou vous aimeriez tester le front avec le même confort qu’un test unitaire. Ce tuto permet de lancer un mini environnement navigateur+webserver via JUnit et de tester votre interface web.
  
@@ -11,7 +11,7 @@ Vous avez besoin de tester en permanence votre webapp ? Mais ne disposez pas d�
  
 Les outils utilisés sont JUnit, Selenium et un environnement de base navigateur (Phantomjs) / server web (Tomcat).
  
-![alt text](screenshots/160520005742021.jpg)
+![alt text](screenshots/160523003139653.jpg)
  
 
  
@@ -31,25 +31,25 @@ Pour ces tests, de simples pages web avec quelques liens suffisent.
  
 Main page
  
-![alt text](screenshots/160520005742053.jpg)
+![alt text](screenshots/160523003139903.jpg)
  
 
  
 Page 1
  
-![alt text](screenshots/160520005742094.jpg)
+![alt text](screenshots/160523003140893.jpg)
  
 
  
 Page 2 (une 404, pour tester une erreur)
  
-![alt text](screenshots/160520005742125.jpg)
+![alt text](screenshots/160523003141294.jpg)
  
 
  
 # Code
  
-![alt text](screenshots/160520005742151.jpg)
+![alt text](screenshots/160523003141697.jpg)
  
 
  
@@ -183,17 +183,17 @@ public class WebUITest {
  
 WebUITest.java 2/2 : les tests
  
-![alt text](screenshots/160520005742190.svg)
+![alt text](screenshots/160523003142154.svg)
  
 Les tests fonctionnent à base de sélection d’élèments dans le DOM de la page web. Du coup, il faut utiliser à font les cssSelector pour sélectionner (ID, c’est dépassé ne pas les utiliser évite de les maintenir et redonne du sens à votre structure html). Un cssSelector, c’est tout simplement la règle css qui décrit comment sélectionner un élément dans le DOM (comme “#container h1” dans un fichier *.css pour appliquer une couleur). Heureusement, pour écrire ces formules quand on est pas un pro du CSS, il y a les outils.
  
 Exemple en utilisant le plugin de dev de votre navigateur (Chrome ici)
  
-![alt text](screenshots/160520005742259.jpg)
+![alt text](screenshots/160523003142223.jpg)
  
 
  
-![alt text](screenshots/160520005742284.jpg)
+![alt text](screenshots/160523003142523.jpg)
  
 
  
@@ -382,7 +382,7 @@ Il y a 2 façons de procéder selon le besoin.
  
 …le plus simple, il suffit de lancer les tests du projet ou de la classe WebUITest.
  
-![alt text](screenshots/160520005742353.jpg)
+![alt text](screenshots/160523003143086.jpg)
  
 
  
@@ -426,13 +426,13 @@ public class WebUITest {
  
 Puis lancer votre propre server si besoin, puis les tests.
  
-![alt text](screenshots/160520005742393.jpg)
+![alt text](screenshots/160523003143510.jpg)
  
 
  
 Dans les 2 cas, c’est la suite JUnit qui montrera le résultat.
  
-![alt text](screenshots/160520005742421.jpg)
+![alt text](screenshots/160523003143820.jpg)
  
 
  
@@ -459,5 +459,6 @@ https://github.com/damienfremont/blog/tree/master/20150118-test-selenium
 http://atatorus.developpez.com/tutoriels/java/test-application-web-avec-selenium/
  
  
+## Origin
 [https://damienfremont.com/2015/01/18/tester-une-webapp-avec-selenium-java-phantomjs-et-un-webserver-embarque](https://damienfremont.com/2015/01/18/tester-une-webapp-avec-selenium-java-phantomjs-et-un-webserver-embarque)
  

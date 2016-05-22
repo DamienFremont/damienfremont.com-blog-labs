@@ -1,7 +1,7 @@
 JavaEE AngularJs: Browser URLs Cache and Version
 ======
  
-![alt text](screenshots/160520010236245.png)
+![alt text](screenshots/160523003700702.png)
  
 This tutorial provides a way for the browser to manage different versions of the same resource.
  
@@ -13,37 +13,37 @@ Because new version of your website is deployed, especially with a rich client, 
  
 You need Eclipse, Maven, Tomcat.
  
-![alt text](screenshots/160520010236310.png)
+![alt text](screenshots/160523003700769.png)
  
 
  
-![alt text](screenshots/160520010236610.png)
+![alt text](screenshots/160523003700996.png)
  
 
  
 There are two parts: the vendor URLs version (like angular.js) and your app URLs version (like  app.js, home.html, main.css).
  
-![alt text](screenshots/160520010236934.png)
+![alt text](screenshots/160523003701418.png)
  
 
  
 You can update versions in pom.xml.
  
-![alt text](screenshots/160520010237395.png)
+![alt text](screenshots/160523003701963.png)
  
 
  
 And after restarting the app server, the URLs have changed.
  
-![alt text](screenshots/160520010237690.png)
+![alt text](screenshots/160523003702231.png)
  
 
  
-![alt text](screenshots/160520010237968.png)
+![alt text](screenshots/160523003702586.png)
  
 
  
-![alt text](screenshots/160520010238321.png)
+![alt text](screenshots/160523003703053.png)
  
 
  
@@ -51,39 +51,39 @@ Details of vendor URLs version (like angular.js):
  
 pom.xml: version
  
-![alt text](screenshots/160520010238820.png)
+![alt text](screenshots/160523003703642.png)
  
 
  
 index.html: url
  
-![alt text](screenshots/160520010239046.png)
+![alt text](screenshots/160523003703873.png)
  
 
  
 browser: real world
  
-![alt text](screenshots/160520010239339.png)
+![alt text](screenshots/160523003704093.png)
  
 
  
 Details of webapp URLs version (like app.js):
  
-![alt text](screenshots/160520010239620.png)
+![alt text](screenshots/160523003704373.png)
  
 
  
-![alt text](screenshots/160520010239962.png)
+![alt text](screenshots/160523003704636.png)
  
 
  
-![alt text](screenshots/160520010240217.png)
+![alt text](screenshots/160523003704834.png)
  
 
  
 ## Source
  
-![alt text](screenshots/160520010240526.png)
+![alt text](screenshots/160523003705133.png)
  
 
  
@@ -284,5 +284,6 @@ https://github.com/DamienFremont/blog/tree/master/20160109-javaee-angularjs-brow
  
  
  
+## Origin
 [https://damienfremont.com/2016/01/09/javaee-angularjs-browser-urls-cache-and-version/](https://damienfremont.com/2016/01/09/javaee-angularjs-browser-urls-cache-and-version/)
  

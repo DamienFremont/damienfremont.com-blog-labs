@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: DataTable and Excel Export
 ======
  
-![alt text](screenshots/160520010058445.png)
+![alt text](screenshots/160523003504278.png)
  
 This is a read-only table with a CSV export button, then an editable table form like Excel tab (DataTable) with add, remove, undo and update buttons. There is also a default focus on last editable row.
  
@@ -10,51 +10,51 @@ This is a read-only table with a CSV export button, then an editable table form 
 [http://localhost:8080/20151020-javaee-angularjs-bootstrap-table_export/](http://localhost:8080/20151020-javaee-angularjs-bootstrap-table_export/)
 http://localhost:8080/20151020-javaee-angularjs-bootstrap-table_export/
  
-![alt text](screenshots/160520010058516.png)
+![alt text](screenshots/160523003504350.png)
  
 
  
 Here is a read-only table with CSV Export Button, from REST API @GET /person/all
  
-![alt text](screenshots/160520010058561.png)
+![alt text](screenshots/160523003504395.png)
  
 
  
 A CSV file is send by REST API @GET /person/all/csv.
  
-![alt text](screenshots/160520010058590.png)
+![alt text](screenshots/160523003504901.png)
  
 
  
-![alt text](screenshots/160520010058614.png)
+![alt text](screenshots/160523003504940.png)
  
 
  
 Here is a DataTable, editable like an Excel Window, with focus set on the last row’s cell.
  
-![alt text](screenshots/160520010058654.png)
+![alt text](screenshots/160523003504981.png)
  
 
  
 You can add or remove table’s row with buttons, then update.
  
-![alt text](screenshots/160520010058678.png)
+![alt text](screenshots/160523003505004.png)
  
 
  
-![alt text](screenshots/160520010058702.png)
+![alt text](screenshots/160523003505027.png)
  
 
  
 And send to REST API @POST /person/all.
  
-![alt text](screenshots/160520010058728.png)
+![alt text](screenshots/160523003505051.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010058751.png)
+![alt text](screenshots/160523003505101.png)
  
 GenerateCSV.java
  
@@ -461,5 +461,6 @@ http://www.angulartutorial.net/2014/04/angular-js-auto-focus-for-input-box.html
 http://jsfiddle.net/bonamico/cahz7/
  
  
+## Origin
 [https://damienfremont.com/2015/10/20/javaee-angularjs-bootstrap-datatable-and-excel-export/](https://damienfremont.com/2015/10/20/javaee-angularjs-bootstrap-datatable-and-excel-export/)
  

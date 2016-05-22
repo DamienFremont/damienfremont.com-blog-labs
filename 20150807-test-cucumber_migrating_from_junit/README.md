@@ -1,7 +1,7 @@
 Migrating from Simple JUnit Test to Cucumber Java
 ======
  
-![alt text](screenshots/160520005920783.png)
+![alt text](screenshots/160523003327756.png)
  
 This post explains how to migrate source code from simple JUnit test to Cucumber Java Test. It’s a not so simple task, because in older JUnit test the behaviour is not always implemetend.
  
@@ -166,7 +166,7 @@ public class D_CucumberJava8Test implements En {
  
 This project runs the four test classes, targeting the same implementation.
  
-![alt text](screenshots/160520005920829.jpg)
+![alt text](screenshots/160523003327850.jpg)
  
 
  
@@ -223,7 +223,7 @@ Maven config pom.xml
  
 Run ti with JUnit.
  
-![alt text](screenshots/160520005921356.jpg)
+![alt text](screenshots/160523003328151.jpg)
  
 
  
@@ -241,5 +241,6 @@ https://cucumber.io/docs/reference
 https://rmannibucau.wordpress.com/2015/01/26/cukespace-or-bdd-arquillian-and-java-8/
  
  
+## Origin
 [https://damienfremont.com/2015/08/07/migrating-from-simple-junit-test-to-cucumber-java/](https://damienfremont.com/2015/08/07/migrating-from-simple-junit-test-to-cucumber-java/)
  

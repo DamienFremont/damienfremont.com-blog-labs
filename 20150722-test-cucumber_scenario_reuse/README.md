@@ -1,7 +1,7 @@
 How to Cucumber Java : ReUse Same Scenario for Core, Service and Web UI Tests
 ======
  
-![alt text](screenshots/160520005846914.png)
+![alt text](screenshots/160523003251857.png)
  
 An example of unified code to reuse the same functional test scenario. Over unit tests of the core component code, or exposed API and services, and finally the web application UI.
  
@@ -24,7 +24,7 @@ Feature: Person Repository
  
 ## And give it to developers.
  
-![alt text](screenshots/160520005847009.jpg)
+![alt text](screenshots/160523003251963.jpg)
  
 
  
@@ -247,7 +247,7 @@ class PersonRepository {
 }
 ```
  
-![alt text](screenshots/160520005847314.jpg)
+![alt text](screenshots/160523003252312.jpg)
  
 with this project:
  
@@ -255,7 +255,7 @@ And launching RunBDDTest.java with JUnit:
  
 0.026 sec (test) + 0.2 sec (startup)
  
-![alt text](screenshots/160520005847683.jpg)
+![alt text](screenshots/160523003252792.jpg)
  
 
  
@@ -263,13 +263,13 @@ And launching RunBDDTest.java with JUnit:
  
 Testing that service API:
  
-![alt text](screenshots/160520005847958.jpg)
+![alt text](screenshots/160523003253039.jpg)
  
 
  
 with this project:
  
-![alt text](screenshots/160520005848206.jpg)
+![alt text](screenshots/160523003253267.jpg)
  
 
  
@@ -277,7 +277,7 @@ And launching RunBDDTest.java with JUnit:
  
 0.210 sec (test) + 3 sec (startup)
  
-![alt text](screenshots/160520005848484.jpg)
+![alt text](screenshots/160523003253502.jpg)
  
 
  
@@ -285,13 +285,13 @@ And launching RunBDDTest.java with JUnit:
  
 Testing that web UI:
  
-![alt text](screenshots/160520005848760.jpg)
+![alt text](screenshots/160523003253752.jpg)
  
 
  
 with this project:
  
-![alt text](screenshots/160520005849008.jpg)
+![alt text](screenshots/160523003253980.jpg)
  
 
  
@@ -299,7 +299,7 @@ And launching RunBDDTest.java with JUnit:
  
 0.628 sec (test) + 7 sec (startup)
  
-![alt text](screenshots/160520005849257.jpg)
+![alt text](screenshots/160523003254244.jpg)
  
 
  
@@ -307,7 +307,7 @@ And launching RunBDDTest.java with JUnit:
  
 A common feature file and maven sub-projects
  
-![alt text](screenshots/160520005849507.jpg)
+![alt text](screenshots/160523003254492.jpg)
  
 Maven pom.xml
  
@@ -374,7 +374,7 @@ And launching all tests with Maven:
  
 17 sec
  
-![alt text](screenshots/160520005849773.jpg)
+![alt text](screenshots/160523003254747.jpg)
  
 
  
@@ -395,5 +395,6 @@ http://zsoltfabok.com/blog/2012/08/embedded-web-services-for-testing/
 https://github.com/tastejs/todomvc/tree/gh-pages/examples/vanillajs
  
  
+## Origin
 [https://damienfremont.com/2015/07/23/how-to-cucumber-java-reuse-same-scenario-for-core-service-and-web-ui-tests/ ](https://damienfremont.com/2015/07/23/how-to-cucumber-java-reuse-same-scenario-for-core-service-and-web-ui-tests/ )
  

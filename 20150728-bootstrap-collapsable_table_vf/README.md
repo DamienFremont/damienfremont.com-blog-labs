@@ -1,7 +1,7 @@
 Comment agrandir / réduire les lignes d’un tableau avec Bootstrap
 ======
  
-![alt text](screenshots/160520005856210.jpg)
+![alt text](screenshots/160523003300872.jpg)
  
 Comment faire des accordéons dans des lignes de tableau en Twitter Bootstrap ? Nous verrons qu’utiliser une table pour faire un tableau …n’est pas une si bonne idée !
  
@@ -9,7 +9,7 @@ Comment faire des accordéons dans des lignes de tableau en Twitter Bootstrap ? 
  
 Faire un tableau dont chaque ligne est cliquable pour afficher un sous-contenu masqué (partie gauche) et/ou pour naviguer avec des boutons cliquables (partie droite).
  
-![alt text](screenshots/160520005856279.jpg)
+![alt text](screenshots/160523003300943.jpg)
  
 
  
@@ -39,7 +39,7 @@ Rien à dire, c’est la solution la plus logique, car c’est celle que bootstr
 </tr>
 ```
  
-![alt text](screenshots/160520005856304.jpg)
+![alt text](screenshots/160523003301038.jpg)
  
 
  
@@ -71,7 +71,7 @@ Solution : créer un DIV dans un sous-TR (facultatif : ajouter du CSS pour cache
 </tr>
 ```
  
-![alt text](screenshots/160520005856331.jpg)
+![alt text](screenshots/160523003301113.jpg)
  
 
  
@@ -103,7 +103,7 @@ Solution : il faut empêcher l’expand/collapse de se déclencher en cas d’ap
 </tr>
 ```
  
-![alt text](screenshots/160520005856361.jpg)
+![alt text](screenshots/160523003301218.jpg)
  
 
  
@@ -127,7 +127,7 @@ Solution : (facultatif) Il faut refaire du CSS si l’on veut obtenir le même r
 </div>
 ```
  
-![alt text](screenshots/160520005856396.jpg)
+![alt text](screenshots/160523003301279.jpg)
  
 
  
@@ -158,7 +158,7 @@ Solution : (facultatif) utiliser un style perso ou re-utiliser la class accordio
 </div>
 ```
  
-![alt text](screenshots/160520005856425.jpg)
+![alt text](screenshots/160523003301321.jpg)
  
 
  
@@ -231,5 +231,6 @@ http://getbootstrap.com/2.3.2/scaffolding.html
 http://getbootstrap.com/2.3.2/components.html
  
  
+## Origin
 [https://damienfremont.com/2015/07/28/comment-agrandir-reduire-les-lignes-dun-tableau-avec-bootstrap/ ](https://damienfremont.com/2015/07/28/comment-agrandir-reduire-les-lignes-dun-tableau-avec-bootstrap/ )
  

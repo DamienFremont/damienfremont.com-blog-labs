@@ -1,7 +1,7 @@
 Comment créer et tester un server HTTP REST en JAX-RS JavaEE sous Tomcat ?
 ======
  
-![alt text](screenshots/160520005732093.png)
+![alt text](screenshots/160523003128416.png)
  
 Ce tutoriel couvre l’implémentation d’un server HTTP REST exposant du CRUD sur un simple objet. Ainsi que ses tests avec l’intégration d’un Tomcat dans JUnit et l’écriture de tests en BDD avec RestAssured. Il se fera en 2 partie : un dev/test de base, puis un dev/test gérant la validation de données et les codes d’erreur.
  
@@ -13,7 +13,7 @@ Eclipse, Jersey-Server, Tomcat et RestAssured. RestAssured propose un formalise 
  
 # Source code
  
-![alt text](screenshots/160520005732164.jpg)
+![alt text](screenshots/160523003128486.jpg)
  
 
  
@@ -256,15 +256,15 @@ Les tests pourront s’exécuter au choix vers un serveur Tomcat local ou embarq
  
 Voici le test “à la main”. Il faut monter le projet dans un serveur Tomcat installé sur le poste de dev, à l’aide du plugin d’Eclipse par exemple. Puis tester avec votre navigateur web préféré ou SOAP-UI.
  
-![alt text](screenshots/160520005732477.jpg)
+![alt text](screenshots/160523003129353.jpg)
  
 
  
-![alt text](screenshots/160520005732706.jpg)
+![alt text](screenshots/160523003129595.jpg)
  
 
  
-![alt text](screenshots/160520005733135.jpg)
+![alt text](screenshots/160523003130008.jpg)
  
 
  
@@ -419,13 +419,13 @@ public class PersonService1Test {
 }
 ```
  
-![alt text](screenshots/160520005733435.jpg)
+![alt text](screenshots/160523003130696.jpg)
  
 
  
  
  
-![alt text](screenshots/160520005733640.svg)
+![alt text](screenshots/160523003130990.svg)
  
 C’est quand même plus simple pour tous les jours !
  
@@ -586,7 +586,7 @@ public class PersonService2Test {
 }
 ```
  
-![alt text](screenshots/160520005733751.jpg)
+![alt text](screenshots/160523003131330.jpg)
  
 
  
@@ -640,5 +640,6 @@ http://www.hascode.com/2011/09/rest-assured-vs-jersey-test-framework-testing-you
 http://blog.fastconnect.fr/?p=1565
  
  
+## Origin
 [https://damienfremont.com/2015/01/15/comment-creer-et-tester-un-server-http-rest-en-jax-rs-javaee-sous-tomcat/](https://damienfremont.com/2015/01/15/comment-creer-et-tester-un-server-http-rest-en-jax-rs-javaee-sous-tomcat/)
  

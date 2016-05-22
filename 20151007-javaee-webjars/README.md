@@ -1,7 +1,7 @@
 Webjars: Manage your Web Dependencies with Maven
 ======
  
-![alt text](screenshots/160520005929036.png)
+![alt text](screenshots/160523003336586.png)
  
 
  
@@ -79,7 +79,7 @@ index.html (standard example, use webjars paths)
  
 Only pom.xml and web.xml are required to manage web depencies. And you’ll see your web dependencies like the others.
  
-![alt text](screenshots/160520005929067.jpg)
+![alt text](screenshots/160523003336728.jpg)
  
 
  
@@ -90,15 +90,15 @@ Run this project on your webapp server (Tomcat for example), and test on:
 [http://localhost:8080/20151007-javaee-webjars/](http://localhost:8080/20151007-javaee-webjars/)
 http://localhost:8080/20151007-javaee-webjars/
  
-![alt text](screenshots/160520005929473.jpg)
+![alt text](screenshots/160523003337006.jpg)
  
 
  
-![alt text](screenshots/160520005929899.jpg)
+![alt text](screenshots/160523003337379.jpg)
  
 
  
-![alt text](screenshots/160520005930179.jpg)
+![alt text](screenshots/160523003337668.jpg)
  
 
  
@@ -118,7 +118,7 @@ Con:
  
 You will find a lot more libs at mvnrepository or webjars.org !
  
-![alt text](screenshots/160520005930508.jpg)
+![alt text](screenshots/160523003337999.jpg)
  
 
  
@@ -139,5 +139,6 @@ https://github.com/webjars/webjars-servlet-2.x
 http://mvnrepository.com/artifact/org.webjars
  
  
+## Origin
 [https://damienfremont.com/2015/10/07/webjars-manage-your-web-dependencies-with-maven/](https://damienfremont.com/2015/10/07/webjars-manage-your-web-dependencies-with-maven/)
  

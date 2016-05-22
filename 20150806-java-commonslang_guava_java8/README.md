@@ -1,7 +1,7 @@
 Migrating from Java4 CommonsLang to Java6 Guava to Java8
 ======
  
-![alt text](screenshots/160520005915354.png)
+![alt text](screenshots/160523003321875.png)
  
 This tutorial cover code migration from different historical technical stacks. It goes from Java 1.4 with Commons-Lang (2005, Apache), to Java 1.6 with Guava (2009, Google) then to Java 8 (2015). These technical stacks are knowned to be Java language extension (Jakarta and Guava). Most basic usecases will be covered:
  
@@ -292,7 +292,7 @@ public class Java8GuavaImpl implements IJavaUseCases {
  
 ## Demo
  
-![alt text](screenshots/160520005915503.jpg)
+![alt text](screenshots/160523003321968.jpg)
  
 The same test suite will be played for each technical stacks, by using JUnit Parameterized. JavaUseCasesTest.java
  
@@ -470,5 +470,6 @@ http://tutorials.jenkov.com/java-collections/streams.html
 http://www.mkyong.com/unittest/junit-4-tutorial-6-parameterized-test/
  
  
+## Origin
 [https://damienfremont.com/2015/08/06/migrating-from-java4-commonslang-to-java6-guava-to-java8/](https://damienfremont.com/2015/08/06/migrating-from-java4-commonslang-to-java6-guava-to-java8/)
  

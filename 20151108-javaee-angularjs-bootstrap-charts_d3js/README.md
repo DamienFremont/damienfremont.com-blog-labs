@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: HowTo Charts with D3JS
 ======
  
-![alt text](screenshots/160520010206235.png)
+![alt text](screenshots/160523003625829.png)
  
 Here simple use cases: a static Bar chart and a dynamic Line chart. It’s build with d3js and nvd3 for angularjs integration and java jersey for backend datas.
  
@@ -14,13 +14,13 @@ http://localhost:8080/20151108-javaee-angularjs-bootstrap-charts_d3js/
  
 Here the two uses cases: bar charts and line charts.
  
-![alt text](screenshots/160520010206314.png)
+![alt text](screenshots/160523003625912.png)
  
 
  
 There is a tooltip for each datas in charts.
  
-![alt text](screenshots/160520010206880.png)
+![alt text](screenshots/160523003626367.png)
  
 
  
@@ -29,25 +29,25 @@ There are two instances of Line chart:
 * static (unique update at loading time)
 * dynamic (refreshing every second)
  
-![alt text](screenshots/160520010207025.gif)
+![alt text](screenshots/160523003626513.gif)
  
 
  
 Caution: for each refresh you’ll ended with a backend request. Pay attention to performance and load (bigger refresh interval, or replace only with new datas)
  
-![alt text](screenshots/160520010207659.png)
+![alt text](screenshots/160523003627210.png)
  
 
  
 Java Data back-end response (build with Jersey JAX-RS impl).
  
-![alt text](screenshots/160520010207878.png)
+![alt text](screenshots/160523003627446.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010208298.png)
+![alt text](screenshots/160523003627906.png)
  
 
  
@@ -351,5 +351,6 @@ http://busypeoples.github.io/post/promises-in-angular-js/
  
  
  
+## Origin
 [https://damienfremont.com/2015/11/08/javaee-angularjs-bootstrap-howto-charts-with-d3js/](https://damienfremont.com/2015/11/08/javaee-angularjs-bootstrap-howto-charts-with-d3js/)
  

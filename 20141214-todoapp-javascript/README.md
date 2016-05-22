@@ -1,7 +1,7 @@
 TODO list exemple – full Javascript avec AngularJS NodeJS Express
 ======
  
-![alt text](screenshots/160520005659155.png)
+![alt text](screenshots/160523003051453.png)
  
 Ce tutoriel est le dev d’une simple TODO list de type client-serveur (front-end + back-end). Le but est d’utiliser une stack technique complète en JavaScript pour comparer avec d’autres technologies.
  
@@ -23,11 +23,11 @@ La structure (classique) est composé d’un MVC coté front et d’un service R
 # Code
  
 [github ici](https://github.com/damienfremont/blog/tree/master/20141214-todoapp-javascript)
-![alt text](screenshots/160520005659183.jpg)
+![alt text](screenshots/160523003051792.jpg)
  
 Récupérer le code à partir de github ici.
  
-![alt text](screenshots/160520005659406.jpg)
+![alt text](screenshots/160523003052025.jpg)
  
 La partie back se présente avec un fichier de conf, une app et des routes :
  
@@ -50,7 +50,7 @@ Faire un clique droit sur le fichier package.json pour lancer une commande Run A
 }
 ```
  
-![alt text](screenshots/160520005659560.jpg)
+![alt text](screenshots/160523003052194.jpg)
  
 
  
@@ -112,22 +112,22 @@ exports.save = function(req, res) {
  
 # Demo
  
-![alt text](screenshots/160520005659790.jpg)
+![alt text](screenshots/160523003052525.jpg)
  
 Lancer le server
  
-![alt text](screenshots/160520005700027.jpg)
+![alt text](screenshots/160523003052761.jpg)
  
 Vérifier les logs
  
 [http://localhost:3000/api/todos](http://localhost:3000/api/todos)
-![alt text](screenshots/160520005700251.jpg)
+![alt text](screenshots/160523003053002.jpg)
  
 Tester sur L’URL du back
 http://localhost:3000/api/todos
  
 [http://localhost:3000/index.html#/](http://localhost:3000/index.html#/)
-![alt text](screenshots/160520005700478.jpg)
+![alt text](screenshots/160523003053263.jpg)
  
 Tester sur L’URL du front
 http://localhost:3000/index.html#/
@@ -135,18 +135,18 @@ http://localhost:3000/index.html#/
 Jouer avec l’application.
 Le client doit envoyer des requetes PUT et GET au serveur. Serveur qui trace tout dans la console.
  
-![alt text](screenshots/160520005700885.jpg)
+![alt text](screenshots/160523003053667.jpg)
  
 
  
-![alt text](screenshots/160520005701380.jpg)
+![alt text](screenshots/160523003054047.jpg)
  
 
  
 PS : en cas d’erreur lors de npm install, tenter la commande
 npm install -g express
  
-![alt text](screenshots/160520005701662.jpg)
+![alt text](screenshots/160523003054459.jpg)
  
 
  
@@ -169,5 +169,6 @@ http://docs.angularjs.org/api/ngResource.$resource
 http://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js
  
  
+## Origin
 [https://damienfremont.com/2014/12/15/todo-list-exemple-full-javascript-avec-angularjs-nodejs-express/](https://damienfremont.com/2014/12/15/todo-list-exemple-full-javascript-avec-angularjs-nodejs-express/)
  

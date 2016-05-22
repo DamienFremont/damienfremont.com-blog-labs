@@ -1,14 +1,14 @@
 Git – The Simple Guide
 ======
  
-![alt text](screenshots/160520005924417.png)
+![alt text](screenshots/160523003331608.png)
  
 [git – the simple guide](http://rogerdudler.github.io/git-guide/)
 Because I always forget git commands… source here: git – the simple guide (it’s better)
  
 
  
-![alt text](screenshots/160520005924918.svg)
+![alt text](screenshots/160523003332137.svg)
  
 just a simple guide for getting started with git. no deep shit
  
@@ -34,7 +34,7 @@ when using a remote server, your command will be
  
 your local repository consists of three “trees” maintained by git. the first one is your Working Directory which holds the actual files. the second one is the Index which acts as a staging area and finally the HEAD which points to the last commit you’ve made.
  
-![alt text](screenshots/160520005924993.png)
+![alt text](screenshots/160523003332233.png)
  
 
  
@@ -100,7 +100,7 @@ These are just a few of the possible parameters you can use.
  
 ## Replace local changes
  
-![alt text](screenshots/160520005925347.svg)
+![alt text](screenshots/160523003332532.svg)
  
 In case you did something wrong, which for sure never happens, you can replace local changes using the command
  
@@ -147,5 +147,6 @@ use interactive adding
 http://rogerdudler.github.io/git-guide/
  
  
+## Origin
 [https://damienfremont.com/2015/09/01/git-the-simple-guide/](https://damienfremont.com/2015/09/01/git-the-simple-guide/)
  

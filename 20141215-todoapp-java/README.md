@@ -1,7 +1,7 @@
 TODO list exemple – full Java avec GWT Tomcat Jersey
 ======
  
-![alt text](screenshots/160520005709663.png)
+![alt text](screenshots/160523003103608.png)
  
 [todoapp js](http://damienfremont.com/2014/12/15/todo-list-exemple-full-javascript-avec-angularjs-nodejs-express/)
 Ce tutoriel est la suite de todoapp js, mais en java cette fois-ci. C’est le dev d’une simple TODO list de type client-serveur (front-end + back-end). Le but est d’utiliser une stack technique complète en Java pour comparer avec d’autres technologies.
@@ -14,7 +14,7 @@ Ce tutoriel est la suite de todoapp js, mais en java cette fois-ci. C’est le d
 [plugin GWT](https://developers.google.com/eclipse/docs/getting_started#installing)
 En DEV : un IDE eclipse JavaEE + Maven et un tomcat7, ensuite installer le plugin GWT, manuellement ou via le marketplace d’eclipse.
  
-![alt text](screenshots/160520005709739.jpg)
+![alt text](screenshots/160523003103679.jpg)
  
 
  
@@ -22,7 +22,7 @@ En DEV : un IDE eclipse JavaEE + Maven et un tomcat7, ensuite installer le plugi
 [exemple en GWT](http://todomvc.com/examples/gwt/)
 En RUN : le front-end se base sur le site todomvc.com avec l’exemple en GWT. Le back-end est un Tomcat avec une servlet REST HTTP Jersey (JAX-RS).
  
-![alt text](screenshots/160520005709805.jpg)
+![alt text](screenshots/160523003103871.jpg)
  
 
  
@@ -36,11 +36,11 @@ La structure (classique) est composé d’un MVC coté front et d’un service R
 [github source](https://github.com/damienfremont/blog/tree/master/20141215-todoapp-java)
 Récupérer le code à partir de github source puis builder le projet.
  
-![alt text](screenshots/160520005710033.jpg)
+![alt text](screenshots/160523003104758.jpg)
  
 
  
-![alt text](screenshots/160520005710568.jpg)
+![alt text](screenshots/160523003105324.jpg)
  
 
  
@@ -256,7 +256,7 @@ web.xml
 </web-app>
 ```
  
-![alt text](screenshots/160520005710882.svg)
+![alt text](screenshots/160523003105747.svg)
  
 Coté client, c’est du GWT (classique …et compliqué pour rien. Voir le source sur github ou todomvc.
  
@@ -267,7 +267,7 @@ Lancer le serveur.
 [http://localhost:8080/20141215-todoapp-java/api/todos](http://localhost:8080/20141215-todoapp-java/api/todos)
 Tester sur L’URL du back. http://localhost:8080/20141215-todoapp-java/api/todos
  
-![alt text](screenshots/160520005710977.jpg)
+![alt text](screenshots/160523003105847.jpg)
  
 
  
@@ -278,7 +278,7 @@ Tester sur L’URL du back. http://localhost:8080/20141215-todoapp-java/api/todo
 [http://localhost:8080/20141215-todoapp-java/](http://localhost:8080/20141215-todoapp-java/)
 Tester sur L’URL du front. http://localhost:8080/20141215-todoapp-java/
  
-![alt text](screenshots/160520005711213.jpg)
+![alt text](screenshots/160523003106111.jpg)
  
 
  
@@ -306,5 +306,6 @@ http://mojo.codehaus.org/gwt-maven-plugin/user-guide/project.html
 http://mojo.codehaus.org/gwt-maven-plugin/user-guide/compile.html
  
  
+## Origin
 [https://damienfremont.com/2014/12/17/todo-list-exemple-full-java-avec-gwt-tomcat-jersey/](https://damienfremont.com/2014/12/17/todo-list-exemple-full-java-avec-gwt-tomcat-jersey/)
  

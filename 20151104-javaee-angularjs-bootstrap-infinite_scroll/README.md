@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: How to Infinite-Scroll
 ======
  
-![alt text](screenshots/160520010139758.png)
+![alt text](screenshots/160523003550188.png)
  
 
  
@@ -18,13 +18,13 @@ A simple timeline with Bootstrap components.
  
 You can scroll to the end.
  
-![alt text](screenshots/160520010139827.png)
+![alt text](screenshots/160523003550263.png)
  
 
  
 And there is loading alert and animated progress bar.
  
-![alt text](screenshots/160520010140399.png)
+![alt text](screenshots/160523003550896.png)
  
 
  
@@ -32,13 +32,13 @@ After loading, the new content is displayed.
  
 You can do infinite scroll now.
  
-![alt text](screenshots/160520010140726.png)
+![alt text](screenshots/160523003551220.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010141577.png)
+![alt text](screenshots/160523003551908.png)
  
 
  
@@ -448,5 +448,6 @@ https://github.com/sroze/ngInfiniteScroll
 http://getbootstrap.com/components/#btn-groups-single
  
  
+## Origin
 [https://damienfremont.com/2015/11/04/javaee-angularjs-bootstrap-how-to-infinite-scroll/](https://damienfremont.com/2015/11/04/javaee-angularjs-bootstrap-how-to-infinite-scroll/)
  

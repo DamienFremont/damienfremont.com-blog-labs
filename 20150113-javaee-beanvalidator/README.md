@@ -1,7 +1,7 @@
 Comment utiliser BeanValidation manuellement hors d’un serveur JavaEE ?
 ======
  
-![alt text](screenshots/160520005724025.png)
+![alt text](screenshots/160523003120694.png)
  
 Ce tuto décrit comment valider un modèle de données manuellement avec JavaEE BeanValidation (JSR 303). L’intérêt ? Eviter une pile de <If> inmaintenable dans le code quand on n’a pas accès à l’annotation @Valid (pas de server JavaEE, un Tomcat par exemple). Ce point étant couvert par la spécification mais rarement décrit. Les exceptions et les messages d’erreurs seront également abordés.
  
@@ -493,5 +493,6 @@ http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html
 http://www.jmdoudoux.fr/java/dej/chap-validation_donnees.htm
  
  
+## Origin
 [https://damienfremont.com/2015/01/13/comment-utiliser-beanvalidation-manuellement-hors-dun-serveur-javaee/](https://damienfremont.com/2015/01/13/comment-utiliser-beanvalidation-manuellement-hors-dun-serveur-javaee/)
  

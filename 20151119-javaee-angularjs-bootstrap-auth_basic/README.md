@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: How to Authent (Basic)
 ======
  
-![alt text](screenshots/160520010221079.png)
+![alt text](screenshots/160523003644176.png)
  
 This post is about basic authentification with AngularJs, Satellizer and JAX-RS Jersey.
  
@@ -24,55 +24,55 @@ Start Tomcat and open your Internet Browser at :
 [http://localhost:8080/20151119-javaee-angularjs-bootstrap-auth_basic/#/](http://localhost:8080/20151119-javaee-angularjs-bootstrap-auth_basic/#/)
 http://localhost:8080/20151119-javaee-angularjs-bootstrap-auth_basic/#/
  
-![alt text](screenshots/160520010221156.png)
+![alt text](screenshots/160523003644253.png)
  
 
  
 Only Login and Home menu’s buttons are visible.
  
-![alt text](screenshots/160520010221181.png)
+![alt text](screenshots/160523003644283.png)
  
 
  
 Login redirect to the Login page (login=user1@mail.com, password=pass1).
  
-![alt text](screenshots/160520010221205.png)
+![alt text](screenshots/160523003644310.png)
  
 
  
 The login view call the Java backend, and as a response there’ll be a token. After login, the Home page is displayed.
  
-![alt text](screenshots/160520010221229.png)
+![alt text](screenshots/160523003644342.png)
  
 
  
 And the navbar now contains a “Datas” button. Also, Login is now more visible, but Logout is.
  
-![alt text](screenshots/160520010221253.png)
+![alt text](screenshots/160523003644369.png)
  
 
  
 This secured page by route authent and navbar is now displayed with a message from the REST backend server.
  
-![alt text](screenshots/160520010221274.png)
+![alt text](screenshots/160523003644393.png)
  
 
  
 On Logout, the app’s first state is restored (no auth, need to login).
  
-![alt text](screenshots/160520010221297.png)
+![alt text](screenshots/160523003644423.png)
  
 
  
 It’s no longer possible to access #/datas page (route url is also secured).
  
-![alt text](screenshots/160520010221320.png)
+![alt text](screenshots/160523003644447.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010221343.png)
+![alt text](screenshots/160523003644475.png)
  
 
  
@@ -819,5 +819,6 @@ https://hackhands.com/building-instagram-clone-angularjs-satellizer-nodejs-mongo
 https://github.com/sahat/instagram-hackhands
  
  
+## Origin
 [https://damienfremont.com/2015/11/19/javaee-angularjs-bootstrap-how-to-authent-basic/](https://damienfremont.com/2015/11/19/javaee-angularjs-bootstrap-how-to-authent-basic/)
  

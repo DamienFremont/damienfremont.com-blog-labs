@@ -1,7 +1,7 @@
 Créer et tester un client HTTP REST en JAX-RS JavaEE avec Jersey ?
 ======
  
-![alt text](screenshots/160520005748836.png)
+![alt text](screenshots/160523003150393.png)
  
 Voici comment créer un client HTTP REST en Java appelant un simple service CRUD. La solution se base sur le standard JavaEE JAX-RS avec comme implémentation Jersey-client pour le mapping et RESTEasy pour l’exécution, testé par JUnit et Jadler qui émule un server REST.
  
@@ -13,7 +13,7 @@ Le client va appeler un service REST dont l’API est la suivante :
  
 # Source
  
-![alt text](screenshots/160520005748903.jpg)
+![alt text](screenshots/160523003150476.jpg)
  
 
  
@@ -303,7 +303,7 @@ public class PersonClientTest {
 }
 ```
  
-![alt text](screenshots/160520005748974.jpg)
+![alt text](screenshots/160523003151518.jpg)
  
 C’est donc un test d’intégration du client que l’on peut lancer comme un simple test JUnit.
  
@@ -394,7 +394,7 @@ public class ExecutorTest {
 }
 ```
  
-![alt text](screenshots/160520005749018.jpg)
+![alt text](screenshots/160523003152069.jpg)
  
 
  
@@ -421,5 +421,6 @@ http://www.mkyong.com/tutorials/jax-rs-tutorials/
 http://www.mastertheboss.com/jboss-frameworks/resteasy/resteasy-tutorial
  
  
+## Origin
 [https://damienfremont.com/2015/01/20/creer-et-tester-un-client-http-rest-en-jax-rs-javaee-avec-jersey](https://damienfremont.com/2015/01/20/creer-et-tester-un-client-http-rest-en-jax-rs-javaee-avec-jersey)
  

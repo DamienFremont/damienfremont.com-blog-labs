@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: File Upload
 ======
  
-![alt text](screenshots/160520010045614.png)
+![alt text](screenshots/160523003456275.png)
  
 A simple picture upload with preview with alert messages for avatar and a multiple files upload with progress bar.
  
@@ -12,25 +12,25 @@ A simple picture upload with preview with alert messages for avatar and a multip
 [http://localhost:8080/20151019-javaee-angularjs-bootstrap-upload_file/](http://localhost:8080/20151019-javaee-angularjs-bootstrap-upload_file/)
 http://localhost:8080/20151019-javaee-angularjs-bootstrap-upload_file/
  
-![alt text](screenshots/160520010045687.png)
+![alt text](screenshots/160523003456342.png)
  
 
  
 Here is Picture upload.
  
-![alt text](screenshots/160520010045731.png)
+![alt text](screenshots/160523003456388.png)
  
 
  
-![alt text](screenshots/160520010046231.png)
+![alt text](screenshots/160523003456410.png)
  
 
  
-![alt text](screenshots/160520010047075.png)
+![alt text](screenshots/160523003456456.png)
  
 
  
-![alt text](screenshots/160520010047556.png)
+![alt text](screenshots/160523003456482.png)
  
 
  
@@ -38,35 +38,35 @@ Here is Picture upload.
  
  
  
-![alt text](screenshots/160520010048225.png)
+![alt text](screenshots/160523003456506.png)
  
 
  
 Here is multiple files upload.
  
-![alt text](screenshots/160520010048703.png)
+![alt text](screenshots/160523003456531.png)
  
 
  
-![alt text](screenshots/160520010049256.png)
+![alt text](screenshots/160523003456554.png)
  
 
  
-![alt text](screenshots/160520010049990.png)
+![alt text](screenshots/160523003456595.png)
  
 
  
-![alt text](screenshots/160520010050386.png)
+![alt text](screenshots/160523003456618.png)
  
 
  
-![alt text](screenshots/160520010051013.png)
+![alt text](screenshots/160523003456644.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010051337.png)
+![alt text](screenshots/160523003456668.png)
  
 
  
@@ -364,5 +364,6 @@ https://angular-file-upload.appspot.com/
 http://howtodoinjava.com/2015/08/05/jersey-file-upload-example/
  
  
+## Origin
 [https://damienfremont.com/2015/10/19/javaee-angularjs-bootstrap-file-upload/](https://damienfremont.com/2015/10/19/javaee-angularjs-bootstrap-file-upload/)
  

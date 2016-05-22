@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: How to Breadcrumb and NavBar
 ======
  
-![alt text](screenshots/160520010150706.png)
+![alt text](screenshots/160523003603289.png)
  
 A navigation feature: simple responsive navbar, with breadcrumb and home view. Using vanilla AngularJS (because angular-breadcrumb is too complicated: it’s also using ui-router …two frameworks for one feature?).
  
@@ -12,59 +12,59 @@ A navigation feature: simple responsive navbar, with breadcrumb and home view. U
 [http://localhost:8080/20151105-javaee-angularjs-bootstrap-breadcrumb/](http://localhost:8080/20151105-javaee-angularjs-bootstrap-breadcrumb/)
 http://localhost:8080/20151105-javaee-angularjs-bootstrap-breadcrumb/
  
-![alt text](screenshots/160520010150775.png)
+![alt text](screenshots/160523003603363.png)
  
 
  
 After reducing displayed size, navbar’s menu toggle from a bar to a button.
  
-![alt text](screenshots/160520010150814.png)
+![alt text](screenshots/160523003603667.png)
  
 
  
 A click on ‘Page 1’ button…
  
-![alt text](screenshots/160520010150837.png)
+![alt text](screenshots/160523003603941.png)
  
 
  
 …route to page 1.
  
-![alt text](screenshots/160520010150861.png)
+![alt text](screenshots/160523003604206.png)
  
 
  
 The URI is also consistant with the route and the view (here #/page1 for page1.html)
  
-![alt text](screenshots/160520010150885.png)
+![alt text](screenshots/160523003604546.png)
  
 
  
 It’s possible to go further in depth with a third level (here ‘home/page2/subpage’).
  
-![alt text](screenshots/160520010150910.png)
+![alt text](screenshots/160523003604803.png)
  
 
  
 The URI is consistant ot (here #/page2/subpage for page2subpage.html)
  
-![alt text](screenshots/160520010150933.png)
+![alt text](screenshots/160523003604949.png)
  
 
  
 All breadcrumb items are clickable (here ‘home’).
  
-![alt text](screenshots/160520010150956.png)
+![alt text](screenshots/160523003605281.png)
  
 
  
-![alt text](screenshots/160520010150979.png)
+![alt text](screenshots/160523003605569.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010151003.png)
+![alt text](screenshots/160523003605857.png)
  
 
  
@@ -397,5 +397,6 @@ https://github.com/DamienFremont/blog/tree/master/20151105-javaee-angularjs-boot
 http://getbootstrap.com/components/#breadcrumbs
  
  
+## Origin
 [https://damienfremont.com/2015/11/05/javaee-angularjs-bootstrap-how-to-breadcrumb-and-navbar/](https://damienfremont.com/2015/11/05/javaee-angularjs-bootstrap-how-to-breadcrumb-and-navbar/)
  

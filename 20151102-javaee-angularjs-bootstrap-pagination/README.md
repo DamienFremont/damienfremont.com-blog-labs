@@ -1,7 +1,7 @@
 JavaEE AngularJS Bootstrap: How to Pagination with Smart-Table
 ======
  
-![alt text](screenshots/160520010124157.png)
+![alt text](screenshots/160523003531333.png)
  
 
  
@@ -16,31 +16,31 @@ http://localhost:8080/20151102-javaee-angularjs-bootstrap-pagination/
  
 A data-table with page size selector (10, 25, 50) and pagination bar (1,2,3,4,5,>,LAST)
  
-![alt text](screenshots/160520010124222.png)
+![alt text](screenshots/160523003531407.png)
  
 
  
 Data-table’s page size can be change to 25 or 50.
  
-![alt text](screenshots/160520010124264.png)
+![alt text](screenshots/160523003531930.png)
  
 
  
 The displayed page can be change to another (2 here).
  
-![alt text](screenshots/160520010124289.png)
+![alt text](screenshots/160523003531960.png)
  
 
  
 It’s also possible to jump to First or Last page.
  
-![alt text](screenshots/160520010124318.png)
+![alt text](screenshots/160523003531986.png)
  
 
  
 # Source
  
-![alt text](screenshots/160520010124341.png)
+![alt text](screenshots/160523003532015.png)
  
 
  
@@ -495,5 +495,6 @@ http://lorenzofox3.github.io/smart-table-website/
 http://plnkr.co/edit/e82rdx7R4pjbLvayUHXx?p=preview
  
  
+## Origin
 [https://damienfremont.com/2015/11/02/javaee-angularjs-bootstrap-how-to-pagination-with-smart-table/](https://damienfremont.com/2015/11/02/javaee-angularjs-bootstrap-how-to-pagination-with-smart-table/)
  

@@ -1,23 +1,23 @@
 JavaEE AngularJS : Loading Screen
 ======
  
-![alt text](screenshots/160520010254462.png)
+![alt text](screenshots/160523003720627.png)
  
 A simple way to handle loading screen before javascript kick-in, rely on ng-if.
  
 ## Demo
  
-![alt text](screenshots/160520010254536.png)
+![alt text](screenshots/160523003720708.png)
  
 
  
-![alt text](screenshots/160520010254992.png)
+![alt text](screenshots/160523003720751.png)
  
 
  
 ## Source
  
-![alt text](screenshots/160520010255317.png)
+![alt text](screenshots/160523003720775.png)
  
 
  
@@ -217,5 +217,6 @@ http://www.bennadel.com/blog/2758-creating-a-pre-bootstrap-loading-screen-in-ang
 JavaEE AngularJS : Loading Screen
  
  
+## Origin
 [https://damienfremont.com/2016/01/18/javaee-angularjs-loading-screen/](https://damienfremont.com/2016/01/18/javaee-angularjs-loading-screen/)
  

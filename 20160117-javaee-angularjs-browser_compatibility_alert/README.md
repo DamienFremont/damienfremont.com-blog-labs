@@ -1,7 +1,7 @@
 JavaEE AngularJs: Browser Compatibility Alert
 ======
  
-![alt text](screenshots/160520010247050.png)
+![alt text](screenshots/160523003712576.png)
  
 An example of alert in case of client side incompatible browser, like IE8. On others browsers like Chrome, FF or Safari, it will not popup.
  
@@ -11,37 +11,37 @@ An example of alert in case of client side incompatible browser, like IE8. On ot
  
 On IE11 Browser.
  
-![alt text](screenshots/160520010247114.png)
+![alt text](screenshots/160523003712645.png)
  
 
  
 Now change your compatibility to IE8 after F12.
  
-![alt text](screenshots/160520010247415.png)
+![alt text](screenshots/160523003712968.png)
  
 
  
 On IE8 Browser.
  
-![alt text](screenshots/160520010247756.png)
+![alt text](screenshots/160523003713206.png)
  
 
  
 On Edge Browser.
  
-![alt text](screenshots/160520010248067.png)
+![alt text](screenshots/160523003713544.png)
  
 
  
 On Chrome Browser.
  
-![alt text](screenshots/160520010248309.png)
+![alt text](screenshots/160523003713808.png)
  
 
  
 ## Source
  
-![alt text](screenshots/160520010248785.png)
+![alt text](screenshots/160523003714254.png)
  
 
  
@@ -233,5 +233,6 @@ https://github.com/DamienFremont/blog/tree/master/20160117-javaee-angularjs-brow
 http://www.impressivewebs.com/conditional-comments/
  
  
+## Origin
 [https://damienfremont.com/2016/01/17/javaee-angularjs-browser-compatibility-alert/](https://damienfremont.com/2016/01/17/javaee-angularjs-browser-compatibility-alert/)
  
