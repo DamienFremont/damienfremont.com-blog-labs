@@ -108,60 +108,6 @@
 				</configuration>
 			</plugin>
 
-			<!-- UNPACK WEBJARS FOR MINIFY -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.10</version>
-				<executions>
-					<execution>
-						<id>unpack-js</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.webjars</groupId>
-									<artifactId>angularjs</artifactId>
-									<version>${angularjs.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.webjars</groupId>
-									<artifactId>requirejs</artifactId>
-									<version>${requirejs.version}</version>
-								</artifactItem>
-							</artifactItems>
-							<includes>**/*.min.js</includes>
-							<outputDirectory>${basedir}/src/main/webapp/js/vendor</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
-					<execution>
-						<id>unpack-css</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.webjars</groupId>
-									<artifactId>angularjs</artifactId>
-									<version>${angularjs.version}</version>
-								</artifactItem>
-							</artifactItems>
-							<includes>**/*.css</includes>
-							<outputDirectory>${basedir}/src/main/webapp/css/vendor</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
 			<!-- ASSEMBLE AND MINIFY -->
 			<plugin>
 				<groupId>com.samaxes.maven</groupId>
@@ -187,11 +133,12 @@
 								<jsSourceInclude>**/**/*.*js</jsSourceInclude>
 							</jsSourceIncludes>
 							<jsEngine>CLOSURE</jsEngine>
+							<jsFinalFile></jsFinalFile>
 						</configuration>
-
 					</execution>
 				</executions>
 			</plugin>
+
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -227,6 +174,7 @@
 	</build>
 	<profiles>
 		<profile>
+			<!-- NO ASSEMBLY, NO MINIFIY, NO CACHE -->
 			<id>dev</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -238,6 +186,7 @@
 			</properties>
 		</profile>
 		<profile>
+			<!-- ASSEMBLY, MINIFIY, NOCACHE -->
 			<id>prod</id>
 			<properties>
 				<profile.id>prod</profile.id>

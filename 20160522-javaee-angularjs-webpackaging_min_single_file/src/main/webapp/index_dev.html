@@ -3,12 +3,26 @@
 <head>
 <meta charset="utf-8">
 
-<!-- LIBS JS -->
+<!-- LIBS CSS -->
 <link rel="stylesheet" href="webjars/angularjs/${angularjs.version}/angular-csp.css">
+
+<!-- LIBS JS -->
+<script src="webjars/requirejs/${requirejs.version}/require${javascript.min}.js"></script>
+<script src="webjars/angularjs/${angularjs.version}/angular${javascript.min}.js"></script>
+<script src="webjars/angularjs/${angularjs.version}/angular-resource${javascript.min}.js"></script>
+<script src="webjars/angularjs/${angularjs.version}/angular-route${javascript.min}.js"></script>
+
+<!-- YOUR APP -->
 
 <!-- YOUR CSS -->
 <link rel="stylesheet" href="css/page1.css?nocache=${project.version}">
 <link rel="stylesheet" href="css/page2.css?nocache=${project.version}">
+
+<!-- YOUR JS -->
+<script src="js/templates.js?nocache=${project.version}"></script>
+<script src="js/app.js?nocache=${project.version}"></script>
+<script src="js/page1/page1.js?nocache=${project.version}"></script>
+<script src="js/page2/page2.js?nocache=${project.version}"></script>
 
 </head>
 <body ng-app="myapp">
@@ -20,18 +34,5 @@
   <div class="view-animate" ng-view ></div>
 
 </div>
-
-<!-- LIBS JS -->
-<script src="webjars/requirejs/${requirejs.version}/require${javascript.min}.js"></script>
-<script src="webjars/angularjs/${angularjs.version}/angular${javascript.min}.js"></script>
-<script src="webjars/angularjs/${angularjs.version}/angular-resource${javascript.min}.js"></script>
-<script src="webjars/angularjs/${angularjs.version}/angular-route${javascript.min}.js"></script>
-
-<!-- YOUR JS -->
-<script src="js/templates.js?nocache=${project.version}"></script>
-<script src="js/app.js?nocache=${project.version}"></script>
-<script src="js/page1/page1.js?nocache=${project.version}"></script>
-<script src="js/page2/page2.js?nocache=${project.version}"></script>
-
 </body>
 </html>

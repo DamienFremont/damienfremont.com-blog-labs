@@ -7,7 +7,7 @@ angular.module('myapp', [ //
 ])
 
 // CONFIG
-.config(function($routeProvider) {
+.config([ "$routeProvider", function($routeProvider) {
 
 	// ROUTE
 	$routeProvider
@@ -24,4 +24,4 @@ angular.module('myapp', [ //
 	})
 	// DEFAULT
 	.otherwise('/page1');
-});
+} ]);
