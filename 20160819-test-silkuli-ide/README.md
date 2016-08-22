@@ -1,4 +1,4 @@
-Test : How to Silkuli - Test UI without programming
+How to Silkuli - Test UI without programming
 ======
  
 ![alt text](screenshots/ScreenShot060.jpg)
