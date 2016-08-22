@@ -5,6 +5,10 @@ How to Silkuli - Test UI without programming
 
 This tutorial is intended to provide a way for non-developpers to start building UI test case. By using Silkuli IDE for making and runnning visual scripts (Python script + Screenshots thumbs)
 
+## Demo
+
+![alt text](screenshots/demo.gif)
+
 ## Steps
 
 The following steps are details in the original documentation at http://sikulix.com/quickstart/ and are currently testing a website (Google).
