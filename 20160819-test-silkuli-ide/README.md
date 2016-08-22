@@ -13,14 +13,17 @@ The following steps are details in the original documentation at http://sikulix.
 2. Install
 3. Init project
 4. Create Test
-4.1 Step 1 - Open start menu
-4.2 Step 2 - Search for chrome app
-4.3 Step 3 - Click on chrome icon
-4.4 Step 4 - Go to Google website
-4.5 Step 5 - Check result
 5. Run Test with Success
 6. Run Test with Error
 7. Find your project and share it
+
+Create Test Details:
+1. Step 1 - Open start menu
+2. Step 2 - Search for chrome app
+3. Step 3 - Click on chrome icon
+4. Step 4 - Go to Google website
+5. Step 5 - Check result
+
 
 ### 1. Download
 
