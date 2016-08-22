@@ -1,0 +1,5 @@
+click("1471612312940.png")
+type("1471613928691.png", "chrome")
+click("1471614212321.png")
+type("1471614896832.png", "google"+Key.ENTER)
+wait("1471615124890.png")
