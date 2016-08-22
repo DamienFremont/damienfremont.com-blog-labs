@@ -197,6 +197,14 @@ First save the test project
 
 Silkuli 2 is on the way to be released at the end of 2016.
 
+## Project
+
+https://github.com/DamienFremont/blog/tree/master/20160819-test-silkuli-ide
+
 ## References
 
 http://doc.sikuli.org/keys.html
+
+## Origin
+
+https://damienfremont.com/2016/08/19/how-to-silkuli-test-ui-without-programming/
