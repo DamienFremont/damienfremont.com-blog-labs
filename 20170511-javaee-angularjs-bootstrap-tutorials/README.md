@@ -7,7 +7,7 @@ Here are all my tutorials about JavaEE/AngularJS/Bootstrap, from 2015 to 2016 (i
 
 ---
 
-![alt text](screenshots/bootstrap-angularjs-java-maven-logo)
+![alt text](screenshots/bootstrap-angularjs-java-maven-logo.jpg)
 
 ## List
 
