@@ -3,4 +3,4 @@ dfremont-blog
 
 The labs for my blog.
 
-http://damienfremont.com/
+http://damienfremont.com/blog
