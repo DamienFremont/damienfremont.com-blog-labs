@@ -4,7 +4,7 @@
   "description": "JS React Material Express: Setting Up a Project Using Npm, Webpack, Babel",
   "author": "Damien FREMONT",
 
-  "main": "server.bundle.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"

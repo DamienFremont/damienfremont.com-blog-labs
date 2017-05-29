@@ -14,3 +14,4 @@ bower_components
 public
 dist
 bin
+*.bundle.js
