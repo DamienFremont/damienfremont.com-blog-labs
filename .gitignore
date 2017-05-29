@@ -1,3 +1,4 @@
+# JAVA
 *.class
 *.war
 *.ear
@@ -5,4 +6,6 @@
 .project
 .settings
 target
+
+# JS
 npm-debug.*
