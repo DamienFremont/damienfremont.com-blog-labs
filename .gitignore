@@ -9,3 +9,8 @@ target
 
 # JS
 npm-debug.*
+node_modules
+bower_components
+public
+dist
+bin
