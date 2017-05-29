@@ -7,7 +7,7 @@ This is the simplest example to build a webapp using ReactJS, MaterialUI and Exp
  
 
  
-A lot of these tools are not required to use React. But using ES6, JSX and watchmode is more more productive (and Redux, Babel, etc).
+A lot of these tools are not required to use React. But using ES6, JSX is more productive.
  
 ## Stack
  
