@@ -1,0 +1,11 @@
+{
+  "name": "20170529-js-react-material-express-setting_up_a_project",
+  "version": "1.0.0",
+  "description": "JS React Material Express: Setting Up a Project Using Npm, Webpack, Babel",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Damien FREMONT",
+  "license": "ISC"
+}
