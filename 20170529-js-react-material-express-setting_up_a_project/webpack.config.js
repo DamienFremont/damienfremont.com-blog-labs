@@ -8,7 +8,7 @@ module.exports = [
 {
   entry: './views/index.jsx',
   output: {
-    path: path.resolve(__dirname, '/public/'),
+    path: __dirname + '/public/',
     filename: '[name].js',
     publicPath: '/'
   },
@@ -26,7 +26,7 @@ module.exports = [
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        "presets": ["react", "es2015", "stage-0"]
+        "presets": ["react", "es2015"]
       }
     }]
   }
