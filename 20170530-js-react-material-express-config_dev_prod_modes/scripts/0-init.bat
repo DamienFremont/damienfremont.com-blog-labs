@@ -1,0 +1,2 @@
+cd ..
+start npm install
