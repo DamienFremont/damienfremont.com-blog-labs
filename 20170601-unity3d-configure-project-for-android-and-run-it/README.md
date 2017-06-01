@@ -360,5 +360,5 @@ https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-andr
  
  
 ## Origin
-[https://damienfremont.com/2017/05/24/how-to-unity3d-configure-project-for-android-and-run-it-on-mobile-device//](https://damienfremont.com/2017/05/24/how-to-unity3d-configure-project-for-android-and-run-it-on-mobile-device//)
+[https://damienfremont.com/2017/06/01/how-to-unity3d-configure-project-for-android-and-run-it-on-mobile-device/](https://damienfremont.com/2017/06/01/how-to-unity3d-configure-project-for-android-and-run-it-on-mobile-device/)
  
