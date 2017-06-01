@@ -1,7 +1,7 @@
 How to Unity3D – Configure Project for Android and Run it on Mobile Device
 ======
  
-![alt text](screenshots/170601180602459.png)
+![alt text](screenshots/170601181037754.png)
  
 In this tutorial, you start from scratch. You will install Unity3D, Android SDK, then configure a project for Android, and run it on a mobile device.
  
@@ -32,11 +32,11 @@ Examples:
 [https://en.wikipedia.org/wiki/Android_version_history](https://en.wikipedia.org/wiki/Android_version_history)
 https://en.wikipedia.org/wiki/Android_version_history
  
-![alt text](screenshots/170601180602665.png)
+![alt text](screenshots/170601181037949.png)
  
 
  
-![alt text](screenshots/170601180602728.png)
+![alt text](screenshots/170601181038014.png)
  
 
  
@@ -49,43 +49,43 @@ Unity3D and his Android package is needed.
 * choose components Example Project Android Build Support
 * Wait for download to complete (4 Go)
  
-![alt text](screenshots/170601180602763.png)
+![alt text](screenshots/170601181038048.png)
  
 
  
-![alt text](screenshots/170601180602807.png)
+![alt text](screenshots/170601181038094.png)
  
 
  
-![alt text](screenshots/170601180602836.png)
+![alt text](screenshots/170601181038146.png)
  
 
  
-![alt text](screenshots/170601180602869.png)
+![alt text](screenshots/170601181038207.png)
  
 
  
-![alt text](screenshots/170601180602900.png)
+![alt text](screenshots/170601181038275.png)
  
 
  
-![alt text](screenshots/170601180602930.png)
+![alt text](screenshots/170601181038343.png)
  
 
  
-![alt text](screenshots/170601180602968.png)
+![alt text](screenshots/170601181038391.png)
  
 
  
-![alt text](screenshots/170601180603000.png)
+![alt text](screenshots/170601181038436.png)
  
 
  
-![alt text](screenshots/170601180603033.png)
+![alt text](screenshots/170601181038494.png)
  
 
  
-![alt text](screenshots/170601180603065.png)
+![alt text](screenshots/170601181038565.png)
  
 
  
@@ -104,65 +104,65 @@ You need to install Android SDK for Unity3D compatibility (API 23/Android6.0 for
  
  
  
-![alt text](screenshots/170601180603098.png)
+![alt text](screenshots/170601181038623.png)
  
 
  
-![alt text](screenshots/170601180603131.png)
+![alt text](screenshots/170601181038671.png)
  
 
  
-![alt text](screenshots/170601180603182.png)
+![alt text](screenshots/170601181038724.png)
  
 
  
-![alt text](screenshots/170601180603234.png)
+![alt text](screenshots/170601181038786.png)
  
 
  
-![alt text](screenshots/170601180603278.png)
+![alt text](screenshots/170601181038838.png)
  
 
  
-![alt text](screenshots/170601180603308.png)
+![alt text](screenshots/170601181038874.png)
  
 
  
-![alt text](screenshots/170601180603339.png)
+![alt text](screenshots/170601181038905.png)
  
 
  
-![alt text](screenshots/170601180603391.png)
+![alt text](screenshots/170601181038953.png)
  
 
  
-![alt text](screenshots/170601180603420.png)
- 
-
- 
- 
- 
- 
- 
-![alt text](screenshots/170601180603449.png)
- 
-
- 
-![alt text](screenshots/170601180603478.png)
- 
-
- 
-![alt text](screenshots/170601180603506.png)
+![alt text](screenshots/170601181038984.png)
  
 
  
  
  
-![alt text](screenshots/170601180603536.png)
+ 
+ 
+![alt text](screenshots/170601181039018.png)
  
 
  
-![alt text](screenshots/170601180603584.png)
+![alt text](screenshots/170601181039048.png)
+ 
+
+ 
+![alt text](screenshots/170601181039077.png)
+ 
+
+ 
+ 
+ 
+![alt text](screenshots/170601181039106.png)
+ 
+
+ 
+![alt text](screenshots/170601181039154.png)
  
 
  
@@ -177,7 +177,7 @@ Sometimes, to enable debug mode, you need to install a specific USB driver for y
 [https://developer.android.com/studio/run/win-usb.html](https://developer.android.com/studio/run/win-usb.html)
 https://developer.android.com/studio/run/win-usb.html
  
-![alt text](screenshots/170601180603637.png)
+![alt text](screenshots/170601181039204.png)
  
 
  
@@ -190,9 +190,9 @@ Settings > Developer Options > USB Debugging.
 [https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android.htm](https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android.htm)
 https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android.htm
  
-![alt text](screenshots/170601180603747.png)
+![alt text](screenshots/170601181039238.png)
  
-![alt text](screenshots/170601180603786.png)
+![alt text](screenshots/170601181039275.png)
  
 
  
@@ -206,59 +206,59 @@ Check only ONE project Choose Android, with dev build
 * Test it locally (Windows)
 * Save
  
-![alt text](screenshots/170601180603832.png)
+![alt text](screenshots/170601181039322.png)
  
 
  
  
  
-![alt text](screenshots/170601180604006.png)
+![alt text](screenshots/170601181039352.png)
  
 
  
-![alt text](screenshots/170601180604114.png)
+![alt text](screenshots/170601181039467.png)
  
 
  
-![alt text](screenshots/170601180604310.png)
+![alt text](screenshots/170601181039503.png)
  
 
  
-![alt text](screenshots/170601180604589.png)
+![alt text](screenshots/170601181039545.png)
  
 
  
-![alt text](screenshots/170601180604765.png)
+![alt text](screenshots/170601181039577.png)
  
 
  
-![alt text](screenshots/170601180604925.png)
+![alt text](screenshots/170601181039626.png)
  
 
  
-![alt text](screenshots/170601180605096.png)
+![alt text](screenshots/170601181039656.png)
  
 
  
-![alt text](screenshots/170601180605273.png)
+![alt text](screenshots/170601181039687.png)
  
 
  
-![alt text](screenshots/170601180605363.png)
+![alt text](screenshots/170601181039785.png)
  
 
  
-![alt text](screenshots/170601180605561.png)
+![alt text](screenshots/170601181039822.png)
  
 
  
-![alt text](screenshots/170601180605650.png)
+![alt text](screenshots/170601181039899.png)
  
 
  
-![alt text](screenshots/170601180605796.png)
+![alt text](screenshots/170601181039932.png)
  
-![alt text](screenshots/170601180605889.png)
+![alt text](screenshots/170601181040025.png)
  
 
  
@@ -273,51 +273,51 @@ Project and device are ready.
 * Play!
 * Get APK from Project folder (on Windows, ‘Example Project.apk’)
  
-![alt text](screenshots/170601180606074.png)
+![alt text](screenshots/170601181040074.png)
  
 
  
-![alt text](screenshots/170601180606282.png)
+![alt text](screenshots/170601181040104.png)
  
 
  
-![alt text](screenshots/170601180607042.png)
+![alt text](screenshots/170601181040142.png)
  
 
  
-![alt text](screenshots/170601180607212.png)
+![alt text](screenshots/170601181040173.png)
  
 
  
-![alt text](screenshots/170601180607266.png)
+![alt text](screenshots/170601181040213.png)
  
 
  
-![alt text](screenshots/170601180607417.png)
+![alt text](screenshots/170601181040242.png)
  
 
  
-![alt text](screenshots/170601180607590.png)
+![alt text](screenshots/170601181040277.png)
  
 
  
-![alt text](screenshots/170601180607775.png)
+![alt text](screenshots/170601181040306.png)
  
 
  
-![alt text](screenshots/170601180608553.png)
+![alt text](screenshots/170601181040368.png)
  
 
  
-![alt text](screenshots/170601180608703.png)
+![alt text](screenshots/170601181040455.png)
  
 
  
-![alt text](screenshots/170601180608827.png)
+![alt text](screenshots/170601181040569.png)
  
 
  
-![alt text](screenshots/170601180609073.png)
+![alt text](screenshots/170601181040619.png)
  
 
  
@@ -334,7 +334,7 @@ These example have been tested on multiple devices:
  
 If you change your mind about the Android Version, just relaunch AndroidWorks.
  
-![alt text](screenshots/170601180609566.png)
+![alt text](screenshots/170601181040682.png)
  
 
  
