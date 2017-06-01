@@ -1,2 +1,0 @@
-cd ..
-start npm install
