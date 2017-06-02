@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class UIExample : MonoBehaviour
 {
@@ -12,12 +13,18 @@ public class UIExample : MonoBehaviour
 		Texture2D tex = new Texture2D (1, 1);
 		tex.SetPixels(new Color[]{Color.blue});
 
+		CreateEventSystem (this.transform);
+
 		GameObject a = area (this.transform, rect, tex);
-		GameObject b1 = button (a.transform, new Vector2(0,12), "Click me", new UnityAction (action));
-		GameObject b2 = button (a.transform, new Vector2(0,-12), "Or me", new UnityAction (action));
+		GameObject b1 = button (a.transform, new Vector2(0,12), "Click me", delegate { 
+			TaskOnClick(); 
+		});
+		GameObject b2 = button (a.transform, new Vector2(0,-12), "Or me",  delegate { 
+			TaskOnClick(); 
+		});
 	}
 
-	private void action ()
+	public void TaskOnClick ()
 	{
 		Debug.Log ("Hello!");
 	}
@@ -26,19 +33,25 @@ public class UIExample : MonoBehaviour
 
 	GameObject area (Transform parent, Rect rect, Texture2D tex)
 	{
+		// OBJECT
 		GameObject canObj = new GameObject ("UI:Canvas");
 		canObj.transform.SetParent (parent);
+
+		// OBJECT:CANVAS
 		// http://docs.unity3d.com/Manual/UICanvas.html
 		Canvas can = canObj.AddComponent<Canvas> ();
 		can.renderMode = RenderMode.ScreenSpaceOverlay;
 		can.pixelPerfect = true;
 
+		// OBJECT:CANVAS:PANEL
 		GameObject panObj = new GameObject ("UI:Panel");
 		panObj.transform.SetParent (canObj.transform);
 		// https://docs.unity3d.com/Manual/UIBasicLayout.html
 		RectTransform panTrs = panObj.AddComponent<RectTransform> ();
-		SetSize(panTrs, new Vector2(rect.width, rect.height));
 		panTrs.anchoredPosition = new Vector2 (rect.x, rect.y);
+		SetSize(panTrs, new Vector2(rect.width, rect.height));
+
+		// OBJECT:CANVAS:PANEL:TEXTURE
 		Image img = panObj.AddComponent<Image> ();
 		img.sprite = Sprite.Create (tex, new Rect (0, 0, tex.width, tex.height),
 			new Vector2 (1.0f, 1.0f));
@@ -50,28 +63,42 @@ public class UIExample : MonoBehaviour
 	{
 		Vector2 size = new Vector2 (90, 25);
 
+		// OBJECT
 		GameObject btnObj = new GameObject ("UI:Button");
 		btnObj.transform.SetParent (parent);
 		RectTransform btnTrs = btnObj.AddComponent<RectTransform> ();
-		SetSize(btnTrs, size);
 		btnTrs.anchoredPosition = coord;
-		btnTrs.localPosition.Set (0, 0, 0);
+		SetSize(btnTrs, size);
 
+		// OBJECT:CANVAS
+		// https://docs.unity3d.com/Manual/script-GraphicRaycaster.html
+		CanvasScaler btnObjRen = btnObj.AddComponent<CanvasScaler> ();
+		GraphicRaycaster btnObjRay = btnObj.AddComponent<GraphicRaycaster> ();
+
+		// OBJECT:CANVAS:TEXTURE
+		// http://docs.unity3d.com/ScriptReference/Sprite.Create.html
 		Image img = btnObj.AddComponent<Image> ();
 		Texture2D tex = Resources.Load<Texture2D> ("button_bkg");
 		img.type = Image.Type.Sliced;
 		img.sprite = Sprite.Create (tex, new Rect (0, 0, tex.width, tex.height), new Vector2 (0.5f, 0.5f), 
 			100.0f, 0, SpriteMeshType.Tight, new Vector4 (10, 10, 10, 10));
-			
+
+		//  OBJECT:BUTTON
+		// https://docs.unity3d.com/ScriptReference/UI.Button-onClick.html
 		Button btn = btnObj.AddComponent<Button> ();
 		btn.interactable = true;
 		btn.onClick.AddListener (eventListner);
+		// https://docs.unity3d.com/ScriptReference/UI.Selectable-transition.html
+		btn.targetGraphic = img;
+		btn.transition = Selectable.Transition.ColorTint;
 
+		//  OBJECT:TEXT
+		// https://docs.unity3d.com/ScriptReference/UI.Text.html
 		GameObject btnTxtObj = new GameObject ("UI:Text");
 		btnTxtObj.transform.SetParent (btnObj.transform);
 		RectTransform btnTxtTrs = btnTxtObj.AddComponent<RectTransform> ();
-		SetSize(btnTxtTrs, size);
 		btnTxtTrs.anchoredPosition = new Vector2(0,0);
+		SetSize(btnTxtTrs, size);
 		Text txt = btnTxtObj.AddComponent<Text> ();
 		txt.supportRichText = true;
 		txt.text = textStr;
@@ -94,5 +121,24 @@ public class UIExample : MonoBehaviour
 		trans.offsetMax = trans.offsetMax +
 			new Vector2 (sizeDiff.x * (1.0f - trans.pivot.x),
 				sizeDiff.y * (1.0f - trans.pivot.y));
+	}
+
+	public static GameObject CreateEventSystem (Transform parent)
+	{
+		// https://docs.unity3d.com/Manual/EventSystem.html
+		GameObject esObj = new GameObject ("EventSystem");
+		esObj.transform.SetParent (parent);
+
+		EventSystem esClz = esObj.AddComponent<EventSystem> ();
+		esClz.sendNavigationEvents = true;
+		esClz.pixelDragThreshold = 5;
+
+		StandaloneInputModule stdIn = esObj.AddComponent<StandaloneInputModule> ();
+		stdIn.horizontalAxis = "Horizontal";
+		stdIn.verticalAxis = "Vertical";
+
+		TouchInputModule touchIn = esObj.AddComponent<TouchInputModule> ();
+
+		return esObj;
 	}
 }

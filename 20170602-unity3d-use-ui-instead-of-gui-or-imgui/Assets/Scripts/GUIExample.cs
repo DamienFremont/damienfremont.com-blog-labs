@@ -5,7 +5,6 @@ using UnityEngine;
 public class GUIExample : MonoBehaviour
 {
 	// Use this for initialization
-	// https://docs.unity3d.com/ScriptReference/GUILayout.BeginArea.html
 	void OnGUI ()
 	{
 		Rect rect = new Rect (10, 10, 100, 100);
@@ -14,6 +13,7 @@ public class GUIExample : MonoBehaviour
 
 		GUIStyle style = new GUIStyle ();
 		style.normal.background = tex;
+		// https://docs.unity3d.com/ScriptReference/GUILayout.BeginArea.html
 		GUILayout.BeginArea (rect, tex, style);
 		if (GUILayout.Button ("Click me"))
 			action ();
