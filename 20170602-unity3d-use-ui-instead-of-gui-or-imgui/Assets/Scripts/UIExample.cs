@@ -43,6 +43,16 @@ public class UIExample : MonoBehaviour
 		can.renderMode = RenderMode.ScreenSpaceOverlay;
 		can.pixelPerfect = true;
 
+		// OBJECT:CANVAS:SCALER
+		// http://docs.unity3d.com/ScriptReference/UI.CanvasScaler.html
+		CanvasScaler canObjSca = canObj.AddComponent<CanvasScaler> ();
+		canObjSca.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+		canObjSca.referenceResolution = new Vector2(540, 480);
+
+		// OBJECT:CANVAS:RAYCASTER
+		// https://docs.unity3d.com/Manual/script-GraphicRaycaster.html
+		GraphicRaycaster canvasRayc = canObj.AddComponent<GraphicRaycaster> ();	
+
 		// OBJECT:CANVAS:PANEL
 		GameObject panObj = new GameObject ("UI:Panel");
 		panObj.transform.SetParent (canObj.transform);
@@ -69,11 +79,6 @@ public class UIExample : MonoBehaviour
 		RectTransform btnTrs = btnObj.AddComponent<RectTransform> ();
 		btnTrs.anchoredPosition = coord;
 		SetSize(btnTrs, size);
-
-		// OBJECT:CANVAS
-		// https://docs.unity3d.com/Manual/script-GraphicRaycaster.html
-		CanvasScaler btnObjRen = btnObj.AddComponent<CanvasScaler> ();
-		GraphicRaycaster btnObjRay = btnObj.AddComponent<GraphicRaycaster> ();
 
 		// OBJECT:CANVAS:TEXTURE
 		// http://docs.unity3d.com/ScriptReference/Sprite.Create.html
