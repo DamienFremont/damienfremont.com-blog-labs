@@ -15,3 +15,20 @@ public
 dist
 bin
 *.bundle.js
+
+# UNITY3D
+Temp
+Library
+ProjectSettings
+builds
+obj
+*.meta
+*.log
+*.sln
+*.userprefs
+*.csproj
+*.pdb
+*_Data
+*.suo
+*.exe
+*.apk
