@@ -59,7 +59,8 @@ public class UIExample : MonoBehaviour
 		// https://docs.unity3d.com/Manual/UIBasicLayout.html
 		RectTransform panTrs = panObj.AddComponent<RectTransform> ();
 		panTrs.anchoredPosition = new Vector2 (rect.x, rect.y);
-		SetSize(panTrs, new Vector2(rect.width, rect.height));
+		panTrs.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
+		// SetSize(panTrs, new Vector2(rect.width, rect.height));
 
 		// OBJECT:CANVAS:PANEL:TEXTURE
 		Image img = panObj.AddComponent<Image> ();
@@ -78,6 +79,7 @@ public class UIExample : MonoBehaviour
 		btnObj.transform.SetParent (parent);
 		RectTransform btnTrs = btnObj.AddComponent<RectTransform> ();
 		btnTrs.anchoredPosition = coord;
+		btnTrs.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
 		SetSize(btnTrs, size);
 
 		// OBJECT:CANVAS:TEXTURE
@@ -103,7 +105,7 @@ public class UIExample : MonoBehaviour
 		btnTxtObj.transform.SetParent (btnObj.transform);
 		RectTransform btnTxtTrs = btnTxtObj.AddComponent<RectTransform> ();
 		btnTxtTrs.anchoredPosition = new Vector2(0,0);
-		SetSize(btnTxtTrs, size);
+		// SetSize(btnTxtTrs, size);
 		Text txt = btnTxtObj.AddComponent<Text> ();
 		txt.supportRichText = true;
 		txt.text = textStr;
