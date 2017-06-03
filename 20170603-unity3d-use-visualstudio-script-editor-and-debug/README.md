@@ -1,4 +1,4 @@
-How to Unity3d – Use VisualStudio Script Editor and Debug Project
+How to Unity3D – Use VisualStudio Script Editor and Debug Project
 ======
  
 ![alt text](screenshots/170603170836797.png)
