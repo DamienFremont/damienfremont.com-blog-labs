@@ -15,7 +15,6 @@ Here are the tutorials from my blog at [http://damienfremont.com/blog](http://da
 - [2017/06/02: How to Unity3D – Why Use UI instead of GUI / IMGUI](20170602-unity3d-use-ui-instead-of-gui-or-imgui)
 - [2017/06/01: How to Unity3D – Configure Project for Android and Run it on Mobile Device](20170601-unity3d-configure-project-for-android-and-run-it)
 - [2017/05/29: JS React Material Express: Setting Up a Project Using Npm, Webpack, Babel](20170529-js-react-material-express-setting_up_a_project)
-
 - [2017/05/11: JavaEE AngularJS Bootstrap: tutorials](20170511-javaee-angularjs-bootstrap-tutorials)
 - [2016/08/20: How to Silkuli – Test UI without programming – Advanced](20160820-test-silkuli-ide-advanced)
 - [2016/08/19: How to Silkuli – Test UI without programming](20160819-test-silkuli-ide)
