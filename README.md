@@ -1,11 +1,8 @@
-Damien Fremont's Blog
-=============
-
-Here are the tutorials from my blog at [http://damienfremont.com/blog](http://damienfremont.com/blog).
+Source [http://damienfremont.com/blog](http://damienfremont.com/blog).
 
 ---
 
-## Posts > Tutorials
+# Posts > Tutorials
 
 - [2017/06/05: Git – Unity3d .gitignore](20170605-git-unity3d-gitignore)
 - [2017/06/05: Git – Java .gitignore](20170605-git-java-gitignore)
