@@ -29,9 +29,37 @@ A quicktip about writing good commit messages. It’s inspired by major open sou
  
 ## Examples
  
-## 
- 
- 
+```
+feat(menu): color, font (#102)
+```
+
+```
+doc(menu): get started (#103)
+```
+
+```
+fix(menu): color change bug (#399)
+```
+
+```
+feat(account): font (#104)
+```
+
+```
+doc(account): get started (#104)
+```
+
+```
+refactor: common font for menu, account (#652)
+```
+
+```
+fix: remove deprecated fonts (#901)
+  Removed:
+  * Arial.ttf
+  * Comic.ttf
+```
+
  
 ## Source
  
