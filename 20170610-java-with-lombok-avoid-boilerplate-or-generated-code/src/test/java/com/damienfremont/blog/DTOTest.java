@@ -14,7 +14,7 @@ public class DTOTest {
     assertThat(obj.getFirstName()).isEqualTo("Damien");
     assertThat(obj.getLastName()).isEqualTo("FREMONT");
     
-    assertThat(obj.toString()).isEqualTo("DTO_1Vanilla(firstName=Damien, lastName=FREMONT, birthdate=null)");
+    assertThat(obj.toString()).isEqualTo("DTO_Vanilla(firstName=Damien, lastName=FREMONT, birthdate=null)");
   }
 
   @Test
@@ -25,7 +25,7 @@ public class DTOTest {
     assertThat(obj.getFirstName()).isEqualTo("Damien");
     assertThat(obj.getLastName()).isEqualTo("FREMONT");
     
-    assertThat(obj.toString()).isEqualTo("DTO_2Lombock(firstName=Damien, lastName=FREMONT, birthdate=null)");
+    assertThat(obj.toString()).isEqualTo("DTO_Lombock(firstName=Damien, lastName=FREMONT, birthdate=null)");
   }
 
 }

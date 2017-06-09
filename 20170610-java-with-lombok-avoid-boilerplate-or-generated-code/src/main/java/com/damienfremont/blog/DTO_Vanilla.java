@@ -17,7 +17,7 @@ public class DTO_Vanilla {
 
   @Override
   public String toString() {
-    return "DTO_1Vanilla(firstName=" + firstName + ", lastName=" + lastName + ", birthdate=" + birthdate + ")";
+    return "DTO_Vanilla(firstName=" + firstName + ", lastName=" + lastName + ", birthdate=" + birthdate + ")";
   }
 
   public Long getId() {
