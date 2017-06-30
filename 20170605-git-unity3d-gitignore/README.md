@@ -17,7 +17,6 @@ Library
 ProjectSettings
 builds
 obj
-*.meta
 *.log
 *.sln
 *.userprefs
