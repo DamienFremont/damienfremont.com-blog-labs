@@ -100,7 +100,6 @@ Launch with JUnit or
  
 ```
 mvn test
-mvn verify
 ```
  
 The result is at /target/cucumber.json
@@ -262,7 +261,7 @@ public class RunBDDTest {
 Launch with
  
 ```
-mvn clean install
+mvn test verify
 ```
  
 The result is at /target/site/cucumber-reports/feature-overview.html
