@@ -100,6 +100,7 @@ Launch with JUnit or
  
 ```
 mvn test
+mvn verify
 ```
  
 The result is at /target/cucumber.json
