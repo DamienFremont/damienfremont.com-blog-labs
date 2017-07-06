@@ -33,7 +33,7 @@ pom.xml
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <properties>
-    <cucumber.version>1.2.4</cucumber.version>
+    <cucumber.version>1.2.5</cucumber.version>
     <java.version>8</java.version>
   </properties>
   <dependencies>
@@ -172,7 +172,7 @@ pom.xml
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <properties>
-    <cucumber.version>1.2.4</cucumber.version>
+    <cucumber.version>1.2.5</cucumber.version>
     <java.version>8</java.version>
   </properties>
   <dependencies>
