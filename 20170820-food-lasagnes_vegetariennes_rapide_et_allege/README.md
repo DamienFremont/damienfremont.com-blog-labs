@@ -1,7 +1,7 @@
 Food - Lasagnes végétariennes (rapide et allégé)
 ======
  
-![alt text](screenshots/photo.jpg)
+![alt text](screenshots/photo-mini.jpg)
  
 
 Lasagnes légères aux champignons, épinards et emmental.
@@ -46,16 +46,16 @@ Pour les tomates: couper en petits morceaux (2 cm)
 
 Disposer dans l'ordre: beurrer/huiler le plat (optionnel), béchamel  (1/5 du total)
 
-### Etape 6: Couches intermédiaires
+### Etape 5: Couches intermédiaires
 
 Disposer dans l'ordre et aplanir avec une fourchette: feuilles de lasagnes (2 couches), béchamel  (1/5 du total), champignons (1/3 du total), épinards (1/3 du total), emmental (1/4 du total)
 Répéter 3 fois.
 
-### Etape 7: Dernière couche
+### Etape 6: Dernière couche
 
 Disposer dans l'ordre et finir: béchamel, tomates, emmental
 
-### Etape 8: Cuire
+### Etape 7: Cuire
 
 AU micro-onde/grill: puissance 60% + grill, 35 minutes ...ou au four: 180°C + grill haut, 40 minutes
 
@@ -74,3 +74,7 @@ Vin blanc sec (Entre-deux-mer, Côtes du Rhône blanc, Chinon blanc, Chablis, An
 ## Origin
 
 http://www.750g.com/lasagnes-vegetariennes-rapide-et-allege-r202828.htm
+
+https://github.com/DamienFremont/blog/tree/master/20170820-food-lasagnes_vegetariennes_rapide_et_allege
+
+http://damienfremont.com/2017/08/20/food-lasagnes-vegetariennes-rapide-et-allege/
