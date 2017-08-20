@@ -1,7 +1,7 @@
 Food - Lasagnes végétariennes (rapide et allégé)
 ======
  
-![alt text](screenshots/photo.png)
+![alt text](screenshots/photo.jpg)
  
 
 Lasagnes légères aux champignons, épinards et emmental.
