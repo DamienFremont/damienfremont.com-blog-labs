@@ -78,3 +78,6 @@ http://www.750g.com/lasagnes-vegetariennes-rapide-et-allege-r202828.htm
 https://github.com/DamienFremont/blog/tree/master/20170820-food-lasagnes_vegetariennes_rapide_et_allege
 
 http://damienfremont.com/2017/08/20/food-lasagnes-vegetariennes-rapide-et-allege/
+
+
+![alt text](screenshots/photo.jpg)
