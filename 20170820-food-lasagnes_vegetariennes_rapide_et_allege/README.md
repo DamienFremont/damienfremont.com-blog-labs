@@ -44,13 +44,16 @@ Pour les tomates: couper en petits morceaux (2 cm)
 
 ### Etape 4: 1ère couche du plat
 
+Disposer dans l'ordre: beurrer/huiler le plat (optionnel), béchamel (1/5 du total)
 
 ### Etape 5: Couches intermédiaires
 
+Disposer dans l'ordre et aplanir avec une fourchette: feuilles de lasagnes (2 couches), béchamel (1/5 du total), champignons (1/3 du total), épinards (1/3 du total), emmental (1/4 du total)
 Répéter 3 fois.
 
 ### Etape 6: Dernière couche
 
+Disposer dans l'ordre et finir: feuilles de lasagnes (2 couches), béchamel, tomates, emmental
 
 
 ### Etape 7: Cuire
