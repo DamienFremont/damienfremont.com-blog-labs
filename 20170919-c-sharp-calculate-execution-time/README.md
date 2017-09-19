@@ -1,7 +1,7 @@
 C# (sharp) – Calculate Execution Time
 ======
  
-![alt text](screenshots/170919162538937.png)
+![alt text](screenshots/170919162910499.png)
  
 Stopwatch is designed for this purpose, and is one of the best way to measure time execution in .NET.
  
