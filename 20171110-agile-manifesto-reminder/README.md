@@ -1,7 +1,7 @@
 Agile manifesto (reminder)
 ======
  
-![alt text](screenshots/171110165844104.jpg)
+![alt text](screenshots/171110172023609.jpg)
  
 Here is a quick reminder of the Agile Manifesto’s content from 2001, followed by some examples with code, doc, charts, and tasks (classic VS agile way).
  
@@ -14,6 +14,21 @@ Here is a quick reminder of the Agile Manifesto’s content from 2001, followed 
  
 ## Manifesto
  
+```
+Manifesto for Agile Software Development (2001)
+
+We are uncovering better ways of developing
+software by doing it and helping others do it.
+Through this work we have come to value:
+
+- Individuals and interactions over processes and tools
+- Working software over comprehensive documentation
+- Customer collaboration over contract negotiation
+- Responding to change over following a plan
+
+That is, while there is value in the items on
+the right, we value the items on the left more.
+```
 [Twelve Principles of Agile Software](http://agilemanifesto.org/principles.html)
 You can read more at “Twelve Principles of Agile Software“.
  
@@ -27,7 +42,7 @@ As the authors said, “we value the items on the left more“, more doesn’t m
  
 ## Examples
  
-![alt text](screenshots/171110165844454.png)
+![alt text](screenshots/171110172023808.png)
  
 You can see Agile like this:
  
@@ -37,13 +52,13 @@ Example with task management:
  
 Instead of using a dedicated software like JIRA at start, with accounts, hosting, user training, etc.
  
-![alt text](screenshots/171110165845043.png)
+![alt text](screenshots/171110172023901.png)
  
 
  
 You can just use post-it on a wall, let people move it themselves. Then change this process/tool later on if needed, as the project grow.
  
-![alt text](screenshots/171110165845717.png)
+![alt text](screenshots/171110172024009.png)
  
 
  
@@ -114,29 +129,44 @@ Example with features:
  
 Instead of doing all features requested by your client without hesitation.
  
-![alt text](screenshots/171110165847501.png)
+![alt text](screenshots/171110172024487.png)
  
 
  
+```
+1. Authent
+2. Profile
+3. Profile Notification
+4. Display Business model 1
+6. Display Business model 2
+```
 You can : Ask him which are the keyfeatures and start only with it, then show him how much each of them cost, and let him decide if some of them are really mandatory for him (it’s not always the most expensive feature that adds the most value)
  
-![alt text](screenshots/171110165848045.png)
+![alt text](screenshots/171110172024561.png)
  
 
  
+```
+1. Display Business model 1-1 (8 pts)
+2. Display Business model 2 (5 pts)
+3. Authent (5 pts)
+4. Display Business model 1-2 (13 pts)
+5. Profile (3 pts)
+(6. Profile Notification (8 pts))
+```
 ## 4. Responding to change over following a plan
  
 Example with project delay change:
  
 Instead of just reevaluating tasks randomly.
  
-![alt text](screenshots/171110165848515.png)
+![alt text](screenshots/171110172024648.png)
  
 
  
 You can evaluate the project feasibility over time (using the burndown chart). Then remove/transform/add features or stop the project before it’s too late.
  
-![alt text](screenshots/171110165848726.png)
+![alt text](screenshots/171110172024696.png)
  
 
  
