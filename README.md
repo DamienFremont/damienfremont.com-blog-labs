@@ -5,10 +5,8 @@ Source [http://damienfremont.com/blog](http://damienfremont.com/blog).
 # Posts > Tutorials
 
 - [2017/11/10: Agile manifesto (reminder)](20171110-agile-manifesto-reminder)
-
 - [2017/09/27: IndieGame – Free Resources and Materials](20170927-indiegame-free-resources-and-materials)
 - [2017/09/19: C# (sharp) – Calculate Execution Time](20170919-c-sharp-calculate-execution-time)
-
 - [2017/06/14: Git – Merge Repositories Without Losing Commit History](20170614-git-merge-repositories-without-losing-commit-history)
 - [2017/06/08: Java with Lombok – Avoid Boilerplate or Generated Code (like GET, SET, CONSTRUCT, COMPARE)](20170610-java-with-lombok-avoid-boilerplate-or-generated-code)
 - [2017/06/08: Eclipse IDE – Install UI Dark Theme](20170609-eclipse-ide-install-ui-dark-theme)
