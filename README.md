@@ -4,6 +4,17 @@ Source [http://damienfremont.com/blog](http://damienfremont.com/blog).
 
 # Posts > Tutorials
 
+- [2017/11/10: Agile manifesto (reminder)](20171110-agile-manifesto-reminder)
+
+- [2017/09/27: IndieGame – Free Resources and Materials](20170927-indiegame-free-resources-and-materials)
+- [2017/09/19: C# (sharp) – Calculate Execution Time](20170919-c-sharp-calculate-execution-time)
+
+- [2017/06/14: Git – Merge Repositories Without Losing Commit History](20170614-git-merge-repositories-without-losing-commit-history)
+- [2017/06/08: Java with Lombok – Avoid Boilerplate or Generated Code (like GET, SET, CONSTRUCT, COMPARE)](20170610-java-with-lombok-avoid-boilerplate-or-generated-code)
+- [2017/06/08: Eclipse IDE – Install UI Dark Theme](20170609-eclipse-ide-install-ui-dark-theme)
+- [2017/06/08: GitHub – Edit Markdown Files Locally in your IDE](20170608-github-edit-markdown-files-locally)
+- [2017/06/07: GitHub – Create a Simple Website for your Side Project](20170607-github-create-simple-website)
+- [2017/06/06: Git – Commit Message Conventions](20170606-git-commit-message-conventions)
 - [2017/06/05: Git – Unity3d .gitignore](20170605-git-unity3d-gitignore)
 - [2017/06/05: Git – Java .gitignore](20170605-git-java-gitignore)
 - [2017/06/04: Créer rapidement une marque sur Internet – Nom, Domain, Site, Réseaux, Suivi](20170604-job-creer-rapidement-une-marque-sur-internet)
