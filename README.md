@@ -4,6 +4,7 @@ Source [http://damienfremont.com/blog](http://damienfremont.com/blog).
 
 # Posts > Tutorials
 
+- [2017/11/19: HowTo SpringBoot – DataSource](20171119-springboot-datasource)
 - [2017/11/11: Maslow’s hierarchy of needs for Software Developers](20171111-dev-maslow-pyramid)
 - [2017/11/10: Agile manifesto (reminder)](20171110-agile-manifesto-reminder)
 - [2017/09/27: IndieGame – Free Resources and Materials](20170927-indiegame-free-resources-and-materials)
