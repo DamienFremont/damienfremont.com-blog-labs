@@ -2,12 +2,19 @@
 *.class
 *.war
 *.ear
+target
+
+# JAVA : ECLIPSE
 .classpath
 .project
 .settings
-target
+bin
 
-# JS
+# JAVA : INTELLIJ
+.idea
+*.iml
+
+# JAVASCRIPT
 npm-debug.*
 node_modules
 bower_components
@@ -17,18 +24,24 @@ bin
 *.bundle.js
 
 # UNITY3D
-Temp
 Library
 ProjectSettings
-builds
 obj
 *.meta
 *.log
-*.sln
 *.userprefs
 *.csproj
 *.pdb
 *_Data
 *.suo
 *.exe
+
+# VISUALSTUDIO
+Temp
+*.sln
+
+# ANDROID
 *.apk
+
+# CUSTOM
+builds
