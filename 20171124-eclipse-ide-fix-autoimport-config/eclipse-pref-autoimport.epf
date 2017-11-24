@@ -1,0 +1,4 @@
+#Fri Nov 24 13:10:54 CET 2017
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled=antlr.collections.*;COM.*;com.ibm.*;com.sun.*;java.awt.*;org.hibernate.mapping.List;org.omg.*;sun.*;
+@org.eclipse.jdt.ui=3.13.50.v20170929-1653
+file_export_version=3.0
