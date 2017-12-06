@@ -1,0 +1,16 @@
+{
+    "author": "Damien FREMONT",
+    "name": "js-node-express-rest-api",
+    "version": "2017.12.07",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon server.js"
+    },
+    "devDependencies": {
+        "nodemon": "1.12.4"
+    },
+    "dependencies": {
+        "body-parser": "1.18.2",
+        "express": "4.16.2"
+    }
+}
