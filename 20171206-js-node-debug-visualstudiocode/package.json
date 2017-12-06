@@ -1,0 +1,15 @@
+{
+    "author": "Damien FREMONT",
+    "name": "js-nodejs-visualstudiocode-debug",
+    "version": "2017.12.05",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon server.js"
+    },
+    "devDependencies": {
+        "nodemon": "1.12.4"
+    },
+    "dependencies": {
+        "express": "4.16.2"
+    }
+}

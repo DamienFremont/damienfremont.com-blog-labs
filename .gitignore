@@ -45,3 +45,7 @@ Temp
 
 # CUSTOM
 builds
+
+# NODEJS
+package-lock.json
+.vscode
