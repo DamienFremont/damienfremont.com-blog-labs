@@ -1,11 +1,7 @@
 Unity3D – Reducing the APK file size of your build for mobile device
 ======
 
-![gamedev-logo](screenshots/gamedev-logo-3.png)
-
 ![unity-logo](https://damienfremont.files.wordpress.com/2015/06/unity-logo.png?w=700)Keeping the file size of the built app to a minimum is important, especially for mobile devices or for app stores that impose a size limit.
-
-<span id="more-5737"></span>
 
 ![Diapositive1.PNG](https://damienfremont.files.wordpress.com/2019/05/diapositive1.png?w=700)
 
