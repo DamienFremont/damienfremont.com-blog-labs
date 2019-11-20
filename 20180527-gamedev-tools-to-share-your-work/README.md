@@ -12,7 +12,7 @@ When developing video games or any visual application, we often find ourselves n
 *   [LibreOffice](https://www.libreoffice.org/)-Presentation for marketing stuff
 *   ….then [Buffer](https://buffer.com/) to schedule and share all this content on Twitter, Facebokk & Instagram, with tags like #MobileGame #IndieGame #GameDev #Puzzle #Game #Screenshot #Android #GooglePlay
 
-![resulat.gif](https://damienfremont.files.wordpress.com/2018/05/resulat1.gif?w=700)
+![resulat.gif](screenshots/resulat1.gif?w=700)
 
 * * *
 
@@ -33,13 +33,13 @@ Then use it zone-capture mode with :
 3.  press Enter to confirm selection
 4.  …repeat or get your file in User/Pictures/MyScreenshots
 
-![Screen Shot 05-27-18 at 06.39 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-06-39-pm-001.png?w=700)
+![Screen Shot 05-27-18 at 06.39 PM 001](screenshots/screen-shot-05-27-18-at-06-39-pm-001.png?w=700)
 
-![Screen Shot 05-27-18 at 06.39 PM 002](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-06-39-pm-002.png?w=700)
+![Screen Shot 05-27-18 at 06.39 PM 002](screenshots/screen-shot-05-27-18-at-06-39-pm-002.png?w=700)
 
-![Screen Shot 05-27-18 at 06.40 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-06-40-pm.png?w=700)
+![Screen Shot 05-27-18 at 06.40 PM](screenshots/screen-shot-05-27-18-at-06-40-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 06.40 PM 001.PNG](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-06-40-pm-001.png?w=700)
+![Screen Shot 05-27-18 at 06.40 PM 001.PNG](screenshots/screen-shot-05-27-18-at-06-40-pm-001.png?w=700)
 
 * * *
 
@@ -59,17 +59,17 @@ You need to use it zone-capture mode by :
     4.  test it with Playback > Play
     5.  File > Save as > Save
 
-![Screen Shot 05-27-18 at 07.39 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-39-pm.png?w=700)![Screen Shot 05-27-18 at 07.41 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-41-pm.png?w=700)![Screen Shot 05-27-18 at 07.43 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-43-pm.png?w=700)![Screen Shot 05-27-18 at 07.44 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-44-pm.png?w=700)
+![Screen Shot 05-27-18 at 07.39 PM](screenshots/screen-shot-05-27-18-at-07-39-pm.png?w=700)![Screen Shot 05-27-18 at 07.41 PM](screenshots/screen-shot-05-27-18-at-07-41-pm.png?w=700)![Screen Shot 05-27-18 at 07.43 PM](screenshots/screen-shot-05-27-18-at-07-43-pm.png?w=700)![Screen Shot 05-27-18 at 07.44 PM](screenshots/screen-shot-05-27-18-at-07-44-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 07.47 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-47-pm.png?w=700)
+![Screen Shot 05-27-18 at 07.47 PM](screenshots/screen-shot-05-27-18-at-07-47-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 07.48 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-48-pm.png?w=700)
+![Screen Shot 05-27-18 at 07.48 PM](screenshots/screen-shot-05-27-18-at-07-48-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 07.48 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-48-pm-001.png?w=700)
+![Screen Shot 05-27-18 at 07.48 PM 001](screenshots/screen-shot-05-27-18-at-07-48-pm-001.png?w=700)
 
-![Screen Shot 05-27-18 at 07.48 PM 002](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-48-pm-002.png?w=700)![Screen Shot 05-27-18 at 07.48 PM 003](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-48-pm-003.png?w=700)
+![Screen Shot 05-27-18 at 07.48 PM 002](screenshots/screen-shot-05-27-18-at-07-48-pm-002.png?w=700)![Screen Shot 05-27-18 at 07.48 PM 003](screenshots/screen-shot-05-27-18-at-07-48-pm-003.png?w=700)
 
-![resulat.gif](https://damienfremont.files.wordpress.com/2018/05/resulat.gif?w=700)
+![resulat.gif](screenshots/resulat.gif?w=700)
 
 * * *
 
@@ -103,27 +103,27 @@ You need to use it zone-capture mode, editing mode, then compression :
         4.  …wait for it
         5.  get file from User/Videos folder
 
-![Screen Shot 05-27-18 at 07.55 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-55-pm1.png?w=700)
+![Screen Shot 05-27-18 at 07.55 PM](screenshots/screen-shot-05-27-18-at-07-55-pm1.png?w=700)
 
-![Screen Shot 05-27-18 at 07.56 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-56-pm1.png?w=700)![Screen Shot 05-27-18 at 07.56 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-56-pm-0011.png?w=700)![Screen Shot 05-27-18 at 07.56 PM 002](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-07-56-pm-0021.png?w=700)
+![Screen Shot 05-27-18 at 07.56 PM](screenshots/screen-shot-05-27-18-at-07-56-pm1.png?w=700)![Screen Shot 05-27-18 at 07.56 PM 001](screenshots/screen-shot-05-27-18-at-07-56-pm-0011.png?w=700)![Screen Shot 05-27-18 at 07.56 PM 002](screenshots/screen-shot-05-27-18-at-07-56-pm-0021.png?w=700)
 
-![Screen Shot 05-27-18 at 08.07 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-07-pm.png?w=700)
+![Screen Shot 05-27-18 at 08.07 PM](screenshots/screen-shot-05-27-18-at-08-07-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 08.07 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-07-pm-001.png?w=700)
+![Screen Shot 05-27-18 at 08.07 PM 001](screenshots/screen-shot-05-27-18-at-08-07-pm-001.png?w=700)
 
-![Screen Shot 05-27-18 at 08.08 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-08-pm.png?w=700)
+![Screen Shot 05-27-18 at 08.08 PM](screenshots/screen-shot-05-27-18-at-08-08-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 08.09 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-09-pm.png?w=700)![Screen Shot 05-27-18 at 08.10 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-10-pm.png?w=700)
+![Screen Shot 05-27-18 at 08.09 PM](screenshots/screen-shot-05-27-18-at-08-09-pm.png?w=700)![Screen Shot 05-27-18 at 08.10 PM](screenshots/screen-shot-05-27-18-at-08-10-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 08.10 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-10-pm-001.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-11-pm-001.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 003](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-11-pm-003.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 004](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-11-pm-004.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 005](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-11-pm-005.png?w=700)
+![Screen Shot 05-27-18 at 08.10 PM 001](screenshots/screen-shot-05-27-18-at-08-10-pm-001.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 001](screenshots/screen-shot-05-27-18-at-08-11-pm-001.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 003](screenshots/screen-shot-05-27-18-at-08-11-pm-003.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 004](screenshots/screen-shot-05-27-18-at-08-11-pm-004.png?w=700)![Screen Shot 05-27-18 at 08.11 PM 005](screenshots/screen-shot-05-27-18-at-08-11-pm-005.png?w=700)
 
-![Screen Shot 05-27-18 at 08.11 PM 006.PNG](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-11-pm-0061.png?w=700)
+![Screen Shot 05-27-18 at 08.11 PM 006.PNG](screenshots/screen-shot-05-27-18-at-08-11-pm-0061.png?w=700)
 
-![Screen Shot 05-27-18 at 08.12 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-12-pm.png?w=700)
+![Screen Shot 05-27-18 at 08.12 PM](screenshots/screen-shot-05-27-18-at-08-12-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 08.12 PM 002](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-12-pm-002.png?w=700)![Screen Shot 05-27-18 at 08.12 PM 003](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-12-pm-003.png?w=700)![Screen Shot 05-27-18 at 08.12 PM 004](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-12-pm-004.png?w=700)![Screen Shot 05-27-18 at 08.12 PM 005](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-12-pm-005.png?w=700)![Screen Shot 05-27-18 at 08.15 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-15-pm.png?w=700)![Screen Shot 05-27-18 at 08.16 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-16-pm-001.png?w=700)
+![Screen Shot 05-27-18 at 08.12 PM 002](screenshots/screen-shot-05-27-18-at-08-12-pm-002.png?w=700)![Screen Shot 05-27-18 at 08.12 PM 003](screenshots/screen-shot-05-27-18-at-08-12-pm-003.png?w=700)![Screen Shot 05-27-18 at 08.12 PM 004](screenshots/screen-shot-05-27-18-at-08-12-pm-004.png?w=700)![Screen Shot 05-27-18 at 08.12 PM 005](screenshots/screen-shot-05-27-18-at-08-12-pm-005.png?w=700)![Screen Shot 05-27-18 at 08.15 PM](screenshots/screen-shot-05-27-18-at-08-15-pm.png?w=700)![Screen Shot 05-27-18 at 08.16 PM 001](screenshots/screen-shot-05-27-18-at-08-16-pm-001.png?w=700)
 
-![result2.gif](https://damienfremont.files.wordpress.com/2018/05/result2.gif?w=700)
+![result2.gif](screenshots/result2.gif?w=700)
 
 ## [LibreOffice](https://www.libreoffice.org/)-Presentation for marketing stuff
 
@@ -141,17 +141,17 @@ You must install LibreOffice, then make a simple presentation:
 6.  Edit background color
 7.  Export to *.png without transparency
 
-![Screen Shot 05-27-18 at 09.15 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-09-15-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.15 PM 002](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-09-15-pm-002.png?w=700)
+![Screen Shot 05-27-18 at 09.15 PM 001](screenshots/screen-shot-05-27-18-at-09-15-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.15 PM 002](screenshots/screen-shot-05-27-18-at-09-15-pm-002.png?w=700)
 
-![Screen Shot 05-27-18 at 08.49 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-49-pm.png?w=700)![Screen Shot 05-27-18 at 08.50 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-50-pm.png?w=700)
+![Screen Shot 05-27-18 at 08.49 PM](screenshots/screen-shot-05-27-18-at-08-49-pm.png?w=700)![Screen Shot 05-27-18 at 08.50 PM](screenshots/screen-shot-05-27-18-at-08-50-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 08.53 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-53-pm.png?w=700)![Screen Shot 05-27-18 at 08.53 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-53-pm-001.png?w=700)
+![Screen Shot 05-27-18 at 08.53 PM](screenshots/screen-shot-05-27-18-at-08-53-pm.png?w=700)![Screen Shot 05-27-18 at 08.53 PM 001](screenshots/screen-shot-05-27-18-at-08-53-pm-001.png?w=700)
 
-![Screen Shot 05-27-18 at 08.53 PM 002](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-53-pm-002.png?w=700)
+![Screen Shot 05-27-18 at 08.53 PM 002](screenshots/screen-shot-05-27-18-at-08-53-pm-002.png?w=700)
 
-![Screen Shot 05-27-18 at 08.55 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-55-pm.png?w=700)![Screen Shot 05-27-18 at 08.57 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-57-pm.png?w=700)![Screen Shot 05-27-18 at 08.58 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-58-pm.png?w=700)![Screen Shot 05-27-18 at 08.59 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-08-59-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.01 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-09-01-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.01 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-09-01-pm.png?w=700)![Screen Shot 05-27-18 at 09.02 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-09-02-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.03 PM 002](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-09-03-pm-002.png?w=700)![Screen Shot 05-27-18 at 09.03 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-09-03-pm.png?w=700)
+![Screen Shot 05-27-18 at 08.55 PM](screenshots/screen-shot-05-27-18-at-08-55-pm.png?w=700)![Screen Shot 05-27-18 at 08.57 PM](screenshots/screen-shot-05-27-18-at-08-57-pm.png?w=700)![Screen Shot 05-27-18 at 08.58 PM](screenshots/screen-shot-05-27-18-at-08-58-pm.png?w=700)![Screen Shot 05-27-18 at 08.59 PM 001](screenshots/screen-shot-05-27-18-at-08-59-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.01 PM 001](screenshots/screen-shot-05-27-18-at-09-01-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.01 PM](screenshots/screen-shot-05-27-18-at-09-01-pm.png?w=700)![Screen Shot 05-27-18 at 09.02 PM 001](screenshots/screen-shot-05-27-18-at-09-02-pm-001.png?w=700)![Screen Shot 05-27-18 at 09.03 PM 002](screenshots/screen-shot-05-27-18-at-09-03-pm-002.png?w=700)![Screen Shot 05-27-18 at 09.03 PM](screenshots/screen-shot-05-27-18-at-09-03-pm.png?w=700)
 
-![picture.png](https://damienfremont.files.wordpress.com/2018/05/picture.png?w=700)
+![picture.png](screenshots/picture.png?w=700)
 
 * * *
 
@@ -171,15 +171,15 @@ You must link socials account, write a post, then scheduling it:
     2.  Click ‘Add to queue’
 4.  …wait tomorrow for post, or click ‘share now’
 
-![Screen Shot 05-27-18 at 10.38 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-10-38-pm.png?w=700)
+![Screen Shot 05-27-18 at 10.38 PM](screenshots/screen-shot-05-27-18-at-10-38-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 10.40 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-10-40-pm.png?w=700)
+![Screen Shot 05-27-18 at 10.40 PM](screenshots/screen-shot-05-27-18-at-10-40-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 10.41 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-10-41-pm.png?w=700)![Screen Shot 05-27-18 at 10.42 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-10-42-pm.png?w=700)![Screen Shot 05-27-18 at 10.43 PM](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-10-43-pm.png?w=700)
+![Screen Shot 05-27-18 at 10.41 PM](screenshots/screen-shot-05-27-18-at-10-41-pm.png?w=700)![Screen Shot 05-27-18 at 10.42 PM](screenshots/screen-shot-05-27-18-at-10-42-pm.png?w=700)![Screen Shot 05-27-18 at 10.43 PM](screenshots/screen-shot-05-27-18-at-10-43-pm.png?w=700)
 
-![Screen Shot 05-27-18 at 10.43 PM 001](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-10-43-pm-001.png?w=700)
+![Screen Shot 05-27-18 at 10.43 PM 001](screenshots/screen-shot-05-27-18-at-10-43-pm-001.png?w=700)
 
-![Screen Shot 05-27-18 at 10.44 PM.PNG](https://damienfremont.files.wordpress.com/2018/05/screen-shot-05-27-18-at-10-44-pm.png?w=700)
+![Screen Shot 05-27-18 at 10.44 PM.PNG](screenshots/screen-shot-05-27-18-at-10-44-pm.png?w=700)
 
 * * *
 
