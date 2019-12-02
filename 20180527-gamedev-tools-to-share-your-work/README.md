@@ -1,5 +1,5 @@
 Solo Game Dev – What Tools to Use to Share Your Work
-====
+======
 
 ![gamedev-logo](screenshots/gamedev-logo-3.png)
 
