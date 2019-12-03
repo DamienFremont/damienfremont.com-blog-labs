@@ -25,9 +25,9 @@ But Trello’s simplicity is its greatest strength. Let’s take a look at how i
 
 The final board:
 
-![Screen Shot 11-24-18 at 07.52 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-52-pm1.png?w=700)
+![Screen Shot 11-24-18 at 07.52 PM.PNG](screenshots/screen-shot-11-24-18-at-07-52-pm1.png)
 
-![kanban](https://damienfremont.files.wordpress.com/2018/11/kanban.png?w=700)
+![kanban](screenshots/kanban.png)
 
 * * *
 
@@ -37,7 +37,7 @@ Go to Trello’s signup and use the ‘Sign up with Google’.
 
 [https://trello.com/signup](https://trello.com/signup)
 
-![Screen Shot 11-24-18 at 06.17 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-17-pm.png?w=361)
+![Screen Shot 11-24-18 at 06.17 PM.PNG](screenshots/screen-shot-11-24-18-at-06-17-pm.png?w=361)
 
 * * *
 
@@ -47,9 +47,9 @@ Each one can be used by a whole company, a separate team within it, a non-work r
 
 Create a new team by clicking the “+” button at the left hand side of your Trello header. Add a name, picture and people to your team, then save
 
-![file-YqisH32629.png](https://damienfremont.files.wordpress.com/2018/11/file-yqish32629.png?w=271&h=268)
+![file-YqisH32629.png](screenshots/file-yqish32629.png?w=271&h=268)
 
-![Screen Shot 11-24-18 at 06.15 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-15-pm.png?w=409&h=415)
+![Screen Shot 11-24-18 at 06.15 PM.PNG](screenshots/screen-shot-11-24-18-at-06-15-pm.png?w=409&h=415)
 
 * * *
 
@@ -67,21 +67,21 @@ From the team’s Boards tab, click “Create new board” in the Trello header 
 4.  Add a picture to the card with ‘attachment’, then complete decription
 5.  And some other cards like ‘Release Target: 2018’ and ‘Tips for using this Board’
 
-![Screen Shot 11-24-18 at 06.31 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-31-pm.png?w=284)
+![Screen Shot 11-24-18 at 06.31 PM.PNG](screenshots/screen-shot-11-24-18-at-06-31-pm.png?w=284)
 
-![Screen Shot 11-24-18 at 06.34 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-34-pm.png?w=487)
+![Screen Shot 11-24-18 at 06.34 PM.PNG](screenshots/screen-shot-11-24-18-at-06-34-pm.png?w=487)
 
-![Screen Shot 11-24-18 at 06.37 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-37-pm.png?w=487)
+![Screen Shot 11-24-18 at 06.37 PM.PNG](screenshots/screen-shot-11-24-18-at-06-37-pm.png?w=487)
 
-![Screen Shot 11-24-18 at 06.36 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-36-pm.png?w=490)
+![Screen Shot 11-24-18 at 06.36 PM.PNG](screenshots/screen-shot-11-24-18-at-06-36-pm.png?w=490)
 
-![Screen Shot 11-24-18 at 06.39 PM 001](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-39-pm-001.png?w=485&h=279)
+![Screen Shot 11-24-18 at 06.39 PM 001](screenshots/screen-shot-11-24-18-at-06-39-pm-001.png?w=485&h=279)
 
-![Screen Shot 11-24-18 at 06.38 PM](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-38-pm.png?w=483&h=278)
+![Screen Shot 11-24-18 at 06.38 PM](screenshots/screen-shot-11-24-18-at-06-38-pm.png?w=483&h=278)
 
-![Screen Shot 11-24-18 at 06.39 PM](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-39-pm.png?w=485&h=279)
+![Screen Shot 11-24-18 at 06.39 PM](screenshots/screen-shot-11-24-18-at-06-39-pm.png?w=485&h=279)
 
-![Screen Shot 11-24-18 at 06.28 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-28-pm.png?w=486)
+![Screen Shot 11-24-18 at 06.28 PM.PNG](screenshots/screen-shot-11-24-18-at-06-28-pm.png?w=486)
 
 * * *
 
@@ -102,9 +102,9 @@ Use the following:
 
 later you can add more lists,  for each release: coping Done’s content to Shipped for v1, Shipped for v2, etc
 
-![kanban.png](https://damienfremont.files.wordpress.com/2018/11/kanban.png?w=500&h=250)
+![kanban.png](screenshots/kanban.png?w=500&h=250)
 
-![Screen Shot 11-24-18 at 06.44 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-44-pm.png?w=505)
+![Screen Shot 11-24-18 at 06.44 PM.PNG](screenshots/screen-shot-11-24-18-at-06-44-pm.png?w=505)
 
 * * *
 
@@ -128,9 +128,9 @@ You can also add and remove labels pressing “l” to bring up a pop-over menu 
 
 You can use ASCII art to make icons for your labels:  /!\ [x] [_] <?> ♥ …
 
-### ![Screen Shot 11-24-18 at 06.45 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-06-45-pm.png?w=300)
+### ![Screen Shot 11-24-18 at 06.45 PM.PNG](screenshots/screen-shot-11-24-18-at-06-45-pm.png?w=300)
 
-![Screen Shot 11-24-18 at 08.00 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-08-00-pm.png?w=700)
+![Screen Shot 11-24-18 at 08.00 PM.PNG](screenshots/screen-shot-11-24-18-at-08-00-pm.png)
 
 * * *
 
@@ -151,13 +151,13 @@ You can **upload images and files** from your device, or from Google Drive, Drop
 
 You can add multiple card in a one-shot action if the text in it have multiple lines.
 
-![Screen Shot 11-24-18 at 07.04 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-04-pm.png?w=505&h=286)
+![Screen Shot 11-24-18 at 07.04 PM.PNG](screenshots/screen-shot-11-24-18-at-07-04-pm.png?w=505&h=286)
 
-![Screen Shot 11-24-18 at 07.14 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-14-pm.png?w=507&h=511)
+![Screen Shot 11-24-18 at 07.14 PM.PNG](screenshots/screen-shot-11-24-18-at-07-14-pm.png?w=507&h=511)
 
-![Screen Shot 11-24-18 at 07.18 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-18-pm.png?w=511&h=347)
+![Screen Shot 11-24-18 at 07.18 PM.PNG](screenshots/screen-shot-11-24-18-at-07-18-pm.png?w=511&h=347)
 
-![Screen Shot 11-24-18 at 07.19 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-19-pm.png?w=521&h=354)
+![Screen Shot 11-24-18 at 07.19 PM.PNG](screenshots/screen-shot-11-24-18-at-07-19-pm.png?w=521&h=354)
 
 * * *
 
@@ -190,17 +190,17 @@ Always start your card with a verb if it’s a task.
 
 Check checklists’ boxes to follow Card advancement.
 
-![Screen Shot 11-24-18 at 07.11 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-11-pm.png?w=700)
+![Screen Shot 11-24-18 at 07.11 PM.PNG](screenshots/screen-shot-11-24-18-at-07-11-pm.png)
 
-![Screen Shot 11-24-18 at 07.22 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-22-pm.png?w=700)
+![Screen Shot 11-24-18 at 07.22 PM.PNG](screenshots/screen-shot-11-24-18-at-07-22-pm.png)
 
-![Screen Shot 11-24-18 at 07.39 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-39-pm.png?w=700)
+![Screen Shot 11-24-18 at 07.39 PM.PNG](screenshots/screen-shot-11-24-18-at-07-39-pm.png)
 
-![Screen Shot 11-24-18 at 07.41 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-41-pm.png?w=700)
+![Screen Shot 11-24-18 at 07.41 PM.PNG](screenshots/screen-shot-11-24-18-at-07-41-pm.png)
 
-![Screen Shot 11-24-18 at 07.42 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-42-pm.png?w=700)
+![Screen Shot 11-24-18 at 07.42 PM.PNG](screenshots/screen-shot-11-24-18-at-07-42-pm.png)
 
-![Screen Shot 11-24-18 at 07.45 PM.PNG](https://damienfremont.files.wordpress.com/2018/11/screen-shot-11-24-18-at-07-45-pm.png?w=700)
+![Screen Shot 11-24-18 at 07.45 PM.PNG](screenshots/screen-shot-11-24-18-at-07-45-pm.png)
 
 * * *
 
@@ -210,7 +210,7 @@ The app is available on desktop web browser or on your mobile app : use it at an
 
 [https://trello.com/platforms](https://trello.com/platforms)
 
-![proxy.duckduckgo.com.png](https://damienfremont.files.wordpress.com/2018/11/proxy-duckduckgo-com.png?w=493)
+![proxy.duckduckgo.com.png](screenshots/proxy-duckduckgo-com.png?w=493)
 
 * * *
 
@@ -218,9 +218,9 @@ The app is available on desktop web browser or on your mobile app : use it at an
 
 You can invite others to your boards and teams by sharing a special link with them.
 
-![file-0p7VKSYInx.gif](https://damienfremont.files.wordpress.com/2018/11/file-0p7vksyinx.gif?w=700)
+![file-0p7VKSYInx.gif](screenshots/file-0p7vksyinx.gif)
 
-![file-PryOhIJNDP.gif](https://damienfremont.files.wordpress.com/2018/11/file-pryohijndp.gif?w=700)
+![file-PryOhIJNDP.gif](screenshots/file-pryohijndp.gif)
 
 * * *
 
