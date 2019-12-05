@@ -1,6 +1,8 @@
 IndieGame – Using Trello for Project Management
 ======
 
+![gamedev-logo](screenshots/gamedev-logo-3.png)
+
 Do you find project management stressful? Do you struggle to keep your tasks, team members, and goals organized? Here’s how to manage your project with a simple and free tool like Trello. Whether on desktop or mobile.
 
 Staying on top of these things can be frustrating—but with the right tool, the entire process can become streamlined, efficient, and easier for everyone. The right tool will turn you into a project management master, able to get updates, reprioritize tasks, and communicate with your team on the fly.
