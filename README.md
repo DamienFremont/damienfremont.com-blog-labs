@@ -3,6 +3,7 @@ Source [http://damienfremont.com/blog](http://damienfremont.com/blog).
 ---
 
 # Posts > Tutorials
+- [2018/11/24: IndieGame – Using Trello for Project Management](20181124-gamedev-trello-for-project-management)
 - [2018/05/27: Solo Game Dev – What Tools to Use to Share Your Work](20180527-gamedev-tools-to-share-your-work)
 - [2018/10/22: Retour sur DevFest Nantes 2018](20181022-devfest-nantes-2018-retours)
 - [2017/12/06: HowTo JS – Node Debug in Visual Studio Code](20171206-js-node-debug-visualstudiocode)
