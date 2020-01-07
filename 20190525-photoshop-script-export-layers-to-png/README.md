@@ -1,7 +1,7 @@
 How to Photoshop Script: Export Layers to PNG Files
 ======
 
-![photoshop-logo](https://damienfremont.files.wordpress.com/2019/05/photoshop-logo.png?w=700)
+![photoshop-logo](screenshots/photoshop-logo.png)
 
 When you don’t want to do repetitive tasks in Photoshop… This script exports root layers from your current project to separate PNG files.
 
@@ -57,12 +57,12 @@ NOTE: only ‘root’ layers or groups will generate files, you don’t have to 
 
 ## Example
 
-![ScreenShot000](https://damienfremont.files.wordpress.com/2019/05/screenshot000.png?w=700)
+![ScreenShot000](screenshots/screenshot000.png)
 
-![ScreenShot002](https://damienfremont.files.wordpress.com/2019/05/screenshot002.png?w=700)
+![ScreenShot002](screenshots/screenshot002.png)
 
-![ScreenShot003](https://damienfremont.files.wordpress.com/2019/05/screenshot003.png?w=700)
+![ScreenShot003](screenshots/screenshot003.png)
 
-![ScreenShot005](https://damienfremont.files.wordpress.com/2019/05/screenshot005.png?w=700)
+![ScreenShot005](screenshots/screenshot005.png)
 
-![ScreenShot006](https://damienfremont.files.wordpress.com/2019/05/screenshot006.png?w=700)
+![ScreenShot006](screenshots/screenshot006.png)
