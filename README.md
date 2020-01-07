@@ -3,6 +3,7 @@ Source [http://damienfremont.com/blog](http://damienfremont.com/blog).
 ---
 
 # Posts > Tutorials
+- [2019/05/25: How to Photoshop Script: Export Layers to PNG Files](20190525-photoshop-script-export-layers-to-png)
 - [2019/05/04: Unity3D – Reducing the APK file size of your build for mobile device](20190504-unity3d-reducing-apk-size-for-mobile)
 - [2018/11/24: IndieGame – Using Trello for Project Management](20181124-gamedev-trello-for-project-management)
 - [2018/05/27: Solo Game Dev – What Tools to Use to Share Your Work](20180527-gamedev-tools-to-share-your-work)
