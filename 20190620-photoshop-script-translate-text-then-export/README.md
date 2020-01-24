@@ -1,4 +1,4 @@
-![photoshop-logo](https://damienfremont.files.wordpress.com/2019/05/photoshop-logo.png?w=700)
+![photoshop-logo](screenshots/photoshop-logo.png)
 
 Photoshop script to translate text layers based on language JSON files, then export project to PNG images for each language. Save a lot of time!
 
@@ -6,7 +6,7 @@ Usage: generate screenshots files for your app (ex: Googleplay, etc).
 
 One project is converted to X languages screenshots. With the seconde script, you can also convert each group layer as a separate files (for multi-screenshots project).
 
-![example-ScreenShot007](https://damienfremont.files.wordpress.com/2019/06/example-screenshot007.png?w=700)
+![example-ScreenShot007](screenshots/example-screenshot007.png)
 
 ## Getting started (one screenshot by project)
 
@@ -139,19 +139,19 @@ for (var t = 0; t &lt; langs.length; t++) {
 }
 ````
 
-![project-ScreenShot000.png](https://damienfremont.files.wordpress.com/2019/06/project-screenshot000.png?w=700)
+![project-ScreenShot000.png](screenshots/project-screenshot000.png)
 
-![project-ScreenShot001.png](https://damienfremont.files.wordpress.com/2019/06/project-screenshot001-1.png?w=700)
+![project-ScreenShot001.png](screenshots/project-screenshot001-1.png)
 
-![project-ScreenShot002](https://damienfremont.files.wordpress.com/2019/06/project-screenshot002.png?w=700)
+![project-ScreenShot002](screenshots/project-screenshot002.png)
 
-![project-ScreenShot003](https://damienfremont.files.wordpress.com/2019/06/project-screenshot003.png?w=700)
+![project-ScreenShot003](screenshots/project-screenshot003.png)
 
-![project-ScreenShot004](https://damienfremont.files.wordpress.com/2019/06/project-screenshot004.png?w=700)
+![project-ScreenShot004](screenshots/project-screenshot004.png)
 
-![project-ScreenShot005](https://damienfremont.files.wordpress.com/2019/06/project-screenshot005.png?w=700)
+![project-ScreenShot005](screenshots/project-screenshot005.png)
 
-![project-ScreenShot006.png](https://damienfremont.files.wordpress.com/2019/06/project-screenshot006.png?w=700)
+![project-ScreenShot006.png](screenshots/project-screenshot006.png)
 
 ## Getting started (multiple screenshot layers by project)
 
@@ -291,21 +291,21 @@ for (var y = 0; y &lt; doc.layers.length; y++) {
 }
 ````
 
-![group-ScreenShot000](https://damienfremont.files.wordpress.com/2019/06/group-screenshot000.png?w=700)
+![group-ScreenShot000](screenshots/group-screenshot000.png)
 
-![group-ScreenShot001](https://damienfremont.files.wordpress.com/2019/06/group-screenshot001.png?w=700)
+![group-ScreenShot001](screenshots/group-screenshot001.png)
 
-![group-ScreenShot002](https://damienfremont.files.wordpress.com/2019/06/group-screenshot002-1.png?w=700)
+![group-ScreenShot002](screenshots/group-screenshot002-1.png)
 
-![group-ScreenShot003](https://damienfremont.files.wordpress.com/2019/06/group-screenshot003.png?w=700)
+![group-ScreenShot003](screenshots/group-screenshot003.png)
 
-![group-ScreenShot004](https://damienfremont.files.wordpress.com/2019/06/group-screenshot004.png?w=700)
+![group-ScreenShot004](screenshots/group-screenshot004.png)
 
-![group-ScreenShot005](https://damienfremont.files.wordpress.com/2019/06/group-screenshot005.png?w=700)
+![group-ScreenShot005](screenshots/group-screenshot005.png)
 
-![group-ScreenShot006](https://damienfremont.files.wordpress.com/2019/06/group-screenshot006.png?w=700)
+![group-ScreenShot006](screenshots/group-screenshot006.png)
 
-![group-ScreenShot007](https://damienfremont.files.wordpress.com/2019/06/group-screenshot007.png?w=700)
+![group-ScreenShot007](screenshots/group-screenshot007.png)
 
 ## Example – External Project
 
@@ -314,15 +314,15 @@ text-group-translate.bat
 <pre class="language-javascript"><span class="token string">"C:\Program Files (x86)\Photoshop\Photoshop.exe"</span> c<span class="token punctuation">:</span>\Users\damien\git\photoshop<span class="token operator">-</span>script<span class="token operator">-</span>text<span class="token operator">-</span>translator\text<span class="token operator">-</span>groups<span class="token operator">-</span>translate<span class="token punctuation">.</span>jsx
 </pre>
 
-![example-ScreenShot002](https://damienfremont.files.wordpress.com/2019/06/example-screenshot002.png?w=700)
+![example-ScreenShot002](screenshots/example-screenshot002.png)
 
-![example-ScreenShot004](https://damienfremont.files.wordpress.com/2019/06/example-screenshot004.png?w=700)
+![example-ScreenShot004](screenshots/example-screenshot004.png)
 
-![example-ScreenShot005.png](https://damienfremont.files.wordpress.com/2019/06/example-screenshot005-1.png?w=700)
+![example-ScreenShot005.png](screenshots/example-screenshot005-1.png)
 
-![example-ScreenShot006](https://damienfremont.files.wordpress.com/2019/06/example-screenshot006.png?w=700)
+![example-ScreenShot006](screenshots/example-screenshot006.png)
 
-![example-ScreenShot007](https://damienfremont.files.wordpress.com/2019/06/example-screenshot007.png?w=700)
+![example-ScreenShot007](screenshots/example-screenshot007.png)
 
 ## References
 
