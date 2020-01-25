@@ -1,3 +1,6 @@
+How to Photoshop Script: Translate Text Then Save PNG for Each Language
+======
+
 ![photoshop-logo](screenshots/photoshop-logo.png)
 
 Photoshop script to translate text layers based on language JSON files, then export project to PNG images for each language. Save a lot of time!
