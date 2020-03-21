@@ -1,0 +1,24 @@
+{
+  "name": "project-mago-app",
+  "version": "0.0.1",
+  "engines": {
+    "node": "10.15.x",
+    "npm": "6.x"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/project-mago/project-mago-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/project-mago/project-mago-app/issues"
+  },
+  "homepage": "https://gitlab.com/project-mago/project-mago-app#readme"
+}
