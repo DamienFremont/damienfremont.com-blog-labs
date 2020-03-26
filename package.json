@@ -1,24 +1,23 @@
 {
-  "name": "project-mago-app",
-  "version": "0.0.1",
+  "name": "projet-mago-app",
+  "version": "0.2.0",
+  "private": true,
   "engines": {
-    "node": "10.15.x",
-    "npm": "6.x"
+    "node": "12.16.x",
+    "npm": "6.9.x"
   },
-  "description": "",
-  "main": "index.js",
   "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"Server,Client\" -c \"green.bold,blue.bold\" \"npm run dev-server\" \"npm run dev-client\"",
+    "dev-client": "cd client && npm run start",
+    "dev-server": "cd server && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "build": "npm install && npm run build-client && npm run build-server",
+    "build-client": "cd client && npm install && npm run build",
+    "build-server": "cd server && npm run build",
+    "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "start": "cd server && npm run start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/project-mago/project-mago-app.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/project-mago/project-mago-app/issues"
-  },
-  "homepage": "https://gitlab.com/project-mago/project-mago-app#readme"
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
 }
