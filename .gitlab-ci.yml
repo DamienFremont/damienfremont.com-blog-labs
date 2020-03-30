@@ -37,6 +37,9 @@ staging:
     - dpl --provider=heroku --app=$HEROKU_APP_STAGING --api-key=$HEROKU_STAGING_API_KEY
   only:
     - master
+  except:
+    # too much concurrent builds on gitlab
+    - tags
 
 production:
   stage: deploy
