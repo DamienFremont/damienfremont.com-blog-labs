@@ -10,38 +10,38 @@ class App {
 
   constructor() {
     this.port = process.env.PORT || 5000;
-    this.hostname = process.env.HOSTNAME || '127.0.0.1';
+    this.hostname = process.env.HOSTNAME || 'localhost';
     this.public = process.env.NODE_PUBLIC || '../client/build';
   }
 
   start() {
     console.info('Start Application...');
-    this.app = express();
-    this.initServer();
-    this.initStatic();
-    this.initServices();
+    const app = this.app = express();
+    this.initServer(app);
+    this.initStatic(app);
+    this.initServices(app);
     this.app.listen(this.port, this.hostname, () => {
       console.info('Application started!');
       this.logEnv();
     });
   }
 
-  initServer() {
+  initServer(app) {
     console.info('initServer');
-    this.app.use(express.json());
-    this.app.use(express.urlencoded({ extended: false }));
-    this.server = http.createServer(this.app);
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
+    this.server = http.createServer(app);
   }
 
-  initStatic() {
+  initStatic(app) {
     console.info(`initStatic at ${this.public}`);
-    this.app.use(express.static(this.public));
+    app.use(express.static(this.public));
   }
 
-  initServices() {
+  initServices(app) {
     console.info('initservices at /api');
-    this.app.use('/api', apiV1()); // TOUJOURS LA DERNIERE, CAR UTILISEE PAR L'APPLICATION
-    this.app.use('/api/v1', apiV1()); // UTILISEE PAR D'AUTRES QUE L'APPLICATION (EX: SITES WEB, OUTILS)
+    app.use('/api', apiV1()); // TOUJOURS LA DERNIERE, CAR UTILISEE PAR L'APPLICATION
+    app.use('/api/v1', apiV1()); // UTILISEE PAR D'AUTRES QUE L'APPLICATION (EX: SITES WEB, OUTILS)
   }
 
   logEnv() {
