@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.herokuapp.projetmago",
+            "sha256_cert_fingerprints": [
+                "EC:FF:DB:A0:51:8E:D7:E5:9C:E2:F0:66:92:C6:D6:94:16:CA:0B:BE:81:41:D6:D3:86:D8:C3:61:36:B0:F7:2B"
+            ]
+        }
+    }
+]

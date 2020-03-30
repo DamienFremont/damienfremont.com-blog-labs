@@ -1,6 +1,6 @@
 # PROJECT-MAGO-APP
 
-## Usage
+## Getting started
 
 You need nodejs 12+ installed.
 
@@ -22,13 +22,20 @@ npm run build
 npm run start
 ```
 
+## Usage
+
+http://localhost:3000
+
+http://localhost:5000
+
+
 # Links
 
 - Development -> Staging -> Production
-  - Production https://gitlab-ci-projet-mago-prod.herokuapp.com/
-  - Staging https://gitlab-ci-projet-mago-staging.herokuapp.com/
-  - Development https://gitlab-ci-projet-mago-dev.herokuapp.com/
+  - Production https://projetmago.herokuapp.com/
+  - Staging https://gitlab-ci-projetmago-staging.herokuapp.com/
+  - Development https://gitlab-ci-projetmago-dev.herokuapp.com/
 
 - GitLab -> Heroku
-  - GitLab https://gitlab.com/projet-mago-group/projet-mago-app/
+  - GitLab https://gitlab.com/projetmago-group/projetmago-app/
   - Heroku https://dashboard.heroku.com/pipelines/9e978532-d7ff-4578-bb08-97e031030f2d
