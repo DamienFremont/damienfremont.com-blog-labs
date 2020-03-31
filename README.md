@@ -8,6 +8,7 @@ Local Dev
 ``` bash
 # install dependencies
 npm install
+npm run build
 
 # serve with hot reload at localhost:8080
 npm run dev
