@@ -8,8 +8,4 @@ class StatusResponse {
     }
 }
 
-class StatusRequest {
-
-}
-
-export { StatusResponse, StatusRequest };
+export { StatusResponse };

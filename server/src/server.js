@@ -1,58 +1,40 @@
-import express from 'express';
-import http from 'http';
-import apiV1 from './api/v1';
-import fs from 'fs';
-import db from './db/index';
-
 /**
  * Main script for server
  */
-class App {
+import express from 'express';
+import http from 'http';
+import api from './api';
 
-  constructor() {
-    this.port = process.env.PORT || 5000;
-    this.hostname = process.env.HOSTNAME || 'localhost';
-    this.public = process.env.NODE_PUBLIC || '../client/build';
-  }
+console.info('Get Envs Vars...');
+const port = process.env.PORT || 5000;
+const hostname = process.env.HOSTNAME || 'localhost';
+const publiz = process.env.NODE_PUBLIC || '../client/build';
 
-  start() {
-    console.info('Start Application...');
-    const app = this.app = express();
-    this.initServer(app);
-    this.initStatic(app);
-    this.initServices(app);
-    this.app.listen(this.port, this.hostname, () => {
-      console.info('Application started!');
-      this.logEnv();
-    });
-  }
+console.info('Configure Application...');
+const app = express();
 
-  initServer(app) {
-    console.info('initServer');
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: false }));
-    this.server = http.createServer(app);
-  }
+console.info('Init HTTP Server...');
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+http.createServer(app);
 
-  initStatic(app) {
-    console.info(`initStatic at ${this.public}`);
-    app.use(express.static(this.public));
-  }
+console.info(`Init Static at ${publiz}`);
+app.use(express.static(publiz));
 
-  initServices(app) {
-    console.info('initservices at /api');
-    app.use('/api', apiV1(db)); // TOUJOURS LA DERNIERE, CAR UTILISEE PAR L'APPLICATION
-    app.use('/api/v1', apiV1(db)); // UTILISEE PAR D'AUTRES QUE L'APPLICATION (EX: SITES WEB, OUTILS)
-  }
+console.info('Set REST services to /api');
+app.use('/api', api());
 
-  logEnv() {
-    if (process.pid)
-      console.info(`Process PID = ${process.pid}`);
-    if (process.env.NODE_ENV !== 'production')
-      console.debug(`Env = \'${process.env.NODE_ENV}\' (process.env.NODE_ENV not set to \'production\')`);
-    console.info(`Server running at http://${this.hostname}:${this.port}/`);
-  }
-}
+console.info('Start Application...');
+app.listen(port, hostname, () => {
 
-var app = new App();
-app.start();
+  console.info('Application started!');
+  if (process.pid)
+    console.info(`Process PID = ${process.pid}`);
+  if (process.env.NODE_ENV !== 'production')
+    console.debug(`Env = \'${process.env.NODE_ENV}\' (process.env.NODE_ENV not set to \'production\')`);
+
+  console.info(`Server running at http://${hostname}:${port}/`);
+  console.info(`Server running at http://${hostname}:${port}/api/`);
+  console.info(`Server running at http://${hostname}:${port}/api/status/`);
+  console.info(`Server running at http://${hostname}:${port}/api/status/v1`);
+});

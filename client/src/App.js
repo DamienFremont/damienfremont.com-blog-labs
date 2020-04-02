@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import StatusApi from './status-api';
+import api from './shared/status/client';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ const App = (props) => {
     };
   });
 
-  const getStatus = () => StatusApi.get()
+  const getStatus = () => api.get()
     .then(res => setResponse(res))
     .catch(err => setResponse(null));
 

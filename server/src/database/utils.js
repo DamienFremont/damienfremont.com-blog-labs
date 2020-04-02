@@ -1,7 +1,7 @@
 /**
  *  @see https://node-postgres.com/api/pool#pool.connect
  */
-import fs from 'fs';
+import fs from './node_modules/fs';
 
 const test = (client, release) => {
     client.query('SELECT NOW()', (err, result) => {
