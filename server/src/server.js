@@ -2,6 +2,7 @@ import express from 'express';
 import http from 'http';
 import apiV1 from './api/v1';
 import fs from 'fs';
+import db from './db/index';
 
 /**
  * Main script for server
@@ -40,8 +41,8 @@ class App {
 
   initServices(app) {
     console.info('initservices at /api');
-    app.use('/api', apiV1()); // TOUJOURS LA DERNIERE, CAR UTILISEE PAR L'APPLICATION
-    app.use('/api/v1', apiV1()); // UTILISEE PAR D'AUTRES QUE L'APPLICATION (EX: SITES WEB, OUTILS)
+    app.use('/api', apiV1(db)); // TOUJOURS LA DERNIERE, CAR UTILISEE PAR L'APPLICATION
+    app.use('/api/v1', apiV1(db)); // UTILISEE PAR D'AUTRES QUE L'APPLICATION (EX: SITES WEB, OUTILS)
   }
 
   logEnv() {

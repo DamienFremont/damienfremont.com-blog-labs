@@ -2,16 +2,14 @@ class StatusResponse {
 
     constructor(data) {
         this.status = data.status;
-        this.playersCount = data.playersCount
+        this.accounts = data.accounts;
+        this.players = data.players;
+        this.games = data.games;
     }
 }
 
 class StatusRequest {
 
-    constructor(data) {
-        this.status = data.status;
-        this.playersCount = data.playersCount
-    }
 }
 
 export { StatusResponse, StatusRequest };

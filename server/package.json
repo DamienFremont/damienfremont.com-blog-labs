@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "express": "^4.17.1",
     "esm": "^3.2.25",
-    "module-alias": "^2.2.2"
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "pg": "^8.0.0",
+    "pg-pool": "^3.0.0"
   },
   "_moduleAliases": {
     "@root": ".",
     "@client": "../client/src",
-    "@shared": "../client/src/shared"
+    "@shared": "../client/src/shared",
+    "@database": "../database"
   },
   "scripts": {
     "dev": "nodemon src/index.js",

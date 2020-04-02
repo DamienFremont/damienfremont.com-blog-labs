@@ -1,0 +1,12 @@
+{
+    "app.title": "Projet MAGO",
+    "welcome.title": "Bienvenue sur Projet MAGO",
+    "welcome.text": "Cliquer sur l'icone question dans le coin en haut à gauche pour apprendre comment démarrer. Vous pouvez également regarder cette vidéo expliquant les bases du jeu.",
+    "welcome.ok": "Continuer",
+    "serverstatus.text": "Status du server",
+    "serverstatus.online.success": "En ligne",
+    "serverstatus.online.info": "Reconnexion...",
+    "serverstatus.accounts.text": "{accounts, plural, one {# joueur} other {# joueurs}}",
+    "serverstatus.players.text": "{players, plural, one {# connecté} other {# connectés}}",
+    "serverstatus.games.text": "{games, plural, one {# partie} other {# parties}}  en cours"
+}
