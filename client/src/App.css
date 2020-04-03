@@ -1,14 +1,3 @@
-/* FIXME: app theme */
-.modal-content {
-  border: 0px solid #dee2e6 !important;
-}
-.modal-header {
-  border: 0px solid #dee2e6 !important;
-}
-.modal-footer {
-  border: 0px solid #dee2e6 !important;
-}
-.close {
-  color: white !important;
-  text-shadow: 1px 1px #000 !important;
+html, body, #root {
+    height: 100%;
 }

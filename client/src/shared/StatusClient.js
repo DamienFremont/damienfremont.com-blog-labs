@@ -1,4 +1,4 @@
-import { StatusResponse } from 'shared/status/model';
+import { StatusResponse } from 'shared/StatusModel';
 
 const url = '/api/status';
 
