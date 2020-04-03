@@ -5,16 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import { IntlProvider } from 'react-intl';
-import messages_fr from "./translations/fr.json";
-
-const messages = {
-  'fr': messages_fr
-};
-const language = navigator.language.split(/[-_]/)[0];  // language without region code
+import { usersLocale, translationsForUsersLocale } from './translations';
 
 ReactDOM.render(
   <React.StrictMode>
-    <IntlProvider locale={language} messages={messages[language]}>
+    <IntlProvider locale={usersLocale()} messages={translationsForUsersLocale()}>
       <App />
     </IntlProvider>
   </React.StrictMode>,

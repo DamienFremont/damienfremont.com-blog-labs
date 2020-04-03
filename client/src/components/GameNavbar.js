@@ -26,7 +26,7 @@ const GameNavbar = (props) => {
             <Navbar color="dark" dark>
                 <NavbarBrand className="mr-auto" tag={Link} to="/">
                     <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="" />{' '}
-                    <FormattedMessage id="GameNavbar.title" />
+                    <FormattedMessage id="app.short_name" />
                 </NavbarBrand>
                 <Nav navbar>
                     <Button color="dark" className="text-uppercase" onClick={toggle} >

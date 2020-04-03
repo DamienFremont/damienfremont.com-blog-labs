@@ -12,16 +12,16 @@ const MenuLayout = (props) => {
             <Container fluid={true} className="vh-100">
                 <Row>
                     <Col>
-                        <div class="d-lg-none">
+                        <div className="d-lg-none">
                             <h1 className="display-5 text-center mt-5 mb-5">
-                                <FormattedMessage id="MenuLayout.title" /><br />
-                                <img src={logo} width="60" height="60" className="d-inline-block align-top mt-2" alt="" />{' '}
+                                <FormattedMessage id="app.name" /><br />
+                                <img src={logo} width="60" height="60" className="d-inline-block mt-2" alt="" />{' '}
                             </h1>
                         </div>
-                        <div class="d-none d-lg-block">
+                        <div className="d-none d-lg-block">
                             <h1 className="display-1 text-center mt-5 mb-5">
-                                <FormattedMessage id="MenuLayout.title" />{' '}
-                                <img src={logo} width="80" height="80" className="d-inline-block align-top" alt="" />{' '}
+                                <FormattedMessage id="app.name" />{' '}
+                                <img src={logo} width="80" height="80" className="d-inline-block align-center" alt="" />{' '}
                             </h1>
                         </div>
                     </Col>
