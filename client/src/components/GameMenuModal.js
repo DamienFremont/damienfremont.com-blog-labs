@@ -18,19 +18,23 @@ const GameMenuModal = React.forwardRef((props, ref) => {
             <ModalHeader className="text-center">
                 <FormattedMessage id="GameMenuModal.title" />
             </ModalHeader>
-            <ModalBody>
-                <Button color="primary" block onClick={toggle}>
-                    <FontAwesomeIcon icon={faPlay} />{' '}
-                    <FormattedMessage id="GameMenuModal.resume" />
-                </Button>
-                <Button color="light" disabled block>
-                    <FontAwesomeIcon icon={faCog} />{' '}
-                    <FormattedMessage id="GameMenuModal.settings" />
-                </Button>
-                <Button color="light" block tag={Link} to="/home/">
-                    <FontAwesomeIcon icon={faSignOutAlt} />{' '}
-                    <FormattedMessage id="GameMenuModal.quit" />
-                </Button>
+            <ModalBody className="pb-5">
+                <div className="d-flex justify-content-center">
+                    <div>
+                        <Button color="primary" block className="pl-5 pr-5 text-left" onClick={toggle}>
+                            <FontAwesomeIcon icon={faPlay} />{' '}
+                            <FormattedMessage id="GameMenuModal.resume" />
+                        </Button>
+                        <Button color="light" block className="pl-5 pr-5 text-left" disabled>
+                            <FontAwesomeIcon icon={faCog} />{' '}
+                            <FormattedMessage id="GameMenuModal.settings" />
+                        </Button>
+                        <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/home/">
+                            <FontAwesomeIcon icon={faSignOutAlt} />{' '}
+                            <FormattedMessage id="GameMenuModal.quit" />
+                        </Button>
+                    </div>
+                </div>
             </ModalBody >
         </Modal >
     );
