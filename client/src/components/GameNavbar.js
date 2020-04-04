@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl';
 import { Nav, Navbar, Button, NavbarBrand, } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import logo from './GameNavbar-logo.png';
 import GameMenuModal from './GameMenuModal';
 
 const GameNavbar = (props) => {
@@ -23,10 +22,7 @@ const GameNavbar = (props) => {
     return (
         <div>
             <Navbar color="dark" dark>
-                <NavbarBrand className="mr-auto">
-                    <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="" />{' '}
-                    <FormattedMessage id="app.short_name" />
-                </NavbarBrand>
+                <NavbarBrand className="mr-auto"></NavbarBrand>
                 <Nav navbar>
                     <Button color="dark" className="text-uppercase" onClick={toggle} >
                         <div class="d-lg-none">
