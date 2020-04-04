@@ -8,7 +8,7 @@ import logo from './MenuLayout-logo.png';
 const MenuLayout = (props) => {
 
     return (
-        <div className="mainlayout vh-100 d-flex align-items-center menu-bg-wallpaper">
+        <div className="mainlayout vh-100 d-flex align-items-center">
             <Container fluid={true} className="vh-100">
                 <Row>
                     <Col>

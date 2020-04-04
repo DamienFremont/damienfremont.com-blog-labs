@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router-dom';
 import { Nav, Navbar, Button, NavbarBrand, } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -24,7 +23,7 @@ const GameNavbar = (props) => {
     return (
         <div>
             <Navbar color="dark" dark>
-                <NavbarBrand className="mr-auto" tag={Link} to="/">
+                <NavbarBrand className="mr-auto">
                     <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="" />{' '}
                     <FormattedMessage id="app.short_name" />
                 </NavbarBrand>
@@ -39,8 +38,7 @@ const GameNavbar = (props) => {
                     </Button>
                 </Nav>
             </Navbar>
-            <GameMenuModal
-                ref={modal} />
+            <GameMenuModal ref={modal} />
         </div>
     );
 }

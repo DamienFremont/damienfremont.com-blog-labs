@@ -9,11 +9,11 @@ const WelcomeModal = (props) => {
 
     const [response, setResponse] = useState({});
     const confirmInput = useRef(null);
+    const toggle = props.toggle;
 
     const getStatus = () => api.get()
         .then(res => setResponse(res))
         .catch(err => setResponse(null));
-
 
     useEffect(() => {
         const ms = props.refreshSec * 1000;
@@ -27,7 +27,7 @@ const WelcomeModal = (props) => {
         const online = (response && response.status === 'ONLINE');
         const status = online ? 'success' : 'info';
         return (
-            <div>
+            <span>
                 <b><FormattedMessage id="WelcomeModal.status.text" /></b> <br />
                 <div className={`text-${status}`}>
                     <span><FormattedMessage id={`WelcomeModal.status.online.${status}`} /></span> <br />
@@ -35,26 +35,25 @@ const WelcomeModal = (props) => {
                     <span>{online ? <FormattedMessage id="WelcomeModal.status.players.text" values={response} /> : ' '}</span> <br />
                     <span>{online ? <FormattedMessage id="WelcomeModal.status.games.text" values={response} /> : ' '}</span> <br />
                 </div>
-            </div>
+            </span>
         );
     };
 
     return (
-        <Modal isOpen={props.isOpen} toggle={props.toggle} fade={true} centered={true}>
-            <div>
-                <ModalHeader toggle={props.toggle}>
-                    <FormattedMessage id="WelcomeModal.title" />
-                </ModalHeader>
-                <ModalBody>
-                    <p><FormattedMessage id="WelcomeModal.text" /></p>
-                    <p>{renderServerstatus()}</p>
-                </ModalBody>
-                <ModalFooter>
-                    <Button color="primary" onClick={props.toggle} ref={confirmInput}>
-                        <FontAwesomeIcon icon={faCheck} />{' '}
-                        <FormattedMessage id="WelcomeModal.ok" />
-                    </Button>
-                </ModalFooter></div>
+        <Modal isOpen={props.isOpen} toggle={toggle} fade={true} centered={true}>
+            <ModalHeader>
+                <FormattedMessage id="WelcomeModal.title" />
+            </ModalHeader>
+            <ModalBody>
+                <p><FormattedMessage id="WelcomeModal.text" /></p>
+                <p>{renderServerstatus()}</p>
+            </ModalBody>
+            <ModalFooter>
+                <Button color="primary" onClick={toggle} ref={confirmInput}>
+                    <FontAwesomeIcon icon={faCheck} />{' '}
+                    <FormattedMessage id="WelcomeModal.ok" />
+                </Button>
+            </ModalFooter>
         </Modal>
     );
 }

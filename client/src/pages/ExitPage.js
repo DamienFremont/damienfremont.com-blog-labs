@@ -26,7 +26,7 @@ const ExitPage = (props) => {
                         <CardText>
                             <FormattedMessage id="ExitPage.text" />
                         </CardText>
-                        <Button color="primary" size="lg" tag={Link} to="/">
+                        <Button color="primary" tag={Link} to="/">
                             <FontAwesomeIcon icon={faSignInAlt} />{' '}
                             <FormattedMessage id="ExitPage.reconnect" />
                         </Button>{' '}

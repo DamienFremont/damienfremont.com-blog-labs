@@ -3,7 +3,7 @@ import WelcomeModal from '../components/WelcomeModal';
 import MenuLayout from '../layouts/MenuLayout';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { faCog, faQuestionCircle, faPlay, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -18,24 +18,24 @@ const HomePage = (props) => {
     return (
         <MenuLayout>
             <div className="d-flex justify-content-center">
-                <ListGroup vertical pills>
-                    <ListGroupItem className="pl-5 pr-5" tag={Link} to="/game/">
+                <div>
+                    <Button color="primary" block className="pl-5 pr-5 text-left" tag={Link} to="/game/">
                         <FontAwesomeIcon icon={faPlay} />{' '}
                         <FormattedMessage id="HomePage.start" />
-                    </ListGroupItem>
-                    <ListGroupItem className="pl-5 pr-5">
+                    </Button>
+                    <Button color="light" block className="pl-5 pr-5 text-left" disabled>
                         <FontAwesomeIcon icon={faCog} />{' '}
                         <FormattedMessage id="HomePage.settings" />
-                    </ListGroupItem>
-                    <ListGroupItem className="pl-5 pr-5">
+                    </Button>
+                    <Button color="light" block className="pl-5 pr-5 text-left" target="_blank" href="https://damienfremont.com/projetmago-help/">
                         <FontAwesomeIcon icon={faQuestionCircle} />{' '}
                         <FormattedMessage id="HomePage.help" />
-                    </ListGroupItem>
-                    <ListGroupItem className="pl-5 pr-5" tag={Link} to="/exit/">
+                    </Button>
+                    <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/exit/">
                         <FontAwesomeIcon icon={faSignOutAlt} />{' '}
                         <FormattedMessage id="HomePage.exit" />
-                    </ListGroupItem>
-                </ListGroup>
+                    </Button>
+                </div>
             </div>
             <WelcomeModal
                 isOpen={isOpen}

@@ -14,8 +14,8 @@ const GameMenuModal = React.forwardRef((props, ref) => {
     ref.current = { toggle };
 
     return (
-        <Modal isOpen={isOpen} fade={true} >
-            <ModalHeader toggle={toggle} className="text-center">
+        <Modal isOpen={isOpen} fade={true} centered={true} >
+            <ModalHeader className="text-center">
                 <FormattedMessage id="GameMenuModal.title" />
             </ModalHeader>
             <ModalBody>
@@ -23,11 +23,11 @@ const GameMenuModal = React.forwardRef((props, ref) => {
                     <FontAwesomeIcon icon={faPlay} />{' '}
                     <FormattedMessage id="GameMenuModal.resume" />
                 </Button>
-                <Button color="light" disabled block tag={Link} to="/settings">
+                <Button color="light" disabled block>
                     <FontAwesomeIcon icon={faCog} />{' '}
                     <FormattedMessage id="GameMenuModal.settings" />
                 </Button>
-                <Button color="light" block tag={Link} to="/">
+                <Button color="light" block tag={Link} to="/home/">
                     <FontAwesomeIcon icon={faSignOutAlt} />{' '}
                     <FormattedMessage id="GameMenuModal.quit" />
                 </Button>

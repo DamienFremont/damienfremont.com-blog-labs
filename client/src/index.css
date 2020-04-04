@@ -1,1 +1,3 @@
-/* FIXME: app theme */
+html, body, #root {
+    height: 100%;
+}
