@@ -1,9 +1,7 @@
 /**
  * @see https://taylor.callsen.me/using-reactflux-with-openlayers-3-and-other-third-party-libraries/
  */
-import ReactDOM from 'react-dom';
 import React from 'react';
-
 import 'ol/ol.css';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';

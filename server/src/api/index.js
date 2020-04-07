@@ -1,15 +1,15 @@
 import Router from 'express';
 import bodyParser from 'body-parser';
-import { cacheControl } from '../utils/header';
-import StatusApi from './StatusApi';
+import nocache from '../utils/nocache';
+import status from './status';
 
 export default () => {
 	console.log('Init API...');
 	let api = Router();
 	api.use(bodyParser.json());
-	api.use(cacheControl.noStore());
+	api.use(nocache());
 	// perhaps expose some API metadata at the root
-	api.use('/status', StatusApi());
-	api.use('/status/v1', StatusApi());
+	api.use('/status', status());
+	api.use('/status/v1', status());
 	return api;
 }

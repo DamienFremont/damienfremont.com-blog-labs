@@ -4,7 +4,7 @@
 import express from 'express';
 import http from 'http';
 import api from './api';
-import { pragma, cacheControl, expires } from './utils/header';
+import nocache from './utils/nocache';
 
 console.info('Get Envs Vars...');
 const port = process.env.PORT || 5000;
@@ -15,15 +15,13 @@ console.info('Configure Application...');
 const app = express();
 
 console.info('Init HTTP Server...');
+app.use(nocache());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 http.createServer(app);
 
 console.info(`Init Static at ${publiz}`);
 app.use(express.static(publiz));
-app.use(cacheControl.noStoreCache());
-app.use(pragma.noCache());
-app.use(expires.zero());
 
 console.info('Set REST services to /api');
 app.use('/api', api());
