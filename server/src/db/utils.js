@@ -23,7 +23,7 @@ const reconnect = (pool) => {
     });
 }
 
-const update = (client) => {
+const updateSchema = (client) => {
     console.log('Database updating...');
     const sql = fs.readFileSync('../database/init_database.sql').toString();
     client.query(sql, function (err, result) {
@@ -35,4 +35,4 @@ const update = (client) => {
     });
 }
 
-export { update, reconnect };
+export { updateSchema, reconnect };

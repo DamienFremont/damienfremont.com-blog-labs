@@ -4,6 +4,7 @@
 import express from 'express';
 import http from 'http';
 import api from './api';
+import { pragma, cacheControl, expires } from './utils/header';
 
 console.info('Get Envs Vars...');
 const port = process.env.PORT || 5000;
@@ -20,6 +21,9 @@ http.createServer(app);
 
 console.info(`Init Static at ${publiz}`);
 app.use(express.static(publiz));
+api.use(cacheControl.noStoreCache());
+api.use(pragma.noCache());
+api.use(expires.zero());
 
 console.info('Set REST services to /api');
 app.use('/api', api());

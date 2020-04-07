@@ -1,4 +1,4 @@
-class StatusResponse {
+class ServerStatusResponse {
 
     constructor(data) {
         this.status = data.status;
@@ -8,4 +8,4 @@ class StatusResponse {
     }
 }
 
-export { StatusResponse };
+export { ServerStatusResponse };

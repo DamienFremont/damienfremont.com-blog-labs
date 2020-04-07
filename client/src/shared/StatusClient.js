@@ -1,4 +1,4 @@
-import { StatusResponse } from 'shared/StatusModel';
+import { ServerStatusResponse } from 'shared/StatusModel';
 
 const url = '/api/status';
 
@@ -8,7 +8,7 @@ const get = async () => {
   if (response.status !== 200) {
     throw Error(body.message);
   }
-  return new StatusResponse(body);
+  return new ServerStatusResponse(body);
 };
 
 export default { get };

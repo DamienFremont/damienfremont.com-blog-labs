@@ -1,6 +1,6 @@
 import url from 'url';
 import { Pool } from 'pg';
-import { reconnect, update } from './utils';
+import { reconnect, updateSchema } from './utils';
 
 console.log('Database config...');
 const params = url.parse(process.env.DATABASE_URL || 'progres://projetmago:projetmago@localhost:5432/projetmago');
@@ -15,11 +15,11 @@ const config = {
 };
 
 const pool = new Pool(config);
-update(pool);
+updateSchema(pool);
 
 pool.on('connect', (client) => {
   console.log('Database Connected');
-  update(client);
+  updateSchema(client);
 });
 
 pool.on('error', (err, client) => {
