@@ -21,9 +21,9 @@ http.createServer(app);
 
 console.info(`Init Static at ${publiz}`);
 app.use(express.static(publiz));
-api.use(cacheControl.noStoreCache());
-api.use(pragma.noCache());
-api.use(expires.zero());
+app.use(cacheControl.noStoreCache());
+app.use(pragma.noCache());
+app.use(expires.zero());
 
 console.info('Set REST services to /api');
 app.use('/api', api());
