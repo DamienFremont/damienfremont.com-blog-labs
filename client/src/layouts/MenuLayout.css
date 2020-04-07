@@ -1,11 +1,3 @@
-.mainlayout {
-    background-size: 1500px;
-    background-color: #002a54;
-    background-image: url("./MenuLayout-background.jpg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-
 .mainlayout h1 {
     color: #ffffff;
 }

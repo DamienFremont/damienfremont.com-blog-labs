@@ -22,7 +22,7 @@
     "ServerStatus.text": "Status du server",
     "ServerStatus.online.success": "En ligne",
     "ServerStatus.online.info": "Reconnexion...",
-    "ServerStatus.accounts.text": "{accounts, plural, one {# joueur} other {# joueurs}}",
+    "ServerStatus.accounts.text": "{accounts, plural, one {# inscrit} other {# inscrits}}",
     "ServerStatus.players.text": "{players, plural, one {# connecté} other {# connectés}}",
     "ServerStatus.games.text": "{games, plural, one {# partie} other {# parties}}  en cours",
     "SettingsPage.title": "Paramètres",
