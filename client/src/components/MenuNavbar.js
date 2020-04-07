@@ -6,10 +6,10 @@ const MenuNavbar = (props) => {
 
     return (
         <div>
-            <Navbar color="dark" dark>
+            <Navbar dark>
                 <NavbarBrand className="mr-auto"></NavbarBrand>
                 <Nav navbar>
-                    <Button color="primary" disabled>
+                    <Button color="secondary" disabled>
                         <img src={avatar} width="30" height="30" className="d-inline-block align-top" alt="" />
                     </Button>
                 </Nav>

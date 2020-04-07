@@ -8,13 +8,13 @@ import MenuNavbar from '../components/MenuNavbar';
 const MenuLayout = (props) => {
 
     return (
-        <div className="mainlayout vh-100">
+        <div className="mainlayout h-100">
             <header>
                 <MenuNavbar />
             </header>
             <main>
-                <div className="vh-100 d-flex align-items-center">
-                    <Container fluid={true} className="vh-100">
+                <div className="d-flex align-items-center">
+                    <Container fluid={true}>
                         <Row>
                             <Col>
                                 <div className="d-lg-none">

@@ -7,6 +7,7 @@ import HomePage from 'pages/HomePage';
 import LoginPage from 'pages/LoginPage';
 import ExitPage from 'pages/ExitPage';
 import GamePage from 'pages/GamePage';
+import SettingsPage from 'pages/SettingsPage';
 
 const App = (props) => {
 
@@ -15,8 +16,9 @@ const App = (props) => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={() => <Redirect to="/home" />} />
-          <Route exact path="/home" component={HomePage} />
           <Route exact path="/login/" component={LoginPage} />
+          <Route exact path="/home" component={HomePage} />
+          <Route exact path="/settings/*" component={SettingsPage} />
           <Route exact path="/game/" component={GamePage} />
           <Route exact path="/exit/" component={ExitPage} />
         </Switch>

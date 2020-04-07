@@ -14,7 +14,7 @@ const GameMenuModal = React.forwardRef((props, ref) => {
     ref.current = { toggle };
 
     return (
-        <Modal isOpen={isOpen} fade={true} centered={true} >
+        <Modal isOpen={isOpen} fade={false} centered={true} >
             <ModalHeader className="text-center">
                 <FormattedMessage id="GameMenuModal.title" />
             </ModalHeader>

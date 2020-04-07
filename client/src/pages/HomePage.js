@@ -6,12 +6,11 @@ import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { faCog, faQuestionCircle, faPlay, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ServerStatus from '../components/ServerStatus';
 
 const HomePage = (props) => {
 
-    const refreshSec = 1;
-
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState((localStorage.getItem('WelcomeModalHide') === 'false'));
 
     const toggle = () => setIsOpen(!isOpen);
 
@@ -23,7 +22,7 @@ const HomePage = (props) => {
                         <FontAwesomeIcon icon={faPlay} />{' '}
                         <FormattedMessage id="HomePage.start" />
                     </Button>
-                    <Button color="light" block className="pl-5 pr-5 text-left" disabled>
+                    <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/settings/">
                         <FontAwesomeIcon icon={faCog} />{' '}
                         <FormattedMessage id="HomePage.settings" />
                     </Button>
@@ -37,11 +36,13 @@ const HomePage = (props) => {
                     </Button>
                 </div>
             </div>
+            <div className="d-flex justify-content-end align-items-end pt-5">
+                <ServerStatus />
+            </div>
             <WelcomeModal
                 isOpen={isOpen}
-                toggle={toggle}
-                refreshSec={refreshSec} />
-        </MenuLayout>
+                toggle={toggle} />
+        </MenuLayout >
     );
 }
 
