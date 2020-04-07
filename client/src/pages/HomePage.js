@@ -40,6 +40,7 @@ const HomePage = (props) => {
                 <ServerStatus />
             </div>
             <WelcomeModal
+                className="text-right"
                 isOpen={isOpen}
                 toggle={toggle} />
         </MenuLayout >

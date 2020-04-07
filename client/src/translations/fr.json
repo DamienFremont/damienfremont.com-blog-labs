@@ -30,6 +30,8 @@
     "SettingsPage.default": "Défaut",
     "SettingsPage.general": "Général",
     "SettingsPage.about": "A propos",
+    "SettingsPage.about.text": "Projet MAGO est un jeux video de stratégie, développé par Loïc LEFLOCH (conception) et Damien FREMONT (développement).",
+    "SettingsPage.status": "Status",
     "SettingsPage.interface": "Interface",
     "SettingsPage.WelcomeModalHide": "Masquer Aide démarrage"
 }

@@ -22,7 +22,7 @@ const ServerStatus = (props) => {
     const status = () => (online ? 'success' : 'info');
 
     return (
-        <div className={`text-${status()} text-right`}>
+        <div className={`text-${status()}`}>
             <b><FormattedMessage id="ServerStatus.text" />:</b> <br />
             <span><FormattedMessage id={`ServerStatus.online.${status()}`} /></span> <br />
             <span>{online() ? <FormattedMessage id="ServerStatus.accounts.text" values={response} /> : ' '}</span> <br />

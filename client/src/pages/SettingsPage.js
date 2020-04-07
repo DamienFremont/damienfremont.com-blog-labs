@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, ListGroupItem } from 'reactstrap';
 import { faChevronLeft, faChevronRight, faTrashAlt, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ServerStatus from '../components/ServerStatus';
 
 const SettingsPage = (props) => {
 
@@ -87,6 +88,14 @@ const SettingsPage = (props) => {
                                             <b><FormattedMessage id="SettingsPage.about" /></b>
                                         </ListGroupItem>
                                         <ListGroupItem>
+                                            <FormattedMessage id="SettingsPage.about.text" />
+
+                                        </ListGroupItem>
+                                        <ListGroupItem>
+                                            <b><FormattedMessage id="SettingsPage.status" /></b>
+                                        </ListGroupItem>
+                                        <ListGroupItem>
+                                            <ServerStatus />
                                         </ListGroupItem>
                                     </ListGroup>
 
