@@ -25,10 +25,10 @@ const GameNavbar = (props) => {
                 <NavbarBrand className="mr-auto"></NavbarBrand>
                 <Nav navbar>
                     <Button color="dark" className="text-uppercase" onClick={toggle} >
-                        <div class="d-lg-none">
+                        <div className="d-lg-none">
                             <FontAwesomeIcon icon={faBars} />
                         </div>
-                        <div class="d-none d-lg-block">
+                        <div className="d-none d-lg-block">
                             <FontAwesomeIcon icon={faBars} />{' '}<FormattedMessage id="GameNavbar.menu" class="d-none d-lg-block" />
                         </div>
                     </Button>

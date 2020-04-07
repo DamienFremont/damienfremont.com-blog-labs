@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
     "module-alias": "^2.2.2",
+    "ol": "^6.3.1",
     "react": "^16.13.1",
     "react-bootstrap-table-next": "^4.0.0",
     "react-dom": "^16.13.1",

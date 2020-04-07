@@ -1,8 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { Nav, Navbar, Button, NavbarBrand, } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import avatar from './MenuNavbar-avatar.png';
 
 const MenuNavbar = (props) => {

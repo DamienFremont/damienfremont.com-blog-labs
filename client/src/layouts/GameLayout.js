@@ -10,7 +10,7 @@ const GameLayout = (props) => {
             <header>
                 <GameNavbar />
             </header>
-            <main>
+            <main className="h-100">
                 {props.children}
             </main>
         </div>
