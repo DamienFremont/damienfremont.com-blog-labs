@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavItem, Button, NavbarBrand, } from 'reactstrap';
+import { Navbar, Button, NavbarBrand, } from 'reactstrap';
 import avatar from './MenuNavbar-avatar.png';
 import { FormattedMessage } from 'react-intl';
 

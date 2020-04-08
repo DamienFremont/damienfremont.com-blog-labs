@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router-dom';
-import { Button, Container, Row, Col } from 'reactstrap';
-import { faCog, faQuestionCircle, faPlay, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Container, Row, Col } from 'reactstrap';
 import { MenuLayout } from '../layouts';
 import { MainMenu, ServerStatus, WelcomeModal } from '../components';
 import { isAuthenticated } from '../helper/security';

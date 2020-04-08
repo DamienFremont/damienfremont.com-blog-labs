@@ -8,8 +8,6 @@ import { PrivateRoute } from './helper/security';
 
 const App = (props) => {
 
-  const isLoggedIn = () => true;
-
   return (
     <IntlProvider locale={locale()} messages={messages()}>
       <BrowserRouter>
