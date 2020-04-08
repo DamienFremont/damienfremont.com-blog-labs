@@ -35,5 +35,8 @@
     "SettingsPage.WelcomeModalHide": "Masquer Aide démarrage",
     "NewsFeed.title": "Dernières nouvelles",
     "NewsFeed.goto": "détails",
-    "NewsFeed.website": "Le site web est lancé!"
+    "NewsFeed.website": "Le site web est lancé!",
+    "GameSidebar.username": "Pseudo",
+    "GameSidebar.resources": "Ressources",
+    "GameSidebar.army": "Armée"
 }

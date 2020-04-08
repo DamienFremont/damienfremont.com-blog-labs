@@ -8,6 +8,7 @@ import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import * as layer from 'ol/layer';
 import * as source from 'ol/source';
+import './GameMap.css';
 
 
 class GameMap extends React.Component {
@@ -47,7 +48,7 @@ class GameMap extends React.Component {
 
     render() {
         return (
-            <div ref="mapContainer" className="h-100"> </div>
+            <div ref="mapContainer" className="h-100 w-100"> </div>
         );
     }
 }
