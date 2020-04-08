@@ -2,11 +2,11 @@ import messages_fr from "./fr.json";
 
 const defLang = 'fr';
 
-const usersLocale = () => {
+const locale = () => {
     return navigator.language || 'fr-FR';
 }
 
-const translationsForUsersLocale = () => {
+const messages = () => {
     const messages = {
         'fr': messages_fr
     };
@@ -15,4 +15,4 @@ const translationsForUsersLocale = () => {
     return messages[currLang];
 }
 
-export { usersLocale, translationsForUsersLocale };
+export { locale, messages };

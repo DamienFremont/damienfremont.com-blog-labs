@@ -3,7 +3,7 @@ import MenuLayout from '../layouts/MenuLayout';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, ListGroupItem } from 'reactstrap';
-import { faChevronLeft, faChevronRight, faTrashAlt, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faTrashAlt, faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ServerStatus from '../components/ServerStatus';
 
@@ -19,10 +19,10 @@ const SettingsPage = (props) => {
         localStorage.clear();
     }
 
-    const pathname = () => ((props.location && props.location && props.location.pathname) || '');
+    const pathname = () => ((window.location && window.location && window.location.href) || '');
     const activeInterface = () => pathname().includes('interface');
-    const activeAbout = () => pathname().includes('about');
-    const active = () => (activeInterface() || activeAbout());
+    const activeStatus = () => pathname().includes('status');
+    const active = () => (activeInterface() || activeStatus());
 
     return (
         <MenuLayout>
@@ -43,9 +43,15 @@ const SettingsPage = (props) => {
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </span>
                                 </ListGroupItem>
-                                <ListGroupItem tag={Link} to="/settings/about" active={activeAbout()}>
+                                <ListGroupItem tag="a" target="_blank" href="https://projetmago.wordpress.com/about/">
                                     <span className="d-flex justify-content-between">
                                         <FormattedMessage id="SettingsPage.about" />{' '}
+                                        <FontAwesomeIcon icon={faChevronRight} />
+                                    </span>
+                                </ListGroupItem>
+                                <ListGroupItem tag={Link} to="/settings/status" active={activeStatus()}>
+                                    <span className="d-flex justify-content-between">
+                                        <FormattedMessage id="SettingsPage.status" />{' '}
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </span>
                                 </ListGroupItem>
@@ -78,24 +84,19 @@ const SettingsPage = (props) => {
                                     </ListGroup>
 
                                 </div>
-                                <div className={`tab-pane fade show ${activeAbout() ? 'active' : ''}`} id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                <div className={`tab-pane fade show ${activeStatus() ? 'active' : ''}`} id="list-home" role="tabpanel" aria-labelledby="list-home-list">
 
                                     <ListGroup>
                                         <ListGroupItem>
                                             <Button color="link" tag={Link} to="/settings/">
                                                 <FontAwesomeIcon icon={faArrowLeft} />
                                             </Button>
-                                            <b><FormattedMessage id="SettingsPage.about" /></b>
-                                        </ListGroupItem>
-                                        <ListGroupItem>
-                                            <FormattedMessage id="SettingsPage.about.text" />
-
-                                        </ListGroupItem>
-                                        <ListGroupItem>
                                             <b><FormattedMessage id="SettingsPage.status" /></b>
                                         </ListGroupItem>
                                         <ListGroupItem>
+
                                             <ServerStatus />
+
                                         </ListGroupItem>
                                     </ListGroup>
 
@@ -105,8 +106,8 @@ const SettingsPage = (props) => {
                     </div>
                 </ModalBody>
                 <ModalFooter className="d-flex justify-content-between">
-                    <Button color="primary" tag={Link} to="/home/">
-                        <FontAwesomeIcon icon={faChevronLeft} />{' '}
+                    <Button color="primary" tag={Link} to="/">
+                        <FontAwesomeIcon icon={faHome} />{' '}
                         <FormattedMessage id="SettingsPage.back" />
                     </Button>
                     <Button onClick={restore}>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import api from '../shared/StatusClient';
+import { get } from 'axios';
 import { FormattedMessage } from 'react-intl';
+import { ServerStatusResponse } from 'shared/status';
 
 const ServerStatus = (props) => {
 
@@ -8,9 +9,10 @@ const ServerStatus = (props) => {
 
     const [response, setResponse] = useState({});
 
-    const getStatus = () => api.get()
-        .then(res => setResponse(res))
-        .catch(err => setResponse(null));
+    const getStatus = () =>
+        get('/api/status').then(
+            ({ data }) => setResponse(new ServerStatusResponse(data)),
+            err => setResponse({ status: 'OFFLINE' }));
 
     useEffect(() => {
         const ms = refreshSec * 1000;
@@ -19,7 +21,7 @@ const ServerStatus = (props) => {
     }, [refreshSec]);
 
     const online = () => (response && response.status === 'ONLINE');
-    const status = () => (online ? 'success' : 'info');
+    const status = () => (online() ? 'success' : 'info');
 
     return (
         <div className={`text-${status()}`}>

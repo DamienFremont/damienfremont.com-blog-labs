@@ -1,4 +1,4 @@
-import { ServerStatusResponse } from '@shared/StatusModel';
+import { ServerStatusResponse } from '@shared/status';
 import db from '../db/index';
 
 const get = async () => {

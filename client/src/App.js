@@ -1,26 +1,29 @@
 import React from 'react';
 import './App.css';
 import { IntlProvider } from 'react-intl';
-import { usersLocale, translationsForUsersLocale } from './translations';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import HomePage from 'pages/HomePage';
-import LoginPage from 'pages/LoginPage';
-import ExitPage from 'pages/ExitPage';
-import GamePage from 'pages/GamePage';
-import SettingsPage from 'pages/SettingsPage';
+import { locale, messages } from './translations';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HomePage, GamePage, SettingsPage, LoginPage, LogoutPage } from './pages';
+import { PrivateRoute } from './helper/security';
 
 const App = (props) => {
 
+  const isLoggedIn = () => true;
+
   return (
-    <IntlProvider locale={usersLocale()} messages={translationsForUsersLocale()}>
+    <IntlProvider locale={locale()} messages={messages()}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={() => <Redirect to="/home" />} />
+
+          <Route exact path="/" component={HomePage} />
+
           <Route exact path="/login/" component={LoginPage} />
-          <Route exact path="/home" component={HomePage} />
-          <Route exact path="/settings/*" component={SettingsPage} />
-          <Route exact path="/game/" component={GamePage} />
-          <Route exact path="/exit/" component={ExitPage} />
+          <Route exact path="/signup/" component={LoginPage} />
+          <Route exact path="/logout/" component={LogoutPage} />
+
+          <PrivateRoute path="/settings/*" component={SettingsPage} />
+          <PrivateRoute exact path="/game/" component={GamePage} />
+
         </Switch>
       </BrowserRouter>
     </IntlProvider>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignOutAlt, faPlay, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faCog, faHome } from '@fortawesome/free-solid-svg-icons';
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -29,8 +29,8 @@ const GameMenuModal = React.forwardRef((props, ref) => {
                             <FontAwesomeIcon icon={faCog} />{' '}
                             <FormattedMessage id="GameMenuModal.settings" />
                         </Button>
-                        <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/home/">
-                            <FontAwesomeIcon icon={faSignOutAlt} />{' '}
+                        <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/">
+                            <FontAwesomeIcon icon={faHome} />{' '}
                             <FormattedMessage id="GameMenuModal.quit" />
                         </Button>
                     </div>
