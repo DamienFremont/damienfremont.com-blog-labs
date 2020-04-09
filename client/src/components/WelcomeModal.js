@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import HelpModal from './HelpModal';
+import { UIHelpModal } from 'components';
 import { ModalBody, ModalHeader } from 'reactstrap';
 
 const WelcomeModal = (props) => {
@@ -9,14 +9,14 @@ const WelcomeModal = (props) => {
     const isOpen = props.isOpen;
 
     return (
-        <HelpModal settingsName="WelcomeModalHide" isOpen={isOpen} toggle={toggle}>
+        <UIHelpModal settingsName="WelcomeModalHide" isOpen={isOpen} toggle={toggle}>
             <ModalHeader>
                 <FormattedMessage id="WelcomeModal.title" />
             </ModalHeader>
             <ModalBody>
-                <p><FormattedMessage id="WelcomeModal.text" /></p>
+                <p><FormattedMessage id="WelcomeModal.desc" /></p>
             </ModalBody>
-        </HelpModal>
+        </UIHelpModal>
     );
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const SigninPage = (props) => {
+const PublicScreen = (props) => {
 
     return (
         <div>
-            SigninPage
+            Public
         </div>
     );
 }
 
-export default SigninPage;
+export default PublicScreen;

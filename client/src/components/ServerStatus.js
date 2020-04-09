@@ -25,11 +25,11 @@ const ServerStatus = (props) => {
 
     return (
         <div className={`text-${status()}`}>
-            <b><FormattedMessage id="ServerStatus.text" />:</b> <br />
+            <b><FormattedMessage id="ServerStatus.desc" />:</b> <br />
             <span><FormattedMessage id={`ServerStatus.online.${status()}`} /></span> <br />
-            <span>{online() ? <FormattedMessage id="ServerStatus.accounts.text" values={response} /> : ' '}</span> <br />
-            <span>{online() ? <FormattedMessage id="ServerStatus.players.text" values={response} /> : ' '}</span> <br />
-            <span>{online() ? <FormattedMessage id="ServerStatus.games.text" values={response} /> : ' '}</span> <br />
+            <span>{online() ? <FormattedMessage id="ServerStatus.accounts.desc" values={response} /> : ' '}</span> <br />
+            <span>{online() ? <FormattedMessage id="ServerStatus.players.desc" values={response} /> : ' '}</span> <br />
+            <span>{online() ? <FormattedMessage id="ServerStatus.games.desc" values={response} /> : ' '}</span> <br />
         </div>
     );
 };

@@ -1,10 +1,9 @@
 import React from 'react';
-import GameLayout from '../layouts/GameLayout';
-import GameMap from '../components/GameMap';
+import { GameLayout } from 'layouts';
 import { Container, Row, Col } from 'reactstrap';
-import GameSidebar from '../components/GameSidebar';
+import { GameSidebar, GameMap } from 'components';
 
-const GamePage = (props) => {
+const GameScreen = (props) => {
 
     return (
         <GameLayout>
@@ -22,4 +21,4 @@ const GamePage = (props) => {
     );
 }
 
-export default GamePage;
+export default GameScreen;

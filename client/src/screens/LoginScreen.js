@@ -6,11 +6,11 @@ import React, { useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { fakeAuth } from '../helper/security';
-import logo from '../App-logo.png';
-import './LoginPage.css';
+import { fakeAuth } from 'helpers/security';
+import logo from 'logo.png';
+import './LoginScreen.css';
 
-const LoginPage = (props) => {
+const LoginScreen = (props) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -38,35 +38,35 @@ const LoginPage = (props) => {
                 </div>
                 <h1 className="text-center">
                     <span className="font-weight-bold">
-                        <FormattedMessage id="LoginPage.title" />
+                        <FormattedMessage id="LoginScreen.title" />
                     </span>
                 </h1>
                 <FormGroup>
                     <Label for="exampleEmail">
-                        <FormattedMessage id="LoginPage.email" />
+                        <FormattedMessage id="LoginScreen.email" />
                     </Label>
                     <Input
                         type="text"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
-                        placeholder={intl.formatMessage({ id: 'LoginPage.email.placeholder' })}
+                        placeholder={intl.formatMessage({ id: 'LoginScreen.email.placeholder' })}
                         autoFocus />
                 </FormGroup>
                 <FormGroup>
                     <Label for="examplePassword">
-                        <FormattedMessage id="LoginPage.password" />
+                        <FormattedMessage id="LoginScreen.password" />
                     </Label>
                     <Input type="password"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
-                        placeholder={intl.formatMessage({ id: 'LoginPage.password.placeholder' })} />
+                        placeholder={intl.formatMessage({ id: 'LoginScreen.password.placeholder' })} />
                 </FormGroup>
                 <Button color="primary" className="btn-lg btn-block" onClick={handleSubmit} disabled={!validateForm()}>
-                    <FormattedMessage id="LoginPage.submit" />
+                    <FormattedMessage id="LoginScreen.submit" />
                 </Button>
                 <div className="text-center">
                     <Button color="link" tag={Link} to="/signup">
-                        <FormattedMessage id="LoginPage.signup" />
+                        <FormattedMessage id="LoginScreen.signup" />
                     </Button>
                 </div>
             </Form>
@@ -80,4 +80,4 @@ const LoginPage = (props) => {
     );
 }
 
-export default LoginPage;
+export default LoginScreen;

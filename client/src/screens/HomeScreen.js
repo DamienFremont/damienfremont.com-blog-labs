@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { MenuLayout } from '../layouts';
-import { MainMenu, ServerStatus, WelcomeModal } from '../components';
-import News from '../components/NewsFeed';
-import { fakeAuth } from '../helper/security';
+import { MenuLayout } from 'layouts';
+import { MainMenu, ServerStatus, WelcomeModal, NewsFeed } from 'components';
+import { fakeAuth } from 'helpers/security';
 
-const HomePage = (props) => {
+const HomeScreen = (props) => {
 
     const [isOpen, setIsOpen] = useState((localStorage.getItem('WelcomeModalHide') === 'false'));
 
@@ -32,7 +31,7 @@ const HomePage = (props) => {
                         {' '}
                     </Col>
                     <Col xs="12" md="6" className="mt-5">
-                        <News />
+                        <NewsFeed />
                     </Col>
                     <Col xs="12" md="3" className="mt-5">
                         <ServerStatus />
@@ -47,4 +46,4 @@ const HomePage = (props) => {
     );
 }
 
-export default HomePage;
+export default HomeScreen;

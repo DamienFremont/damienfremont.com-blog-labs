@@ -1,13 +1,13 @@
 import React from 'react';
-import MenuLayout from '../layouts/MenuLayout';
+import { MenuLayout } from 'layouts';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, ListGroupItem } from 'reactstrap';
 import { faChevronRight, faTrashAlt, faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ServerStatus from '../components/ServerStatus';
+import { ServerStatus } from 'components';
 
-const SettingsPage = (props) => {
+const SettingsScreen = (props) => {
 
     const defaultChecked = localStorage.getItem('WelcomeModalHide');
 
@@ -28,30 +28,30 @@ const SettingsPage = (props) => {
         <MenuLayout>
             <Modal isOpen={true} fade={false} centered={true} size='lg'>
                 <ModalHeader>
-                    <FormattedMessage id="SettingsPage.title" />
+                    <FormattedMessage id="SettingsScreen.title" />
                 </ModalHeader>
                 <ModalBody>
                     <div className="row">
                         <div className={`col-md-4 ${active() ? 'd-none d-md-block' : 'col-12'}`}>
                             <ListGroup>
                                 <ListGroupItem disable>
-                                    <b><FormattedMessage id="SettingsPage.general" /></b>
+                                    <b><FormattedMessage id="SettingsScreen.general" /></b>
                                 </ListGroupItem>
                                 <ListGroupItem tag={Link} to="/settings/interface" active={activeInterface()}>
                                     <span className="d-flex justify-content-between">
-                                        <FormattedMessage id="SettingsPage.interface" />{' '}
+                                        <FormattedMessage id="SettingsScreen.interface" />{' '}
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </span>
                                 </ListGroupItem>
                                 <ListGroupItem tag="a" target="_blank" href="https://projetmago.wordpress.com/about/">
                                     <span className="d-flex justify-content-between">
-                                        <FormattedMessage id="SettingsPage.about" />{' '}
+                                        <FormattedMessage id="SettingsScreen.about" />{' '}
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </span>
                                 </ListGroupItem>
                                 <ListGroupItem tag={Link} to="/settings/status" active={activeStatus()}>
                                     <span className="d-flex justify-content-between">
-                                        <FormattedMessage id="SettingsPage.status" />{' '}
+                                        <FormattedMessage id="SettingsScreen.status" />{' '}
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </span>
                                 </ListGroupItem>
@@ -66,7 +66,7 @@ const SettingsPage = (props) => {
                                             <Button color="link" tag={Link} to="/settings/">
                                                 <FontAwesomeIcon icon={faArrowLeft} />
                                             </Button>
-                                            <b><FormattedMessage id="SettingsPage.interface" /></b>
+                                            <b><FormattedMessage id="SettingsScreen.interface" /></b>
                                         </ListGroupItem>
                                         <ListGroupItem>
 
@@ -76,7 +76,7 @@ const SettingsPage = (props) => {
                                                     onChange={onChange}
                                                 />
                                                 <label className="custom-control-label" for="customSwitch1">
-                                                    <FormattedMessage id="SettingsPage.WelcomeModalHide" />
+                                                    <FormattedMessage id="SettingsScreen.WelcomeModalHide" />
                                                 </label>
                                             </div>
 
@@ -91,7 +91,7 @@ const SettingsPage = (props) => {
                                             <Button color="link" tag={Link} to="/settings/">
                                                 <FontAwesomeIcon icon={faArrowLeft} />
                                             </Button>
-                                            <b><FormattedMessage id="SettingsPage.status" /></b>
+                                            <b><FormattedMessage id="SettingsScreen.status" /></b>
                                         </ListGroupItem>
                                         <ListGroupItem>
 
@@ -108,11 +108,11 @@ const SettingsPage = (props) => {
                 <ModalFooter className="d-flex justify-content-between">
                     <Button color="primary" tag={Link} to="/">
                         <FontAwesomeIcon icon={faHome} />{' '}
-                        <FormattedMessage id="SettingsPage.back" />
+                        <FormattedMessage id="SettingsScreen.back" />
                     </Button>
                     <Button onClick={restore}>
                         <FontAwesomeIcon icon={faTrashAlt} />{' '}
-                        <FormattedMessage id="SettingsPage.default" />
+                        <FormattedMessage id="SettingsScreen.default" />
                     </Button>
                 </ModalFooter>
             </Modal>
@@ -120,4 +120,4 @@ const SettingsPage = (props) => {
     );
 }
 
-export default SettingsPage;
+export default SettingsScreen;

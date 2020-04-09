@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import WelcomeModal from '../components/WelcomeModal';
-import MenuLayout from '../layouts/MenuLayout';
+import { WelcomeModal, ServerStatus } from 'components';
+import { MenuLayout } from 'layouts/MenuLayout';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { faCog, faQuestionCircle, faPlay, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ServerStatus from '../components/ServerStatus';
 
-const MainPage = (props) => {
+const MainScreen = (props) => {
 
     const [isOpen, setIsOpen] = useState((localStorage.getItem('WelcomeModalHide') === 'false'));
 
@@ -30,4 +29,4 @@ const MainPage = (props) => {
     );
 }
 
-export default MainPage;
+export default MainScreen;

@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
-import GameNavbar from '../components/GameNavbar';
+import { GameNavbar } from 'components';
 import './GameLayout.css';
 
 const GameLayout = (props) => {

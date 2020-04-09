@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Button, Modal, ModalFooter } from 'reactstrap';
 
-const HelpModal = (props) => {
+const UIUIHelpModal = (props) => {
 
     const settingsName = props.settingsName;
     const toggle = props.toggle;
@@ -26,16 +26,16 @@ const HelpModal = (props) => {
                         onChange={onChange}
                     />
                     <label className="custom-control-label" for="customSwitch1">
-                        <FormattedMessage id="HelpModal.hide" />
+                        <FormattedMessage id="UIHelpModal.hide" />
                     </label>
                 </div>
                 <Button color="primary" onClick={toggle}>
                     <FontAwesomeIcon icon={faCheck} />{' '}
-                    <FormattedMessage id="HelpModal.ok" />
+                    <FormattedMessage id="UIHelpModal.ok" />
                 </Button>
             </ModalFooter>
         </Modal>
     );
 }
 
-export default HelpModal;
+export default UIUIHelpModal;

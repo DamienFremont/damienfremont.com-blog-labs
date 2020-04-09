@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-import { faCog, faQuestionCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faQuestionCircle, faPlay, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MainMenu = (props) => {
@@ -22,7 +22,7 @@ const MainMenu = (props) => {
                 <FormattedMessage id="MainMenu.help" />
             </Button>
             <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/logout/">
-                <FontAwesomeIcon icon={faCog} />{' '}
+                <FontAwesomeIcon icon={faSignOutAlt} />{' '}
                 <FormattedMessage id="MainMenu.logout" />
             </Button>
         </div>

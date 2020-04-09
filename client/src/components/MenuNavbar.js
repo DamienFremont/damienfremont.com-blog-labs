@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navbar, Button, NavbarBrand, } from 'reactstrap';
-import avatar from '../App-avatar.png';
+import avatar from 'avatar.png';
 import { FormattedMessage } from 'react-intl';
-import { fakeAuth } from '../helper/security';
+import { fakeAuth } from 'helpers/security';
 import { Link } from 'react-router-dom';
 
 const MenuNavbar = (props) => {
