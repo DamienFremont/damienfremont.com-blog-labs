@@ -2,22 +2,23 @@ import React from 'react';
 import { Navbar, Button, NavbarBrand, } from 'reactstrap';
 import avatar from './MenuNavbar-avatar.png';
 import { FormattedMessage } from 'react-intl';
+import { fakeAuth } from '../helper/security';
+import { Link } from 'react-router-dom';
 
 const MenuNavbar = (props) => {
 
-    const isLoggedIn = () => false;
+    const isLoggedIn = () => fakeAuth.isAuthenticated;
 
     const renderPublicBar = () => (
         <span>
-            <Button color="light" className="mr-1">
+            <Button color="light" className="mr-1" tag={Link} to="/login">
                 <FormattedMessage id="MenuNavbar.signin" />
             </Button>
-            <Button color="primary" className="mr-1">
+            <Button color="primary" className="mr-1" tag={Link} to="/signup">
                 <FormattedMessage id="MenuNavbar.signup" />
             </Button>
         </span>
     );
-
 
     const renderUserBar = () => (
         <Button color="secondary" disabled>

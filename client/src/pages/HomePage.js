@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { MenuLayout } from '../layouts';
 import { MainMenu, ServerStatus, WelcomeModal } from '../components';
 import News from '../components/NewsFeed';
+import { fakeAuth } from '../helper/security';
 
 const HomePage = (props) => {
 
@@ -10,17 +11,23 @@ const HomePage = (props) => {
 
     const toggle = () => setIsOpen(!isOpen);
 
+    const isLoggedIn = () => fakeAuth.isAuthenticated;
+
     return (
         <MenuLayout>
             <Container>
-                <Row>
-                    <Col sm="12">
-                        <div className="d-flex justify-content-center">
-                            <MainMenu />
-                        </div>
-                    </Col>
-                </Row>
-                <Row className="mt-5" >
+                {isLoggedIn() ?
+                    <Row>
+                        <Col sm="12">
+                            <div className="d-flex justify-content-center">
+                                <MainMenu />
+                            </div>
+                        </Col>
+                    </Row>
+                    :
+                    <span></span>
+                }
+                <Row className="mt-3" >
                     <Col xs="0" md="3">
                         {' '}
                     </Col>

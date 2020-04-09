@@ -11,15 +11,19 @@ const MainMenu = (props) => {
         <div>
             <Button color="primary" block className="pl-5 pr-5 text-left" tag={Link} to="/game/">
                 <FontAwesomeIcon icon={faPlay} />{' '}
-                <FormattedMessage id="HomePage.start" />
+                <FormattedMessage id="MainMenu.start" />
             </Button>
             <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/settings/">
                 <FontAwesomeIcon icon={faCog} />{' '}
-                <FormattedMessage id="HomePage.settings" />
+                <FormattedMessage id="MainMenu.settings" />
             </Button>
             <Button color="light" block className="pl-5 pr-5 text-left" target="_blank" href="https://projetmago.wordpress.com/help/">
                 <FontAwesomeIcon icon={faQuestionCircle} />{' '}
-                <FormattedMessage id="HomePage.help" />
+                <FormattedMessage id="MainMenu.help" />
+            </Button>
+            <Button color="light" block className="pl-5 pr-5 text-left" tag={Link} to="/logout/">
+                <FontAwesomeIcon icon={faCog} />{' '}
+                <FormattedMessage id="MainMenu.logout" />
             </Button>
         </div>
     );

@@ -5,6 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import './MenuLayout.css';
 import logo from './MenuLayout-logo.png';
 import MenuNavbar from '../components/MenuNavbar';
+
 const MenuLayout = (props) => {
 
     return (

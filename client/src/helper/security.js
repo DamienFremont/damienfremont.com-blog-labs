@@ -6,7 +6,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 const fakeAuth = {
-    isAuthenticated: true,
+    isAuthenticated: false,
     authenticate(cb) {
         this.isAuthenticated = true
         setTimeout(cb, 100) // fake async
@@ -16,8 +16,6 @@ const fakeAuth = {
         setTimeout(cb, 100) // fake async
     }
 }
-
-const isAuthenticated = () => fakeAuth.isAuthenticated();
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
@@ -30,4 +28,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     )} />
 )
 
-export { PrivateRoute, isAuthenticated };
+export { PrivateRoute, fakeAuth };

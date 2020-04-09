@@ -3,7 +3,7 @@ import './App.css';
 import { IntlProvider } from 'react-intl';
 import { locale, messages } from './translations';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { HomePage, GamePage, SettingsPage, LoginPage, LogoutPage } from './pages';
+import { HomePage, GamePage, SettingsPage, LoginPage, LogoutPage, SigninPage } from './pages';
 import { PrivateRoute } from './helper/security';
 
 const App = (props) => {
@@ -16,7 +16,7 @@ const App = (props) => {
           <Route exact path="/" component={HomePage} />
 
           <Route exact path="/login/" component={LoginPage} />
-          <Route exact path="/signup/" component={LoginPage} />
+          <Route exact path="/signup/" component={SigninPage} />
           <Route exact path="/logout/" component={LogoutPage} />
 
           <PrivateRoute path="/settings/*" component={SettingsPage} />
