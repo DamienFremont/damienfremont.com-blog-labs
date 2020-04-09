@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { MenuLayout } from '../layouts';
 import { MainMenu, ServerStatus, WelcomeModal } from '../components';
-import { isAuthenticated } from '../helper/security';
 import News from '../components/NewsFeed';
 
 const HomePage = (props) => {
