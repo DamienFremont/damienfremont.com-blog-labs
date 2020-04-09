@@ -7,7 +7,7 @@ import { Redirect, Link } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { fakeAuth } from '../helper/security';
-import logo from './LoginPage-logo.png';
+import logo from '../App-logo.png';
 import './LoginPage.css';
 
 const LoginPage = (props) => {

@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { FormattedMessage } from 'react-intl';
 import './MenuLayout.css';
-import logo from './MenuLayout-logo.png';
+import logo from '../App-logo.png';
 import MenuNavbar from '../components/MenuNavbar';
 
 const MenuLayout = (props) => {

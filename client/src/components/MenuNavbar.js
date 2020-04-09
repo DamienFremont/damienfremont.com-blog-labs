@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Button, NavbarBrand, } from 'reactstrap';
-import avatar from './MenuNavbar-avatar.png';
+import avatar from '../App-avatar.png';
 import { FormattedMessage } from 'react-intl';
 import { fakeAuth } from '../helper/security';
 import { Link } from 'react-router-dom';

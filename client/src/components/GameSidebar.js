@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { ListGroup, ListGroupItem } from 'reactstrap';
-import avatar from './GameSidebar-avatar.png';
+import avatar from '../App-avatar.png';
 
 const GameSidebar = (props) => {
 
