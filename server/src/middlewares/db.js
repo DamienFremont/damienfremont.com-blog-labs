@@ -1,6 +1,7 @@
 import url from 'url';
+import fs from 'fs';
 import { Pool } from 'pg';
-import { reconnect, updateSchema } from './utils';
+import { reconnect, queryFile } from './dbutils';
 
 console.log('Database config...');
 const params = url.parse(process.env.DATABASE_URL || 'progres://projetmago:projetmago@localhost:5432/projetmago');
@@ -14,12 +15,19 @@ const config = {
   ssl: process.env.DATABASE_SSL || false
 };
 
+const updateDatabase = (client) => {
+  const path = '../database';
+  fs.readdirSync(path)
+    .filter(fn => fn.endsWith('.sql'))
+    .forEach(e => queryFile(client, `${path}/${e}`));
+}
+
 const pool = new Pool(config);
-updateSchema(pool);
+updateDatabase(pool);
 
 pool.on('connect', (client) => {
   console.log('Database Connected');
-  updateSchema(client);
+  updateDatabase(client);
 });
 
 pool.on('error', (err, client) => {

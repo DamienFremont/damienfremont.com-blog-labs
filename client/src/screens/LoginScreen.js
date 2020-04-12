@@ -1,38 +1,37 @@
 /**
  * @see https://tylermcginnis.com/react-router-protected-routes-authentication/
  * @see https://serverless-stack.com/chapters/create-a-login-page.html
+ * 
+ * @see https://medium.com/@paul.allies/stateless-auth-with-express-passport-jwt-7a55ffae0a5c
+ * @see https://blog.usejournal.com/sessionless-authentication-withe-jwts-with-node-express-passport-js-69b059e4b22c
  */
 import React, { useState } from 'react';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { fakeAuth } from 'helpers/security';
+import { auth } from 'helpers/auth';
 import logo from 'logo.png';
 import './LoginScreen.css';
 
 const LoginScreen = (props) => {
 
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const [isAlreadyLogged, setIsAlreadyLogged] = useState(fakeAuth.isAuthenticated);
     const intl = useIntl();
 
-    function validateForm() {
-        return email.length > 0 && password.length > 0;
+    const validateForm = () =>
+        username.length > 0 && password.length > 0;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        auth.authenticate(() =>
+            props.history.push('/'));
     }
 
-    const handleSubmit = (event) => {
-        fakeAuth.authenticate(() => setIsAlreadyLogged(true))
-    }
-
-    const renderRedirect = () => (
-        <Redirect to='/' />
-    )
-
-    const renderForm = () => (
+    return (
         <div className="d-flex justify-content-center">
-            <Form className="login-form bg-light">
+            <Form className="login-form bg-light" onSubmit={handleSubmit}>
                 <div className="text-center">
                     <img src={logo} width="60" height="60" className="d-inline-block mt-2" alt="" />{' '}
                 </div>
@@ -42,18 +41,18 @@ const LoginScreen = (props) => {
                     </span>
                 </h1>
                 <FormGroup>
-                    <Label for="exampleEmail">
-                        <FormattedMessage id="LoginScreen.email" />
+                    <Label for="username">
+                        <FormattedMessage id="LoginScreen.username" />
                     </Label>
                     <Input
                         type="text"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        placeholder={intl.formatMessage({ id: 'LoginScreen.email.placeholder' })}
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                        placeholder={intl.formatMessage({ id: 'LoginScreen.username.placeholder' })}
                         autoFocus />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="examplePassword">
+                    <Label for="password">
                         <FormattedMessage id="LoginScreen.password" />
                     </Label>
                     <Input type="password"
@@ -61,7 +60,7 @@ const LoginScreen = (props) => {
                         onChange={e => setPassword(e.target.value)}
                         placeholder={intl.formatMessage({ id: 'LoginScreen.password.placeholder' })} />
                 </FormGroup>
-                <Button color="primary" className="btn-lg btn-block" onClick={handleSubmit} disabled={!validateForm()}>
+                <Button color="primary" className="btn-lg btn-block" type="submit" disabled={!validateForm()}>
                     <FormattedMessage id="LoginScreen.submit" />
                 </Button>
                 <div className="text-center">
@@ -71,12 +70,6 @@ const LoginScreen = (props) => {
                 </div>
             </Form>
         </div>
-    )
-
-    return (
-        isAlreadyLogged ?
-            renderRedirect() :
-            renderForm()
     );
 }
 

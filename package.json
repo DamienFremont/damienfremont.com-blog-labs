@@ -10,7 +10,7 @@
     "dev": "concurrently -k -p \"[{name}]\" -n \"Server,Client\" -c \"green.bold,blue.bold\" \"npm run dev-server\" \"npm run dev-client\"",
     "dev-client": "cd client && npm run start",
     "dev-server": "cd server && npm run dev",
-    "dev-database": "cd database && test.bat",
+    "dev-database": "cd database && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install && npm run build-client && npm run build-server",
     "build-client": "cd client && npm install && npm run build",

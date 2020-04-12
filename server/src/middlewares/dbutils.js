@@ -23,11 +23,11 @@ const reconnect = (pool) => {
     });
 }
 
-const updateSchema = (client) => {
-    console.log('Database updating...');
-    const sql = fs.readFileSync('../database/init_database.sql').toString();
+const queryFile = (client, file) => {
+    console.log(`Database updating with... ${file}`);
+    const sql = fs.readFileSync(file).toString();
     client.query(sql, function (err, result) {
-        // done();
+        // FIXME: done();
         if (err) {
             console.log('error: ', err);
         }
@@ -35,4 +35,4 @@ const updateSchema = (client) => {
     });
 }
 
-export { updateSchema, reconnect };
+export { queryFile, reconnect };

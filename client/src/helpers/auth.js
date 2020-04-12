@@ -5,8 +5,8 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-const fakeAuth = {
-    isAuthenticated: true,
+const auth = {
+    isAuthenticated: false,
     authenticate(cb) {
         this.isAuthenticated = true
         setTimeout(cb, 100) // fake async
@@ -17,9 +17,15 @@ const fakeAuth = {
     }
 }
 
+/**
+ * @see https://medium.com/@thanhbinh.tran93/private-route-public-route-and-restricted-route-with-react-router-d50b27c15f5e
+ */
+
+const isLogin = () => auth.isAuthenticated;
+
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
-        fakeAuth.isAuthenticated === true
+        isLogin() === true
             ? <Component {...props} />
             : <Redirect to={{
                 pathname: '/login',
@@ -28,4 +34,16 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     )} />
 )
 
-export { PrivateRoute, fakeAuth };
+const PublicRoute = ({ component: Component, restricted, ...rest }) => {
+    return (
+        // restricted = false meaning public route
+        // restricted = true meaning restricted route
+        <Route {...rest} render={props => (
+            isLogin() && restricted ?
+                <Redirect to="/" />
+                : <Component {...props} />
+        )} />
+    );
+};
+
+export { auth, isLogin, PrivateRoute, PublicRoute };

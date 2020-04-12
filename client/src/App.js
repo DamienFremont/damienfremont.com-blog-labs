@@ -4,7 +4,7 @@ import { IntlProvider } from 'react-intl';
 import { locale, messages } from 'translations';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { HomeScreen, GameScreen, SettingsScreen, LoginScreen, LogoutScreen, SignupScreen } from 'screens';
-import { PrivateRoute } from 'helpers/security';
+import { PrivateRoute, PublicRoute } from 'helpers/auth';
 
 const App = (props) => {
 
@@ -15,12 +15,12 @@ const App = (props) => {
 
           <Route exact path="/" component={HomeScreen} />
 
-          <Route exact path="/login/" component={LoginScreen} />
-          <Route exact path="/signup/" component={SignupScreen} />
-          <Route exact path="/logout/" component={LogoutScreen} />
+          <PublicRoute path="/login/" component={LoginScreen} exact restricted={true} />
+          <PublicRoute path="/signup/" component={SignupScreen} exact restricted={true} />
+          <PrivateRoute path="/logout/" component={LogoutScreen} exact />
 
           <PrivateRoute path="/settings/*" component={SettingsScreen} />
-          <PrivateRoute exact path="/game/" component={GameScreen} />
+          <PrivateRoute path="/game/" component={GameScreen} exact />
 
         </Switch>
       </BrowserRouter>

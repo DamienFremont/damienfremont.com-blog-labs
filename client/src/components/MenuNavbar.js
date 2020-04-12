@@ -2,12 +2,10 @@ import React from 'react';
 import { Navbar, Button, NavbarBrand, } from 'reactstrap';
 import avatar from 'avatar.png';
 import { FormattedMessage } from 'react-intl';
-import { fakeAuth } from 'helpers/security';
+import { isLogin } from 'helpers/auth';
 import { Link } from 'react-router-dom';
 
 const MenuNavbar = (props) => {
-
-    const isLoggedIn = () => fakeAuth.isAuthenticated;
 
     const renderPublicBar = () => (
         <span>
@@ -30,7 +28,7 @@ const MenuNavbar = (props) => {
         <div>
             <Navbar>
                 <NavbarBrand className="mr-auto"></NavbarBrand>
-                {isLoggedIn() ?
+                {isLogin() ?
                     renderUserBar() :
                     renderPublicBar()
                 }

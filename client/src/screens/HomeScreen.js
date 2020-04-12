@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { MenuLayout } from 'layouts';
 import { MainMenu, ServerStatus, WelcomeModal, NewsFeed } from 'components';
-import { fakeAuth } from 'helpers/security';
+import { isLogin } from 'helpers/auth';
 
 const HomeScreen = (props) => {
 
@@ -10,12 +10,10 @@ const HomeScreen = (props) => {
 
     const toggle = () => setIsOpen(!isOpen);
 
-    const isLoggedIn = () => fakeAuth.isAuthenticated;
-
     return (
         <MenuLayout>
             <Container>
-                {isLoggedIn() ?
+                {isLogin() ?
                     <Row>
                         <Col sm="12">
                             <div className="d-flex justify-content-center">

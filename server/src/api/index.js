@@ -1,8 +1,8 @@
 import Router from 'express';
 import bodyParser from 'body-parser';
-import nocache from '../utils/nocache';
+import { nocache } from '../helpers/httpheader';
+import auth from '../middlewares/auth';
 import status from './status';
-import auth from './auth';
 
 export default () => {
 	console.log('Init API...');
@@ -11,8 +11,6 @@ export default () => {
 	api.use(nocache());
 	// perhaps expose some API metadata at the root
 	api.use('/status', status());
-	api.use('/auth', auth());
 	api.use('/status/v1', status());
-	api.use('/auth/v1', status());
 	return api;
 }

@@ -1,16 +1,15 @@
 import { ServerStatusResponse } from '@shared/status';
-import db from '../db/index';
+import db from '../middlewares/db';
 
 const get = async () => {
-    return Promise.all([
-        db.query('SELECT COUNT(*) FROM projetmago_users WHERE enabled = $1', [true]),
-        db.query('SELECT COUNT(*) FROM projetmago_users WHERE enabled = $1 AND session_active = $2', [true, true])
-    ]).then(([accountsRes, playersRes]) =>
+    let accountsQuery = db.query('SELECT COUNT(*) FROM user_entity WHERE enabled = $1', [true]);
+    let playersQuery = db.query('SELECT COUNT(*) FROM user_session', []);
+    return Promise.all([accountsQuery, playersQuery]).then(([accountsResult, playersResult]) =>
         new ServerStatusResponse({
             status: 'ONLINE',
             database: true,
-            accounts: accountsRes.rows[0].count,
-            players: playersRes.rows[0].count,
+            accounts: accountsResult.rows[0].count,
+            players: playersResult.rows[0].count,
             games: 0
         })
     );

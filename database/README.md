@@ -3,19 +3,16 @@ DATABASE
 
 ## Usage
 
-db.bat <action[create, schema, insert, delete]>
+test/test.bat <action[create, schema, insert, delete]>
 
 Dev
 `````bash
-./database/create_database.bat 
-./database/init_database.bat 
 npm run dev
-./database/insert_data.bat 
 `````
 
 Test SQl
 `````bash
-./database/test.bat
+npm run build
 `````
 
 ## Links

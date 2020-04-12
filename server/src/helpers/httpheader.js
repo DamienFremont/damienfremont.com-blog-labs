@@ -10,4 +10,4 @@ const nocache = () => (req, res, next) => {
     next();
 };
 
-export default nocache;
+export { nocache }; 

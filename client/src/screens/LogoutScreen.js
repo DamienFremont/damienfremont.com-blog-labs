@@ -1,25 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { UIConfirmModal } from 'components';
-import { Redirect } from 'react-router-dom';
-import { fakeAuth } from 'helpers/security';
+import { auth } from 'helpers/auth';
 
 const LogoutScreen = (props) => {
 
-    const [isAlreadyLogged, setIsAlreadyLogged] = useState(fakeAuth.isAuthenticated);
+    const handleCancel = () => props.history.push('/');
 
-    const handleCancel = () => {
-        props.history.push('/')
-    }
+    const handleConfirm = () => auth.signout(() => props.history.push('/'));
 
-    const handleConfirm = () => {
-        fakeAuth.signout(() => setIsAlreadyLogged(false));
-    }
-
-    const renderLoggedOut = () => (
-        <Redirect to='/' />
-    )
-
-    const renderConfirm = () => (
+    return (
         <UIConfirmModal
             isOpen={true}
             title="LogoutScreen.modal.title"
@@ -28,12 +17,6 @@ const LogoutScreen = (props) => {
             handleCancel={handleCancel}
             handleConfirm={handleConfirm}
         />
-    )
-
-    return (
-        isAlreadyLogged ?
-            renderConfirm() :
-            renderLoggedOut()
     );
 }
 
