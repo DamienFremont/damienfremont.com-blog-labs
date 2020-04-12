@@ -27,6 +27,8 @@ development:
     - dpl --provider=heroku --app=$HEROKU_APP_DEVELOPMENT --api-key=$HEROKU_DEVELOPMENT_API_KEY
   only:
     - /^v.*$/
+  except:
+    - tags
 
 staging:
   stage: deploy

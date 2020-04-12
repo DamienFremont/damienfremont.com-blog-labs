@@ -52,13 +52,29 @@ Search for `process.env.*` in source code.
 - DATABASE_URL
 - DATABASE_SSL
 
-## Links
+# Try-it
 
-- Development -> Staging -> Production
+Development -> Staging -> Production
+- Production https://projetmago.herokuapp.com/
+- Staging https://gitlab-ci-projetmago-staging.herokuapp.com/
+- Development https://gitlab-ci-projetmago-dev.herokuapp.com/
+
+# Links
+
+- Web App
+  - Production https://projetmago.herokuapp.com/
+- GooglePlay App
+  - page https://play.google.com/store/apps/details?id=com.herokuapp.projetmago
+- Site web
+  - blog https://projetmago.wordpress.com/blog/
+  - aide https://projetmago.wordpress.com/help/
+- Trello
+  - Sprint https://trello.com/b/VqHKFGjf/projet-mago-sprint
+  - Roadmap https://trello.com/b/mvRnCdFJ/projet-mago-roadmap
+- GitLab -> Heroku
+  - GitLab https://gitlab.com/projet-mago-group/projet-mago-app/
+  - Heroku https://dashboard.heroku.com/pipelines/9e978532-d7ff-4578-bb08-97e031030f2d
+- Build : Development -> Staging -> Production
   - Production https://projetmago.herokuapp.com/
   - Staging https://gitlab-ci-projetmago-staging.herokuapp.com/
   - Development https://gitlab-ci-projetmago-dev.herokuapp.com/
-
-- GitLab -> Heroku
-  - GitLab https://gitlab.com/projetmago-group/projetmago-app/
-  - Heroku https://dashboard.heroku.com/pipelines/9e978532-d7ff-4578-bb08-97e031030f2d

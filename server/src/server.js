@@ -25,7 +25,8 @@ app.use(express.urlencoded({ extended: false }));
 http.createServer(app);
 
 console.info(`[server] Init Static at ${publiz}`);
-app.use(express.static(publiz));
+const options = { etag: false, maxAge: '5000' };
+app.use(express.static(publiz, options));
 
 console.info('[server] Routes...');
 console.info('[server] Routes... REST services');
