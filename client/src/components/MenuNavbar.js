@@ -19,7 +19,7 @@ const MenuNavbar = (props) => {
     );
 
     const renderUserBar = () => (
-        <Button color="secondary" disabled>
+        <Button color="secondary" tag={Link} to="/profile">
             <img src={avatar} width="30" height="30" className="d-inline-block align-top" alt="" />
         </Button>
     );

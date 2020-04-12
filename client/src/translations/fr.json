@@ -41,9 +41,10 @@
     "LoginScreen.title": "Projet MAGO",
     "LoginScreen.desc": "Se connecter à MAGO",
     "LoginScreen.username": "Identifiant",
-    "LoginScreen.username.placeholder": "Utilisateur ou email",
+    "LoginScreen.username.placeholder": "Utilisateur",
     "LoginScreen.password": "Mot de passe",
     "LoginScreen.password.placeholder": "Saisir votre mot de passe",
+    "LoginScreen.failed": "Erreur utilisateur / mot de passe",
     "LoginScreen.submit": "Se connecter",
     "LoginScreen.signup": "S'inscrire sur Projet MAGO",
     "LogoutScreen.modal.title": "Se déconnecter de MAGO?",
@@ -56,11 +57,12 @@
     "SignupScreen.title": "Créer votre compte",
     "SignupScreen.username": "Utilisateur",
     "SignupScreen.username.placeholder": "Comment devrait on vous appeler?",
-    "SignupScreen.email": "Email",
-    "SignupScreen.email.placeholder": "Email",
     "SignupScreen.password": "Mot de passe",
     "SignupScreen.password.placeholder": "Saisir votre mot de passe",
     "SignupScreen.passwordconfirm": "Confirmer mot de passe",
     "SignupScreen.submit": "S'inscrire",
-    "SignupScreen.cancel": "Annuler"
+    "SignupScreen.cancel": "Annuler",
+    "ProfileScreen.title": "Profile",
+    "ProfileScreen.username": "Nom d'utilisateur",
+    "ProfileScreen.back": "Retour"
 }

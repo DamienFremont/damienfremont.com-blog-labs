@@ -6,7 +6,7 @@ const LogoutScreen = (props) => {
 
     const handleCancel = () => props.history.push('/');
 
-    const handleConfirm = () => auth.signout(() => props.history.push('/'));
+    const handleConfirm = () => auth.signout().then(() => props.history.push('/'));
 
     return (
         <UIConfirmModal

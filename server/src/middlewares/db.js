@@ -1,9 +1,9 @@
 import url from 'url';
 import fs from 'fs';
 import { Pool } from 'pg';
-import { reconnect, queryFile } from './dbutils';
+import { reconnect, queryFile } from './dbhelpers';
 
-console.log('Database config...');
+console.log('[db] Database config...');
 const params = url.parse(process.env.DATABASE_URL || 'progres://projetmago:projetmago@localhost:5432/projetmago');
 const auth = params.auth.split(':');
 const config = {
@@ -26,12 +26,12 @@ const pool = new Pool(config);
 updateDatabase(pool);
 
 pool.on('connect', (client) => {
-  console.log('Database Connected');
+  console.log('[db] Database Connected');
   updateDatabase(client);
 });
 
 pool.on('error', (err, client) => {
-  console.log('Database Error');
+  console.log('[db] Database Error');
   reconnect(pool);
 });
 

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Button, Modal, ModalFooter } from 'reactstrap';
 
-const UIUIHelpModal = (props) => {
+const UIHelpModal = (props) => {
 
     const settingsName = props.settingsName;
     const toggle = props.toggle;
@@ -38,4 +38,4 @@ const UIUIHelpModal = (props) => {
     );
 }
 
-export default UIUIHelpModal;
+export default UIHelpModal;

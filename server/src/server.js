@@ -3,44 +3,48 @@
  * @see https://github.com/jaredhanson/passport-openid/blob/master/examples/signon/app.js
  */
 import express from 'express';
+import passport from 'passport';
 import http from 'http';
 import api from './api';
 import auth from './middlewares/auth';
 import { nocache } from './helpers/httpheader';
 
-console.info('Get Envs Vars...');
+console.info('[server] Get Envs Vars...');
 const port = process.env.PORT || 5000;
 const hostname = process.env.HOSTNAME || 'localhost';
 const publiz = process.env.NODE_PUBLIC || '../client/build';
 
-console.info('Configure Application...');
+console.info('[server] Configure Application...');
 const app = express();
-app.configure
+app.use(auth.initialize());
 
-console.info('Init HTTP Server...');
+console.info('[server] Init HTTP Server...');
 app.use(nocache());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 http.createServer(app);
 
-console.info(`Init Static at ${publiz}`);
+console.info(`[server] Init Static at ${publiz}`);
 app.use(express.static(publiz));
 
-console.info('Set REST services to /api /auth');
+console.info('[server] Routes...');
+console.info('[server] Routes... REST services');
 app.use('/api', api());
-app.use('/auth', auth.routes());
+console.info('[server] Routes... SECU services');
+app.post('/login', auth.login());
+app.post('/registration', auth.registration());
 
-console.info('Start Application...');
+console.info('[server] Start Application...');
 app.listen(port, hostname, () => {
 
-  console.info('Application started!');
+  console.info('[server] Application started!');
   if (process.pid)
-    console.info(`Process PID = ${process.pid}`);
+    console.info(`[server] Process PID = ${process.pid}`);
   if (process.env.NODE_ENV !== 'production')
-    console.debug(`Env = \'${process.env.NODE_ENV}\' (process.env.NODE_ENV not set to \'production\')`);
+    console.debug(`[server] Env = \'${process.env.NODE_ENV}\' (process.env.NODE_ENV not set to \'production\')`);
 
-  console.info(`Server running at http://${hostname}:${port}/`);
-  console.info(`Server running at http://${hostname}:${port}/api/`);
-  console.info(`Server running at http://${hostname}:${port}/api/status/`);
-  console.info(`Server running at http://${hostname}:${port}/api/status/v1`);
+  console.info(`[server] running at http://${hostname}:${port}/`);
+  console.info(`[server] running at http://${hostname}:${port}/api/`);
+  console.info(`[server] running at http://${hostname}:${port}/api/status/`);
+  console.info(`[server] running at http://${hostname}:${port}/api/status/v1`);
 });

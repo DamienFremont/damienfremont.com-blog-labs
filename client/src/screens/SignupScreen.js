@@ -4,15 +4,12 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { auth } from 'helpers/auth';
 import './SignupScreen.css';
-import { post } from 'axios';
-import { UserRegistration } from '../shared/user';
 
 const SignupScreen = (props) => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordconfirm, setPasswordconfirm] = useState("");
-    const [email, setEmail] = useState("");
 
     const intl = useIntl();
 
@@ -23,15 +20,13 @@ const SignupScreen = (props) => {
 
     const validateForm = () =>
         (username.length > 0 && password.length > 0) &&
-        validatePasswordInput() &&
-        (email.length > 0 && email.length > 0);
+        validatePasswordInput();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let data = new UserRegistration({ email, password });
-        post('/auth/registration', data)
-            .then(() => auth.authenticate(
-                () => props.history.push('/')));
+        auth.signup({ username, password })
+            .then(() => auth.authenticate({ username, password })
+                .then(() => props.history.push('/')));
     }
 
     return (
@@ -40,17 +35,6 @@ const SignupScreen = (props) => {
                 <h1 className="text-center">
                     <FormattedMessage id="SignupScreen.title" />
                 </h1>
-                <FormGroup>
-                    <Label for="email">
-                        <FormattedMessage id="SignupScreen.email" />
-                    </Label>
-                    <Input
-                        type="email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        placeholder={intl.formatMessage({ id: 'SignupScreen.email.placeholder' })}
-                        autoFocus />
-                </FormGroup>
                 <FormGroup>
                     <Label for="username">
                         <FormattedMessage id="SignupScreen.username" />

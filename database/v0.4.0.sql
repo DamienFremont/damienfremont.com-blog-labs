@@ -2,12 +2,9 @@
 
 CREATE TABLE IF NOT EXISTS user_entity (
     id VARCHAR(36) NOT NULL,
-    email VARCHAR(255) UNIQUE,
-    enabled boolean DEFAULT false NOT NULL,
-    first_name VARCHAR(255),
-    last_name VARCHAR(255),
-    username VARCHAR(255) UNIQUE,
     created_date bigint,
+    enabled boolean DEFAULT false NOT NULL,
+    username VARCHAR(255) UNIQUE,
     PRIMARY KEY (id)
 );
 
@@ -17,6 +14,7 @@ CREATE TABLE IF NOT EXISTS credential (
     credential_type VARCHAR(36),
     secret_data VARCHAR(4000),
     credential_data VARCHAR(4000),
+    algorithm VARCHAR(36),
     PRIMARY KEY (user_ID),
 	FOREIGN KEY (user_ID) REFERENCES user_entity (id)
 );

@@ -7,7 +7,7 @@
  */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Alert } from 'reactstrap';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { auth } from 'helpers/auth';
 import logo from 'logo.png';
@@ -17,6 +17,7 @@ const LoginScreen = (props) => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [failed, setFailed] = useState(false);
 
     const intl = useIntl();
 
@@ -25,8 +26,9 @@ const LoginScreen = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        auth.authenticate(() =>
-            props.history.push('/'));
+        auth.authenticate({ username, password })
+            .then((res) => props.history.push('/'))
+            .catch(err => setFailed(true));
     }
 
     return (
@@ -40,6 +42,11 @@ const LoginScreen = (props) => {
                         <FormattedMessage id="LoginScreen.title" />
                     </span>
                 </h1>
+                {
+                    failed
+                        ? <Alert color="danger"><FormattedMessage id="LoginScreen.failed" /></Alert>
+                        : null
+                }
                 <FormGroup>
                     <Label for="username">
                         <FormattedMessage id="LoginScreen.username" />
