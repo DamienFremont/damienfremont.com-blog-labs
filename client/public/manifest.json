@@ -1,6 +1,6 @@
 {
-  "short_name": "Projet MAGO",
   "name": "Projet MAGO",
+  "short_name ": "MAGO",
   "start_url": ".",
   "display": "fullscreen",
   "theme_color": "#4c316f",

@@ -1,46 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import StatusApi from './status-api';
+import { IntlProvider } from 'react-intl';
+import { locale, messages } from 'translations';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HomeScreen, GameScreen, SettingsScreen, LoginScreen, LogoutScreen, SignupScreen, ProfileScreen } from 'screens';
+import { PrivateRoute, PublicRoute } from 'helpers/auth';
 
-class App extends React.Component {
+const App = (props) => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      response: ''
-    };
-  }
+  return (
+    <IntlProvider locale={locale()} messages={messages()}>
+      <BrowserRouter>
+        <Switch>
 
-  componentDidMount() {
-    StatusApi.get()
-      .then(res => this.setState({ response: res.status }))
-      .catch(err => this.setState({ response: "error" }));
-  }
+          <Route exact path="/" component={HomeScreen} />
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-            <br />
-            state: {this.state.response}
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-        </header>
+          <PublicRoute path="/login/" component={LoginScreen} exact restricted={true} />
+          <PublicRoute path="/signup/" component={SignupScreen} exact restricted={true} />
+          <PrivateRoute path="/logout/" component={LogoutScreen} exact />
 
-      </div>
-    );
-  }
+          <PrivateRoute path="/settings/*" component={SettingsScreen} />
+          <PrivateRoute path="/profile/" component={ProfileScreen} />
+          <PrivateRoute path="/game/" component={GameScreen} exact />
+
+        </Switch>
+      </BrowserRouter>
+    </IntlProvider>
+  );
 }
 
 export default App;
