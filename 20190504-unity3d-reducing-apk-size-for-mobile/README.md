@@ -9,6 +9,8 @@ Keeping the file size of the built app to a minimum is important, especially for
 
 Note: this article was made using Unity 2019.1
 
+**Edit (2020):** use App Bundle now. Your app will be splitted in small parts for download, it’s one package for all hardware plateformes …and Google will force you into it next year anyway.
+
 ## Content
 
 1.  Don’t expect too much from Unity
