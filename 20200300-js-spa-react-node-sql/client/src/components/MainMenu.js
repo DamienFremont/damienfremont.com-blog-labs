@@ -17,7 +17,7 @@ const MainMenu = (props) => {
                 <FontAwesomeIcon icon={faCog} />{' '}
                 <FormattedMessage id="MainMenu.settings" />
             </Button>
-            <Button color="light" block className="pl-5 pr-5 text-left" target="_blank" href="https://projetmago.wordpress.com/help/">
+            <Button color="light" block className="pl-5 pr-5 text-left" target="_blank" href="https://PROJECTSITE.com/help/">
                 <FontAwesomeIcon icon={faQuestionCircle} />{' '}
                 <FormattedMessage id="MainMenu.help" />
             </Button>

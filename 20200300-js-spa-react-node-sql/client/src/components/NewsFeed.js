@@ -16,7 +16,7 @@ const NewsFeed = (props) => {
                 <span>
                     <FormattedMessage id="NewsFeed.website" />
                 </span>
-                <Button color="link" target="_blank" href="https://projetmago.wordpress.com/">
+                <Button color="link" target="_blank" href="https://PROJECTSITE.com/">
                     <FormattedMessage id="NewsFeed.goto" />{' '}
                     <FontAwesomeIcon icon={faExternalLinkAlt} />
                 </Button>

@@ -5,7 +5,7 @@ SELECT
 FROM
    pg_stat_activity
 WHERE
-   datname = 'projetmago';
+   datname = 'projectname';
 
 -- Second, terminate the active connections by issuing the following query:
 
@@ -14,9 +14,9 @@ SELECT
 FROM
    pg_stat_activity
 WHERE
-   pg_stat_activity.datname = 'projetmago';
+   pg_stat_activity.datname = 'projectname';
 
 -- Third, execute the DROP DATABASE statement:
 
-DROP DATABASE IF EXISTS projetmago;
-DROP USER projetmago;
+DROP DATABASE IF EXISTS projectname;
+DROP USER projectname;

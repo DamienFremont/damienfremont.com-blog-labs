@@ -8,7 +8,7 @@ const findOne = async (filter) => db
 
 
 const findOneById = async (id) => db
-    .query('SELECT * FROM projetmago_users WHERE id = $1', [id])
+    .query('SELECT * FROM projectname_users WHERE id = $1', [id])
     .then(res => res.rows[0]);
 
 const create = (data) => {

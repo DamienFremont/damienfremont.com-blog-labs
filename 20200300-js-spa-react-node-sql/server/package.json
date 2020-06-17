@@ -1,5 +1,5 @@
 {
-  "name": "projet-mago-server",
+  "name": "server",
   "private": true,
   "dependencies": {
     "esm": "^3.2.25",

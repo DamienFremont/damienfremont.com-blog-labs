@@ -43,7 +43,7 @@ const SettingsScreen = (props) => {
                                         <FontAwesomeIcon icon={faChevronRight} />
                                     </span>
                                 </ListGroupItem>
-                                <ListGroupItem tag="a" target="_blank" href="https://projetmago.wordpress.com/about/">
+                                <ListGroupItem tag="a" target="_blank" href="https://PROJECTSITE.com/about/">
                                     <span className="d-flex justify-content-between">
                                         <FormattedMessage id="SettingsScreen.about" />{' '}
                                         <FontAwesomeIcon icon={faChevronRight} />

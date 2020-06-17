@@ -4,7 +4,7 @@ import { Pool } from 'pg';
 import { reconnect, queryFile } from './dbhelpers';
 
 console.log('[db] Database config...');
-const params = url.parse(process.env.DATABASE_URL || 'progres://projetmago:projetmago@localhost:5432/projetmago');
+const params = url.parse(process.env.DATABASE_URL || 'progres://projectname:projectname@localhost:5432/projectname');
 const auth = params.auth.split(':');
 const config = {
   user: auth[0],
