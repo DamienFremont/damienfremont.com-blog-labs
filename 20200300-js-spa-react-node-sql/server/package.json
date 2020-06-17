@@ -1,0 +1,31 @@
+{
+  "name": "projet-mago-server",
+  "private": true,
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.0.0",
+    "pg-pool": "^3.0.0"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@client": "../client/src",
+    "@shared": "../client/src/shared",
+    "@database": "../database"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install",
+    "start": "node src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

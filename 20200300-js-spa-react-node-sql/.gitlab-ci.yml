@@ -1,0 +1,54 @@
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm run build --progress=false
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - node_modules/
+  only:
+    - /^v.*$/
+    - master
+    - tags
+
+development:
+  # In the example below, job will run only for refs that start with 'v', like 'v0.2', whereas all branches will be skipped:
+  stage: deploy
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_DEVELOPMENT --api-key=$HEROKU_DEVELOPMENT_API_KEY
+  only:
+    - /^v.*$/
+  except:
+    - tags
+
+staging:
+  stage: deploy
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_STAGING --api-key=$HEROKU_STAGING_API_KEY
+  only:
+    - master
+  except:
+    # too much concurrent builds on gitlab
+    - tags
+
+production:
+  stage: deploy
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_PRODUCTION_API_KEY
+  only:
+    - tags
