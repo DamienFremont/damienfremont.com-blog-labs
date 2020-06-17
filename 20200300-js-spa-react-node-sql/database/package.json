@@ -1,0 +1,8 @@
+{
+  "name": "projet-mago-database",
+  "private": true,
+  "scripts": {
+    "dev": "cd test && all.bat",
+    "build": "cd test && create.bat"
+  }
+}

@@ -1,0 +1,6 @@
+CREATE ROLE projetmago;
+ALTER ROLE projetmago WITH LOGIN PASSWORD 'projetmago' NOSUPERUSER NOCREATEDB NOCREATEROLE;
+CREATE DATABASE projetmago OWNER projetmago;
+REVOKE ALL ON DATABASE projetmago FROM PUBLIC;
+GRANT CONNECT ON DATABASE projetmago TO projetmago;
+GRANT ALL ON DATABASE projetmago TO projetmago;
