@@ -634,7 +634,12 @@ Test-driven development is about development (and design), specifically improvin
 
 ---
 
+## Post
+
+- https://damienfremont.com/2021/02/01/test-driven-development-tdd-in-java-helloworld-examples/
+
 ## References
 
 - https://javacodehouse.com/blog/test-driven-development-tutorial/#what-is-tdd
+- https://technologyconversations.com/2014/09/30/test-driven-development-tdd/
 - https://technologyconversations.com/2013/12/24/test-driven-development-tdd-best-practices-using-java-examples-2/
