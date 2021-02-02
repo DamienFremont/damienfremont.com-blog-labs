@@ -1,13 +1,13 @@
-package com.damienfremont.blog.step999;
+package com.damienfremont.blog.step5Final;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class GoodbyeValidatorTest {
+class GoodbyeValidator5Test {
 
-    private GoodbyeValidator classToTest = new GoodbyeValidator();
+    private GoodbyeValidator5 classToTest = new GoodbyeValidator5();
 
     @ParameterizedTest
     @CsvSource({

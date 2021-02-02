@@ -1,9 +1,9 @@
-package com.damienfremont.blog.step999;
+package com.damienfremont.blog.step5Final;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class GoodbyeValidator {
+public class GoodbyeValidator5 {
 
     public boolean isValid(String name) {
         if (name == null) {

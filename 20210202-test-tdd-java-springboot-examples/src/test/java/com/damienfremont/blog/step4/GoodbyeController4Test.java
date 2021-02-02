@@ -1,4 +1,4 @@
-package com.damienfremont.blog.step999;
+package com.damienfremont.blog.step4;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -16,21 +16,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class GoodbyeControllerTest {
+public class GoodbyeController4Test {
 
     @Autowired
     private MockMvc mvc;
     @MockBean
-    private GoodbyeTransform transformMock;
-    @MockBean
-    private GoodbyeValidator validatorMock;
+    private GoodbyeTransform4 transformMock;
 
     @Test
     public void getGoodbye_success() throws Exception {
-        Mockito.when(validatorMock.isValid(Mockito.anyString())).thenReturn(true);
+        // TODO: Mockito.when(validatorMock
         Mockito.when(transformMock.transform(Mockito.anyString())).thenReturn("Goodbye from DAMIEN!");
         String expected = "Goodbye from DAMIEN!";
-        mvc.perform(MockMvcRequestBuilders.get("/goodbye/damien")
+        mvc.perform(MockMvcRequestBuilders.get("/goodbye9/damien")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo(expected)));
@@ -38,9 +36,7 @@ public class GoodbyeControllerTest {
 
     @Test
     public void getGoodbye_not_valid() throws Exception {
-        Mockito.when(validatorMock.isValid(Mockito.anyString())).thenReturn(false);
-        mvc.perform(MockMvcRequestBuilders.get("/goodbye/xx")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isBadRequest());
+        throw new IllegalStateException("Not yet implemented!");
+        // TODO:
     }
 }

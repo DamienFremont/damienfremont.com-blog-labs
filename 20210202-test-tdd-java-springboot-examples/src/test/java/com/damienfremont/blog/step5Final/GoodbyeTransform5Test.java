@@ -1,4 +1,4 @@
-package com.damienfremont.blog.step999;
+package com.damienfremont.blog.step5Final;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -8,9 +8,9 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 
-class GoodbyeTransformTest {
+class GoodbyeTransform5Test {
 
-    private GoodbyeTransform classToTest = new GoodbyeTransform();
+    private GoodbyeTransform5 classToTest = new GoodbyeTransform5();
 
     @ParameterizedTest
     @CsvSource({
