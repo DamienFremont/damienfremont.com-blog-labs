@@ -5,7 +5,7 @@ Software Architecture – “Train wagons” – Be agile and prioritize your st
 
 You can view an application as a train, and components as wagons. It’s possible to let go some of them if needed, like features for a project backlog. But here, instead of saving now on time or cost (implementation), you mostly save on future cost (maintenance).  
 
-![Diapositive2 - Copy](screenshots/diapositive2-Copy.jpg)
+![Diapositive2 - Copy](screenshots/Diapositive2-Copy.JPG)
 
 ## Content:
 
@@ -21,15 +21,15 @@ You can view an application as a train, and components as wagons. It’s possibl
 
 You can view tasks in a list, as wagons attached to a train. First wagon is the most important (a must have), last wagon is the least important (nice to have).  
 
-![Diapositive1](screenshots/diapositive1.jpg)
+![Diapositive1](screenshots/Diapositive1.JPG)
 
 …and when you can’t make it to the end in the required budget or time, you could let go some wagons from the tail (actual benefice).  
 
-![Diapositive2](screenshots/diapositive3.jpg)
+![Diapositive2](screenshots/Diapositive3.JPG)
 
 It’s also possible to view an application stack, or software architecture, in the same way. The train is the application, parts of it are wagons and you can let go some wagons. But here, instead of saving on time, you save on maintenance cost (future benefice).
 
-![Diapositive2](screenshots/diapositive2.jpg)
+![Diapositive2](screenshots/Diapositive2.JPG)
 
 ## Example – Classic Full-stack Javascript Project
 
@@ -49,7 +49,7 @@ Not all components are equals. You need to identify which depends on which (A ->
 
 The classic way is to group them by software layers, then do the dependency graph. Usually with full-stack applications, you’ll find 2 layers (back-end server, database), up to sometimes 4 layers (+proxy, +front-end).
 
-![Diapositive4](screenshots/diapositive4.jpg)
+![Diapositive4](screenshots/Diapositive4.JPG)
 
 In this diagram, there are two layers: front-end (browser) and back-end (server). It’s obvious that the front-end is kinda bloated, specifically with add-ons!
 
@@ -67,9 +67,9 @@ Constant refactoring: library without Long Term Support (LTS) or community (ex: 
 
 Over-testing: why doing unit testing (Mocha) on front-end ? when you already do UI testing with full coverage (Selenium, Protractor)
 
-![Diapositive5](screenshots/diapositive5.jpg)
+![Diapositive5](screenshots/Diapositive5.JPG)
 
-![Diapositive6](screenshots/diapositive6.jpg)
+![Diapositive6](screenshots/Diapositive6.JPG)
 
 ## Step 3 – Repeat until best-value is achieved
 
@@ -79,15 +79,15 @@ Client side: maybe your users don’t need it (simple website or business applic
 
 Tests: maybe your tests are bad (low coverage, disabled, unmaintained) or your source code is bullet-proof (generated code, simple), or site downtime is OK (non-critical app).
 
-![Diapositive7](screenshots/diapositive7.jpg)
+![Diapositive7](screenshots/Diapositive7.JPG)
 
-![Diapositive8](screenshots/diapositive8.jpg)
+![Diapositive8](screenshots/Diapositive8.JPG)
 
 ## Conclusion
 
 You need to answer these questions: Are all components essentials ? and not just here for the hype ? Do I need a perfect clean project ? What is the future cost of each non-essential components ?
 
-![Diapositive9](screenshots/diapositive9.jpg)
+![Diapositive9](screenshots/Diapositive9.JPG)
 
 ## Resources
 
