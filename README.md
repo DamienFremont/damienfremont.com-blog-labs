@@ -5,7 +5,7 @@ DAMIEN FREMONT'S TECH BLOG
 [![Twitter Follow](https://img.shields.io/twitter/follow/Damien_Fremont?style=social)](https://twitter.com/Damien_Fremont)
 [!["Buy Me A Coffee"](./docs/buymeacoffee-20.png)](https://www.buymeacoffee.com/damienfremont)
 
-Source [http://damienfremont.com/blog](http://damienfremont.com/blog)
+This repo contains the programming labs for [damienfremont.com](http://damienfremont.com/blog)
 
 ---
 
